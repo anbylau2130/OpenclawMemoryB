@@ -14,14 +14,3 @@ Thumbs.db
 
 # 依赖
 node_modules/
-
-# 敏感配置（包含密钥）
-.openclaw/
-
-# 数据文件
-data/alert_queue.json
-data/*.json
-
-# 内存文件
-memory/heartbeat-state.json
-projects/edict/
