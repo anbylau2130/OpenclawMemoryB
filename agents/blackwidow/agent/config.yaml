@@ -1,0 +1,49 @@
+# BlackWidow Agent Configuration
+# 自动压缩策略配置
+
+agent:
+  id: blackwidow
+  name: BlackWidow（高效执行者）
+
+# 模型配置 - 默认使用 NVIDIA 免费模型
+model:
+  provider: nvidia
+  model: mistralai/Mistral-7B-Instruct-v0.3
+  apiKey: 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
+  contextWindow: 32768
+  maxTokens: 32768
+
+# 模型备用配置（多模型自动切换）
+model_fallback:
+  enabled: true
+  config_file: "/home/node/.openclaw/workspace-blackwidow/config/MODEL_FALLBACK.yaml"
+  cooldown_seconds: 300
+  max_retries: 3
+  log_file: "/home/node/.openclaw/workspace-blackwidow/logs/model_switch.log"
+
+# Compaction 配置 - 自动压缩对话历史
+compaction:
+  enabled: true
+  # 触发压缩的token阈值
+  triggerTokens: 150000
+  # 保留的最小token数
+  reserveTokensFloor: 30000
+  # 压缩策略
+  strategy: "sliding_window"
+  # 保留最近的N条消息
+  keepRecentMessages: 100
+  # 保留系统消息
+  keepSystemMessages: true
+
+# 会话配置
+session:
+  maxHistorySize: 1000
+  autoCompact: true
+  compactInterval: 50
+
+# 上下文硬限制 - 防止 context_window_exceeded
+context:
+  maxTokens: 150000
+  truncationStrategy: "sliding_window"
+  preserveSystemMessages: true
+  preserveRecentMessages: 50

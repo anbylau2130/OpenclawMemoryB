@@ -1,0 +1,31 @@
+# Thor Agent Configuration
+
+agent:
+  id: thor
+  name: Thor
+  
+compaction:
+  enabled: true
+  triggerTokens: 150000
+  reserveTokensFloor: 30000
+  strategy: "sliding_window"
+  keepRecentMessages: 100
+  keepSystemMessages: true
+  
+model:
+  provider: zai
+  model: glm-5
+  apiKey: dacf7eed5cb84295bcc6bcb98988cb0c.RtJKLhLSyCFBDUI8
+  contextWindow: 204800
+  maxTokens: 131072
+  
+session:
+  maxHistorySize: 1000
+  autoCompact: true
+  compactInterval: 50
+  
+context:
+  maxTokens: 150000
+  truncationStrategy: "sliding_window"
+  preserveSystemMessages: true
+  preserveRecentMessages: 50

@@ -1,0 +1,300 @@
+{
+  "version": 1,
+  "updatedAt": 1773728990412,
+  "records": [
+    {
+      "msgId": "msgqXwwzglKWGf0XkylTX/Ohw==",
+      "messageType": "text",
+      "text": "胜率太低了，优化我们的方案把，或者找其他更可靠的策略，你需要自行完成，然后通知我",
+      "createdAt": 1773708184833
+    },
+    {
+      "msgId": "msg0Ne8x+/L+Mnj8ZUUgD2zFg==",
+      "messageType": "text",
+      "text": "我们的交易体系文档在哪里？",
+      "createdAt": 1773708790573
+    },
+    {
+      "msgId": "msg+QEhD8jNAlaTMtJmx6/WKQ==",
+      "messageType": "text",
+      "text": "目前的体系还是不够完整，需要迭代，直到我们的体系健壮，完整，并且胜率有保障",
+      "createdAt": 1773708907886
+    },
+    {
+      "msgId": "msg/xj8ue4hg0/sWETFxxkd3A==",
+      "messageType": "text",
+      "text": "继续",
+      "createdAt": 1773709428790
+    },
+    {
+      "msgId": "msgoOa1dBCEahfJB5qnD09Y2w==",
+      "messageType": "text",
+      "text": "你可以参照https://github.com/anbylau2130/OpenclawMemery这个项目，这个项目中有回测数据的获取方法，每个分支的内容不同，你需要从不同的分支找，我忘记在哪个分支了，你找找看",
+      "createdAt": 1773709904483
+    },
+    {
+      "msgId": "msg55xjxDs1sWYX4tp+/ENxEw==",
+      "messageType": "text",
+      "text": "https://github.com/anbylau2130/OpenclawMemery 这个项目是我之前机器人的工作空间，每个分支都不同，他们有不同的记忆，你可以提取有用的，关于交易相关的记忆，然后保存为你的记忆，项目地址没错。",
+      "createdAt": 1773710322514
+    },
+    {
+      "msgId": "msgHXUoVMjccihEqkdBystCXw==",
+      "messageType": "text",
+      "text": "同过这个项目提取关于交易相关的记忆，保存为你的记忆。用到我们的系统中，项目中有完善的回测机制",
+      "createdAt": 1773710461045
+    },
+    {
+      "msgId": "msgpFh3hjhwUAKZ8I9RfCKP0g==",
+      "messageType": "text",
+      "text": "https://github.com/anbylau2130/OpenclawMemery.git",
+      "createdAt": 1773710835985
+    },
+    {
+      "msgId": "msgg/jxi8bTxQ4c6QlXcH83Ew==",
+      "messageType": "text",
+      "text": "私有仓库",
+      "createdAt": 1773710838866
+    },
+    {
+      "msgId": "msglG/hUfV978dm3QJkAYzg8A==",
+      "messageType": "text",
+      "text": "github-token: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",
+      "createdAt": 1773710899756
+    },
+    {
+      "msgId": "msg3wy5MCihkhhIF+45OPz9eg==",
+      "messageType": "text",
+      "text": "记得你所学习的内容要以md的形式存储到Knowledge目录中，不能只靠嘴巴记忆",
+      "createdAt": 1773711600121
+    },
+    {
+      "msgId": "msgqMsHbhC8NoQjAicOwJMlCQ==",
+      "messageType": "text",
+      "text": "继续完善模块",
+      "createdAt": 1773712197149
+    },
+    {
+      "msgId": "msgs676rJ6a1Dv7kHoQ5JTJjA==",
+      "messageType": "text",
+      "text": "完成交易模块",
+      "createdAt": 1773712738833
+    },
+    {
+      "msgId": "msgebQDZzfkvEfw6jIdUMBjFw==",
+      "messageType": "text",
+      "text": "先执行2和3",
+      "createdAt": 1773713284388
+    },
+    {
+      "msgId": "msgpqOGiXKfCHpx0H/DRx+jFQ==",
+      "messageType": "text",
+      "text": "优化参数",
+      "createdAt": 1773713667361
+    },
+    {
+      "msgId": "msgVrmWPIYq9jnff/C8NnwDpw==",
+      "messageType": "text",
+      "text": "继续迭代我们的交易体系，执行效率提升起来，因为数据是实时的，如果1分钟的间隔可能就是很大的损失",
+      "createdAt": 1773714059474
+    },
+    {
+      "msgId": "msg2hMy1bxeMq7BA+q6nTY90w==",
+      "messageType": "text",
+      "text": "完成剩余模块",
+      "createdAt": 1773716782793
+    },
+    {
+      "msgId": "msg948l/k3CI4qX7JvByXlIuQ==",
+      "messageType": "text",
+      "text": "我想部署在docker中部署https://github.com/cft0808/edict.git这个项目，然后给你有用，应该怎么操作",
+      "createdAt": 1773717415685
+    },
+    {
+      "msgId": "msgYgKpml4TkMB0kjtAcq1QBw==",
+      "messageType": "text",
+      "text": "如果是docker部署我能使用openclaw操作么？",
+      "createdAt": 1773718091072
+    },
+    {
+      "msgId": "msgBuebW4rUf1iidQovvDndbQ==",
+      "messageType": "text",
+      "text": "这还有个问题，就是开机要启动这个项目把？",
+      "createdAt": 1773718289896
+    },
+    {
+      "msgId": "msgNHN0ozH4htLYk8m7IjikUA==",
+      "messageType": "text",
+      "text": "先把文档保存了",
+      "createdAt": 1773718357865
+    },
+    {
+      "msgId": "msg/OO02rfg/egheS/CAIB+hQ==",
+      "messageType": "text",
+      "text": "保存到哪里了？",
+      "createdAt": 1773718550301
+    },
+    {
+      "msgId": "msgu8uVQ1L319oOd1qVhOQBHQ==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773718766760
+    },
+    {
+      "msgId": "msg5ue0VjsLM/2OfymEmWKpLw==",
+      "messageType": "text",
+      "text": "开始部署把",
+      "createdAt": 1773718894412
+    },
+    {
+      "msgId": "msg+vOExInhEWPSoGB2W0EuPg==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773719700632
+    },
+    {
+      "msgId": "msguJG/89d+sap4qDrEFAejWw==",
+      "messageType": "text",
+      "text": "看板无法访问",
+      "createdAt": 1773720529418
+    },
+    {
+      "msgId": "msgFcCjWM0WexsFxo++r9X2bg==",
+      "messageType": "text",
+      "text": "现在测试一下这个项目",
+      "createdAt": 1773720881642
+    },
+    {
+      "msgId": "msgHWZFnVrObHvQeXTw3zqzTA==",
+      "messageType": "text",
+      "text": "我没办法跟太子讲话",
+      "createdAt": 1773721253214
+    },
+    {
+      "msgId": "msg/YZ8DVmeVvZItiyXbDYS0Q==",
+      "messageType": "text",
+      "text": "因为我用的钉钉，怎么跟太子讲话？再设置一个机器人？",
+      "createdAt": 1773721278165
+    },
+    {
+      "msgId": "msgCLWox5oMBePtKIkte0A/PA==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773722259795
+    },
+    {
+      "msgId": "msgyUttAf1cu4vACvrQAkwPgA==",
+      "messageType": "text",
+      "text": "我又申请了一个钉钉机器人，你帮我把他配到\nAgentId：4346325687\nClient ID：dingyhlhrphf9uxwp5u3\nClient Secret：8GQXzXWOLZqQ7UyNtbMU12Q0_-mA3c7trPM_A5XNIDA0LjepnThuzky23YGcCi_G\nRobotCode：dingyhlhrphf9uxwp5u3\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n这个是智谱模型的token:6c8b2fbf9592485883e20f86d03f2fac.MU2ZNCOJynlRXUFS，URL地址是https://open.bigmodel.cn/api/coding/paas/v4",
+      "createdAt": 1773722912112
+    },
+    {
+      "msgId": "msgAhdGizh2eBUtBNKwKPla+Q==",
+      "messageType": "text",
+      "text": "继续",
+      "createdAt": 1773723591455
+    },
+    {
+      "msgId": "msgjWVq1xamxr4nAdqYC1bOyw==",
+      "messageType": "text",
+      "text": "配置好了么",
+      "createdAt": 1773723713558
+    },
+    {
+      "msgId": "msgjWVq1xamxr4nAdqYC1bOyw==",
+      "messageType": "text",
+      "text": "配置好了么",
+      "createdAt": 1773723713558
+    },
+    {
+      "msgId": "msgI+VFxJ6icC7lhsKRzoPsmg==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773724233559
+    },
+    {
+      "msgId": "msgiWbt+tYLRYAPFK8M0In9Sg==",
+      "messageType": "text",
+      "text": "太子没回复",
+      "createdAt": 1773724386260
+    },
+    {
+      "msgId": "msg2bG9N4p8V1RQN9gtRqJc/w==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773724570999
+    },
+    {
+      "msgId": "msg2bG9N4p8V1RQN9gtRqJc/w==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773724570999
+    },
+    {
+      "msgId": "msgndUVe1+ExZiTS5kue+ix9w==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773724651827
+    },
+    {
+      "msgId": "msgndUVe1+ExZiTS5kue+ix9w==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773724651827
+    },
+    {
+      "msgId": "msgNr4jxXausPqbeAHtv5O9OA==",
+      "messageType": "text",
+      "text": "我配置过了，你检查一下",
+      "createdAt": 1773725143376
+    },
+    {
+      "msgId": "msgsDDgjRM9e5uDr4MW7818kQ==",
+      "messageType": "text",
+      "text": "？你的工作空间是什么",
+      "createdAt": 1773725295155
+    },
+    {
+      "msgId": "msgJ542aEOpWGJ7yjORk/ZdEg==",
+      "messageType": "text",
+      "text": "为什么太子的工作空间和你一样？",
+      "createdAt": 1773725368854
+    },
+    {
+      "msgId": "msg/se8uV3ETEnadPfvhgXByQ==",
+      "messageType": "text",
+      "text": "哪里配置的有问题，太子说他的工作空间是/root/.openclaw/workspace",
+      "createdAt": 1773726155197
+    },
+    {
+      "msgId": "msgU30QrWI6RGVWMKjD9aLH9A==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773726452090
+    },
+    {
+      "msgId": "msgsoUKOnj/Yofo2M3dOQ6tSw==",
+      "messageType": "text",
+      "text": "我需要怎么改，才能让\n \"taizi\": {\n                    \"clientId\": \"dingyhlhrphf9uxwp5u3\",\n                    \"clientSecret\": \"8GQXzXWOLZqQ7UyNtbMU12Q0_-mA3c7trPM_A5XNIDA0LjepnThuzky23YGcCi_G\",\n                    \"robotCode\": \"dingyhlhrphf9uxwp5u3\",\n                    \"corpId\": \"ding3cecc6cee84e6509a1320dcb25e91351\",\n                    \"agentId\": \"4346325687\",\n                    \"dmPolicy\": \"open\",\n                    \"groupPolicy\": \"open\",\n                    \"messageType\": \"markdown\",\n                    \"userPhone\": \"13027729771\",\n                    \"allowFrom\": [\n                        \"*\"\n                    ]\n                }\n\n\n这段配置指向taizi",
+      "createdAt": 1773728278278
+    },
+    {
+      "msgId": "msgnbc4OZrjy7/WOQGVT/PjnA==",
+      "messageType": "text",
+      "text": "bindings：\n        {\n            \"agentId\": \"taizi\",\n            \"match\": {\n                \"channel\": \"dingtalk\",\n                \"accountId\": \"4346325687\"\n            }\n        }\n\nchanels.dingtalk.accouts.taizi\n\"taizi\": {\n                    \"clientId\": \"dingyhlhrphf9uxwp5u3\",\n                    \"clientSecret\": \"8GQXzXWOLZqQ7UyNtbMU12Q0_-mA3c7trPM_A5XNIDA0LjepnThuzky23YGcCi_G\",\n                    \"robotCode\": \"dingyhlhrphf9uxwp5u3\",\n                    \"corpId\": \"ding3cecc6cee84e6509a1320dcb25e91351\",\n                    \"agentId\": \"4346325687\",\n                    \"dmPolicy\": \"open\",\n                    \"groupPolicy\": \"open\",\n                    \"messageType\": \"markdown\",\n                    \"userPhone\": \"13027729771\",\n                    \"allowFrom\": [\n                        \"*\"\n                    ]\n                }\n\n哪里有问题",
+      "createdAt": 1773728489957
+    },
+    {
+      "msgId": "msgfr5XtIIrWQxfwJbPAEX0Hg==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773728799619
+    },
+    {
+      "msgId": "msgzwAzwgdMVy+E8TZc/H2zBg==",
+      "messageType": "text",
+      "text": "先把.openclaw文件夹提交到github然后再修改",
+      "createdAt": 1773728990083
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+# Hulk Agent Configuration
+
+agent:
+  id: hulk
+  name: Hulk
+
+# 模型配置 - 默认使用 NVIDIA 免费模型
+model:
+  provider: nvidia
+  model: microsoft/phi-3-mini-4k-instruct
+  apiKey: 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
+  contextWindow: 4096
+  maxTokens: 4096
+
+# 模型备用配置（多模型自动切换）
+model_fallback:
+  enabled: true
+  config_file: "/home/node/.openclaw/workspace-hulk/MODEL_FALLBACK.yaml"
+  cooldown_seconds: 300
+  max_retries: 3
+  log_file: "/home/node/.openclaw/workspace-hulk/logs/model_switch.log"
+
+compaction:
+  enabled: true
+  triggerTokens: 150000
+  reserveTokensFloor: 30000
+  strategy: "sliding_window"
+  keepRecentMessages: 100
+  keepSystemMessages: true
+
+session:
+  maxHistorySize: 1000
+  autoCompact: true
+  compactInterval: 50
+
+context:
+  maxTokens: 150000
+  truncationStrategy: "sliding_window"
+  preserveSystemMessages: true
+  preserveRecentMessages: 50
