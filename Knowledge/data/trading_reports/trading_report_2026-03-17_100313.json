@@ -1,0 +1,112 @@
+{
+  "version": "V5_Complete",
+  "timestamp": "2026-03-17T10:03:13.446584",
+  "summary": {
+    "initial_capital": 100000,
+    "available_capital": 91433.0,
+    "position_count": 1,
+    "total_value": 118073.0,
+    "total_pnl": 18073.0,
+    "total_pnl_pct": 18.07,
+    "positions": {
+      "600031": {
+        "symbol": "600031",
+        "shares": 900,
+        "remaining_shares": 0,
+        "buy_price": 20.85,
+        "current_price": 20.2,
+        "stop_loss": 20.224500000000003,
+        "take_profit_1": 22.101000000000003,
+        "take_profit_2": 22.935000000000002,
+        "pnl_amount": 0,
+        "pnl_pct": 0,
+        "buy_time": "2026-03-17T10:03:13.277327"
+      },
+      "600036": {
+        "symbol": "600036",
+        "shares": 200,
+        "remaining_shares": 200,
+        "buy_price": 39.91,
+        "current_price": 42.3,
+        "stop_loss": 38.7127,
+        "take_profit_1": 42.3046,
+        "take_profit_2": 43.900999999999996,
+        "pnl_amount": 478.0,
+        "pnl_pct": 5.99,
+        "buy_time": "2026-03-17T10:03:13.379326"
+      },
+      "600519": {
+        "symbol": "600519",
+        "shares": 0,
+        "remaining_shares": 0,
+        "buy_price": 1680.0,
+        "current_price": 1680.0,
+        "stop_loss": 1629.6,
+        "take_profit_1": 1780.8000000000002,
+        "take_profit_2": 1848.0000000000002,
+        "pnl_amount": 0,
+        "pnl_pct": 0,
+        "buy_time": "2026-03-17T10:03:13.408956"
+      }
+    }
+  },
+  "trades": [
+    {
+      "order_id": "600031_20260317100313276873",
+      "symbol": "600031",
+      "order_type": "buy",
+      "price": 20.85,
+      "shares": 900,
+      "reason": "V5选股：VWAP_BUY, BOLL_BUY, RSI_OVERSOLD，得分4.5",
+      "status": "filled",
+      "created_at": "2026-03-17T10:03:13.276887",
+      "filled_at": "2026-03-17T10:03:13.277340",
+      "filled_price": 20.85,
+      "message": ""
+    },
+    {
+      "order_id": "600036_20260317100313376944",
+      "symbol": "600036",
+      "order_type": "buy",
+      "price": 39.91,
+      "shares": 200,
+      "reason": "V5选股：VWAP_BUY, KDJ_OVERSOLD，得分3.2",
+      "status": "filled",
+      "created_at": "2026-03-17T10:03:13.377005",
+      "filled_at": "2026-03-17T10:03:13.379359",
+      "filled_price": 39.91,
+      "message": ""
+    },
+    {
+      "order_id": "600519_20260317100313399604",
+      "symbol": "600519",
+      "order_type": "buy",
+      "price": 1680.0,
+      "shares": 0,
+      "reason": "V5选股：VWAP_BUY, BOLL_BUY, KDJ_OVERSOLD, RSI_OVERSOLD，得分5.0",
+      "status": "filled",
+      "created_at": "2026-03-17T10:03:13.399651",
+      "filled_at": "2026-03-17T10:03:13.408973",
+      "filled_price": 1680.0,
+      "message": ""
+    },
+    {
+      "order_id": "600031_20260317100313422811",
+      "symbol": "600031",
+      "order_type": "sell",
+      "price": 20.2,
+      "shares": 900,
+      "reason": "触发止损",
+      "status": "filled",
+      "created_at": "2026-03-17T10:03:13.422856",
+      "filled_at": "2026-03-17T10:03:13.432565",
+      "filled_price": 20.2,
+      "message": ""
+    }
+  ],
+  "signals": {
+    "raw_count": 3,
+    "filtered_count": 3,
+    "valid_count": 3
+  }
+}

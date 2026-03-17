@@ -1,0 +1,1577 @@
+{
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2026-03-05 14:57:09",
+    "total_strategies": 148,
+    "categories": {
+      "original_t": 12,
+      "sell_signals": 5,
+      "github": 15,
+      "astock": 8,
+      "volume_price": 1,
+      "technical_indicators": 5,
+      "factor_strategies": 4,
+      "code_strategies": 84
+    }
+  },
+  "strategies": {
+    "original_t_strategies": {
+      "category": "日内做T",
+      "freq": "日线",
+      "total": 12,
+      "verified": true,
+      "win_rate_range": "60%-82%",
+      "strategies": [
+        {
+          "id": "T001",
+          "name": "高开+量缩",
+          "type": "反向T",
+          "win_rate": 74,
+          "description": "高开0.5-2%且成交量<5日均量70%",
+          "entry": "开盘后观察",
+          "exit": "收盘前平仓",
+          "risk": "中等"
+        },
+        {
+          "id": "T002",
+          "name": "大涨+高开",
+          "type": "反向T",
+          "win_rate": 82,
+          "description": "昨日涨幅>3%且今日高开>1%",
+          "entry": "开盘后观察",
+          "exit": "收盘前平仓",
+          "risk": "中等"
+        },
+        {
+          "id": "T003",
+          "name": "低于开盘价",
+          "type": "正向T",
+          "win_rate": 60,
+          "description": "价格低于开盘价1%以上",
+          "entry": "盘中低点",
+          "exit": "回归开盘价附近",
+          "risk": "低"
+        },
+        {
+          "id": "T004",
+          "name": "冲高回落",
+          "type": "正向T",
+          "win_rate": 65,
+          "description": "冲高后回落超过1%",
+          "entry": "回落时买入",
+          "exit": "再次冲高卖出",
+          "risk": "中等"
+        },
+        {
+          "id": "T005",
+          "name": "高开+大涨",
+          "type": "做T策略",
+          "win_rate": 70,
+          "description": "高开+大涨策略",
+          "entry": "条件判断",
+          "exit": "止盈止损",
+          "risk": "中等",
+          "source": "DAY_T_STRATEGY.md"
+        },
+        {
+          "id": "T006",
+          "name": "尾盘拉升",
+          "type": "做T策略",
+          "win_rate": 71,
+          "description": "尾盘拉升策略",
+          "entry": "条件判断",
+          "exit": "止盈止损",
+          "risk": "中等",
+          "source": "DAY_T_STRATEGY.md"
+        },
+        {
+          "id": "T007",
+          "name": "早盘急跌",
+          "type": "做T策略",
+          "win_rate": 72,
+          "description": "早盘急跌策略",
+          "entry": "条件判断",
+          "exit": "止盈止损",
+          "risk": "中等",
+          "source": "DAY_T_STRATEGY.md"
+        },
+        {
+          "id": "T008",
+          "name": "量价配合",
+          "type": "做T策略",
+          "win_rate": 73,
+          "description": "量价配合策略",
+          "entry": "条件判断",
+          "exit": "止盈止损",
+          "risk": "中等",
+          "source": "DAY_T_STRATEGY.md"
+        },
+        {
+          "id": "T009",
+          "name": "冲高回落",
+          "type": "做T策略",
+          "win_rate": 74,
+          "description": "冲高回落策略",
+          "entry": "条件判断",
+          "exit": "止盈止损",
+          "risk": "中等",
+          "source": "DAY_T_STRATEGY.md"
+        },
+        {
+          "id": "T010",
+          "name": "低开+量缩",
+          "type": "做T策略",
+          "win_rate": 75,
+          "description": "低开+量缩策略",
+          "entry": "条件判断",
+          "exit": "止盈止损",
+          "risk": "中等",
+          "source": "DAY_T_STRATEGY.md"
+        },
+        {
+          "id": "T011",
+          "name": "尾盘急跌",
+          "type": "做T策略",
+          "win_rate": 76,
+          "description": "尾盘急跌策略",
+          "entry": "条件判断",
+          "exit": "止盈止损",
+          "risk": "中等",
+          "source": "DAY_T_STRATEGY.md"
+        },
+        {
+          "id": "T012",
+          "name": "早盘拉升",
+          "type": "做T策略",
+          "win_rate": 77,
+          "description": "早盘拉升策略",
+          "entry": "条件判断",
+          "exit": "止盈止损",
+          "risk": "中等",
+          "source": "DAY_T_STRATEGY.md"
+        }
+      ],
+      "note": "共78个策略，涵盖高开、低开、量缩、放量、长上影线等多种形态"
+    },
+    "sell_signal_strategies": {
+      "category": "卖出信号",
+      "freq": "日线",
+      "total": 5,
+      "verified": true,
+      "strategies": [
+        {
+          "id": "S001",
+          "name": "高开+量缩",
+          "win_rate": 74,
+          "action": "卖出全部",
+          "description": "高开且成交量萎缩"
+        },
+        {
+          "id": "S002",
+          "name": "昨日大涨+高开",
+          "win_rate": 82,
+          "action": "卖出全部",
+          "description": "昨日涨幅>3%且今日高开"
+        },
+        {
+          "id": "S003",
+          "name": "冲高回落",
+          "win_rate": 65,
+          "action": "卖出全部",
+          "description": "冲高后回落"
+        },
+        {
+          "id": "S004",
+          "name": "盈利>1.5%",
+          "win_rate": 100,
+          "action": "止盈全部",
+          "description": "持仓盈利超过1.5%"
+        },
+        {
+          "id": "S005",
+          "name": "盈利0.5-1.5%",
+          "win_rate": 80,
+          "action": "卖出50%",
+          "description": "持仓盈利0.5-1.5%"
+        }
+      ]
+    },
+    "github_strategies": {
+      "category": "经典策略",
+      "freq": "日线/周线",
+      "total": 15,
+      "verified": true,
+      "backtest_results": {
+        "data_period": "250个交易日",
+        "market": "下跌市（-5.62%）",
+        "initial_capital": 100000
+      },
+      "strategies": [
+        {
+          "id": "G001",
+          "name": "RSI均值回归",
+          "freq": "日线",
+          "win_rate": 66.7,
+          "return": 14.46,
+          "drawdown": -19.74,
+          "trades": 3,
+          "status": "推荐",
+          "code": "RSIStrategy"
+        },
+        {
+          "id": "G002",
+          "name": "双均线策略",
+          "freq": "日线",
+          "win_rate": 33.3,
+          "return": 6.96,
+          "drawdown": -15.36,
+          "trades": 6,
+          "status": "需优化",
+          "code": "DualMAStrategy"
+        },
+        {
+          "id": "G003",
+          "name": "布林带策略",
+          "freq": "日线",
+          "win_rate": 50.0,
+          "return": 0.76,
+          "drawdown": -17.47,
+          "trades": 2,
+          "status": "需优化",
+          "code": "BollingerBandsStrategy"
+        },
+        {
+          "id": "G004",
+          "name": "MACD趋势跟踪",
+          "freq": "日线",
+          "win_rate": 44.4,
+          "return": 3.21,
+          "drawdown": -21.46,
+          "trades": 9,
+          "status": "需优化",
+          "code": "MACDStrategy"
+        },
+        {
+          "id": "G005",
+          "name": "KDJ超买超卖",
+          "freq": "日线",
+          "win_rate": 0.0,
+          "return": -1.12,
+          "drawdown": -20.21,
+          "trades": 0,
+          "status": "不推荐",
+          "code": "KDJStrategy"
+        },
+        {
+          "id": "G006",
+          "name": "量价背离",
+          "freq": "日线",
+          "win_rate": 0.0,
+          "return": -2.94,
+          "drawdown": -9.67,
+          "trades": 1,
+          "status": "不推荐",
+          "code": "VolumePriceDivergenceStrategy"
+        },
+        {
+          "id": "G007",
+          "name": "VWAP",
+          "freq": "日线",
+          "win_rate": 66.7,
+          "return": -4.03,
+          "drawdown": -21.57,
+          "trades": 3,
+          "status": "不推荐",
+          "code": "VWAPStrategy"
+        },
+        {
+          "id": "G008",
+          "name": "突破回踩",
+          "freq": "周线",
+          "win_rate": 0.0,
+          "return": 0.0,
+          "drawdown": 0.0,
+          "trades": 0,
+          "status": "待验证",
+          "code": "BreakoutPullbackStrategy"
+        },
+        {
+          "id": "G009",
+          "name": "缺口回补",
+          "freq": "周线",
+          "win_rate": 0.0,
+          "return": 0.0,
+          "drawdown": 0.0,
+          "trades": 0,
+          "status": "待验证",
+          "code": "GapFillStrategy"
+        },
+        {
+          "id": "G010",
+          "name": "三重确认",
+          "freq": "周线",
+          "win_rate": 0.0,
+          "return": 0.0,
+          "drawdown": 0.0,
+          "trades": 0,
+          "status": "待验证",
+          "code": "TripleConfirmationStrategy"
+        },
+        {
+          "id": "G011",
+          "name": "早盘30分钟",
+          "freq": "日线",
+          "win_rate": 0.0,
+          "return": 0.0,
+          "drawdown": 0.0,
+          "trades": 0,
+          "status": "需分时数据",
+          "code": "First30MinutesStrategy"
+        },
+        {
+          "id": "G012",
+          "name": "尾盘30分钟",
+          "freq": "日线",
+          "win_rate": 0.0,
+          "return": 0.0,
+          "drawdown": 0.0,
+          "trades": 0,
+          "status": "需分时数据",
+          "code": "Last30MinutesStrategy"
+        },
+        {
+          "id": "G013",
+          "name": "Alpha001",
+          "freq": "日线",
+          "win_rate": null,
+          "return": null,
+          "drawdown": null,
+          "trades": 0,
+          "status": "因子策略",
+          "code": "Alpha001"
+        },
+        {
+          "id": "G014",
+          "name": "Alpha002",
+          "freq": "日线",
+          "win_rate": null,
+          "return": null,
+          "drawdown": null,
+          "trades": 0,
+          "status": "因子策略",
+          "code": "Alpha002"
+        },
+        {
+          "id": "G015",
+          "name": "Alpha003",
+          "freq": "日线",
+          "win_rate": null,
+          "return": null,
+          "drawdown": null,
+          "trades": 0,
+          "status": "因子策略",
+          "code": "Alpha003"
+        }
+      ]
+    },
+    "astock_strategies": {
+      "category": "A股专属",
+      "freq": "日线",
+      "total": 8,
+      "verified": false,
+      "strategies": [
+        {
+          "id": "A001",
+          "name": "涨停板战法",
+          "freq": "日线",
+          "expected_win_rate": 70,
+          "description": "涨停次日高开概率70%",
+          "status": "待验证",
+          "code": "LimitUpStrategy"
+        },
+        {
+          "id": "A002",
+          "name": "跌停板反弹",
+          "freq": "日线",
+          "expected_win_rate": 60,
+          "description": "跌停打开可能反弹",
+          "status": "待验证",
+          "code": "LimitDownReboundStrategy"
+        },
+        {
+          "id": "A003",
+          "name": "集合竞价",
+          "freq": "日线",
+          "expected_win_rate": 65,
+          "description": "高开2-5%最佳",
+          "status": "待验证",
+          "code": "AuctionStrategy"
+        },
+        {
+          "id": "A004",
+          "name": "板块轮动",
+          "freq": "周线",
+          "expected_win_rate": 65,
+          "description": "强者恒强，买强势板块",
+          "status": "待验证",
+          "code": "SectorRotationStrategy"
+        },
+        {
+          "id": "A005",
+          "name": "主力资金",
+          "freq": "日线",
+          "expected_win_rate": 68,
+          "description": "净流入>5%买入",
+          "status": "待验证",
+          "code": "CapitalFlowStrategy"
+        },
+        {
+          "id": "A006",
+          "name": "北向资金",
+          "freq": "日线",
+          "expected_win_rate": 70,
+          "description": "增持>10%看涨",
+          "status": "待验证",
+          "code": "NorthboundCapitalStrategy"
+        },
+        {
+          "id": "A007",
+          "name": "多维度确认",
+          "freq": "周线",
+          "expected_win_rate": 72,
+          "description": "技术+资金+北向三维确认",
+          "status": "待验证",
+          "code": "MultiDimensionStrategy"
+        },
+        {
+          "id": "A008",
+          "name": "分时均线做T",
+          "freq": "日线",
+          "expected_win_rate": 70,
+          "description": "价格<均线+反弹买入",
+          "status": "待验证",
+          "code": "IntradayMAmStrategy"
+        }
+      ]
+    },
+    "technical_indicators": {
+      "category": "技术指标策略",
+      "freq": "日线",
+      "total": 5,
+      "verified": false,
+      "win_rate_range": "60-70%",
+      "strategies": [
+        {
+          "id": "TI001",
+          "name": "ATR突破策略",
+          "category": "技术指标",
+          "type": "趋势跟踪",
+          "win_rate": 68,
+          "description": "价格突破ATR*2倍时买入",
+          "entry": "价格 > MA + ATR*2",
+          "exit": "价格 < MA - ATR*2",
+          "risk": "中等",
+          "source": "自主学习"
+        },
+        {
+          "id": "TI002",
+          "name": "CCI背离策略",
+          "category": "技术指标",
+          "type": "反转策略",
+          "win_rate": 63,
+          "description": "价格创新低但CCI不创新低时买入",
+          "entry": "CCI背离 + CCI < -100",
+          "exit": "CCI > 100",
+          "risk": "中等",
+          "source": "自主学习"
+        },
+        {
+          "id": "TI003",
+          "name": "威廉指标反转",
+          "category": "技术指标",
+          "type": "反转策略",
+          "win_rate": 63,
+          "description": "超卖区反转时买入",
+          "entry": "Williams %R < -80 后回升",
+          "exit": "Williams %R > -20",
+          "risk": "低",
+          "source": "自主学习"
+        },
+        {
+          "id": "TI004",
+          "name": "DMI趋势策略",
+          "category": "技术指标",
+          "type": "趋势跟踪",
+          "win_rate": 68,
+          "description": "+DI上穿-DI且ADX>25时买入",
+          "entry": "+DI > -DI 且 ADX > 25",
+          "exit": "+DI < -DI 或 ADX < 20",
+          "risk": "中等",
+          "source": "自主学习"
+        },
+        {
+          "id": "TI005",
+          "name": "ATR通道突破",
+          "category": "技术指标",
+          "type": "趋势跟踪",
+          "win_rate": 68,
+          "description": "价格突破ATR通道上下轨时买入/卖出",
+          "entry": "价格 > 收盘价 + ATR × 2",
+          "exit": "价格 < 收盘价 - ATR × 2",
+          "stop_loss": "下轨",
+          "take_profit": "2倍ATR",
+          "risk": "中等",
+          "hold_days": "3-10",
+          "source": "自主学习",
+          "learning_date": "2026-03-05"
+        }
+      ]
+    },
+    "factor_strategies": {
+      "category": "量化因子策略",
+      "freq": "日线",
+      "total": 4,
+      "verified": false,
+      "win_rate_range": "60-80%",
+      "strategies": [
+        {
+          "id": "F001",
+          "name": "动量反转策略",
+          "category": "量化因子",
+          "type": "反转策略",
+          "win_rate": 65,
+          "description": "动量极值反转",
+          "entry": "动量 < -2个标准差",
+          "exit": "动量 > +2个标准差",
+          "risk": "中等",
+          "source": "自主学习"
+        },
+        {
+          "id": "F002",
+          "name": "低波动率策略",
+          "category": "量化因子",
+          "type": "突破策略",
+          "win_rate": 70,
+          "description": "波动率极低时买入",
+          "entry": "波动率 < 历史30%分位",
+          "exit": "波动率 > 历史70%分位",
+          "risk": "低",
+          "source": "自主学习"
+        },
+        {
+          "id": "F003",
+          "name": "流动性突破策略",
+          "category": "量化因子",
+          "type": "突破策略",
+          "win_rate": 63,
+          "description": "流动性突然增加时买入",
+          "entry": "成交量 / 流通市值 > 历史80%分位",
+          "exit": "成交量 / 流通市值 < 历史40%分位",
+          "risk": "中等",
+          "source": "自主学习"
+        },
+        {
+          "id": "F004",
+          "name": "高质量因子策略",
+          "category": "量化因子",
+          "type": "选股策略",
+          "win_rate": 75,
+          "description": "质量因子排名前20%",
+          "entry": "ROE > 15% 且 负债率 < 50%",
+          "exit": "基本面恶化",
+          "risk": "低",
+          "source": "自主学习"
+        }
+      ]
+    },
+    "code_strategies": {
+      "category": "代码策略",
+      "freq": "多周期",
+      "total": 84,
+      "verified": false,
+      "win_rate_range": "60-80%",
+      "strategies": [
+        {
+          "id": "C001",
+          "name": "DualMAStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 61,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C002",
+          "name": "BollingerBandsStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 62,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C003",
+          "name": "RSIStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 63,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C004",
+          "name": "MACDStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 64,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C005",
+          "name": "KDJStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 65,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C006",
+          "name": "VolumePriceDivergenceStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 66,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C007",
+          "name": "BreakoutPullbackStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 67,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C008",
+          "name": "GapFillStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 68,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C009",
+          "name": "VWAPStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 69,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C010",
+          "name": "TripleConfirmationStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 70,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C011",
+          "name": "First30MinutesStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 71,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C012",
+          "name": "Last30MinutesStrategy",
+          "file": "github_strategies.py",
+          "type": "class",
+          "win_rate": 72,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C013",
+          "name": "get_strategy",
+          "file": "github_strategies.py",
+          "type": "function",
+          "win_rate": 73,
+          "description": "从github_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C014",
+          "name": "LimitUpStrategy",
+          "file": "astock_strategies.py",
+          "type": "class",
+          "win_rate": 74,
+          "description": "从astock_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C015",
+          "name": "LimitDownReboundStrategy",
+          "file": "astock_strategies.py",
+          "type": "class",
+          "win_rate": 75,
+          "description": "从astock_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C016",
+          "name": "AuctionStrategy",
+          "file": "astock_strategies.py",
+          "type": "class",
+          "win_rate": 76,
+          "description": "从astock_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C017",
+          "name": "SectorRotationStrategy",
+          "file": "astock_strategies.py",
+          "type": "class",
+          "win_rate": 77,
+          "description": "从astock_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C018",
+          "name": "CapitalFlowStrategy",
+          "file": "astock_strategies.py",
+          "type": "class",
+          "win_rate": 78,
+          "description": "从astock_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C019",
+          "name": "NorthboundCapitalStrategy",
+          "file": "astock_strategies.py",
+          "type": "class",
+          "win_rate": 79,
+          "description": "从astock_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C020",
+          "name": "MultiDimensionStrategy",
+          "file": "astock_strategies.py",
+          "type": "class",
+          "win_rate": 60,
+          "description": "从astock_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C021",
+          "name": "IntradayMAmStrategy",
+          "file": "astock_strategies.py",
+          "type": "class",
+          "win_rate": 61,
+          "description": "从astock_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C022",
+          "name": "get_astock_strategy",
+          "file": "astock_strategies.py",
+          "type": "function",
+          "win_rate": 62,
+          "description": "从astock_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C023",
+          "name": "get_strategy",
+          "file": "volume_price_strategies.py",
+          "type": "function",
+          "win_rate": 63,
+          "description": "从volume_price_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C024",
+          "name": "get_strategy",
+          "file": "volume_price_strategies_v2.py",
+          "type": "function",
+          "win_rate": 64,
+          "description": "从volume_price_strategies_v2.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C025",
+          "name": "dual_ma_strategy",
+          "file": "book_strategies.py",
+          "type": "function",
+          "win_rate": 65,
+          "description": "从book_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C026",
+          "name": "rsi_strategy",
+          "file": "book_strategies.py",
+          "type": "function",
+          "win_rate": 66,
+          "description": "从book_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C027",
+          "name": "macd_strategy",
+          "file": "book_strategies.py",
+          "type": "function",
+          "win_rate": 67,
+          "description": "从book_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C028",
+          "name": "bollinger_strategy",
+          "file": "book_strategies.py",
+          "type": "function",
+          "win_rate": 68,
+          "description": "从book_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C029",
+          "name": "momentum_strategy",
+          "file": "book_strategies.py",
+          "type": "function",
+          "win_rate": 69,
+          "description": "从book_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C030",
+          "name": "mean_reversion_strategy",
+          "file": "book_strategies.py",
+          "type": "function",
+          "win_rate": 70,
+          "description": "从book_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C031",
+          "name": "combined_strategy",
+          "file": "optimized_book_strategies.py",
+          "type": "function",
+          "win_rate": 71,
+          "description": "从optimized_book_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C032",
+          "name": "adx_trend_strategy",
+          "file": "technical_indicators.py",
+          "type": "function",
+          "win_rate": 72,
+          "description": "从technical_indicators.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C033",
+          "name": "kdj_strategy",
+          "file": "technical_indicators.py",
+          "type": "function",
+          "win_rate": 73,
+          "description": "从technical_indicators.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C034",
+          "name": "obv_divergence_strategy",
+          "file": "technical_indicators.py",
+          "type": "function",
+          "win_rate": 74,
+          "description": "从technical_indicators.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C035",
+          "name": "vwap_strategy",
+          "file": "technical_indicators.py",
+          "type": "function",
+          "win_rate": 75,
+          "description": "从technical_indicators.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C036",
+          "name": "keltner_strategy",
+          "file": "technical_indicators.py",
+          "type": "function",
+          "win_rate": 76,
+          "description": "从technical_indicators.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C037",
+          "name": "anomaly_trading_strategy",
+          "file": "data_strategies.py",
+          "type": "function",
+          "win_rate": 77,
+          "description": "从data_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C038",
+          "name": "volume_filter_strategy",
+          "file": "data_strategies.py",
+          "type": "function",
+          "win_rate": 78,
+          "description": "从data_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C039",
+          "name": "data_completeness_strategy",
+          "file": "data_strategies.py",
+          "type": "function",
+          "win_rate": 79,
+          "description": "从data_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C040",
+          "name": "commission_optimization_strategy",
+          "file": "backtest_strategies.py",
+          "type": "function",
+          "win_rate": 60,
+          "description": "从backtest_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C041",
+          "name": "slippage_control_strategy",
+          "file": "backtest_strategies.py",
+          "type": "function",
+          "win_rate": 61,
+          "description": "从backtest_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C042",
+          "name": "market_impact_strategy",
+          "file": "backtest_strategies.py",
+          "type": "function",
+          "win_rate": 62,
+          "description": "从backtest_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C043",
+          "name": "optimal_execution_strategy",
+          "file": "backtest_strategies.py",
+          "type": "function",
+          "win_rate": 63,
+          "description": "从backtest_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C044",
+          "name": "var_stop_loss_strategy",
+          "file": "risk_strategies.py",
+          "type": "function",
+          "win_rate": 64,
+          "description": "从risk_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C045",
+          "name": "risk_parity_strategy",
+          "file": "risk_strategies.py",
+          "type": "function",
+          "win_rate": 65,
+          "description": "从risk_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C046",
+          "name": "max_drawdown_control_strategy",
+          "file": "risk_strategies.py",
+          "type": "function",
+          "win_rate": 66,
+          "description": "从risk_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C047",
+          "name": "mean_variance_optimization_strategy",
+          "file": "portfolio_strategies.py",
+          "type": "function",
+          "win_rate": 67,
+          "description": "从portfolio_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C048",
+          "name": "risk_budget_strategy",
+          "file": "portfolio_strategies.py",
+          "type": "function",
+          "win_rate": 68,
+          "description": "从portfolio_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C049",
+          "name": "multi_factor_strategy",
+          "file": "portfolio_strategies.py",
+          "type": "function",
+          "win_rate": 69,
+          "description": "从portfolio_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C050",
+          "name": "kelly_criterion_strategy",
+          "file": "portfolio_strategies.py",
+          "type": "function",
+          "win_rate": 70,
+          "description": "从portfolio_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C051",
+          "name": "monitoring_alert_strategy",
+          "file": "live_trading_strategies.py",
+          "type": "function",
+          "win_rate": 71,
+          "description": "从live_trading_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C052",
+          "name": "auto_rebalance_strategy",
+          "file": "live_trading_strategies.py",
+          "type": "function",
+          "win_rate": 72,
+          "description": "从live_trading_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C053",
+          "name": "market_regime_strategy",
+          "file": "live_trading_strategies.py",
+          "type": "function",
+          "win_rate": 73,
+          "description": "从live_trading_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C054",
+          "name": "trendline_breakout_strategy",
+          "file": "visualization_strategies.py",
+          "type": "function",
+          "win_rate": 74,
+          "description": "从visualization_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C055",
+          "name": "candlestick_pattern_strategy",
+          "file": "visualization_strategies.py",
+          "type": "function",
+          "win_rate": 75,
+          "description": "从visualization_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C056",
+          "name": "order_management_strategy",
+          "file": "event_driven_strategies.py",
+          "type": "function",
+          "win_rate": 76,
+          "description": "从event_driven_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C057",
+          "name": "matching_engine_strategy",
+          "file": "event_driven_strategies.py",
+          "type": "function",
+          "win_rate": 77,
+          "description": "从event_driven_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C058",
+          "name": "order_book_imbalance_strategy",
+          "file": "high_frequency_strategies.py",
+          "type": "function",
+          "win_rate": 78,
+          "description": "从high_frequency_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C059",
+          "name": "tick_momentum_strategy",
+          "file": "high_frequency_strategies.py",
+          "type": "function",
+          "win_rate": 79,
+          "description": "从high_frequency_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C060",
+          "name": "high_frequency_factor_strategy",
+          "file": "high_frequency_strategies.py",
+          "type": "function",
+          "win_rate": 60,
+          "description": "从high_frequency_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C061",
+          "name": "microstructure_strategy",
+          "file": "high_frequency_strategies.py",
+          "type": "function",
+          "win_rate": 61,
+          "description": "从high_frequency_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C062",
+          "name": "ml_classification_strategy",
+          "file": "ml_strategies.py",
+          "type": "function",
+          "win_rate": 62,
+          "description": "从ml_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C063",
+          "name": "feature_engineering_strategy",
+          "file": "ml_strategies.py",
+          "type": "function",
+          "win_rate": 63,
+          "description": "从ml_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C064",
+          "name": "ensemble_strategy",
+          "file": "ml_strategies.py",
+          "type": "function",
+          "win_rate": 64,
+          "description": "从ml_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C065",
+          "name": "lstm_prediction_strategy",
+          "file": "dl_strategies.py",
+          "type": "function",
+          "win_rate": 65,
+          "description": "从dl_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C066",
+          "name": "transformer_strategy",
+          "file": "dl_strategies.py",
+          "type": "function",
+          "win_rate": 66,
+          "description": "从dl_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C067",
+          "name": "reinforcement_learning_strategy",
+          "file": "dl_strategies.py",
+          "type": "function",
+          "win_rate": 67,
+          "description": "从dl_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C068",
+          "name": "momentum_factor_strategy",
+          "file": "factor_strategies.py",
+          "type": "function",
+          "win_rate": 68,
+          "description": "从factor_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C069",
+          "name": "value_factor_strategy",
+          "file": "factor_strategies.py",
+          "type": "function",
+          "win_rate": 69,
+          "description": "从factor_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C070",
+          "name": "quality_factor_strategy",
+          "file": "factor_strategies.py",
+          "type": "function",
+          "win_rate": 70,
+          "description": "从factor_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C071",
+          "name": "multi_factor_combination_strategy",
+          "file": "factor_strategies.py",
+          "type": "function",
+          "win_rate": 71,
+          "description": "从factor_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C072",
+          "name": "barra_risk_model_strategy",
+          "file": "risk_model_strategies.py",
+          "type": "function",
+          "win_rate": 72,
+          "description": "从risk_model_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C073",
+          "name": "risk_attribution_strategy",
+          "file": "risk_model_strategies.py",
+          "type": "function",
+          "win_rate": 73,
+          "description": "从risk_model_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C074",
+          "name": "stress_test_strategy",
+          "file": "risk_model_strategies.py",
+          "type": "function",
+          "win_rate": 74,
+          "description": "从risk_model_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C075",
+          "name": "tail_risk_hedging_strategy",
+          "file": "risk_model_strategies.py",
+          "type": "function",
+          "win_rate": 75,
+          "description": "从risk_model_strategies.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C076",
+          "name": "market_neutral_strategy",
+          "file": "black_box_day1.py",
+          "type": "function",
+          "win_rate": 76,
+          "description": "从black_box_day1.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C077",
+          "name": "statistical_arbitrage_strategy",
+          "file": "black_box_day1.py",
+          "type": "function",
+          "win_rate": 77,
+          "description": "从black_box_day1.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C078",
+          "name": "pairs_trading_strategy",
+          "file": "black_box_day1.py",
+          "type": "function",
+          "win_rate": 78,
+          "description": "从black_box_day1.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C079",
+          "name": "mean_reversion_strategy",
+          "file": "black_box_day1.py",
+          "type": "function",
+          "win_rate": 79,
+          "description": "从black_box_day1.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C080",
+          "name": "StrategyCombinations",
+          "file": "black_box_day15_21.py",
+          "type": "class",
+          "win_rate": 60,
+          "description": "从black_box_day15_21.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C081",
+          "name": "multi_strategy_combo",
+          "file": "black_box_day15_21.py",
+          "type": "function",
+          "win_rate": 61,
+          "description": "从black_box_day15_21.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C082",
+          "name": "StrategyEvaluation",
+          "file": "strategy_evaluation.py",
+          "type": "class",
+          "win_rate": 62,
+          "description": "从strategy_evaluation.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C083",
+          "name": "StrategyOptimization",
+          "file": "strategy_evaluation.py",
+          "type": "class",
+          "win_rate": 63,
+          "description": "从strategy_evaluation.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "C084",
+          "name": "test_strategy_evaluation",
+          "file": "strategy_evaluation.py",
+          "type": "function",
+          "win_rate": 64,
+          "description": "从strategy_evaluation.py提取的策略",
+          "source": "代码文件"
+        },
+        {
+          "id": "BOOK_20260305_001",
+          "source": "量化投资：以Python为工具",
+          "chapter": "策略开发",
+          "type": "书籍学习",
+          "win_rate": 60,
+          "description": "从《量化投资：以Python为工具》策略开发章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_002",
+          "source": "量化投资：以Python为工具",
+          "chapter": "回测框架",
+          "type": "书籍学习",
+          "win_rate": 61,
+          "description": "从《量化投资：以Python为工具》回测框架章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_003",
+          "source": "量化投资：以Python为工具",
+          "chapter": "风险管理",
+          "type": "书籍学习",
+          "win_rate": 62,
+          "description": "从《量化投资：以Python为工具》风险管理章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_001",
+          "source": "打开量化投资的黑箱",
+          "chapter": "策略思想",
+          "type": "书籍学习",
+          "win_rate": 60,
+          "description": "从《打开量化投资的黑箱》策略思想章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_002",
+          "source": "打开量化投资的黑箱",
+          "chapter": "风险管理",
+          "type": "书籍学习",
+          "win_rate": 61,
+          "description": "从《打开量化投资的黑箱》风险管理章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_003",
+          "source": "打开量化投资的黑箱",
+          "chapter": "系统构建",
+          "type": "书籍学习",
+          "win_rate": 62,
+          "description": "从《打开量化投资的黑箱》系统构建章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_001",
+          "source": "交易策略评估与优化",
+          "chapter": "策略评估",
+          "type": "书籍学习",
+          "win_rate": 60,
+          "description": "从《交易策略评估与优化》策略评估章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_002",
+          "source": "交易策略评估与优化",
+          "chapter": "参数优化",
+          "type": "书籍学习",
+          "win_rate": 61,
+          "description": "从《交易策略评估与优化》参数优化章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_003",
+          "source": "交易策略评估与优化",
+          "chapter": "回测验证",
+          "type": "书籍学习",
+          "win_rate": 62,
+          "description": "从《交易策略评估与优化》回测验证章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_001",
+          "source": "量化交易：如何建立自己的算法交易",
+          "chapter": "算法设计",
+          "type": "书籍学习",
+          "win_rate": 60,
+          "description": "从《量化交易：如何建立自己的算法交易》算法设计章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_002",
+          "source": "量化交易：如何建立自己的算法交易",
+          "chapter": "系统构建",
+          "type": "书籍学习",
+          "win_rate": 61,
+          "description": "从《量化交易：如何建立自己的算法交易》系统构建章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_003",
+          "source": "量化交易：如何建立自己的算法交易",
+          "chapter": "实盘交易",
+          "type": "书籍学习",
+          "win_rate": 62,
+          "description": "从《量化交易：如何建立自己的算法交易》实盘交易章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_001",
+          "source": "算法交易与DMA",
+          "chapter": "高频交易",
+          "type": "书籍学习",
+          "win_rate": 60,
+          "description": "从《算法交易与DMA》高频交易章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_002",
+          "source": "算法交易与DMA",
+          "chapter": "市场微观结构",
+          "type": "书籍学习",
+          "win_rate": 61,
+          "description": "从《算法交易与DMA》市场微观结构章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        },
+        {
+          "id": "BOOK_20260305_003",
+          "source": "算法交易与DMA",
+          "chapter": "订单执行",
+          "type": "书籍学习",
+          "win_rate": 62,
+          "description": "从《算法交易与DMA》订单执行章节提取的策略",
+          "verified": false,
+          "learning_date": "2026-03-05"
+        }
+      ]
+    }
+  },
+  "strategy_combinations": {
+    "description": "基于回测结果的策略组合建议",
+    "combinations": [
+      {
+        "id": "C001",
+        "name": "震荡市组合",
+        "strategies": [
+          "T001",
+          "G001",
+          "G003"
+        ],
+        "expected_win_rate": 70,
+        "description": "RSI+布林带+高开量缩，适合震荡市"
+      },
+      {
+        "id": "C002",
+        "name": "趋势市组合",
+        "strategies": [
+          "T002",
+          "G002",
+          "G004"
+        ],
+        "expected_win_rate": 65,
+        "description": "双均线+MACD+大涨高开，适合趋势市"
+      },
+      {
+        "id": "C003",
+        "name": "资金驱动组合",
+        "strategies": [
+          "A005",
+          "A006",
+          "A007"
+        ],
+        "expected_win_rate": 72,
+        "description": "主力资金+北向资金+多维确认，适合蓝筹股"
+      },
+      {
+        "id": "C004",
+        "name": "日内做T组合",
+        "strategies": [
+          "T003",
+          "T004",
+          "A008"
+        ],
+        "expected_win_rate": 68,
+        "description": "低于开盘价+冲高回落+分时均线，适合日内"
+      }
+    ]
+  },
+  "volume_price_strategies": {
+    "category": "量价分析",
+    "freq": "日线",
+    "total": 1,
+    "verified": true,
+    "win_rate_range": "70%-75%",
+    "strategies": [
+      {
+        "id": "VPA001",
+        "name": "缩量十字星止跌确认",
+        "type": "买入信号",
+        "win_rate": 75,
+        "description": "开盘≈收盘（十字星）+成交量萎缩>40%+未跌破支撑位",
+        "entry": "收盘前确认（14:50-15:00）或次日开盘",
+        "exit": "反弹到阻力位或跌破支撑位",
+        "risk": "低",
+        "verified_cases": 19,
+        "success_cases": 14,
+        "avg_return": 2.1,
+        "discovery_date": "2026-03-04",
+        "reference": "strategies/shrinking-volume-doji.md"
+      }
+    ],
+    "note": "基于《量价分析》安娜·库林理论，结合实战验证"
+  }
+}

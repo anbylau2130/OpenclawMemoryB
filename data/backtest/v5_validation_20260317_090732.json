@@ -1,0 +1,476 @@
+{
+  "timestamp": "2026-03-17T09:07:32.646038",
+  "strategy": "V5",
+  "stocks_tested": 10,
+  "summary": {
+    "avg_return": -0.08499999999999992,
+    "total_trades": 24,
+    "win_trades": 9,
+    "loss_trades": 15,
+    "win_rate": 37.5
+  },
+  "details": [
+    {
+      "code": "600031",
+      "initial_capital": 100000,
+      "final_capital": 106125.53,
+      "total_return": 6.13,
+      "total_trades": 4,
+      "win_trades": 3,
+      "loss_trades": 1,
+      "win_rate": 75.0,
+      "trades": [
+        {
+          "day": 4,
+          "action": "BUY",
+          "price": 21.873067641752282,
+          "shares": 914,
+          "score": 3.5
+        },
+        {
+          "day": 5,
+          "action": "SELL_STOP",
+          "price": 20.806056062190653,
+          "shares": 914,
+          "pnl_pct": -4.878198143203611
+        },
+        {
+          "day": 19,
+          "action": "BUY",
+          "price": 19.103169914862075,
+          "shares": 1036,
+          "score": 3
+        },
+        {
+          "day": 20,
+          "action": "SELL_PROFIT",
+          "price": 21.420078289860935,
+          "shares": 1036,
+          "pnl_pct": 12.128397461388483
+        },
+        {
+          "day": 21,
+          "action": "BUY",
+          "price": 18.127399850918152,
+          "shares": 1119,
+          "score": 3
+        },
+        {
+          "day": 22,
+          "action": "SELL_TIME",
+          "price": 18.229839536331212,
+          "shares": 1119,
+          "pnl_pct": 0.5651096475806565
+        },
+        {
+          "day": 24,
+          "action": "BUY",
+          "price": 19.760331054891935,
+          "shares": 1027,
+          "score": 3.5
+        },
+        {
+          "day": 25,
+          "action": "SELL_PROFIT",
+          "price": 24.22559942329412,
+          "shares": 1027,
+          "pnl_pct": 22.597133398211707
+        }
+      ]
+    },
+    {
+      "code": "600036",
+      "initial_capital": 100000,
+      "final_capital": 99608.78,
+      "total_return": -0.39,
+      "total_trades": 2,
+      "win_trades": 1,
+      "loss_trades": 1,
+      "win_rate": 50.0,
+      "trades": [
+        {
+          "day": 6,
+          "action": "BUY",
+          "price": 43.523424105113804,
+          "shares": 459,
+          "score": 3.5
+        },
+        {
+          "day": 7,
+          "action": "SELL_STOP",
+          "price": 41.86827771503447,
+          "shares": 459,
+          "pnl_pct": -3.8028864321014177
+        },
+        {
+          "day": 23,
+          "action": "BUY",
+          "price": 41.940955608699355,
+          "shares": 473,
+          "score": 3.5
+        },
+        {
+          "day": 24,
+          "action": "SELL_TIME",
+          "price": 42.72001724194329,
+          "shares": 473,
+          "pnl_pct": 1.8575199871753565
+        }
+      ]
+    },
+    {
+      "code": "601318",
+      "initial_capital": 100000,
+      "final_capital": 99322.27,
+      "total_return": -0.68,
+      "total_trades": 1,
+      "win_trades": 0,
+      "loss_trades": 1,
+      "win_rate": 0.0,
+      "trades": [
+        {
+          "day": 9,
+          "action": "BUY",
+          "price": 59.20196965869384,
+          "shares": 337,
+          "score": 3
+        },
+        {
+          "day": 14,
+          "action": "SELL_STOP",
+          "price": 57.190899280037755,
+          "shares": 337,
+          "pnl_pct": -3.39696532100222
+        }
+      ]
+    },
+    {
+      "code": "600519",
+      "initial_capital": 100000,
+      "final_capital": 95118.39,
+      "total_return": -4.88,
+      "total_trades": 3,
+      "win_trades": 0,
+      "loss_trades": 3,
+      "win_rate": 0.0,
+      "trades": [
+        {
+          "day": 7,
+          "action": "BUY",
+          "price": 1569.6720348178105,
+          "shares": 12,
+          "score": 3
+        },
+        {
+          "day": 8,
+          "action": "SELL_STOP",
+          "price": 1381.16287079719,
+          "shares": 12,
+          "pnl_pct": -12.00946183910963
+        },
+        {
+          "day": 10,
+          "action": "BUY",
+          "price": 1421.1274349780526,
+          "shares": 13,
+          "score": 3
+        },
+        {
+          "day": 12,
+          "action": "SELL_STOP",
+          "price": 1370.9971095018846,
+          "shares": 13,
+          "pnl_pct": -3.5275038847548728
+        },
+        {
+          "day": 17,
+          "action": "BUY",
+          "price": 1376.6447280726707,
+          "shares": 14,
+          "score": 4.5
+        },
+        {
+          "day": 18,
+          "action": "SELL_STOP",
+          "price": 1236.0870188014105,
+          "shares": 14,
+          "pnl_pct": -10.210165804219049
+        }
+      ]
+    },
+    {
+      "code": "601398",
+      "initial_capital": 100000,
+      "final_capital": 100000,
+      "total_return": 0.0,
+      "total_trades": 0,
+      "win_trades": 0,
+      "loss_trades": 0,
+      "win_rate": 0,
+      "trades": []
+    },
+    {
+      "code": "601288",
+      "initial_capital": 100000,
+      "final_capital": 97524.29,
+      "total_return": -2.48,
+      "total_trades": 1,
+      "win_trades": 0,
+      "loss_trades": 1,
+      "win_rate": 0.0,
+      "trades": [
+        {
+          "day": 24,
+          "action": "BUY",
+          "price": 7.150317719203786,
+          "shares": 2797,
+          "score": 3
+        },
+        {
+          "day": 25,
+          "action": "SELL_STOP",
+          "price": 6.340439096176411,
+          "shares": 2797,
+          "pnl_pct": -11.326470442736603
+        },
+        {
+          "day": 29,
+          "action": "BUY",
+          "price": 6.7224034423132455,
+          "shares": 2907,
+          "score": 5
+        }
+      ]
+    },
+    {
+      "code": "600030",
+      "initial_capital": 100000,
+      "final_capital": 98591.29,
+      "total_return": -1.41,
+      "total_trades": 1,
+      "win_trades": 0,
+      "loss_trades": 1,
+      "win_rate": 0.0,
+      "trades": [
+        {
+          "day": 10,
+          "action": "BUY",
+          "price": 27.32107019041232,
+          "shares": 732,
+          "score": 3.5
+        },
+        {
+          "day": 11,
+          "action": "SELL_STOP",
+          "price": 25.39660897596022,
+          "shares": 732,
+          "pnl_pct": -7.043872004426259
+        }
+      ]
+    },
+    {
+      "code": "601211",
+      "initial_capital": 100000,
+      "final_capital": 103685.64,
+      "total_return": 3.69,
+      "total_trades": 5,
+      "win_trades": 2,
+      "loss_trades": 3,
+      "win_rate": 40.0,
+      "trades": [
+        {
+          "day": 0,
+          "action": "BUY",
+          "price": 17.963292808338345,
+          "shares": 1113,
+          "score": 3
+        },
+        {
+          "day": 3,
+          "action": "SELL_STOP",
+          "price": 17.406141843132414,
+          "shares": 1113,
+          "pnl_pct": -3.101608213764174
+        },
+        {
+          "day": 10,
+          "action": "BUY",
+          "price": 16.805469441264304,
+          "shares": 1182,
+          "score": 5
+        },
+        {
+          "day": 11,
+          "action": "SELL_TIME",
+          "price": 17.523958091488204,
+          "shares": 1182,
+          "pnl_pct": 4.275326272408176
+        },
+        {
+          "day": 14,
+          "action": "BUY",
+          "price": 18.886858902230948,
+          "shares": 1061,
+          "score": 3
+        },
+        {
+          "day": 15,
+          "action": "SELL_STOP",
+          "price": 16.605482044611446,
+          "shares": 1061,
+          "pnl_pct": -12.07917562909321
+        },
+        {
+          "day": 16,
+          "action": "BUY",
+          "price": 14.213895271376757,
+          "shares": 1376,
+          "score": 3
+        },
+        {
+          "day": 17,
+          "action": "SELL_PROFIT",
+          "price": 18.64910054584739,
+          "shares": 1376,
+          "pnl_pct": 31.203306270322894
+        },
+        {
+          "day": 27,
+          "action": "BUY",
+          "price": 17.492710151683905,
+          "shares": 1188,
+          "score": 3
+        },
+        {
+          "day": 28,
+          "action": "SELL_TIME",
+          "price": 17.302641355268545,
+          "shares": 1188,
+          "pnl_pct": -1.086560028533165
+        }
+      ]
+    },
+    {
+      "code": "600028",
+      "initial_capital": 100000,
+      "final_capital": 99356.21,
+      "total_return": -0.64,
+      "total_trades": 5,
+      "win_trades": 2,
+      "loss_trades": 3,
+      "win_rate": 40.0,
+      "trades": [
+        {
+          "day": 4,
+          "action": "BUY",
+          "price": 6.615542420002037,
+          "shares": 3023,
+          "score": 3
+        },
+        {
+          "day": 6,
+          "action": "SELL_STOP",
+          "price": 6.160710850014868,
+          "shares": 3023,
+          "pnl_pct": -6.875196939437492
+        },
+        {
+          "day": 7,
+          "action": "BUY",
+          "price": 5.867016563126408,
+          "shares": 3362,
+          "score": 3
+        },
+        {
+          "day": 8,
+          "action": "SELL_PROFIT",
+          "price": 6.841361408726892,
+          "shares": 3362,
+          "pnl_pct": 16.607160302293003
+        },
+        {
+          "day": 11,
+          "action": "BUY",
+          "price": 6.898303631449538,
+          "shares": 2954,
+          "score": 3
+        },
+        {
+          "day": 12,
+          "action": "SELL_STOP",
+          "price": 6.3416386202901736,
+          "shares": 2954,
+          "pnl_pct": -8.069592770917113
+        },
+        {
+          "day": 19,
+          "action": "BUY",
+          "price": 6.153007561697955,
+          "shares": 3258,
+          "score": 3.5
+        },
+        {
+          "day": 20,
+          "action": "SELL_TIME",
+          "price": 6.739366534779134,
+          "shares": 3258,
+          "pnl_pct": 9.529631927176926
+        },
+        {
+          "day": 27,
+          "action": "BUY",
+          "price": 6.83563001394856,
+          "shares": 2989,
+          "score": 4.5
+        },
+        {
+          "day": 28,
+          "action": "SELL_STOP",
+          "price": 5.895333168754092,
+          "shares": 2989,
+          "pnl_pct": -13.755818311929241
+        }
+      ]
+    },
+    {
+      "code": "601088",
+      "initial_capital": 100000,
+      "final_capital": 99807.32,
+      "total_return": -0.19,
+      "total_trades": 2,
+      "win_trades": 1,
+      "loss_trades": 1,
+      "win_rate": 50.0,
+      "trades": [
+        {
+          "day": 8,
+          "action": "BUY",
+          "price": 48.44628128531616,
+          "shares": 412,
+          "score": 3
+        },
+        {
+          "day": 14,
+          "action": "SELL_STOP",
+          "price": 46.240383800196554,
+          "shares": 412,
+          "pnl_pct": -4.553285467110154
+        },
+        {
+          "day": 21,
+          "action": "BUY",
+          "price": 45.08271721776285,
+          "shares": 439,
+          "score": 4.5
+        },
+        {
+          "day": 22,
+          "action": "SELL_TIME",
+          "price": 46.71404543933055,
+          "shares": 439,
+          "pnl_pct": 3.618522401140778
+        }
+      ]
+    }
+  ]
+}

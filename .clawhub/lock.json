@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "system-resource-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1773619083405
+    },
+    "system-info": {
+      "version": "1.0.0",
+      "installedAt": 1773619201273
+    },
+    "shell-script": {
+      "version": "2.3.1",
+      "installedAt": 1773619261545
+    }
+  }
+}

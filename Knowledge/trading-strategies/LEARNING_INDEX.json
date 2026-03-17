@@ -1,0 +1,125 @@
+{
+  "learning_index": {
+    "last_updated": "2026-03-16T09:10:00+08:00",
+    "total_learned": 10,
+    "strategies": {
+      "MACD": {
+        "learned": true,
+        "file": "macd-oscillator-learning-notes.md",
+        "source": "quant-trading/MACD Oscillator backtest.py",
+        "date": "2026-03-16",
+        "type": "趋势跟踪",
+        "size": "6.7KB"
+      },
+      "RSI": {
+        "learned": true,
+        "file": "rsi-pattern-learning-notes.md",
+        "source": "quant-trading/RSI Pattern Recognition backtest.py",
+        "date": "2026-03-16",
+        "type": "均值回归",
+        "size": "7.8KB"
+      },
+      "Dual_Thrust": {
+        "learned": true,
+        "file": "dual-thrust-learning-notes.md",
+        "source": "quant-trading/Dual Thrust backtest.py",
+        "date": "2026-03-16",
+        "type": "日内突破",
+        "size": "7.5KB"
+      },
+      "Bollinger_Bands": {
+        "learned": true,
+        "file": "bollinger-bands-pattern-learning-notes.md",
+        "source": "quant-trading/Bollinger Bands Pattern Recognition backtest.py",
+        "date": "2026-03-16",
+        "type": "均值回归",
+        "size": "7.9KB"
+      },
+      "Heikin_Ashi": {
+        "learned": true,
+        "file": "heikin-ashi-learning-notes.md",
+        "source": "quant-trading/Heikin-Ashi backtest.py",
+        "date": "2026-03-16",
+        "type": "技术指标",
+        "size": "8.4KB"
+      },
+      "Pair_Trading": {
+        "learned": true,
+        "file": "pair-trading-learning-notes.md",
+        "source": "quant-trading/Pair trading backtest.py",
+        "date": "2026-03-16",
+        "type": "统计套利",
+        "size": "8.2KB"
+      },
+      "Factor_Investing": {
+        "learned": true,
+        "file": "factor-investing-learning-notes.md",
+        "source": "external",
+        "date": "2026-03-16",
+        "type": "因子投资",
+        "size": "9.7KB"
+      },
+      "Quantitative_Projects": {
+        "learned": true,
+        "file": "quantitative-projects-learning-notes.md",
+        "source": "external",
+        "date": "2026-03-16",
+        "type": "项目学习",
+        "size": "7.0KB"
+      },
+      "Volume_Price": {
+        "learned": true,
+        "file": "volume-price-trading-learning-guide.md",
+        "source": "external",
+        "date": "2026-03-16",
+        "type": "量价分析",
+        "size": "7.0KB"
+      },
+      "Learning_Summary": {
+        "learned": true,
+        "file": "trading-strategies-learning-summary-phase1.md",
+        "source": "external",
+        "date": "2026-03-16",
+        "type": "学习总结",
+        "size": "6.5KB"
+      },
+      "Awesome_Oscillator": {
+        "learned": false,
+        "source": "quant-trading/Awesome Oscillator backtest.py",
+        "priority": "high"
+      },
+      "Parabolic_SAR": {
+        "learned": false,
+        "source": "quant-trading/Parabolic SAR backtest.py",
+        "priority": "high"
+      },
+      "London_Breakout": {
+        "learned": false,
+        "source": "quant-trading/London Breakout backtest.py",
+        "priority": "medium"
+      },
+      "Shooting_Star": {
+        "learned": false,
+        "source": "quant-trading/Shooting Star backtest.py",
+        "priority": "low"
+      },
+      "Options_Straddle": {
+        "learned": false,
+        "source": "quant-trading/Options Straddle backtest.py",
+        "priority": "low"
+      },
+      "VIX_Calculator": {
+        "learned": false,
+        "source": "quant-trading/VIX Calculator.py",
+        "priority": "low"
+      }
+    }
+  },
+  "learning_rules": {
+    "check_before_learn": true,
+    "one_file_per_strategy": true,
+    "enhance_existing": true,
+    "avoid_duplicate": true,
+    "target_size": "2-4KB per strategy"
+  }
+}
