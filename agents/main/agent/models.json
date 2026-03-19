@@ -789,6 +789,222 @@
           "api": "openai-completions"
         }
       ]
+    },
+    "zai_zhongshu": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "704cf4689f924bec8897dd4e92b9692c.dPpd9Dj6OFrgI0FE",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_menxia": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "4cd649db94e84e03bfd623e1eed601c5.HHPJGE1GmZOye1y9",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_shangshu": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "e5015cf9d8fa49f8b95bd242706d327e.2PuhnrpYs2s2CGzq",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_libu": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "5cb0bc8010ea47a69ac53e0ac143a225.BqzIJtufhonFGCwr",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_gongbu": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "671cd2ab5a5f4a15821f51e0187b527a.CFqC0mknNIJ2rmOZ",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_bingbu": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "b428b4e9b26c42cfb3eb5bbd54fe9af8.9o8ZM5XxPhhwVLAz",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_hubu": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "8e51c26b598f484abfea2aed2782b006.7insN1NGJqTC0hCn",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_xingbu": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "a48648f61fe8435b9a0f28f983e593b8.G9AQs6rbqTFAA5Pt",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_libu_hr": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "701301e841c4417abc816976a78e436f.Uf0ZM9EUut1H7k8Y",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "87b31aa1-8e37-437a-9b49-3bf247fc45a4",
-    "updatedAt": 1773728990497,
+    "updatedAt": 1773882712555,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -21,7 +21,7 @@
       "accountId": "default"
     },
     "sessionFile": "/root/.openclaw/agents/main/sessions/87b31aa1-8e37-437a-9b49-3bf247fc45a4.jsonl",
-    "compactionCount": 1,
+    "compactionCount": 2,
     "skillsSnapshot": {
       "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>/usr/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>system-info</name>\n    <description>Quick system diagnostics: CPU, memory, disk, uptime</description>\n    <location>~/.openclaw/workspace/skills/system-info/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>system_resource_monitor</name>\n    <description>A clean, reliable system resource monitor for CPU load, RAM, Swap, and Disk usage. Optimized for OpenClaw.</description>\n    <location>~/.openclaw/workspace/skills/system-resource-monitor/SKILL.md</location>\n  </skill>\n</available_skills>",
       "skills": [
@@ -87,15 +87,15 @@
       ],
       "version": 0
     },
-    "authProfileOverride": "zai:default",
+    "authProfileOverride": "zai:edict",
     "authProfileOverrideSource": "auto",
-    "authProfileOverrideCompactionCount": 1,
+    "authProfileOverrideCompactionCount": 2,
     "modelProvider": "zai",
     "model": "glm-5",
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1773728294256,
+      "generatedAt": 1773882216083,
       "sessionId": "87b31aa1-8e37-437a-9b49-3bf247fc45a4",
       "sessionKey": "agent:main:main",
       "provider": "zai",
@@ -115,8 +115,8 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 27790,
-        "projectContextChars": 15718,
+        "chars": 29168,
+        "projectContextChars": 17096,
         "nonProjectContextChars": 12072
       },
       "injectedWorkspaceFiles": [
@@ -164,8 +164,8 @@
           "name": "HEARTBEAT.md",
           "path": "/root/.openclaw/workspace/HEARTBEAT.md",
           "missing": false,
-          "rawChars": 1473,
-          "injectedChars": 1473,
+          "rawChars": 2851,
+          "injectedChars": 2851,
           "truncated": false
         },
         {
@@ -335,16 +335,16 @@
         ]
       }
     },
-    "inputTokens": 58977,
-    "outputTokens": 605,
-    "cacheRead": 9344,
+    "inputTokens": 7096,
+    "outputTokens": 2910,
+    "cacheRead": 68352,
     "cacheWrite": 0,
     "totalTokensFresh": true,
     "lastChannel": "dingtalk",
     "lastAccountId": "default",
-    "memoryFlushAt": 1773718966293,
-    "memoryFlushCompactionCount": 1,
-    "totalTokens": 68321
+    "memoryFlushAt": 1773813825770,
+    "memoryFlushCompactionCount": 2,
+    "totalTokens": 68572
   },
   "agent:main:cron:b06f20d0-58c3-449c-a611-f1b9a175d60a": {
     "sessionId": "2c5a61bc-0b3f-46e1-abc4-5d5efaa9d1b9",
@@ -9532,5 +9532,26 @@
     "totalTokensFresh": true,
     "cacheRead": 364160,
     "cacheWrite": 0
+  },
+  "agent:main:dingtalk:group:13027729771": {
+    "chatType": "group",
+    "channel": "dingtalk",
+    "groupId": "13027729771",
+    "displayName": "dingtalk:g-13027729771",
+    "origin": {
+      "label": "dingtalk:group:13027729771",
+      "provider": "dingtalk",
+      "surface": "dingtalk",
+      "chatType": "group",
+      "from": "dingtalk:group:13027729771",
+      "to": "channel:13027729771",
+      "accountId": "default"
+    },
+    "sessionId": "00a8d385-818c-4309-9f11-9eea53b3953b",
+    "updatedAt": 1773731170061,
+    "deliveryContext": {
+      "channel": "dingtalk"
+    },
+    "lastChannel": "dingtalk"
   }
 }
