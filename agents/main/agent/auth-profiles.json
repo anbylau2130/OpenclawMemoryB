@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "profiles": {
+    "zai:default": {
+      "type": "api_key",
+      "provider": "zai",
+      "key": "701748e84ca840a5b50e80e0d7c129b1.kSiJo4Zpztf5bCiI"
+    },
+    "anthropic:default": {
+      "type": "api_key",
+      "provider": "anthropic",
+      "key": "0c049cc3aab24218aad399e318d34e10.U5DjK4ER3yK5FZIP"
+    },
+    "zai:edict": {
+      "type": "api_key",
+      "provider": "zai",
+      "key": "6c8b2fbf9592485883e20f86d03f2fac.MU2ZNCOJynlRXUFS",
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4"
+    }
+  },
+  "lastGood": {
+    "zai": "zai:default",
+    "anthropic": "anthropic:default"
+  },
+  "usageStats": {
+    "zai:default": {
+      "lastUsed": 1773809218343,
+      "errorCount": 0,
+      "lastFailureAt": 1773215880792
+    },
+    "anthropic:default": {
+      "errorCount": 0,
+      "lastFailureAt": 1773213001898,
+      "lastUsed": 1773213001919
+    },
+    "zai:edict": {
+      "errorCount": 0,
+      "lastUsed": 1773882833205
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "profiles": {
+    "zai:default": {
+      "type": "api_key",
+      "provider": "zai",
+      "key": "fb4d20b02dac43c5a55b97901a0816d2.oCPL1c91AKS6X8zy"
+    },
+    "anthropic:default": {
+      "type": "api_key",
+      "provider": "anthropic",
+      "key": "0c049cc3aab24218aad399e318d34e10.U5DjK4ER3yK5FZIP"
+    }
+  },
+  "lastGood": {
+    "zai": "zai:default",
+    "anthropic": "anthropic:default"
+  },
+  "usageStats": {
+    "zai:default": {
+      "lastUsed": 1773580690232,
+      "errorCount": 0,
+      "lastFailureAt": 1773135406628
+    },
+    "anthropic:default": {
+      "errorCount": 0,
+      "lastFailureAt": 1773213001898,
+      "lastUsed": 1773213001919
+    }
+  }
+}

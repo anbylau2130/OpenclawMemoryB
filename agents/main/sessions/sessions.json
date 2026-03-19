@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "87b31aa1-8e37-437a-9b49-3bf247fc45a4",
-    "updatedAt": 1773882712555,
+    "updatedAt": 1773882843602,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -95,7 +95,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1773882216083,
+      "generatedAt": 1773882604708,
       "sessionId": "87b31aa1-8e37-437a-9b49-3bf247fc45a4",
       "sessionKey": "agent:main:main",
       "provider": "zai",
@@ -335,16 +335,16 @@
         ]
       }
     },
-    "inputTokens": 7096,
-    "outputTokens": 2910,
-    "cacheRead": 68352,
+    "inputTokens": 20214,
+    "outputTokens": 3450,
+    "cacheRead": 81280,
     "cacheWrite": 0,
     "totalTokensFresh": true,
     "lastChannel": "dingtalk",
     "lastAccountId": "default",
     "memoryFlushAt": 1773813825770,
     "memoryFlushCompactionCount": 2,
-    "totalTokens": 68572
+    "totalTokens": 82324
   },
   "agent:main:cron:b06f20d0-58c3-449c-a611-f1b9a175d60a": {
     "sessionId": "2c5a61bc-0b3f-46e1-abc4-5d5efaa9d1b9",

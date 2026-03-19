@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "updatedAt": 1773881152067,
+  "records": [
+    {
+      "msgId": "msgC95ZfqfqTGbw4WvEjBJVPA==",
+      "messageType": "text",
+      "text": "你是谁？",
+      "createdAt": 1773730476585
+    },
+    {
+      "msgId": "msg/ORaCiruU6xj7v1mU6w89A==",
+      "messageType": "text",
+      "text": "是写一篇三省六部想不的详细使用说明，包括集成到openclaw的详细配置，还有详细的使用说明",
+      "createdAt": 1773743603959
+    },
+    {
+      "msgId": "msgWvWkv0JgGU8KLb0PKFTprQ==",
+      "messageType": "text",
+      "text": "起草",
+      "createdAt": 1773743685218
+    },
+    {
+      "msgId": "msgRkQkdP2jGtLlgni2AcEwow==",
+      "messageType": "text",
+      "text": "为什么写博客就你一个人在工作",
+      "createdAt": 1773757192962
+    },
+    {
+      "msgId": "msg2G1KkBxSbf1gnqquDwuLPw==",
+      "messageType": "text",
+      "text": "怎么让中书省上线",
+      "createdAt": 1773757292010
+    },
+    {
+      "msgId": "msgBliZbr/8Zj4RxzbttFIn1g==",
+      "messageType": "text",
+      "text": "在工作的时候所有的三省六部agent需要唤醒他的subagent",
+      "createdAt": 1773757848760
+    },
+    {
+      "msgId": "msgdJM0+ZlziOr+pbYNLABBkg==",
+      "messageType": "text",
+      "text": "记住这个设置，并告诉其他三省六部agent",
+      "createdAt": 1773757895647
+    },
+    {
+      "msgId": "msgXoRORPGRWzwUPYXDvZnX9A==",
+      "messageType": "text",
+      "text": "如何？",
+      "createdAt": 1773758177766
+    },
+    {
+      "msgId": "msgoVPkXRCFMQPTvzAjqhtWxw==",
+      "messageType": "text",
+      "text": "全部按需唤醒，通知下去",
+      "createdAt": 1773758494632
+    },
+    {
+      "msgId": "msgmwymseDWs5MoqhtsTcrMiA==",
+      "messageType": "text",
+      "text": "我已经配置了所有三省六部的钉钉机器人，测试一下是否可用",
+      "createdAt": 1773819272000
+    },
+    {
+      "msgId": "msgXb/hIfoH0yg5rMeVg7jDsg==",
+      "messageType": "text",
+      "text": "尚书省回复我了",
+      "createdAt": 1773819566971
+    },
+    {
+      "msgId": "msgO3kt7fkAeb6tTgcnZtXbtQ==",
+      "messageType": "text",
+      "text": "看看github上有没有可以免费白嫖大模型的项目",
+      "createdAt": 1773837657129
+    },
+    {
+      "msgId": "msg8dvcxPGt29LhgPuigJmg8w==",
+      "messageType": "text",
+      "text": "groq的免费额度是按月？",
+      "createdAt": 1773837917123
+    },
+    {
+      "msgId": "msgGHy8ZEqW4bdV243jGhYYVw==",
+      "messageType": "text",
+      "text": "还有个问题，我怎么在面板上看不到你和中书省的对话",
+      "createdAt": 1773838041930
+    },
+    {
+      "msgId": "msg86fLyjelIshqzhRN+JWmTw==",
+      "messageType": "text",
+      "text": "完整走完三省六部流程",
+      "createdAt": 1773838241945
+    },
+    {
+      "msgId": "msgOdOwmNxYWW6TdV/I5sUSiQ==",
+      "messageType": "text",
+      "text": "为什么我已经配置了中书省的钉钉，你还是无法唤醒中书省",
+      "createdAt": 1773838507207
+    },
+    {
+      "msgId": "msgvtwFooNHCZkY+mxvk4esWQ==",
+      "messageType": "text",
+      "text": "那不是我每次让你干活还要跟其他部门先通话？",
+      "createdAt": 1773838613830
+    },
+    {
+      "msgId": "msg1KI3udTAGbmt02YBzVl2hQ==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1773838788472
+    },
+    {
+      "msgId": "msgSgTXn2RLO3AMr03saD/hyg==",
+      "messageType": "text",
+      "text": "完整走完三省六部流程",
+      "createdAt": 1773838842098
+    },
+    {
+      "msgId": "msgriH7iyyOSGRdwIyDWhDbCg==",
+      "messageType": "text",
+      "text": "🔄 中书规划↻not-started→in-progress",
+      "createdAt": 1773839052772
+    },
+    {
+      "msgId": "msgyCaMIPANaoy1c33dwCTjmg==",
+      "messageType": "text",
+      "text": "不是说要要走完三省六部流程么？怎么最后干活的是中书省",
+      "createdAt": 1773839415392
+    },
+    {
+      "msgId": "msg4qBYcxGIieYuljVOEFC3+w==",
+      "messageType": "text",
+      "text": "通知所有三省六部中的agent让他们记住在工作时需要自动唤醒下面的subagent。不然无法走完整个流程，皇上没义务帮你唤醒",
+      "createdAt": 1773841403929
+    },
+    {
+      "msgId": "msgFN12wQ3CnXokqOdalUnMmA==",
+      "messageType": "text",
+      "text": "为什么没有sessions_spawn权限？",
+      "createdAt": 1773841614953
+    },
+    {
+      "msgId": "msgYBNepaYQvgfZPX5MSbe3mQ==",
+      "messageType": "text",
+      "text": "再次尝试完整走完三省六部流程",
+      "createdAt": 1773841763673
+    },
+    {
+      "msgId": "msgGR+4W7pO0GMgdFoo8ajlXQ==",
+      "messageType": "text",
+      "text": "这次卡在哪里了",
+      "createdAt": 1773842200153
+    },
+    {
+      "msgId": "msgfpYtYjQanfpFbj2RTi3h5Q==",
+      "messageType": "text",
+      "text": "补充边界情况说明和测试用例设计方案，让方案更完善",
+      "createdAt": 1773842394519
+    },
+    {
+      "msgId": "msggrSC73IrTm/X97HiuCKmCA==",
+      "messageType": "text",
+      "text": "帮我整理一份金蝶云苍穹的实施学习文档和二开学习文档，并保存到我们的的知识库，同事你需要先规划项目目录然后在进行保存文件，不要让文件放的哪里都是，要分类保存",
+      "createdAt": 1773846219006
+    },
+    {
+      "msgId": "msg/ra6Ve1U7jfejweFWpYZ7w==",
+      "messageType": "text",
+      "text": "把所有的学习内容全部整理成文档保存下来",
+      "createdAt": 1773846694327
+    },
+    {
+      "msgId": "msgS+t0GXKCs8zEelgZZivv7g==",
+      "messageType": "text",
+      "text": "错了，我是说金蝶云苍穹的学习文档全部进行学习并保存成文档",
+      "createdAt": 1773846806996
+    },
+    {
+      "msgId": "msgwPx6GuIAqaIpKhpngu/Meg==",
+      "messageType": "text",
+      "text": "苍穹的文档要越详细越好，不要有漏掉的地方，后续我们要根据苍穹的文档进行C#重写每个功能",
+      "createdAt": 1773847029823
+    },
+    {
+      "msgId": "msguPct21WgrZoQwZmMld29OQ==",
+      "messageType": "text",
+      "text": "你需要使用本地的searxng进行搜索，地址是192.168.50.251:10011",
+      "createdAt": 1773847270644
+    },
+    {
+      "msgId": "msgbSU35JlOFKPC1E7SGGrirg==",
+      "messageType": "text",
+      "text": "为什么我给你的任务都是你自己在做？没有分配到三省六部？",
+      "createdAt": 1773847409320
+    },
+    {
+      "msgId": "msggyRxfxKrb6U+OXFIHwzXDg==",
+      "messageType": "text",
+      "text": "先把文档整理完毕然后再做下面的任务，还有你为什么没有点用三省六部来整理苍穹的文档？",
+      "createdAt": 1773848136700
+    },
+    {
+      "msgId": "msgoHScmoFpdh0J3y9/nQTPhw==",
+      "messageType": "text",
+      "text": "重走全部流程，以后你需要调用三省六部来工作",
+      "createdAt": 1773848302587
+    },
+    {
+      "msgId": "msg9oIFXVgFYv6Axe1Z7B/dRQ==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773877383164
+    },
+    {
+      "msgId": "msgURD4b+iAyD0G194wVsa2gA==",
+      "messageType": "text",
+      "text": "流转到哪里了",
+      "createdAt": 1773877498837
+    },
+    {
+      "msgId": "msgtAnJ/dcmmaakG/K6dfiADw==",
+      "messageType": "text",
+      "text": "不是有session唤醒机制么？为什么没有唤醒",
+      "createdAt": 1773877622813
+    },
+    {
+      "msgId": "msgawX8se5uYPOHIoaP1IN6Yg==",
+      "messageType": "text",
+      "text": "方案A",
+      "createdAt": 1773877806059
+    },
+    {
+      "msgId": "msg6fR7H+Yz7Kb0W27+TFqmDQ==",
+      "messageType": "text",
+      "text": "官方的解决方案是什么",
+      "createdAt": 1773878042712
+    },
+    {
+      "msgId": "msgXMVHePB3MqgieMQtXYvPFw==",
+      "messageType": "text",
+      "text": "但是钉钉机器人我已经配置了",
+      "createdAt": 1773878160548
+    },
+    {
+      "msgId": "msgZ6kJGdGaUm3OMMbXVenrBA==",
+      "messageType": "text",
+      "text": "进展如何",
+      "createdAt": 1773878389051
+    },
+    {
+      "msgId": "msgcmkDuw7G2IESAvYDyzwQKw==",
+      "messageType": "text",
+      "text": "钉钉消息没有唤醒中书省",
+      "createdAt": 1773878727918
+    },
+    {
+      "msgId": "msg2QX4nzaxic7JWCiicm9W4A==",
+      "messageType": "text",
+      "text": "Agent failed before reply: All models failed (2): zai_zhongshu/glm-4.7: session file locked (timeout 10000ms): pid=1112 /root/.openclaw/agents/zhongshu/sessions/36bfb6c9-80aa-49dc-9443-62fa2628a953.jsonl.lock (timeout) | zai/glm-5: session file locked (timeout 10000ms): pid=1112 /root/.openclaw/agents/zhongshu/sessions/36bfb6c9-80aa-49dc-9443-62fa2628a953.jsonl.lock (timeout). Logs: openclaw logs --follow",
+      "createdAt": 1773878829299
+    },
+    {
+      "msgId": "msgJo9aqmLJ9DEfuvJQTrATGg==",
+      "messageType": "text",
+      "text": "为什么中书省session文件被锁定",
+      "createdAt": 1773878923824
+    },
+    {
+      "msgId": "msgul2xNr2uPfNRCbxa7+omSQ==",
+      "messageType": "text",
+      "text": "不使用CLI激活把，全部使用钉钉激活",
+      "createdAt": 1773879138035
+    },
+    {
+      "msgId": "msgE8Rp50NEnBs/zSouxOI9uQ==",
+      "messageType": "text",
+      "text": "工部任务超时失败",
+      "createdAt": 1773879451770
+    },
+    {
+      "msgId": "msgHKMkOMkEswY+XLup7rkv3A==",
+      "messageType": "text",
+      "text": "1. 重新派发任务 2. 任务拆分 3. 超时时间调整 30分钟",
+      "createdAt": 1773879561014
+    },
+    {
+      "msgId": "msgmDnBvcy6h1jT5rkmdzN2lQ==",
+      "messageType": "text",
+      "text": "为什么我在后台没有看到任务",
+      "createdAt": 1773879667020
+    },
+    {
+      "msgId": "msgJ02XbTIQRQugwD73j6TnsA==",
+      "messageType": "text",
+      "text": "现在的唤醒机制是什么？",
+      "createdAt": 1773879805494
+    },
+    {
+      "msgId": "msg7Dinbbl35XOKHBbQJMPwPg==",
+      "messageType": "text",
+      "text": "测试一下唤醒流程，是否正常",
+      "createdAt": 1773879921522
+    },
+    {
+      "msgId": "msg/hcl0zJzaQwOP0/5JDrQrQ==",
+      "messageType": "text",
+      "text": "要保证所有节点都能唤醒，不然我们的任务无法完整执行",
+      "createdAt": 1773879970255
+    },
+    {
+      "msgId": "msgQob8eOzYddsAznAMsubBaw==",
+      "messageType": "text",
+      "text": "卡在哪里？",
+      "createdAt": 1773880421857
+    },
+    {
+      "msgId": "msgoYrYJZix7y4x0UMxpuaYEQ==",
+      "messageType": "text",
+      "text": "方案3：检查钉钉机器人配置",
+      "createdAt": 1773880562614
+    },
+    {
+      "msgId": "msg/SKyQ1OFLPjKtwfA0/q82Q==",
+      "messageType": "text",
+      "text": "我改了礼部的权限，你试一下礼部可不可以唤醒",
+      "createdAt": 1773881151047
+    }
+  ]
+}

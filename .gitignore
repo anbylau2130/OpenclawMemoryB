@@ -1,18 +1,15 @@
-# 敏感信息 - API密钥、令牌等
-**/auth-profiles.json
-**/credentials/
-**/*.key
-**/*.pem
-**/secrets.json
+# Node modules
+**/node_modules/
+**/extensions/*/node_modules/
+**/.openclaw-install-stage-*/
 
-# 会话和状态文件
-**/sessions/*.json
-**/sessions/*.jsonl
-**/sessions/*.lock
-**/dingtalk-state/
-**/delivery-queue/
-**/logs/
-**/*.log
+# 工作空间子仓库
+workspace/
+workspace-*/
+**/workspace-*/
+
+# 临时备份
+**/backups/
 
 # 临时文件
 **/*.tmp
@@ -24,20 +21,8 @@
 # 浏览器缓存
 **/browser/
 
-# 设备和配对信息
-**/devices/*.json
-
-# 工作空间子仓库
-workspace/
-workspace-*/
-**/workspace-*/
-
-# 临时备份
-**/backups/
-
-# Node modules
-**/node_modules/
-**/extensions/*/node_modules/
-
 # Git 锁文件
 .git/index.lock
+
+# 日志文件（可选）
+**/logs/*.log
