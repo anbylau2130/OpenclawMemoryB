@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774076624844,
+  "updatedAt": 1774099692130,
   "records": [
     {
       "msgId": "msgy6UjIdyQC7AHILKQxMD2Zw==",
@@ -37,6 +37,126 @@
       "messageType": "text",
       "text": "？？",
       "createdAt": 1774076624570
+    },
+    {
+      "msgId": "msgBOpdpIiCh4H8sd7USKgbsQ==",
+      "messageType": "text",
+      "text": "A",
+      "createdAt": 1774077076208
+    },
+    {
+      "msgId": "msgQyMCkQtwo9R9yrW0/RnefQ==",
+      "messageType": "text",
+      "text": "安装Chromium",
+      "createdAt": 1774077866863
+    },
+    {
+      "msgId": "msgH4RA8DUktiBLLeDJHD95QA==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774078383996
+    },
+    {
+      "msgId": "msgHG+SS+X9TU0BqOEEQfBIbw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774078691861
+    },
+    {
+      "msgId": "msgTJ7LgpO0LQSh17AJ1jGZPg==",
+      "messageType": "text",
+      "text": "安装Chromium",
+      "createdAt": 1774079321739
+    },
+    {
+      "msgId": "msgNb/Uj6JXOscFK+wXIx/fbg==",
+      "messageType": "text",
+      "text": "??",
+      "createdAt": 1774079919873
+    },
+    {
+      "msgId": "msgfXVtoogO8FxwInaYVxIJhw==",
+      "messageType": "text",
+      "text": "你好",
+      "createdAt": 1774080208875
+    },
+    {
+      "msgId": "msgJI1FsNsEAJY/MkLQa38JEQ==",
+      "messageType": "text",
+      "text": "你好",
+      "createdAt": 1774080696212
+    },
+    {
+      "msgId": "msg1JCxIC53I6hEShNI6YY9mA==",
+      "messageType": "text",
+      "text": "你是如何安装Chromium的？直接下载还是api-get",
+      "createdAt": 1774080853863
+    },
+    {
+      "msgId": "msg1JCxIC53I6hEShNI6YY9mA==",
+      "messageType": "text",
+      "text": "你是如何安装Chromium的？直接下载还是api-get",
+      "createdAt": 1774080853863
+    },
+    {
+      "msgId": "msgJ/7YlhD8i2eUh0Bb5NCS8Q==",
+      "messageType": "text",
+      "text": "2",
+      "createdAt": 1774080965490
+    },
+    {
+      "msgId": "msgvFc2f2+tbPBRF6xtuO5sog==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774081311039
+    },
+    {
+      "msgId": "msgLTe/J/eciHi5UvVkK0U4/Q==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1774081684118
+    },
+    {
+      "msgId": "msgAW86K8TpQ+/VmLvYHFU8gA==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1774082239750
+    },
+    {
+      "msgId": "msg+1qt8q8bzip6AeWAUBHGqg==",
+      "messageType": "text",
+      "text": "你回调用六部执行还是你自己执行？",
+      "createdAt": 1774082431126
+    },
+    {
+      "msgId": "msg/t1iSpBY584BNMOkAVPI1w==",
+      "messageType": "text",
+      "text": "检查下抓取进度",
+      "createdAt": 1774082472622
+    },
+    {
+      "msgId": "msgd0O5kvH1fvQByMAhGo2ohA==",
+      "messageType": "text",
+      "text": "我发送任务你是如何执行的？会不会调用六部？",
+      "createdAt": 1774082613794
+    },
+    {
+      "msgId": "msgXyPd8S+b8I1IlW71MGVbZg==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1774093153957
+    },
+    {
+      "msgId": "msg3fW5JGNRkT1xhaFsOXxWFA==",
+      "messageType": "text",
+      "text": "?",
+      "createdAt": 1774099618035
+    },
+    {
+      "msgId": "msgqd3kjG/y+jQOvNTsfNbo/g==",
+      "messageType": "text",
+      "text": "我现在发给你任务你能走三省六部的流程么",
+      "createdAt": 1774099691976
     }
   ]
 }

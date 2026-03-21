@@ -19,12 +19,12 @@
     }
   },
   "lastGood": {
-    "zai": "zai:edict",
+    "zai": "zai:default",
     "anthropic": "anthropic:default"
   },
   "usageStats": {
     "zai:default": {
-      "lastUsed": 1774072565635,
+      "lastUsed": 1774103504586,
       "errorCount": 0,
       "lastFailureAt": 1773215880792
     },
@@ -35,7 +35,7 @@
     },
     "zai:edict": {
       "errorCount": 0,
-      "lastUsed": 1774076475539
+      "lastUsed": 1774079491101
     }
   }
 }

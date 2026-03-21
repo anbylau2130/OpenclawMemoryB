@@ -10,7 +10,7 @@
       "accountId": "taizi"
     },
     "sessionId": "bb726dbb-d324-4fcc-b76a-8e8c78161d3a",
-    "updatedAt": 1774076625041,
+    "updatedAt": 1774099720151,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -84,7 +84,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774075736894,
+      "generatedAt": 1774099694325,
       "sessionId": "bb726dbb-d324-4fcc-b76a-8e8c78161d3a",
       "sessionKey": "agent:silijian:main",
       "provider": "zai",
@@ -321,10 +321,11 @@
       }
     },
     "totalTokensFresh": true,
-    "inputTokens": 11824,
-    "outputTokens": 1436,
-    "cacheRead": 20992,
+    "inputTokens": 813,
+    "outputTokens": 675,
+    "cacheRead": 116160,
     "cacheWrite": 0,
-    "totalTokens": 21466
+    "totalTokens": 116973,
+    "channel": "dingtalk"
   }
 }

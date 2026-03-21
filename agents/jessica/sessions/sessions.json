@@ -10,7 +10,7 @@
       "accountId": "jessica"
     },
     "sessionId": "ee357db7-8445-46d2-92a5-7089e3694f30",
-    "updatedAt": 1773727635983,
+    "updatedAt": 1774081374231,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -73,7 +73,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1773727567251,
+      "generatedAt": 1774081367883,
       "sessionId": "ee357db7-8445-46d2-92a5-7089e3694f30",
       "sessionKey": "agent:jessica:main",
       "provider": "zai",
@@ -93,9 +93,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 24381,
+        "chars": 24808,
         "projectContextChars": 12873,
-        "nonProjectContextChars": 11508
+        "nonProjectContextChars": 11935
       },
       "injectedWorkspaceFiles": [
         {
@@ -173,8 +173,8 @@
         ]
       },
       "tools": {
-        "listChars": 1760,
-        "schemaChars": 17767,
+        "listChars": 1816,
+        "schemaChars": 16284,
         "entries": [
           {
             "name": "read",
@@ -208,7 +208,7 @@
           },
           {
             "name": "browser",
-            "summaryChars": 1251,
+            "summaryChars": 1683,
             "schemaChars": 2799,
             "propertiesCount": 48
           },
@@ -217,12 +217,6 @@
             "summaryChars": 106,
             "schemaChars": 661,
             "propertiesCount": 18
-          },
-          {
-            "name": "nodes",
-            "summaryChars": 122,
-            "schemaChars": 1800,
-            "propertiesCount": 37
           },
           {
             "name": "message",
@@ -261,10 +255,16 @@
             "propertiesCount": 5
           },
           {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
             "name": "sessions_spawn",
             "summaryChars": 198,
-            "schemaChars": 922,
-            "propertiesCount": 16
+            "schemaChars": 1179,
+            "propertiesCount": 17
           },
           {
             "name": "subagents",
@@ -305,14 +305,14 @@
         ]
       }
     },
-    "inputTokens": 118080,
-    "outputTokens": 159,
-    "cacheRead": 3414,
+    "inputTokens": 456,
+    "outputTokens": 341,
+    "cacheRead": 122165,
     "cacheWrite": 0,
     "totalTokensFresh": true,
     "memoryFlushAt": 1773635070783,
     "memoryFlushCompactionCount": 0,
-    "totalTokens": 121494
+    "totalTokens": 122621
   },
   "agent:jessica:dingtalk:group:096028035723738668": {
     "chatType": "group",
