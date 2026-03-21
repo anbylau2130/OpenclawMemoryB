@@ -1,0 +1,126 @@
+{
+  "knowledge_base": {
+    "name": "金蝶云·苍穹开发平台知识库",
+    "version": "1.0.0",
+    "created_at": "2026-03-20T13:50:00+08:00",
+    "updated_at": "2026-03-20T13:50:00+08:00",
+    "source": {
+      "platform": "金蝶云社区",
+      "url": "https://vip.kingdee.com/knowledge/specialDetail/218022218066869248?productLineId=29&lang=zh-CN",
+      "special_id": "218022218066869248",
+      "product_line_id": "29",
+      "language": "zh-CN"
+    },
+    "statistics": {
+      "total_documents": 601,
+      "learning_count": "1,005.6万",
+      "rating": 5.0,
+      "rating_count": 225
+    },
+    "categories": [
+      {
+        "name": "动态与公告",
+        "document_count": 4,
+        "description": "重要通知和版本更新说明"
+      },
+      {
+        "name": "整体介绍",
+        "document_count": 4,
+        "description": "产品介绍、应用场景和平台整体介绍"
+      },
+      {
+        "name": "开发环境搭建用户手册",
+        "document_count": 15,
+        "description": "开发环境搭建和工具使用指南"
+      },
+      {
+        "name": "快速入门",
+        "document_count": 2,
+        "description": "创建第一个应用和开发全旅程"
+      },
+      {
+        "name": "开发指南",
+        "document_count": 30,
+        "description": "云管理、应用管理、设计器和页面开发"
+      },
+      {
+        "name": "控件使用指南",
+        "document_count": 120,
+        "description": "各类控件的使用方法和属性说明"
+      },
+      {
+        "name": "插件开发",
+        "document_count": 150,
+        "description": "各类插件开发和事件处理"
+      },
+      {
+        "name": "脚本开发",
+        "document_count": 50,
+        "description": "KingScript脚本开发和调试"
+      },
+      {
+        "name": "微服务开发",
+        "document_count": 4,
+        "description": "微服务开发和模型扩展"
+      },
+      {
+        "name": "功能使用技巧",
+        "document_count": 80,
+        "description": "控件、基础资料、列表等使用技巧"
+      },
+      {
+        "name": "测试与分析",
+        "document_count": 15,
+        "description": "接口测试、性能测试和插件测试"
+      },
+      {
+        "name": "打包部署",
+        "document_count": 5,
+        "description": "打包和部署指南"
+      },
+      {
+        "name": "定制化开发规范",
+        "document_count": 5,
+        "description": "开发规范和安全标准"
+      },
+      {
+        "name": "应用开发实战",
+        "document_count": 20,
+        "description": "采购订货案例实战"
+      },
+      {
+        "name": "开发案例库",
+        "document_count": 30,
+        "description": "各类开发案例集合"
+      }
+    ],
+    "tags": [
+      "金蝶云",
+      "苍穹",
+      "开发平台",
+      "低代码",
+      "插件开发",
+      "KingScript",
+      "微服务",
+      "自定义控件"
+    ],
+    "difficulty_level": "中级到高级",
+    "target_audience": [
+      "开发人员",
+      "技术顾问",
+      "系统架构师",
+      "项目经理"
+    ],
+    "files": {
+      "readme": "README.md",
+      "catalog": "开发平台目录结构.md",
+      "metadata": "metadata.json"
+    },
+    "crawl_info": {
+      "crawler": "OpenClaw Browser Automation",
+      "crawl_date": "2026-03-20",
+      "crawl_status": "partial",
+      "note": "由于文档数量庞大（601篇），本次抓取仅保存了目录结构。完整文档内容需在线访问或后续补充抓取。"
+    }
+  }
+}

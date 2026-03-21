@@ -820,8 +820,8 @@
       "api": "openai-completions",
       "models": [
         {
-          "id": "glm-4.7",
-          "name": "GLM-4.7",
+          "id": "glm-4.6",
+          "name": "GLM-4.6",
           "reasoning": true,
           "input": [
             "text"
@@ -844,8 +844,8 @@
       "api": "openai-completions",
       "models": [
         {
-          "id": "glm-4.7",
-          "name": "GLM-4.7",
+          "id": "glm-4.5-air",
+          "name": "GLM-4.5-air",
           "reasoning": true,
           "input": [
             "text"
@@ -985,6 +985,54 @@
     "zai_libu_hr": {
       "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
       "apiKey": "701301e841c4417abc816976a78e436f.Uf0ZM9EUut1H7k8Y",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_taizi": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "6c8b2fbf9592485883e20f86d03f2fac.MU2ZNCOJynlRXUFS",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "glm-4.7",
+          "name": "GLM-4.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 204800,
+          "maxTokens": 100000,
+          "api": "openai-completions"
+        }
+      ]
+    },
+    "zai_zaochao": {
+      "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+      "apiKey": "0a50225f9de849789817bbb8a9af7f71.Tg8tu66GafjuvlG6",
       "api": "openai-completions",
       "models": [
         {

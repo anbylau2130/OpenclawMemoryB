@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1773882843580,
+  "updatedAt": 1774076618992,
   "records": [
     {
       "msgId": "msgqXwwzglKWGf0XkylTX/Ohw==",
@@ -985,6 +985,852 @@
       "messageType": "text",
       "text": "A",
       "createdAt": 1773882843165
+    },
+    {
+      "msgId": "msgUPBKbdteJKb2HL+u493qBA==",
+      "messageType": "text",
+      "text": "完成了",
+      "createdAt": 1773885809137
+    },
+    {
+      "msgId": "msgnhVetF6Dyc/Psg9wHRA37A==",
+      "messageType": "text",
+      "text": "检查心跳任务哪些没有执行，找出原因",
+      "createdAt": 1773885923499
+    },
+    {
+      "msgId": "msgC/CO3WLrj6kL8UHCebgHsA==",
+      "messageType": "text",
+      "text": "？？？",
+      "createdAt": 1773888177478
+    },
+    {
+      "msgId": "msgkTi9DvrHqvOThhQzw0GyOA==",
+      "messageType": "text",
+      "text": "心跳中有哪些定时任务",
+      "createdAt": 1773888237578
+    },
+    {
+      "msgId": "msgKX2QhUrFlj8cjab2FGLu6Q==",
+      "messageType": "text",
+      "text": "交易监控为什么没有发送给我",
+      "createdAt": 1773888306043
+    },
+    {
+      "msgId": "msgcW4ihk4efXEpm/ReeLGt1A==",
+      "messageType": "text",
+      "text": "现在发送测试一下",
+      "createdAt": 1773888386322
+    },
+    {
+      "msgId": "msgevaLQVasGZFrs1LGQUJlhA==",
+      "messageType": "text",
+      "text": "删除三省六部中除了太子以外的agent的工作空间和配置",
+      "createdAt": 1773888764271
+    },
+    {
+      "msgId": "msgL8SREIFIZAYRdooNhFYfFw==",
+      "messageType": "text",
+      "text": "把太子也删了吧，我需要重新配置三省六部",
+      "createdAt": 1773888911552
+    },
+    {
+      "msgId": "msgwRZmofIPRmdqBXjMhGUdOw==",
+      "messageType": "text",
+      "text": "配置文件没有删么？，为什么后台还能看到这些agent在连接网关",
+      "createdAt": 1773889193285
+    },
+    {
+      "msgId": "msgOELHr/IpqAeQ/oFXXcduzQ==",
+      "messageType": "text",
+      "text": "？？进度如何",
+      "createdAt": 1773889840491
+    },
+    {
+      "msgId": "msgOELHr/IpqAeQ/oFXXcduzQ==",
+      "messageType": "text",
+      "text": "？？进度如何",
+      "createdAt": 1773889840491
+    },
+    {
+      "msgId": "msgcByiWq5KL/WuT8WDZwjbzg==",
+      "messageType": "text",
+      "text": "我看到你的identity.md中 Edict多Agent协作系统 上面写12个agent，但是列表中只有11个agent",
+      "createdAt": 1773890075097
+    },
+    {
+      "msgId": "msgDha+hGhfyuuVBlwnVz2izA==",
+      "messageType": "text",
+      "text": "早朝官的作用是什么？",
+      "createdAt": 1773890159762
+    },
+    {
+      "msgId": "msggEs7fBeX+zfVqTo7FqRmig==",
+      "messageType": "text",
+      "text": "我需要三省六部制的agent，他们需要使用不同的智谱模型token，并且访问接口URL设置成https://open.bigmodel.cn/api/coding/paas/v4,下面是各个agent的配置信息。\n中书省\nAgentId：4359227207\nClient ID：dinggmudgjnnsy58wnmg\nClient Secret：uHkg4xRrWCXqJCRT_DsKLP6U8aPVHesEXLm9K2-i3FgMAcwgtNGiFrxPwAEoKykP\nRobotCode：dinggmudgjnnsy58wnmg\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:704cf4689f924bec8897dd4e92b9692c.dPpd9Dj6OFrgI0FE\n\n门下省\nAgentId：4359089863\nClient ID：dingjnyq2dki0ublgy9h\nClient Secret：LVw-AwDOY11aPDJjkyVL_7qihCdKOEk7JHPnlq-sdzakrRsm1O0ACLjHQjRIVvdE\nRobotCode：dingjnyq2dki0ublgy9h\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:4cd649db94e84e03bfd623e1eed601c5.HHPJGE1GmZOye1y9\n\n尚书省\nAgentId：4359302593\nClient ID：dingwtxon2k4w5wyovka\nClient Secret：49ctnbPHe9YYPJtfzdINsoAi0Iz6kH4DkXmZXaYtv_Piv3v2aYYSZPiYHTd2bjj2\nRobotCode：dingwtxon2k4w5wyovka\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:e5015cf9d8fa49f8b95bd242706d327e.2PuhnrpYs2s2CGzq\n\n兵部\nAgentId：4359241931\nClient ID：dingd7rsbwkpovlconni\nClient Secret：ibI4i8wu3dqWFsRCLYKf7naUROACswdKiockig5wyw1fmDq_NXThOdjhkMXkNBXO\nRobotCode：dingd7rsbwkpovlconni\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:b428b4e9b26c42cfb3eb5bbd54fe9af8.9o8ZM5XxPhhwVLAz\n\n礼部\nAgentId：4359402265\nClient ID：dingwiikp3ehhtpldjjd\nClient Secret：XDju8V_QPaSGUuoMQeZu_tZWDi4Z2qC1qmKR1BFNGH71sAU8Qp6bfK-bcGwkVdLh\nRobotCode：dingwiikp3ehhtpldjjd\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:5cb0bc8010ea47a69ac53e0ac143a225.BqzIJtufhonFGCwr\n\n刑部\nAgentId：4359435206\nClient ID：ding7jhvfg5mg3vmu2ic\nClient Secret：moM4AIPqZUIB1qs1MoVvOSvZEY4XOOJgs3g8TsWL_g80E1pX3mFY31NTPaE40jNz\nRobotCode：ding7jhvfg5mg3vmu2ic\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:a48648f61fe8435b9a0f28f983e593b8.G9AQs6rbqTFAA5Pt\n\n户部\nAgentId：4359256960\nClient ID：dingcofbbrbuphduuctd\nClient Secret：qdaHQZMaqlh6a9wfEKDWZ3Nq0uHthI34050siq5TedojYi_b5zVIGn1GvmewTujW\nRobotCode：dingcofbbrbuphduuctd\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:8e51c26b598f484abfea2aed2782b006.7insN1NGJqTC0hCn\n\n工部\nAgentId：4359265988\nClient ID：dingdaiudstpjyn6ix1i\nClient Secret：nsp6XRGEPVEEz8neNSoARHIf_52soD5XTxDt11cjMgbU-LyV_YBjZM6e0AceOYDA\nRobotCode：dingdaiudstpjyn6ix1i\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:671cd2ab5a5f4a15821f51e0187b527a.CFqC0mknNIJ2rmOZ\n\n吏部\nAgentId：4359467128\nClient ID：dingsgwdrym5vfev3hf6\nClient Secret：eUd983Sd8YvS71V9jQtpO2CdEaf3i3nxHAPOkOUPuyWWnnUVaVBK1gczdzV8n1aB\nRobotCode：dingsgwdrym5vfev3hf6\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:701301e841c4417abc816976a78e436f.Uf0ZM9EUut1H7k8Y\n\n早朝官\nAgentId：4359722816\nClient ID：dinghs1tshemuim4rses\nClient Secret：rwZgx3BnuZMDisP6OFS5rANSfO0CE9uFa4KZRZBTuP_byl9CU6kQCVFZNKmi9qHG\nRobotCode：dinghs1tshemuim4rses\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:0a50225f9de849789817bbb8a9af7f71.Tg8tu66GafjuvlG6",
+      "createdAt": 1773890832349
+    },
+    {
+      "msgId": "msgsEO68yL6KjuMYT7rFPYzAg==",
+      "messageType": "text",
+      "text": "你又把自己配宕机了，为什么不按照官方文档配置？",
+      "createdAt": 1773891662471
+    },
+    {
+      "msgId": "msgKf66EdsxaNqSXsvifNcjnw==",
+      "messageType": "text",
+      "text": "identity中不是有设置么？我让你配置之前查阅文档，没有生效还是不起作用？",
+      "createdAt": 1773891716863
+    },
+    {
+      "msgId": "msguu64mHchBi0vgmDrazrk8A==",
+      "messageType": "text",
+      "text": "根目录下就没有Providers节点，你需要把token信息配置到agents目录下",
+      "createdAt": 1773891887640
+    },
+    {
+      "msgId": "msgaCsQqAKDh3PU2hUuYHvjrQ==",
+      "messageType": "text",
+      "text": "钉钉 配置文档在这里https://github.com/cft0808/edict，https://github.com/soimy/openclaw-channel-dingtalk",
+      "createdAt": 1773891996140
+    },
+    {
+      "msgId": "msgtIoKIR2wWgqnRyn+LXXS4g==",
+      "messageType": "text",
+      "text": "111",
+      "createdAt": 1773892043147
+    },
+    {
+      "msgId": "msg80Xx8kLKRb41gCoU6N8SAw==",
+      "messageType": "text",
+      "text": "根节点下就没有Providers节点，你需要把token信息配置到agents目录下",
+      "createdAt": 1773892297376
+    },
+    {
+      "msgId": "msgQa8gnpWOZeyQpv0dAXlvMg==",
+      "messageType": "text",
+      "text": ",\n  \"providers\": {\n    \"zai_zhongshu\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"704cf4689f924bec8897dd4e92b9692c.dPpd9Dj6OFrgI0FE\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    },\n    \"zai_menxia\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"4cd649db94e84e03bfd623e1eed601c5.HHPJGE1GmZOye1y9\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    },\n    \"zai_shangshu\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"e5015cf9d8fa49f8b95bd242706d327e.2PuhnrpYs2s2CGzq\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    },\n    \"zai_bingbu\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"b428b4e9b26c42cfb3eb5bbd54fe9af8.9o8ZM5XxPhhwVLAz\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    },\n    \"zai_libu\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"5cb0bc8010ea47a69ac53e0ac143a225.BqzIJtufhonFGCwr\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    },\n    \"zai_xingbu\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"a48648f61fe8435b9a0f28f983e593b8.G9AQs6rbqTFAA5Pt\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    },\n    \"zai_hubu\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"8e51c26b598f484abfea2aed2782b006.7insN1NGJqTC0hCn\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    },\n    \"zai_gongbu\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"671cd2ab5a5f4a15821f51e0187b527a.CFqC0mknNIJ2rmOZ\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    },\n    \"zai_libu_hr\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"701301e841c4417abc816976a78e436f.Uf0ZM9EUut1H7k8Y\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    },\n    \"zai_zaochao\": {\n      \"type\": \"openai\",\n      \"baseURL\": \"https://open.bigmodel.cn/api/coding/paas/v4\",\n      \"apiKey\": \"0a50225f9de849789817bbb8a9af7f71.Tg8tu66GafjuvlG6\",\n      \"models\": [\n        {\n          \"id\": \"glm-4.7\"\n        }\n      ]\n    }\n  }\n\n这里有问题，3次都卡在这里启动不起来了",
+      "createdAt": 1773892321046
+    },
+    {
+      "msgId": "msgvsEmzijELS1Dyf4VUkrlOg==",
+      "messageType": "text",
+      "text": "？？、",
+      "createdAt": 1773893051895
+    },
+    {
+      "msgId": "msgMJeLeiPF7hBTW84iZg7xEw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773893368859
+    },
+    {
+      "msgId": "msgdDdPpY0bF8ZOclurG1YRmA==",
+      "messageType": "text",
+      "text": "不知道你动了哪里，现在无法启动了，我帮你恢复了",
+      "createdAt": 1773893428441
+    },
+    {
+      "msgId": "msg3Ol1Gerads1K3WGtmSxJbA==",
+      "messageType": "text",
+      "text": "配置还没有完成",
+      "createdAt": 1773893464549
+    },
+    {
+      "msgId": "msg1rXJni0U/hWT7yV7m5JplA==",
+      "messageType": "text",
+      "text": "应该client id好clientSecrt也不对",
+      "createdAt": 1773893598791
+    },
+    {
+      "msgId": "msgqzzkXAMedFBPb4jtSLR2UQ==",
+      "messageType": "text",
+      "text": "名称：太子\nAgentId：4346325687\nClient ID：dingyhlhrphf9uxwp5u3\nClient Secret：8GQXzXWOLZqQ7UyNtbMU12Q0_-mA3c7trPM_A5XNIDA0LjepnThuzky23YGcCi_G\nRobotCode：dingyhlhrphf9uxwp5u3\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:6c8b2fbf9592485883e20f86d03f2fac.MU2ZNCOJynlRXUFS\n\n\n中书省\nAgentId：4359227207\nClient ID：dinggmudgjnnsy58wnmg\nClient Secret：uHkg4xRrWCXqJCRT_DsKLP6U8aPVHesEXLm9K2-i3FgMAcwgtNGiFrxPwAEoKykP\nRobotCode：dinggmudgjnnsy58wnmg\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:704cf4689f924bec8897dd4e92b9692c.dPpd9Dj6OFrgI0FE\n\n门下省\nAgentId：4359089863\nClient ID：dingjnyq2dki0ublgy9h\nClient Secret：LVw-AwDOY11aPDJjkyVL_7qihCdKOEk7JHPnlq-sdzakrRsm1O0ACLjHQjRIVvdE\nRobotCode：dingjnyq2dki0ublgy9h\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:4cd649db94e84e03bfd623e1eed601c5.HHPJGE1GmZOye1y9\n\n尚书省\nAgentId：4359302593\nClient ID：dingwtxon2k4w5wyovka\nClient Secret：49ctnbPHe9YYPJtfzdINsoAi0Iz6kH4DkXmZXaYtv_Piv3v2aYYSZPiYHTd2bjj2\nRobotCode：dingwtxon2k4w5wyovka\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:e5015cf9d8fa49f8b95bd242706d327e.2PuhnrpYs2s2CGzq\n\n兵部\nAgentId：4359241931\nClient ID：dingd7rsbwkpovlconni\nClient Secret：ibI4i8wu3dqWFsRCLYKf7naUROACswdKiockig5wyw1fmDq_NXThOdjhkMXkNBXO\nRobotCode：dingd7rsbwkpovlconni\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:b428b4e9b26c42cfb3eb5bbd54fe9af8.9o8ZM5XxPhhwVLAz\n\n礼部\nAgentId：4359402265\nClient ID：dingwiikp3ehhtpldjjd\nClient Secret：XDju8V_QPaSGUuoMQeZu_tZWDi4Z2qC1qmKR1BFNGH71sAU8Qp6bfK-bcGwkVdLh\nRobotCode：dingwiikp3ehhtpldjjd\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:5cb0bc8010ea47a69ac53e0ac143a225.BqzIJtufhonFGCwr\n\n刑部\nAgentId：4359435206\nClient ID：ding7jhvfg5mg3vmu2ic\nClient Secret：moM4AIPqZUIB1qs1MoVvOSvZEY4XOOJgs3g8TsWL_g80E1pX3mFY31NTPaE40jNz\nRobotCode：ding7jhvfg5mg3vmu2ic\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:a48648f61fe8435b9a0f28f983e593b8.G9AQs6rbqTFAA5Pt\n\n户部\nAgentId：4359256960\nClient ID：dingcofbbrbuphduuctd\nClient Secret：qdaHQZMaqlh6a9wfEKDWZ3Nq0uHthI34050siq5TedojYi_b5zVIGn1GvmewTujW\nRobotCode：dingcofbbrbuphduuctd\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:8e51c26b598f484abfea2aed2782b006.7insN1NGJqTC0hCn\n\n工部\nAgentId：4359265988\nClient ID：dingdaiudstpjyn6ix1i\nClient Secret：nsp6XRGEPVEEz8neNSoARHIf_52soD5XTxDt11cjMgbU-LyV_YBjZM6e0AceOYDA\nRobotCode：dingdaiudstpjyn6ix1i\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:671cd2ab5a5f4a15821f51e0187b527a.CFqC0mknNIJ2rmOZ\n\n吏部\nAgentId：4359467128\nClient ID：dingsgwdrym5vfev3hf6\nClient Secret：eUd983Sd8YvS71V9jQtpO2CdEaf3i3nxHAPOkOUPuyWWnnUVaVBK1gczdzV8n1aB\nRobotCode：dingsgwdrym5vfev3hf6\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:701301e841c4417abc816976a78e436f.Uf0ZM9EUut1H7k8Y\n\n早朝官\nAgentId：4359722816\nClient ID：dinghs1tshemuim4rses\nClient Secret：rwZgx3BnuZMDisP6OFS5rANSfO0CE9uFa4KZRZBTuP_byl9CU6kQCVFZNKmi9qHG\nRobotCode：dinghs1tshemuim4rses\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\ntoken:0a50225f9de849789817bbb8a9af7f71.Tg8tu66GafjuvlG6",
+      "createdAt": 1773893662000
+    },
+    {
+      "msgId": "msgY94ryJinrVuV8RHmyH9qqQ==",
+      "messageType": "text",
+      "text": "是11个",
+      "createdAt": 1773893761115
+    },
+    {
+      "msgId": "msg6dqNTDnPToN8EwUNMNJnGg==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773893991716
+    },
+    {
+      "msgId": "msgJxnIkKDS7qfDapz7Ijm14Q==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1773894139044
+    },
+    {
+      "msgId": "msguVPQiRQbg4bVIjKpnOD8zQ==",
+      "messageType": "text",
+      "text": "为什么7891又停止了？",
+      "createdAt": 1773895595143
+    },
+    {
+      "msgId": "msgx3n4mN9wKzWD7bqxxLktCQ==",
+      "messageType": "text",
+      "text": "交易监控未发送",
+      "createdAt": 1773897066209
+    },
+    {
+      "msgId": "msgkHRYvlqzYgXNS63QP1Z9iA==",
+      "messageType": "text",
+      "text": "测试通知收到了",
+      "createdAt": 1773897305854
+    },
+    {
+      "msgId": "msgoC+p84F2A9XfTEZQDWZFjw==",
+      "messageType": "text",
+      "text": "重启7891",
+      "createdAt": 1773897663227
+    },
+    {
+      "msgId": "msgc9jrQlRxlIzwE6bx98T9Fg==",
+      "messageType": "text",
+      "text": "7891 改为 /root/.openclaw/edict/data下的项目",
+      "createdAt": 1773898551830
+    },
+    {
+      "msgId": "msgtqYBCLmZ70DdQpcrK9b/+A==",
+      "messageType": "text",
+      "text": "改回去把",
+      "createdAt": 1773898980228
+    },
+    {
+      "msgId": "msgaEAGfVLZDZkG9g0Z6ByFIQ==",
+      "messageType": "text",
+      "text": "先更新/root/.openclaw/workspace/projects/edict/项目",
+      "createdAt": 1773899066917
+    },
+    {
+      "msgId": "msgfHfptnN/1v1PEXL+kJclPQ==",
+      "messageType": "text",
+      "text": "7891又停止了",
+      "createdAt": 1773900372732
+    },
+    {
+      "msgId": "msguIRCe/Qlo5Z9vfW0zFe9hw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773900681933
+    },
+    {
+      "msgId": "msguIRCe/Qlo5Z9vfW0zFe9hw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773900681933
+    },
+    {
+      "msgId": "msg8DQxzHaqMTaxK/wJJ81WVQ==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773900771846
+    },
+    {
+      "msgId": "msgBY51pjIHc0AVffpRW4vubQ==",
+      "messageType": "text",
+      "text": "记住如果以后访问github不流畅，就使用github520中的hosts更新我们的hosts",
+      "createdAt": 1773901185263
+    },
+    {
+      "msgId": "msgtP5hFCJIx4Y80qtfZdhomA==",
+      "messageType": "text",
+      "text": "现在就使用使用gitclone来恢复edict项目",
+      "createdAt": 1773901245733
+    },
+    {
+      "msgId": "msgQ7CJDEgCefibTqW5bOkb0g==",
+      "messageType": "text",
+      "text": "为什么太子不理我",
+      "createdAt": 1773901283663
+    },
+    {
+      "msgId": "msgnvsvoCDPtcjkl5GYS6dNBw==",
+      "messageType": "text",
+      "text": "但是面板中什么也没有",
+      "createdAt": 1773901885813
+    },
+    {
+      "msgId": "msgU1v1kXSNLh9bH7X6YVRdMg==",
+      "messageType": "text",
+      "text": "解决方案是什么",
+      "createdAt": 1773902304708
+    },
+    {
+      "msgId": "msgU1v1kXSNLh9bH7X6YVRdMg==",
+      "messageType": "text",
+      "text": "解决方案是什么",
+      "createdAt": 1773902304708
+    },
+    {
+      "msgId": "msgtuHr+dibdVAoxvCqDCAOew==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1773902835562
+    },
+    {
+      "msgId": "msgkNKVfXpyAG5xPv7LWPLd8A==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1773902952971
+    },
+    {
+      "msgId": "msgqVK85o1ExCPj4d6oF3DLuw==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1773903354018
+    },
+    {
+      "msgId": "msguNzFb8jLko9lB8AmReGvLQ==",
+      "messageType": "text",
+      "text": "帮我修复三省六部的agent，他们现在没有回复我",
+      "createdAt": 1773903477484
+    },
+    {
+      "msgId": "msgKLqUkzIEzUdFdTjYpwAhaQ==",
+      "messageType": "text",
+      "text": "使用github更新edict带最新版本",
+      "createdAt": 1773903910152
+    },
+    {
+      "msgId": "msgwPLxr9RHz7U27UfosJN90w==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773904613762
+    },
+    {
+      "msgId": "msgK6UxdBjZPorxOXl8RR7k9Q==",
+      "messageType": "text",
+      "text": "先把edict改名为edict_backup改为，然后使用git clone获取github上的最新项目代码",
+      "createdAt": 1773904826017
+    },
+    {
+      "msgId": "msgFgKv5cey3HfVw3IEIp7q/g==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1773909983414
+    },
+    {
+      "msgId": "msghCyg9a9ip44g9sMOuUF0UA==",
+      "messageType": "text",
+      "text": "为什么太子没有回复我",
+      "createdAt": 1773910033870
+    },
+    {
+      "msgId": "msgOZtjND8ev5K9vPixvqTc5Q==",
+      "messageType": "text",
+      "text": "你发的是什么？",
+      "createdAt": 1773910186433
+    },
+    {
+      "msgId": "msg7I92W3/L0fHJCJwt4X3L8g==",
+      "messageType": "text",
+      "text": "修复太子卡住的问题",
+      "createdAt": 1773910297090
+    },
+    {
+      "msgId": "msg9rxHbNnZgMLYYUgy8jCpPA==",
+      "messageType": "text",
+      "text": "?",
+      "createdAt": 1773910709131
+    },
+    {
+      "msgId": "msgUjGiDs3jeKNfYNsEzKRtwQ==",
+      "messageType": "text",
+      "text": "为什么没有复盘",
+      "createdAt": 1773920906328
+    },
+    {
+      "msgId": "msgBf9vU4Z9+pN/l6J9zwtMHA==",
+      "messageType": "text",
+      "text": "7891掉线了",
+      "createdAt": 1773921163498
+    },
+    {
+      "msgId": "msgYW7AA6l2GI3D/XEOumB/og==",
+      "messageType": "text",
+      "text": "为什么访问失败了",
+      "createdAt": 1773921278583
+    },
+    {
+      "msgId": "msgPDZR5U42k1b/4wgI5FAPyA==",
+      "messageType": "text",
+      "text": "修复，以后都要使用0.0.0.0启动7891",
+      "createdAt": 1773921493839
+    },
+    {
+      "msgId": "msgjhnqR9I4sLaKegVOpO1dew==",
+      "messageType": "text",
+      "text": "太子的响应速度很慢，你的响应速度也很慢",
+      "createdAt": 1773929855878
+    },
+    {
+      "msgId": "msgEZEJWNrxhnMEDQgG1YWq+g==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1773931002615
+    },
+    {
+      "msgId": "msgM/qRb9HFShrewvi0v1qUWw==",
+      "messageType": "text",
+      "text": "2",
+      "createdAt": 1773931038346
+    },
+    {
+      "msgId": "msgsKV0KiIjHizhh+HUbybWGw==",
+      "messageType": "text",
+      "text": "# 需要在 openclaw.json 中添加：\n\"tools\": {\n  \"sessions\": {\n    \"visibility\": \"all\"\n  }\n}",
+      "createdAt": 1773931209258
+    },
+    {
+      "msgId": "msgoROT5v7aATes/OIwNFPXpg==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773931372745
+    },
+    {
+      "msgId": "msgoROT5v7aATes/OIwNFPXpg==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773931372745
+    },
+    {
+      "msgId": "msgDSa6w3ge6LITMme/YjV0NQ==",
+      "messageType": "text",
+      "text": "修改7891启动方式，改成0.0.0.0:7891",
+      "createdAt": 1773931989817
+    },
+    {
+      "msgId": "msgy6rO9aJLrdwpb0tFQB/HUQ==",
+      "messageType": "text",
+      "text": "为什么openclaw发送消息和我当前时间不一致",
+      "createdAt": 1773933689139
+    },
+    {
+      "msgId": "msgBCl93+31BH9sSDS5Q+Q6Yg==",
+      "messageType": "text",
+      "text": "能不能把7891增加到守护进程中？心跳包检测有点延后",
+      "createdAt": 1773936010040
+    },
+    {
+      "msgId": "msg82RBGybuNKjgqxVAmbhZuQ==",
+      "messageType": "text",
+      "text": "pm不是也可以？",
+      "createdAt": 1773936251452
+    },
+    {
+      "msgId": "msgA9xCNcWZ3LC5SXaKskuALg==",
+      "messageType": "text",
+      "text": "你用的什么守护的？",
+      "createdAt": 1773936337971
+    },
+    {
+      "msgId": "msgkyqsc5VhcnKXkXnowQC4fw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773964065865
+    },
+    {
+      "msgId": "msg6mqoi08Jc3EUOhuwnM0vfQ==",
+      "messageType": "text",
+      "text": "7891服务无法访问",
+      "createdAt": 1773964212747
+    },
+    {
+      "msgId": "msglpzGrn9Cej4qf0JNPMVRSw==",
+      "messageType": "text",
+      "text": "更新edict项目代码",
+      "createdAt": 1773965580880
+    },
+    {
+      "msgId": "msgvUxh+KanAULNVGy3LfyhNg==",
+      "messageType": "text",
+      "text": "选股任务为什么没运行",
+      "createdAt": 1773966712202
+    },
+    {
+      "msgId": "msgvm4kvvJHlv4P6fJ0E8z7xA==",
+      "messageType": "text",
+      "text": "为什么心跳任务没有触发选股？",
+      "createdAt": 1773966843701
+    },
+    {
+      "msgId": "msgEHsivA3GjuC8W3De0e86jg==",
+      "messageType": "text",
+      "text": "守护进程还在执行么？为什么我无法访问7891",
+      "createdAt": 1773969553252
+    },
+    {
+      "msgId": "msgSuCn55eFqMxOgpAby5U2zQ==",
+      "messageType": "text",
+      "text": "🖥",
+      "createdAt": 1773969691197
+    },
+    {
+      "msgId": "msgHsRkIVHA5yY/eFWKjuU3lw==",
+      "messageType": "text",
+      "text": "现在pm2是运行在docker中，你上次已经保存了配置，但是这次还是没有启动",
+      "createdAt": 1773969809068
+    },
+    {
+      "msgId": "msgS4cjW0OtAqwR7SNwCssFzg==",
+      "messageType": "text",
+      "text": "我需要的是如果7891停止了立刻重启",
+      "createdAt": 1773970491021
+    },
+    {
+      "msgId": "msgSak1Kgkuj0+DEmDAqLflmg==",
+      "messageType": "text",
+      "text": "这个脚本需要开启自动运行 /root/.openclaw/workspace/projects/monitor_7891_daemon.sh",
+      "createdAt": 1773970701435
+    },
+    {
+      "msgId": "msgwW9HKbIAK6TYJI38Kr6ZWQ==",
+      "messageType": "text",
+      "text": "是开机自动运行",
+      "createdAt": 1773970939237
+    },
+    {
+      "msgId": "msgUWD9aftfpoxsLVJ5maRE0A==",
+      "messageType": "text",
+      "text": "为什么股票监控没有运行",
+      "createdAt": 1773977322544
+    },
+    {
+      "msgId": "msgrjyZzx5NMa1/aKskPrCVZg==",
+      "messageType": "text",
+      "text": "监控哪些内容？",
+      "createdAt": 1773977484220
+    },
+    {
+      "msgId": "msgTf6ulHg1aFhM5kx3iOe12g==",
+      "messageType": "text",
+      "text": "你要把监控结果上报给我，然后根据监控内容做出操作建议，如:减仓，加仓价格多少和仓位多少，是做T还是观望等待，已转完整的交易体系报告。还要分别给出长期（一般3个月时间）中期（一般一个月）和短期(一般一到两周)交易建议",
+      "createdAt": 1773977895738
+    },
+    {
+      "msgId": "msgrQ5LBi/9xE3dLp6opWc4Lg==",
+      "messageType": "text",
+      "text": "优化一下这个方案，增加根据量价分析给出市场情绪，然后把汇报内容保存到.openclaw/trading中，命名规则按照股票名称-日期-监控的次数进行命名为.md文档，迭代10次，给出最好的汇报建议，最好进行配置",
+      "createdAt": 1773978396418
+    },
+    {
+      "msgId": "msgd5QSATm1hNioP8rlED0j4Q==",
+      "messageType": "text",
+      "text": "为什么没有通知监控内容？",
+      "createdAt": 1773983498492
+    },
+    {
+      "msgId": "msghT6Cc/A+GtSQNNEAEWpS2g==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1773985477307
+    },
+    {
+      "msgId": "msgrND25MI95jbtyaO1tB4JJA==",
+      "messageType": "text",
+      "text": "但是我看trading目录中只有一只股票监控了一次的记录，每次监控都要到trading目录",
+      "createdAt": 1773985776923
+    },
+    {
+      "msgId": "msgKL/hm/H0jX6+q7JPOTLpjA==",
+      "messageType": "text",
+      "text": "阈值较低的时候可以不通知我，但是一定要写文档",
+      "createdAt": 1773985847221
+    },
+    {
+      "msgId": "msgg8wwn3A1gXJi6EigMSpXWQ==",
+      "messageType": "text",
+      "text": "后面我们要根据这些文档进行策略优化",
+      "createdAt": 1773985871744
+    },
+    {
+      "msgId": "msgavkl0/s24yHOPIVNtrImww==",
+      "messageType": "text",
+      "text": "再整理一下trading的目录结构，每只股票一个文件夹，不然看着比较乱。保存的时候按照文件夹进行保存",
+      "createdAt": 1773986002636
+    },
+    {
+      "msgId": "msg/4OsayFkibsvyYORngjQbQ==",
+      "messageType": "text",
+      "text": "为什么没有量价分析数据和市场情绪",
+      "createdAt": 1773986228637
+    },
+    {
+      "msgId": "msgHegcQIogPbzKxdjELJ2t1g==",
+      "messageType": "text",
+      "text": "我们的交易系统现在构建的如何？",
+      "createdAt": 1773986326298
+    },
+    {
+      "msgId": "msgxjETZ9lHSs/D+xHBzOOYxQ==",
+      "messageType": "text",
+      "text": "第一问题监控停止了，第二个问题只监控了三一重工",
+      "createdAt": 1773989633438
+    },
+    {
+      "msgId": "msg8uvjMVhiAiL155NR40NPtw==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1774018981037
+    },
+    {
+      "msgId": "msgJHezoyVK1GaFRehJzrUb5w==",
+      "messageType": "text",
+      "text": "你学习了什么？",
+      "createdAt": 1774019318123
+    },
+    {
+      "msgId": "msgEaXc9e90V0+mcMlYyo4HmA==",
+      "messageType": "text",
+      "text": "继续",
+      "createdAt": 1774019405740
+    },
+    {
+      "msgId": "msgzgdyNYZ8kIq9vOC1gWnHtQ==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774055650048
+    },
+    {
+      "msgId": "msg6piGlbdGyG5ptstQFAlOgw==",
+      "messageType": "text",
+      "text": "帮我卸载所有edict项目的agents并且清除所有三省六部agent的workspace。还有7891的启动任务也要清除",
+      "createdAt": 1774056687803
+    },
+    {
+      "msgId": "msgHPgSs1jzCnUKCq/oRSvdZg==",
+      "messageType": "text",
+      "text": "agents下的三省六部agents目录也删除，这个项目太差劲，无法使用",
+      "createdAt": 1774056888890
+    },
+    {
+      "msgId": "msgzIIu19QyrHKIJjqyNIG3ug==",
+      "messageType": "text",
+      "text": "删除",
+      "createdAt": 1774056917717
+    },
+    {
+      "msgId": "msgwk5qn09kRbEUKbRkhytRnw==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1774066012572
+    },
+    {
+      "msgId": "msgXZIp2omchgdaQYCjcJ3+5w==",
+      "messageType": "text",
+      "text": "重新清理，把openclaw.json中的配置也清了，不在使用",
+      "createdAt": 1774066661239
+    },
+    {
+      "msgId": "msg9VkSWKHXSGqaxszD3BDY9w==",
+      "messageType": "text",
+      "text": "给我整理一份openclaw.json的配置文档保存到我们的知识库里，是所有节点的配置项和说明",
+      "createdAt": 1774066783040
+    },
+    {
+      "msgId": "msgciTDzRhLs+kC75pHgB6MhQ==",
+      "messageType": "text",
+      "text": "记住我们的知识库在.openclaw/knowledge-base",
+      "createdAt": 1774067029182
+    },
+    {
+      "msgId": "msghsrOY3YG1q7AilgpDDLLcg==",
+      "messageType": "text",
+      "text": ".openclaw/agents目录下的配置文档也整理一份放到这里",
+      "createdAt": 1774067102125
+    },
+    {
+      "msgId": "msg0aW7qaJT8fIgCCp+IasF2w==",
+      "messageType": "text",
+      "text": "把你刚才整理的文件放入到openclaw文件夹中",
+      "createdAt": 1774067134377
+    },
+    {
+      "msgId": "msgPj5w2/hTh+TBszESIfRing==",
+      "messageType": "text",
+      "text": "把这个知识库也配置到你的identity.md文件",
+      "createdAt": 1774067476913
+    },
+    {
+      "msgId": "msgU2ywWJ2rw48Z86Uh24N6SQ==",
+      "messageType": "text",
+      "text": "使用github520更新hosts",
+      "createdAt": 1774067630009
+    },
+    {
+      "msgId": "msg9a91lFuSiy1iX1sw/T0LhA==",
+      "messageType": "text",
+      "text": "我通过bash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/install-lite.sh)\n安装了新的三省六部项目，怎么用？",
+      "createdAt": 1774071333553
+    },
+    {
+      "msgId": "msgNVVDpGKbj3kPHsGQmP7BTQ==",
+      "messageType": "text",
+      "text": "你帮我重新安装吧",
+      "createdAt": 1774071618917
+    },
+    {
+      "msgId": "msgnVjR0qF5iVRGYbzCoh035g==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774072036346
+    },
+    {
+      "msgId": "msgMpdFOuXtIUbO34LFY2MkmQ==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774072227183
+    },
+    {
+      "msgId": "msgDD3q4pPmPw9t3AebyTQVag==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774072375810
+    },
+    {
+      "msgId": "msgHEUXW6/K/vco1WPKECtxqQ==",
+      "messageType": "text",
+      "text": "11",
+      "createdAt": 1774072536337
+    },
+    {
+      "msgId": "msgiSzM4lzFkoou3ytMx/wrtA==",
+      "messageType": "text",
+      "text": "我使用的是钉钉，你帮我把太子的钉钉配置",
+      "createdAt": 1774072926165
+    },
+    {
+      "msgId": "msgAEw3fPa+1Tc6c/QYnqn9Sw==",
+      "messageType": "text",
+      "text": "并且你需要帮我把密码改成xiaoyang0.",
+      "createdAt": 1774072966198
+    },
+    {
+      "msgId": "msg3EPe/os//PpfDTl4DUkqRA==",
+      "messageType": "text",
+      "text": "改为taizi → dingtalk:taizi",
+      "createdAt": 1774073113524
+    },
+    {
+      "msgId": "msgoVDSSzfBrixH20m9kzWr+A==",
+      "messageType": "text",
+      "text": "名称：太子\nAgentId：4346325687\nClient ID：dingyhlhrphf9uxwp5u3\nClient Secret：8GQXzXWOLZqQ7UyNtbMU12Q0_-mA3c7trPM_A5XNIDA0LjepnThuzky23YGcCi_G\nRobotCode：dingyhlhrphf9uxwp5u3\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351",
+      "createdAt": 1774073192831
+    },
+    {
+      "msgId": "msgsqKlieIZkzeGo+fbEipUVw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774073331030
+    },
+    {
+      "msgId": "msgjnmTiFyoFo5DP1uHmbWutg==",
+      "messageType": "text",
+      "text": "18795无法访问",
+      "createdAt": 1774073392719
+    },
+    {
+      "msgId": "msgAYXjD5YUibzx7S+bj6KImA==",
+      "messageType": "text",
+      "text": "把18795增加到pm2中让我随时可以访问",
+      "createdAt": 1774073460162
+    },
+    {
+      "msgId": "msgSaucNj5Rq9GkeydhTEfrMg==",
+      "messageType": "text",
+      "text": "我使用192.168.50.251无法访问18795",
+      "createdAt": 1774073516315
+    },
+    {
+      "msgId": "msgysRnXpixGeLPSd479gdGMw==",
+      "messageType": "text",
+      "text": "现在访问可以了，还需要根据https://github.com/wanikua/danghuangshang增加agent把？",
+      "createdAt": 1774073722189
+    },
+    {
+      "msgId": "msg4OZ/bRrEr1I5vJd1NNa/fg==",
+      "messageType": "text",
+      "text": "不对，之前我们配置的是edict，现在的三省六部是danghuangshang，这是两个不同的项目",
+      "createdAt": 1774073836732
+    },
+    {
+      "msgId": "msg6eJzO8ztehScRz7/+7MCIQ==",
+      "messageType": "text",
+      "text": "你需要删除之前的关于edict项目三省六部的记忆",
+      "createdAt": 1774073882869
+    },
+    {
+      "msgId": "msgulgEX1SuBnul9jBOZSaV2A==",
+      "messageType": "text",
+      "text": "https://github.com/wanikua/danghuangshang把这个项目使用git clone保存到 projects目录",
+      "createdAt": 1774074131328
+    },
+    {
+      "msgId": "msgkYqR6tJOmrWPbfbErtBgkQ==",
+      "messageType": "text",
+      "text": "文档里创建agents是通过脚本bash scripts/switch-regime.sh modern-ceo",
+      "createdAt": 1774074279555
+    },
+    {
+      "msgId": "msgawcK1KIRv7S+vvsfXVFWsw==",
+      "messageType": "text",
+      "text": "tang-sansheng",
+      "createdAt": 1774074369550
+    },
+    {
+      "msgId": "msgxpkAxgO93/CqJjAWvqEkPg==",
+      "messageType": "text",
+      "text": "通过脚本配置之后有问题，脚本配置的json在.openclaw/knowledge-base/danghuangshang目录下，错误如下：\nRun: openclaw doctor --fix\n2026-03-21 14:28:49\n2026-03-21 14:28:49\n  - <root>: Unrecognized key: \"_regime\"\n2026-03-21 14:28:49\n  - agents.list.0.subagents: Unrecognized key: \"maxConcurrent\"\n2026-03-21 14:28:49\n  - agents.defaults: Unrecognized key: \"maxSpawnDepth\"\n2026-03-21 14:28:49\n  - models.providers.your-provider.api: Invalid option: expected one of \"openai-completions\"|\"openai-responses\"|\"openai-codex-responses\"|\"anthropic-messages\"|\"google-generative-ai\"|\"github-copilot\"|\"bedrock-converse-stream\"|\"ollama\"\n2026-03-21 14:28:49\nProblem:\n2026-03-21 14:28:49\nFile: ~/.openclaw/openclaw.json\n2026-03-21 14:28:49\nConfig invalid\n2026-03-21 14:28:49\n├───────────────────────────────────────────────────────╯\n2026-03-21 14:28:49\n│                                                       │\n2026-03-21 14:28:49\n│  Run \"openclaw doctor --fix\" to remove these keys.    │\n2026-03-21 14:28:49\n│  Run \"openclaw doctor --fix\" to apply these changes.  │\n2026-03-21 14:28:49\n│  Run \"openclaw doctor --fix\" to apply these changes.  │\n2026-03-21 14:28:49\n│                                                       │\n2026-03-21 14:28:49\n◇  Doctor ──────────────────────────────────────────────╮\n2026-03-21 14:28:49\n│\n2026-03-21 14:28:49\n├────────────────────────────────────────────╯\n2026-03-21 14:28:49\n│                                            │\n2026-03-21 14:28:49\n│  - _regime                                 │\n2026-03-21 14:28:49\n│  - agents.list[0].subagents.maxConcurrent  │\n2026-03-21 14:28:49\n│  - agents.defaults.maxSpawnDepth           │\n2026-03-21 14:28:49\n│                                            │\n2026-03-21 14:28:49\n◇  Unknown config keys ──────────────────────╮\n2026-03-21 14:28:49\n│\n2026-03-21 14:28:49\n├───────────────────────────────────────────────╯\n2026-03-21 14:28:49\n│                                               │\n2026-03-21 14:28:49\n│  dingtalk configured, enabled automatically.  │\n2026-03-21 14:28:49\n│                                               │\n2026-03-21 14:28:49\n◇  Doctor changes ──────────────────────────────╮\n2026-03-21 14:28:49\n│\n2026-03-21 14:28:49\n├───────────────────────────────────────────────────────────────╯\n2026-03-21 14:28:49\n│                                                               │\n2026-03-21 14:28:49\n│  channels.discord.accounts.default.                           │\n2026-03-21 14:28:49\n│  Moved channels.discord single-account top-level values into  │\n2026-03-21 14:28:49\n│                                                               │\n2026-03-21 14:28:49\n◇  Doctor changes ──────────────────────────────────────────────╮\n2026-03-21 14:28:49\n│\n2026-03-21 14:28:49\n├────────────────────────────────────────────────────────────╯\n2026-03-21 14:28:49\n│                                                            │\n2026-03-21 14:28:49\n│  Config invalid; doctor will run with best-effort config.  │\n2026-03-21 14:28:49\n│                                                            │\n2026-03-21 14:28:49\n◇  Config ───────────────────────────────────────────────────╮\n2026-03-21 14:28:49\n│\n2026-03-21 14:28:49\n- <root>: Unrecognized key: \"_regime\"\n2026-03-21 14:28:49\n- agents.list.0.subagents: Unrecognized key: \"maxConcurrent\"\n2026-03-21 14:28:49\n- agents.defaults: Unrecognized key: \"maxSpawnDepth\"\n2026-03-21 14:28:49\nInvalid config at /root/.openclaw/openclaw.json:\\n- models.providers.your-provider.api: Invalid option: expected one of \"openai-completions\"|\"openai-responses\"|\"openai-codex-responses\"|\"anthropic-messages\"|\"google-generative-ai\"|\"github-copilot\"|\"bedrock-converse-stream\"|\"ollama\"\n2026-03-21 14:28:47\n\n你需要手工配置了",
+      "createdAt": 1774074859791
+    },
+    {
+      "msgId": "msgJRxV7UNveFXIzqkQZP0/Sg==",
+      "messageType": "text",
+      "text": "明朝内阁配置你需要根据脚本来手工配置，脚本估计有问题",
+      "createdAt": 1774074978282
+    },
+    {
+      "msgId": "msg5J5E73D1ivfL4gJl4S1qyg==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774075206716
+    },
+    {
+      "msgId": "msgy6AKLJK/xxC8WTSQ224SpA==",
+      "messageType": "text",
+      "text": "太子报错了400 模型不存在，请检查模型代码。",
+      "createdAt": 1774075394556
+    },
+    {
+      "msgId": "msglDQDbn/izmehKgxh7NvIgA==",
+      "messageType": "text",
+      "text": "感觉你现在的回复速度好慢",
+      "createdAt": 1774075510988
+    },
+    {
+      "msgId": "msgAk8o4ueJ0kwx/qO+ospm1Q==",
+      "messageType": "text",
+      "text": "页面上显示:未配置 VITE_COURT_CHANNEL，消息区不可用（下旨功能仍可通过 gateway 通道工作）,是不是应该把VITE_COURT_CHANNEL设置成dingtalk",
+      "createdAt": 1774076240859
+    },
+    {
+      "msgId": "msgjRazjpSvOo5hQ1Se/tBqgw==",
+      "messageType": "text",
+      "text": "ok，把我们的.openclaw目录提交到github把，你需要重新生成.ssh文件，然后给我，我把他配置到github",
+      "createdAt": 1774076415495
+    },
+    {
+      "msgId": "msgnKYllyhtoxAMpEjdkPXb9w==",
+      "messageType": "text",
+      "text": "可以提交敏感信息，我是私有仓库，ssh文件已添加",
+      "createdAt": 1774076618732
     }
   ]
 }

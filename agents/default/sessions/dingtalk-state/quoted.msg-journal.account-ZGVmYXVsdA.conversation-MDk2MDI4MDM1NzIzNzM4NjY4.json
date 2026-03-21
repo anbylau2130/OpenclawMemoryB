@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1773823392916,
+  "updatedAt": 1773899034970,
   "records": [
     {
       "msgId": "/JKjLRWgzuNrUhbgRHwoBinsl9K1bPgk5bBeD5D20+s=",
@@ -115,6 +115,18 @@
       "messageType": "outbound-proactive",
       "text": "老板，✅ **方案A（心跳驱动 + 自动启动）已完成！**\n\n---\n\n## 📋 **完整实施方案**\n\n### 核心机制\n\n**心跳检查时自动执行：**\n```\n判断当前时间 → 在窗口内？\n  ↓ 是           ↓ 否\n执行任务       跳过\n```\n\n**时间窗口：**\n- **8:00-9:00**：选股 + 通知\n- **9:30-15:00**：自动启动交易监控（如未运行）\n- **16:00-17:00**：复盘 + 通知\n\n---\n\n## ✅ **已完成的配置**\n\n### 1. 定时任务系统（`scheduled_tasks.py`）\n\n**功能：**\n- ✅ 选股任务（8:00-9:00）\n- ✅ 复盘任务（16:00-17:00）\n- ✅ 交易监控自动启动（9:30-15:00）\n- ✅ 避免重复执行（检查文件/进程）\n- ✅ 钉钉通知（选股、复盘）\n\n**日志：** `/root/.openclaw/workspace/logs/scheduled_tasks.log`\n\n---\n\n### 2. 交易监控自动启动\n\n**启动逻辑：**\n```python\nif is_trading_hours():  # 9:30-15:00\n    if not is_monitor_running():  # 检查PID/进程\n        start_trading_monitor()  # 后台启动\n```\n\n**PID管理：** `/root/.openclaw/workspace/logs/trading_monitor.pid`\n\n**监控日志：** `/root/.openclaw/workspace/logs/trading_monitor.log`\n\n---\n\n### 3. 通知系统（`stock_notifier.py`）\n\n**支持的通知：**\n- ✅ 选股通知（Markdown格式）\n- ✅ 复盘通知（Markdown格式）\n- ✅ 告警通知（Markdown格式）\n\n---\n\n## 📅 **明天（2026-03-19）的工作流程**\n\n### 自动执行（无需手动）\n\n| 时间 | 心跳 | 执行内容 | 通知 |\n|------|------|---------|------|\n| 8:00-9:00 | ✅ | 选股 | ✅ 钉钉 |\n| 9:30-15:00 | ✅ | 自动启动监控（如未运行） | - |\n| 9:30-15:00 | ✅ | 检查告警队列 | ✅ 如有告警 |\n| 16:00-17:00 | ✅ | 复盘 | ✅ 钉钉 |\n\n### 心跳检查执行命令\n\n```bash\ncd /root/.openclaw/workspace/Knowledge/trading-strategies/code\npython3 scheduled_tasks.py\n```\n\n---\n\n## 📱 **您会收到的通知**\n\n### 1. 选股通知（8:00-9:00）\n\n```\n📊 今日选股结果\n时间: 2026-03-19 08:XX\n选股数量: X 支\n\n1. 601088 中国神华\n   - 买入价: ¥47.48\n   - 得分: 3.0\n   - 止损: ¥46.06\n   - 止盈: ¥52.23\n   - 信号: VWAP买入(97.1%), KDJ偏低(K21)\n\n💡 风险提示: 严格执行止损纪律，单只股票仓位不超过20%\n```\n\n### 2. 交易告警（9:30-15:00，如有）\n\n```\n⚠️ 交易告警\n时间: 2026-03-19 XX:XX:XX\n类型: 止损/止盈/信号变化\n\n601088 中国神华\n- 当前价: ¥XX.XX\n- 建议操作: 卖出/持有/加仓\n\n⚠️ 请及时处理！\n```\n\n### 3. 复盘通知（16:00-17:00）\n\n```\n📈 今日复盘报告\n日期: 2026-03-19\n\n📊 总体表现\n- 准确率: XX.X%\n- 平均收益: XX.XX%\n- 总收益: XX.XX%\n\n📋 个股表现\n✅ 601088 中国神华: +X.XX% (持有中)\n❌ XXXXXX XXX: -X.XX% (已止损)\n\n💡 持续优化策略，严格执行纪律\n```\n\n---\n\n## 🔧 **系统健康度：100%**\n\n| 检查项 | 状态 | 说明 |\n|--------|------|------|\n| 定时任务 | ✅ | 自动执行选股和复盘 |\n| 交易监控 | ✅ | 自动启动，PID管理 |\n| 钉钉通知 | ✅ | 选股、复盘、告警 |\n| 日志系统 | ✅ | 完整日志记录 |\n| 避免重复 | ✅ | 文件和进程检查 |\n\n---\n\n## 📝 **关键文件**\n\n| 文件 | 路径 | 说明 |\n|------|------|------|\n| 定时任务 | `scheduled_tasks.py` | 主执行器 |\n| 通知系统 | `stock_notifier.py` | 钉钉通知 |\n| 交易监控 | `trading_hours_monitor.py` | 实时监控 |\n| 告警队列 | `check_alert_queue.py` | 告警推送 |\n| 任务日志 | `logs/scheduled_tasks.log` | 执行日志 |\n| 监控PID | `logs/trading_monitor.pid` | 进程管理 |\n\n---\n\n**老板，从明天开始，整个交易系统将完全自动化运行！您只需要在钉钉查看通知即可！**",
       "createdAt": 1773823392916
+    },
+    {
+      "msgId": "P1+e1pMIlljha3DjSfO/Wztpq188UAPJ+udmaB1uSwU=",
+      "messageType": "outbound-proactive",
+      "text": "老板，检查完毕！\n\n**📊 交易监控状态：**\n\n1. **监控进程**：✅ 运行中（PID: 2356）\n2. **今日告警**：✅ 已推送\n   - 10:56 中国平安急跌2.02%\n   - 10:56 中国中免急跌2.63%\n\n3. **钉钉工作通知**：✅ 配置正常\n   - 刚刚发送测试消息成功（task_id: 3385615107388）\n\n**📋 今日选股情况：**\n\n- **选股时间**：08:12（正常）\n- **分析股票**：30只\n- **选中数量**：0只\n- **原因**：今日市场条件不满足V5高胜率因子（VWAP 92% + 布林带 71% + RSI 69% + KDJ 70%）\n\n**❓ 您是否收到：**\n1. 刚才的测试通知？\n2. 10:56的急跌告警？\n\n如果都没收到，可能是钉钉客户端问题，请检查：\n- 钉钉消息通知权限\n- 工作通知消息列表",
+      "createdAt": 1773897260868
+    },
+    {
+      "msgId": "HNRLQSbGK2zQxglExsQoC18Vup37vDbeZlqFEwSRzBs=",
+      "messageType": "outbound-proactive",
+      "text": "✅ **已改回！**\n\n- 数据目录：`/root/.openclaw/workspace/projects/edict/data`\n- 服务已重启（PID: 4795/4798）\n- 状态：正常",
+      "createdAt": 1773899034970
     }
   ]
 }
