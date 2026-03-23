@@ -325,7 +325,7 @@
       "accountId": "taizi"
     },
     "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
-    "updatedAt": 1774276326139,
+    "updatedAt": 1774276809875,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -420,7 +420,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774268345995,
+      "generatedAt": 1774276329408,
       "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
       "sessionKey": "agent:zhongshu:main",
       "provider": "zai",
@@ -665,11 +665,11 @@
       }
     },
     "totalTokensFresh": true,
-    "inputTokens": 20586,
-    "outputTokens": 1282,
-    "cacheRead": 141056,
+    "inputTokens": 212278,
+    "outputTokens": 14951,
+    "cacheRead": 89280,
     "cacheWrite": 0,
-    "totalTokens": 141742,
+    "totalTokens": 89352,
     "authProfileOverride": "zai:default",
     "authProfileOverrideSource": "auto",
     "authProfileOverrideCompactionCount": 0

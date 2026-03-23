@@ -26,9 +26,7 @@
           {
             "id": "deepseek-ai/deepseek-v3.2",
             "name": "DeepSeek V3.2",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -39,9 +37,7 @@
           {
             "id": "meta/llama-3.1-70b-instruct",
             "name": "Llama 3.1 70B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -52,9 +48,7 @@
           {
             "id": "meta/llama-3.1-8b-instruct",
             "name": "Llama 3.1 8B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -65,9 +59,7 @@
           {
             "id": "microsoft/phi-3-mini-128k-instruct",
             "name": "Phi-3 Mini 128K",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -78,9 +70,7 @@
           {
             "id": "microsoft/phi-3.5-mini-instruct",
             "name": "Phi-3.5 Mini",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -91,9 +81,7 @@
           {
             "id": "google/gemma-2-9b-it",
             "name": "Gemma 2 9B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -104,9 +92,7 @@
           {
             "id": "google/gemma-2-2b-it",
             "name": "Gemma 2 2B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -117,9 +103,7 @@
           {
             "id": "mistralai/mistral-7b-instruct-v0.3",
             "name": "Mistral 7B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -137,9 +121,7 @@
           {
             "id": "deepseek-ai/deepseek-v3.2",
             "name": "DeepSeek V3.2",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -150,9 +132,7 @@
           {
             "id": "meta/llama-3.1-70b-instruct",
             "name": "Llama 3.1 70B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -163,9 +143,7 @@
           {
             "id": "meta/llama-3.1-8b-instruct",
             "name": "Llama 3.1 8B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -176,9 +154,7 @@
           {
             "id": "microsoft/phi-3-mini-128k-instruct",
             "name": "Phi-3 Mini 128K",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -189,9 +165,7 @@
           {
             "id": "microsoft/phi-3.5-mini-instruct",
             "name": "Phi-3.5 Mini",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -202,9 +176,7 @@
           {
             "id": "google/gemma-2-9b-it",
             "name": "Gemma 2 9B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -215,9 +187,7 @@
           {
             "id": "google/gemma-2-2b-it",
             "name": "Gemma 2 2B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -228,9 +198,7 @@
           {
             "id": "mistralai/mistral-7b-instruct-v0.3",
             "name": "Mistral 7B",
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0
@@ -248,9 +216,7 @@
             "id": "glm-5",
             "name": "GLM-5",
             "reasoning": true,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -264,9 +230,7 @@
             "id": "glm-4.7",
             "name": "GLM-4.7",
             "reasoning": true,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -280,9 +244,7 @@
             "id": "glm-4.6",
             "name": "GLM-4.6",
             "reasoning": true,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -296,9 +258,7 @@
             "id": "glm-4.5-air",
             "name": "glm-4.5-air",
             "reasoning": true,
-            "input": [
-              "text"
-            ],
+            "input": ["text"],
             "cost": {
               "input": 0,
               "output": 0,
@@ -536,89 +496,16 @@
       }
     },
     {
-      "agentId": "yushitai",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "yushitai"
-      }
-    },
-    {
-      "agentId": "shiguan",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "shiguan"
-      }
-    },
-    {
       "agentId": "zhongshu",
       "match": {
         "channel": "dingtalk",
-        "accountId": "zhongshu"
-      }
-    },
-    {
-      "agentId": "menxia",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "menxia"
-      }
-    },
-    {
-      "agentId": "shangshu",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "shangshu"
-      }
-    },
-    {
-      "agentId": "bingbu",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "bingbu"
-      }
-    },
-    {
-      "agentId": "libu",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "libu"
-      }
-    },
-    {
-      "agentId": "xingbu",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "xingbu"
-      }
-    },
-    {
-      "agentId": "hubu",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "hubu"
-      }
-    },
-    {
-      "agentId": "gongbu",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "gongbu"
-      }
-    },
-    {
-      "agentId": "libu2",
-      "match": {
-        "channel": "dingtalk",
-        "accountId": "libu2"
+        "accountId": "taizi"
       }
     }
   ],
   "messages": {
     "groupChat": {
-      "mentionPatterns": [
-        "@everyone",
-        "@here"
-      ]
+      "mentionPatterns": ["@everyone", "@here"]
     }
   },
   "commands": {
@@ -674,9 +561,7 @@
           "messageType": "markdown",
           "ackReaction": "🤔思考中",
           "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
+          "allowFrom": ["*"]
         },
         "jessica": {
           "clientId": "dingftzhsams5mrc5qk0",
@@ -689,9 +574,7 @@
           "messageType": "markdown",
           "ackReaction": "🤔思考中",
           "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
+          "allowFrom": ["*"]
         },
         "taizi": {
           "clientId": "dingyhlhrphf9uxwp5u3",
@@ -704,174 +587,7 @@
           "messageType": "markdown",
           "ackReaction": "🤔思考中",
           "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "yushitai": {
-          "agentId": "4378623307",
-          "clientId": "dingt5gxbqpnjbssi8ix",
-          "clientSecret": "xonSznY1R9R8TimxFkq29STD4XdG3xp-Duh9ERhTRhOAv7rOZSlxo8wSNhhnqngu",
-          "robotCode": "dingt5gxbqpnjbssi8ix",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "shiguan": {
-          "agentId": "4378693146",
-          "clientId": "dinguuxqijyomimp1r3i",
-          "clientSecret": "kRIoFfPpEsCpEZRXu2CwZjQcPXKvLsqiELiWWTnnAiDWqji1SpvVbynbpBeWat5B",
-          "robotCode": "dinguuxqijyomimp1r3i",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "zhongshu": {
-          "agentId": "4359227207",
-          "clientId": "dinggmudgjnnsy58wnmg",
-          "clientSecret": "uHkg4xRrWCXqJCRT_DsKLP6U8aPVHesEXLm9K2-i3FgMAcwgtNGiFrxPwAEoKykP",
-          "robotCode": "dinggmudgjnnsy58wnmg",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "menxia": {
-          "agentId": "4359089863",
-          "clientId": "dingjnyq2dki0ublgy9h",
-          "clientSecret": "LVw-AwDOY11aPDJjkyVL_7qihCdKOEk7JHPnlq-sdzakrRsm1O0ACLjHQjRIVvdE",
-          "robotCode": "dingjnyq2dki0ublgy9h",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "shangshu": {
-          "agentId": "4359302593",
-          "clientId": "dingwtxon2k4w5wyovka",
-          "clientSecret": "49ctnbPHe9YYPJtfzdINsoAi0Iz6kH4DkXmZXaYtv_Piv3v2aYYSZPiYHTd2bjj2",
-          "robotCode": "dingwtxon2k4w5wyovka",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "bingbu": {
-          "agentId": "4359241931",
-          "clientId": "dingd7rsbwkpovlconni",
-          "clientSecret": "ibI4i8wu3dqWFsRCLYKf7naUROACswdKiockig5wyw1fmDq_NXThOdjhkMXkNBXO",
-          "robotCode": "dingd7rsbwkpovlconni",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "libu": {
-          "agentId": "4359402265",
-          "clientId": "dingwiikp3ehhtpldjjd",
-          "clientSecret": "XDju8V_QPaSGUuoMQeZu_tZWDi4Z2qC1qmKR1BFNGH71sAU8Qp6bfK-bcGwkVdLh",
-          "robotCode": "dingwiikp3ehhtpldjjd",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "xingbu": {
-          "agentId": "4359435206",
-          "clientId": "ding7jhvfg5mg3vmu2ic",
-          "clientSecret": "moM4AIPqZUIB1qs1MoVvOSvZEY4XOOJgs3g8TsWL_g80E1pX3mFY31NTPaE40jNz",
-          "robotCode": "ding7jhvfg5mg3vmu2ic",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "hubu": {
-          "agentId": "4359256960",
-          "clientId": "dingcofbbrbuphduuctd",
-          "clientSecret": "qdaHQZMaqlh6a9wfEKDWZ3Nq0uHthI34050siq5TedojYi_b5zVIGn1GvmewTujW",
-          "robotCode": "dingcofbbrbuphduuctd",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "gongbu": {
-          "agentId": "4359265988",
-          "clientId": "dingdaiudstpjyn6ix1i",
-          "clientSecret": "nsp6XRGEPVEEz8neNSoARHIf_52soD5XTxDt11cjMgbU-LyV_YBjZM6e0AceOYDA",
-          "robotCode": "dingdaiudstpjyn6ix1i",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
-        },
-        "libu2": {
-          "agentId": "4359467128",
-          "clientId": "dingsgwdrym5vfev3hf6",
-          "clientSecret": "eUd983Sd8YvS71V9jQtpO2CdEaf3i3nxHAPOkOUPuyWWnnUVaVBK1gczdzV8n1aB",
-          "robotCode": "dingsgwdrym5vfev3hf6",
-          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
-          "dmPolicy": "open",
-          "groupPolicy": "open",
-          "messageType": "markdown",
-          "ackReaction": "🤔思考中",
-          "userPhone": "13027729771",
-          "allowFrom": [
-            "*"
-          ]
+          "allowFrom": ["*"]
         }
       },
       "robots": [
@@ -918,9 +634,7 @@
   },
   "plugins": {
     "load": {
-      "paths": [
-        "/root/.openclaw/plugins/evermemos-openclaw-plugin"
-      ]
+      "paths": ["/root/.openclaw/plugins/evermemos-openclaw-plugin"]
     },
     "slots": {
       "memory": "evermemos-openclaw-plugin"
