@@ -1,0 +1,210 @@
+{
+  "generatedAt": "2026-03-19 14:58:09",
+  "taskSource": "tasks_source.json",
+  "officials": [],
+  "tasks": [
+    {
+      "id": "OC-taizi-666486e1",
+      "title": "崔晓洋 (096028035723738668)",
+      "official": "储君",
+      "org": "太子",
+      "state": "Doing",
+      "now": "Tool 'exec' finished",
+      "eta": "2026-03-19 14:32:27",
+      "block": "无",
+      "output": "/root/.openclaw/agents/taizi/sessions/666486e1-f5e7-4136-ad8f-5f12a222ede9.jsonl",
+      "flow": {
+        "draft": "agent=taizi",
+        "review": "updatedAt=2026-03-19 14:32:27",
+        "dispatch": "sessionKey=agent:taizi:main"
+      },
+      "ac": "来自 OpenClaw runtime sessions 的实时映射",
+      "activity": [
+        {
+          "at": "2026-03-19T06:32:47.138Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:32:37.358Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:32:25.377Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:32:08.652Z",
+          "kind": "tool",
+          "text": "Tool 'exec' returned: (no output)"
+        },
+        {
+          "at": "2026-03-19T06:31:57.619Z",
+          "kind": "tool",
+          "text": "Tool 'exec' returned: []"
+        },
+        {
+          "at": "2026-03-19T06:31:52.133Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:31:43.527Z",
+          "kind": "tool",
+          "text": "Tool 'exec' returned: Directory not found"
+        },
+        {
+          "at": "2026-03-19T06:31:11.974Z",
+          "kind": "user",
+          "text": "User: Note: Reference memory below. Build on past successes; avoid repeating failed approaches.\n- Time: 20..."
+        },
+        {
+          "at": "2026-03-19T06:31:09.658Z",
+          "kind": "assistant",
+          "text": "## ✅ 配置完成！Dashboard已统一到 `/root/.openclaw/workspace/projects/edict/`"
+        },
+        {
+          "at": "2026-03-19T06:30:49.767Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        }
+      ],
+      "sourceMeta": {
+        "agentId": "taizi",
+        "sessionKey": "agent:taizi:main",
+        "sessionId": "666486e1-f5e7-4136-ad8f-5f12a222ede9",
+        "updatedAt": 1773901947769,
+        "ageMs": 24814,
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 5909,
+        "outputTokens": 3610,
+        "totalTokens": 51850
+      },
+      "outputMeta": {
+        "exists": true,
+        "lastModified": "2026-03-19 14:57:55"
+      },
+      "heartbeat": {
+        "status": "stalled",
+        "label": "🔴 已停滞 25分钟",
+        "ageSec": 1541
+      }
+    },
+    {
+      "id": "OC-main-87b31aa1",
+      "title": "崔晓洋 (096028035723738668)",
+      "official": "储君",
+      "org": "太子",
+      "state": "Doing",
+      "now": "正在执行: 老板，**7891服务已完全恢复！**",
+      "eta": "2026-03-19 14:31:26",
+      "block": "无",
+      "output": "/root/.openclaw/agents/main/sessions/87b31aa1-8e37-437a-9b49-3bf247fc45a4.jsonl",
+      "flow": {
+        "draft": "agent=main",
+        "review": "updatedAt=2026-03-19 14:31:26",
+        "dispatch": "sessionKey=agent:main:main"
+      },
+      "ac": "来自 OpenClaw runtime sessions 的实时映射",
+      "activity": [
+        {
+          "at": "2026-03-19T06:31:16.369Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:30:51.661Z",
+          "kind": "user",
+          "text": "User: Note: Reference memory below. Build on past successes; avoid repeating failed approaches.\n- Time: 20..."
+        },
+        {
+          "at": "2026-03-19T06:30:47.478Z",
+          "kind": "assistant",
+          "text": "老板，**7891服务已完全恢复！**"
+        },
+        {
+          "at": "2026-03-19T06:30:31.113Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:30:06.008Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:29:54.292Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:29:36.579Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:29:18.741Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:29:07.079Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        },
+        {
+          "at": "2026-03-19T06:28:41.998Z",
+          "kind": "tool",
+          "text": "Tool 'exec' finished"
+        }
+      ],
+      "sourceMeta": {
+        "agentId": "main",
+        "sessionKey": "agent:main:main",
+        "sessionId": "87b31aa1-8e37-437a-9b49-3bf247fc45a4",
+        "updatedAt": 1773901886230,
+        "ageMs": 86353,
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 11541,
+        "outputTokens": 4223,
+        "totalTokens": 96845
+      },
+      "outputMeta": {
+        "exists": true,
+        "lastModified": "2026-03-19 14:58:06"
+      },
+      "heartbeat": {
+        "status": "stalled",
+        "label": "🔴 已停滞 26分钟",
+        "ageSec": 1602
+      }
+    }
+  ],
+  "history": [],
+  "metrics": {
+    "officialCount": 0,
+    "todayDone": 0,
+    "totalDone": 0,
+    "inProgress": 2,
+    "blocked": 0
+  },
+  "syncStatus": {
+    "ok": true,
+    "lastSyncAt": "2026-03-19 14:32:52",
+    "durationMs": 1945,
+    "source": "openclaw_runtime_sessions",
+    "recordCount": 2,
+    "scannedSessionFiles": 13,
+    "missingFields": {},
+    "error": null
+  },
+  "health": {
+    "syncOk": true,
+    "syncLatencyMs": 1945,
+    "missingFieldCount": 0
+  }
+}

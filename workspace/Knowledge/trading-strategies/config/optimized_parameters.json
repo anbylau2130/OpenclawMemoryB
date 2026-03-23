@@ -1,0 +1,68 @@
+{
+  "optimization_date": "2026-03-17T10:11:08.923201",
+  "parameters": {
+    "factor_weights": {
+      "VWAP": 3.0,
+      "BOLL": 3.0,
+      "KDJ": 3.0,
+      "RSI": 2.0,
+      "MACD": 1.0,
+      "MA": 1.0
+    },
+    "selection_threshold": 4.0,
+    "risk_control": {
+      "stop_loss": -2.0,
+      "take_profit_1": 6.0,
+      "take_profit_2": 10.0,
+      "risk_reward_ratio": 5.0,
+      "max_position": 0.1,
+      "max_total_position": 0.6
+    }
+  },
+  "changes": [
+    {
+      "type": "factor_weight",
+      "factor": "BOLL",
+      "old_value": 2.0,
+      "new_value": 3.0,
+      "change": 1.0
+    },
+    {
+      "type": "factor_weight",
+      "factor": "KDJ",
+      "old_value": 1.5,
+      "new_value": 3.0,
+      "change": 1.5
+    },
+    {
+      "type": "factor_weight",
+      "factor": "RSI",
+      "old_value": 1.5,
+      "new_value": 2.0,
+      "change": 0.5
+    },
+    {
+      "type": "factor_weight",
+      "factor": "MACD",
+      "old_value": 0.5,
+      "new_value": 1.0,
+      "change": 0.5
+    },
+    {
+      "type": "factor_weight",
+      "factor": "MA",
+      "old_value": 0.5,
+      "new_value": 1.0,
+      "change": 0.5
+    },
+    {
+      "type": "selection_threshold",
+      "old_value": 3.0,
+      "new_value": 4.0
+    }
+  ],
+  "recommendations": [
+    "建议应用6项参数优化",
+    "优化后建议重新回测验证效果"
+  ]
+}

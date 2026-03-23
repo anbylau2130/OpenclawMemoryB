@@ -1,0 +1,16 @@
+{
+  "code": "601939",
+  "name": "建设银行",
+  "current_price": 9.38,
+  "open": 9.33,
+  "high": 9.4,
+  "low": 9.27,
+  "volume": 950395,
+  "amount": 889049443.0,
+  "change_pct": 0.43,
+  "pe": 103,
+  "pb": 1027,
+  "total_mv": 0.983790614,
+  "source": "eastmoney",
+  "timestamp": "2026-03-23T08:11:51.949238"
+}

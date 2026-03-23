@@ -1,0 +1,16 @@
+{
+  "code": "600104",
+  "name": "上汽集团",
+  "current_price": 14.28,
+  "open": 14.28,
+  "high": 14.45,
+  "low": 14.2,
+  "volume": 558765,
+  "amount": 800936065.0,
+  "change_pct": 0,
+  "pe": 82,
+  "pb": 1571,
+  "total_mv": 0.704712638,
+  "source": "eastmoney",
+  "timestamp": "2026-03-23T08:11:53.363309"
+}

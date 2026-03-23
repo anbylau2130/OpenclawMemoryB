@@ -1,0 +1,17 @@
+{
+  "currentStock": "sh600031",
+  "currentStockName": "三一重工",
+  "status": "framework_building",
+  "startedAt": "2026-02-25T00:26:00Z",
+  "updatedAt": "2026-02-25T00:30:00Z",
+  "progress": {
+    "dataFetch": "blocked",
+    "indicatorCalc": "completed",
+    "signalGen": "completed",
+    "backtest": "pending",
+    "analysis": "pending"
+  },
+  "completedStocks": [],
+  "totalStocks": 7,
+  "notes": "构建了信号识别逻辑和风险控制规则，历史数据获取受阻"
+}

@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-03-17T08:50:00",
+  "task": "策略优化",
+  "status": "completed",
+  "summary": {
+    "original_win_rate": 44.4,
+    "target_win_rate": 60.0,
+    "optimization": "V3 → V4"
+  },
+  "changes": {
+    "factors_added": [
+      {"name": "KDJ超卖", "weight": 1.5, "win_rate": 70.0}
+    ],
+    "factors_removed": [
+      {"name": "MACD", "weight": 0.5, "win_rate": 36.6},
+      {"name": "均线多头", "weight": 2.0, "win_rate": 36.3}
+    ],
+    "factors_boosted": [
+      {"name": "VWAP", "old_weight": 2.0, "new_weight": 3.0, "win_rate": 92.0},
+      {"name": "布林带", "old_weight": 1.0, "new_weight": 2.0, "win_rate": 71.0}
+    ]
+  },
+  "risk_management": {
+    "old_stop_loss": 0.05,
+    "new_stop_loss": 0.03,
+    "old_take_profit": 0.08,
+    "new_take_profit": 0.10,
+    "old_risk_reward": 1.6,
+    "new_risk_reward": 3.3
+  },
+  "files": {
+    "selector_v4": "code/stock_selector_v4.py",
+    "backtest_engine": "code/backtest_engine.py",
+    "optimization_report": "backtest/STRATEGY_OPTIMIZATION_V4.md",
+    "backtest_data_dir": "data/backtest/"
+  },
+  "note": "模拟数据回测不可靠，需接入真实数据验证"
+}

@@ -1,0 +1,283 @@
+{
+  "date": "2026-03-17",
+  "time": "00:14",
+  "stocks": [
+    {
+      "code": "600690",
+      "name": "海尔智家",
+      "current_price": 157.09140703379995,
+      "total_score": 8,
+      "daily_score": 5,
+      "weekly_score": 3,
+      "daily_signals": [
+        "均线多头排列",
+        "放量（量比2.02）",
+        "RSI超卖(27.9)",
+        "MACD金叉"
+      ],
+      "weekly_signals": [
+        "周线多头排列"
+      ],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "volume_ratio": 2.018742835285292,
+      "rsi": 27.949625502344304,
+      "buy_price": 155.52,
+      "sell_price": 180.66,
+      "stop_loss_short": 149.24,
+      "stop_loss_mid": 144.52,
+      "take_profit_short": 169.66,
+      "take_profit_mid": 180.66,
+      "position": "30-40%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "601857",
+      "name": "中国石油",
+      "current_price": 8.7586668676739,
+      "total_score": 7,
+      "daily_score": 4,
+      "weekly_score": 3,
+      "daily_signals": [
+        "站上MA5",
+        "放量（量比2.19）",
+        "RSI超卖(21.3)",
+        "MACD金叉"
+      ],
+      "weekly_signals": [
+        "周线多头排列"
+      ],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "volume_ratio": 2.1919290003626517,
+      "rsi": 21.30526154855934,
+      "buy_price": 8.67,
+      "sell_price": 10.07,
+      "stop_loss_short": 8.32,
+      "stop_loss_mid": 8.06,
+      "take_profit_short": 9.46,
+      "take_profit_mid": 10.07,
+      "position": "30-40%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "600015",
+      "name": "华夏银行",
+      "current_price": 148.60712721306206,
+      "total_score": 7,
+      "daily_score": 4,
+      "weekly_score": 3,
+      "daily_signals": [
+        "均线多头排列",
+        "放量（量比2.67）",
+        "MACD金叉"
+      ],
+      "weekly_signals": [
+        "周线多头排列"
+      ],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "volume_ratio": 2.67302107650934,
+      "rsi": 41.327017156597165,
+      "buy_price": 147.12,
+      "sell_price": 170.9,
+      "stop_loss_short": 141.18,
+      "stop_loss_mid": 136.72,
+      "take_profit_short": 160.5,
+      "take_profit_mid": 170.9,
+      "position": "30-40%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "600028",
+      "name": "中国石化",
+      "current_price": 166.55096978763413,
+      "total_score": 6,
+      "daily_score": 3,
+      "weekly_score": 3,
+      "daily_signals": [
+        "均线多头排列",
+        "MACD金叉"
+      ],
+      "weekly_signals": [
+        "周线多头排列"
+      ],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "volume_ratio": 1.2145071274385397,
+      "rsi": 51.967178750870985,
+      "buy_price": 164.89,
+      "sell_price": 191.53,
+      "stop_loss_short": 158.22,
+      "stop_loss_mid": 153.23,
+      "take_profit_short": 179.88,
+      "take_profit_mid": 191.53,
+      "position": "20-30%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "600019",
+      "name": "宝钢股份",
+      "current_price": 161.39745231541298,
+      "total_score": 6,
+      "daily_score": 3,
+      "weekly_score": 3,
+      "daily_signals": [
+        "均线多头排列",
+        "MACD金叉"
+      ],
+      "weekly_signals": [
+        "周线多头排列"
+      ],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "volume_ratio": 1.251119486416215,
+      "rsi": 67.83617338485516,
+      "buy_price": 159.78,
+      "sell_price": 185.61,
+      "stop_loss_short": 153.33,
+      "stop_loss_mid": 148.49,
+      "take_profit_short": 174.31,
+      "take_profit_mid": 185.61,
+      "position": "20-30%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "600276",
+      "name": "恒瑞医药",
+      "current_price": 19.223553139226933,
+      "total_score": 6,
+      "daily_score": 3,
+      "weekly_score": 3,
+      "daily_signals": [
+        "站上MA5",
+        "放量（量比2.92）",
+        "MACD金叉"
+      ],
+      "weekly_signals": [
+        "周线多头排列"
+      ],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "volume_ratio": 2.9203208341440834,
+      "rsi": 34.972374791726516,
+      "buy_price": 19.03,
+      "sell_price": 22.11,
+      "stop_loss_short": 18.26,
+      "stop_loss_mid": 17.69,
+      "take_profit_short": 20.76,
+      "take_profit_mid": 22.11,
+      "position": "20-30%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "600048",
+      "name": "保利地产",
+      "current_price": 185.96947934632578,
+      "total_score": 6,
+      "daily_score": 3,
+      "weekly_score": 3,
+      "daily_signals": [
+        "站上MA5",
+        "放量（量比2.05）",
+        "MACD金叉"
+      ],
+      "weekly_signals": [
+        "周线多头排列"
+      ],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "volume_ratio": 2.0477922656684493,
+      "rsi": 65.29638726701299,
+      "buy_price": 184.11,
+      "sell_price": 213.86,
+      "stop_loss_short": 176.67,
+      "stop_loss_mid": 171.09,
+      "take_profit_short": 200.85,
+      "take_profit_mid": 213.86,
+      "position": "20-30%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "000858",
+      "name": "五粮液",
+      "current_price": 108.17611932718752,
+      "total_score": 5,
+      "daily_score": 2,
+      "weekly_score": 3,
+      "daily_signals": [
+        "站上MA5",
+        "MACD金叉"
+      ],
+      "weekly_signals": [
+        "周线多头排列"
+      ],
+      "daily_trend": "NEUTRAL",
+      "weekly_trend": "UP",
+      "volume_ratio": 0.8655167439711859,
+      "rsi": 38.96134655551613,
+      "buy_price": 101.19,
+      "sell_price": 124.4,
+      "stop_loss_short": 102.77,
+      "stop_loss_mid": 99.52,
+      "take_profit_short": 116.83,
+      "take_profit_mid": 124.4,
+      "position": "10-20%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "600887",
+      "name": "伊利股份",
+      "current_price": 132.97120078112096,
+      "total_score": 5,
+      "daily_score": 2,
+      "weekly_score": 3,
+      "daily_signals": [
+        "站上MA5",
+        "MACD金叉"
+      ],
+      "weekly_signals": [
+        "周线多头排列"
+      ],
+      "daily_trend": "NEUTRAL",
+      "weekly_trend": "UP",
+      "volume_ratio": 1.1531997582719264,
+      "rsi": 50.930601741589975,
+      "buy_price": 124.33,
+      "sell_price": 152.92,
+      "stop_loss_short": 126.32,
+      "stop_loss_mid": 122.33,
+      "take_profit_short": 143.61,
+      "take_profit_mid": 152.92,
+      "position": "10-20%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "600703",
+      "name": "三安光电",
+      "current_price": 121.85205112634816,
+      "total_score": 5,
+      "daily_score": 5,
+      "weekly_score": 0,
+      "daily_signals": [
+        "均线多头排列",
+        "放量（量比2.46）",
+        "RSI超卖(23.3)",
+        "MACD金叉"
+      ],
+      "weekly_signals": [],
+      "daily_trend": "UP",
+      "weekly_trend": "DOWN",
+      "volume_ratio": 2.4631085566941247,
+      "rsi": 23.32184838822516,
+      "buy_price": 120.63,
+      "sell_price": 131.6,
+      "stop_loss_short": 115.76,
+      "stop_loss_mid": 112.1,
+      "take_profit_short": 131.6,
+      "take_profit_mid": 140.13,
+      "position": "20-30%",
+      "holding_period": "短线"
+    }
+  ]
+}

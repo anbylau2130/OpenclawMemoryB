@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": {
+    "system-resource-monitor": {
+      "version": "1.0.0",
+      "installedAt": 1773619083405
+    },
+    "system-info": {
+      "version": "1.0.0",
+      "installedAt": 1773619201273
+    },
+    "shell-script": {
+      "version": "2.3.1",
+      "installedAt": 1773619261545
+    },
+    "code-review": {
+      "version": "1.0.0",
+      "installedAt": 1773969137831
+    },
+    "todoist": {
+      "version": "0.2.1",
+      "installedAt": 1773969137862
+    },
+    "self-improving-agent": {
+      "version": "3.0.5",
+      "installedAt": 1773969138388
+    },
+    "ontology": {
+      "version": "1.0.4",
+      "installedAt": 1773969142359
+    },
+    "clawlist": {
+      "version": "0.0.1",
+      "installedAt": 1773969142931
+    },
+    "TaskMaster": {
+      "version": "1.0.0",
+      "installedAt": 1773969143947
+    }
+  }
+}

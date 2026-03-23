@@ -1,0 +1,46 @@
+{
+  "version": "V5",
+  "timestamp": "2026-03-21T08:14:42.356335",
+  "data_source": "real",
+  "total_analyzed": 30,
+  "selected_count": 1,
+  "stocks": [
+    {
+      "code": "601398",
+      "name": "工商银行",
+      "current_price": 7.5,
+      "change_pct": -0.4,
+      "score": 3.0,
+      "signals": [
+        "VWAP强买(94.8%)"
+      ],
+      "rsi": 46.57,
+      "kdj_k": 31.31,
+      "vwap": 7.91,
+      "boll_lower": 6.6,
+      "data_source": "eastmoney",
+      "stop_loss": 7.27,
+      "take_profit": 8.25,
+      "risk_reward": 3.3,
+      "buy_price": 7.5,
+      "sell_price": 8.25,
+      "stop_loss_short": 7.27,
+      "stop_loss_mid": 6.9,
+      "take_profit_short": 7.95,
+      "take_profit_mid": 8.25,
+      "total_score": 3.0,
+      "daily_score": 3.0,
+      "weekly_score": 0,
+      "daily_signals": [
+        "VWAP强买(94.8%)"
+      ],
+      "weekly_signals": [],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "position": "20-30%",
+      "holding_period": "短线"
+    }
+  ],
+  "date": "2026-03-21",
+  "time": "08:14"
+}

@@ -1,0 +1,246 @@
+{
+  "date": "2026-03-17",
+  "time": "00:03",
+  "selection": {
+    "date": "2026-03-17",
+    "time": "00:03",
+    "stocks": [
+      {
+        "code": "600019",
+        "name": "宝钢股份",
+        "composite_score": 0.9951410066954025,
+        "factor_scores": {
+          "value": 1.0298780471959312,
+          "momentum": 0.9475072178735413,
+          "quality": 1.180751619293809,
+          "size": 0.2925954563297526,
+          "low_vol": 1.139205711657017
+        },
+        "signal": "BUY"
+      },
+      {
+        "code": "601766",
+        "name": "中国中车",
+        "composite_score": 0.8974063232176193,
+        "factor_scores": {
+          "value": 0.5867268255989844,
+          "momentum": 0.4999140358695344,
+          "quality": 1.292374699060419,
+          "size": 0.45002213557597925,
+          "low_vol": 1.4349328040386808
+        },
+        "signal": "BUY"
+      },
+      {
+        "code": "601808",
+        "name": "中海油服",
+        "composite_score": 0.8643417156384635,
+        "factor_scores": {
+          "value": 0.2760439738879503,
+          "momentum": 0.9166622806118596,
+          "quality": 1.3141065399003642,
+          "size": 1.1580216422756897,
+          "low_vol": 0.6781927575262423
+        },
+        "signal": "BUY"
+      },
+      {
+        "code": "600745",
+        "name": "闻泰科技",
+        "composite_score": 0.8630709633406933,
+        "factor_scores": {
+          "value": 0.44866985833125916,
+          "momentum": 0.6582478503816445,
+          "quality": 1.0790094269833133,
+          "size": 0.5573694751099292,
+          "low_vol": 1.4164286241110458
+        },
+        "signal": "BUY"
+      },
+      {
+        "code": "002415",
+        "name": "海康威视",
+        "composite_score": 0.8521678594554672,
+        "factor_scores": {
+          "value": 0.9790625537263709,
+          "momentum": 1.3837991625375046,
+          "quality": 0.09751542912039057,
+          "size": -0.04281664412729169,
+          "low_vol": 1.451541826042242
+        },
+        "signal": "BUY"
+      },
+      {
+        "code": "601919",
+        "name": "中远海控",
+        "composite_score": 0.8123856589378251,
+        "factor_scores": {
+          "value": 0.7804844349293232,
+          "momentum": 0.041449806909748865,
+          "quality": 1.4913065523581652,
+          "size": 0.11766318493225691,
+          "low_vol": 1.306666818208781
+        },
+        "signal": "BUY"
+      },
+      {
+        "code": "600741",
+        "name": "华域汽车",
+        "composite_score": 0.6785991405393853,
+        "factor_scores": {
+          "value": 0.6557944360635659,
+          "momentum": 0.5747292380176288,
+          "quality": 0.34249016427700596,
+          "size": 1.4413406302947238,
+          "low_vol": 0.8700066986177051
+        },
+        "signal": "BUY"
+      },
+      {
+        "code": "600588",
+        "name": "用友网络",
+        "composite_score": 0.6724978596491205,
+        "factor_scores": {
+          "value": 1.0294378149165393,
+          "momentum": -0.6884560363635704,
+          "quality": 1.477043058466943,
+          "size": 0.13022662102500604,
+          "low_vol": 1.2822043951873443
+        },
+        "signal": "BUY"
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "composite_score": 0.6519326782721326,
+        "factor_scores": {
+          "value": 1.0290931506391718,
+          "momentum": 1.2136948870197641,
+          "quality": -0.5467166947458175,
+          "size": 0.5368815652957508,
+          "low_vol": 1.1284067177311825
+        },
+        "signal": "BUY"
+      },
+      {
+        "code": "600521",
+        "name": "华海药业",
+        "composite_score": 0.643242679723955,
+        "factor_scores": {
+          "value": 0.3561724380653013,
+          "momentum": 0.9960252411423456,
+          "quality": 0.9044432636649717,
+          "size": 0.11475460933176507,
+          "low_vol": 0.42707802487944435
+        },
+        "signal": "BUY"
+      }
+    ],
+    "weights": {
+      "value": 0.2,
+      "momentum": 0.25,
+      "quality": 0.25,
+      "size": 0.1,
+      "low_vol": 0.2
+    }
+  },
+  "accuracy": {
+    "results": [
+      {
+        "code": "600019",
+        "name": "宝钢股份",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.9951410066954025,
+        "actual_change": 0.8963198716934828,
+        "volume_ratio": 1.8278260485750217,
+        "correct": true
+      },
+      {
+        "code": "601766",
+        "name": "中国中车",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.8974063232176193,
+        "actual_change": -1.7673602663210075,
+        "volume_ratio": 1.2786176717822169,
+        "correct": false
+      },
+      {
+        "code": "601808",
+        "name": "中海油服",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.8643417156384635,
+        "actual_change": 3.3491525046569013,
+        "volume_ratio": 1.5690927715267464,
+        "correct": true
+      },
+      {
+        "code": "600745",
+        "name": "闻泰科技",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.8630709633406933,
+        "actual_change": 3.603321018714267,
+        "volume_ratio": 1.1722072067467344,
+        "correct": true
+      },
+      {
+        "code": "002415",
+        "name": "海康威视",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.8521678594554672,
+        "actual_change": -3.105549708027573,
+        "volume_ratio": 1.669017991655889,
+        "correct": false
+      },
+      {
+        "code": "601919",
+        "name": "中远海控",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.8123856589378251,
+        "actual_change": -2.219762059374454,
+        "volume_ratio": 1.6664376308300406,
+        "correct": false
+      },
+      {
+        "code": "600741",
+        "name": "华域汽车",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.6785991405393853,
+        "actual_change": 1.1480252178582262,
+        "volume_ratio": 0.9006690610833263,
+        "correct": true
+      },
+      {
+        "code": "600588",
+        "name": "用友网络",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.6724978596491205,
+        "actual_change": -3.6368754415960156,
+        "volume_ratio": 1.8973668696086534,
+        "correct": false
+      },
+      {
+        "code": "000333",
+        "name": "美的集团",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.6519326782721326,
+        "actual_change": 4.870310987859094,
+        "volume_ratio": 0.9720859942519045,
+        "correct": true
+      },
+      {
+        "code": "600521",
+        "name": "华海药业",
+        "predicted_signal": "BUY",
+        "predicted_score": 0.643242679723955,
+        "actual_change": -0.8827698692854336,
+        "volume_ratio": 1.7108583859942517,
+        "correct": false
+      }
+    ],
+    "accuracy": 0.5,
+    "correct_count": 5,
+    "total_predictions": 10,
+    "avg_return": 0.2254812256177488,
+    "total_return": 2.254812256177488
+  }
+}

@@ -1,7 +1,7 @@
 {
   "agent:main:main": {
     "sessionId": "44211369-e1d2-405b-a195-eb499d600600",
-    "updatedAt": 1774268538728,
+    "updatedAt": 1774268723592,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -372,7 +372,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774268422951,
+      "generatedAt": 1774268638274,
       "sessionId": "44211369-e1d2-405b-a195-eb499d600600",
       "sessionKey": "agent:main:main",
       "provider": "zai",
@@ -392,9 +392,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 38063,
+        "chars": 38145,
         "projectContextChars": 17109,
-        "nonProjectContextChars": 20954
+        "nonProjectContextChars": 21036
       },
       "injectedWorkspaceFiles": [
         {
@@ -581,7 +581,7 @@
       },
       "tools": {
         "listChars": 1816,
-        "schemaChars": 16296,
+        "schemaChars": 16284,
         "entries": [
           {
             "name": "read",
@@ -627,8 +627,8 @@
           },
           {
             "name": "message",
-            "summaryChars": 89,
-            "schemaChars": 4872,
+            "summaryChars": 97,
+            "schemaChars": 4860,
             "propertiesCount": 91
           },
           {
@@ -712,14 +712,14 @@
         ]
       }
     },
-    "inputTokens": 145458,
-    "outputTokens": 840,
-    "cacheRead": 151168,
+    "inputTokens": 4437,
+    "outputTokens": 725,
+    "cacheRead": 154112,
     "cacheWrite": 0,
     "totalTokensFresh": true,
     "lastChannel": "dingtalk",
     "lastAccountId": "default",
-    "totalTokens": 151803
+    "totalTokens": 154819
   },
   "agent:main:dingtalk:group:096028035723738668": {
     "chatType": "group",

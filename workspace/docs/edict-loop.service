@@ -1,0 +1,17 @@
+[Unit]
+Description=Edict Data Refresh Loop
+After=network.target openclaw-gateway.service
+Wants=openclaw-gateway.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/.openclaw/workspace/projects/edict
+ExecStart=/bin/bash /root/.openclaw/workspace/projects/edict/scripts/run_loop.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

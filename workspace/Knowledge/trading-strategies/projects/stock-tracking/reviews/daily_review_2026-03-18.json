@@ -1,0 +1,76 @@
+{
+  "date": "2026-03-18",
+  "time": "16:42",
+  "type": "daily",
+  "selection": {
+    "version": "V5",
+    "timestamp": "2026-03-18T16:28:52.858470",
+    "data_source": "real",
+    "total_analyzed": 30,
+    "selected_count": 1,
+    "stocks": [
+      {
+        "code": "601088",
+        "name": "中国神华",
+        "current_price": 47.48,
+        "change_pct": -0.54,
+        "score": 3.0,
+        "signals": [
+          "VWAP买入(97.1%)",
+          "KDJ偏低(K21)"
+        ],
+        "rsi": 53.08,
+        "kdj_k": 21.39,
+        "vwap": 48.92,
+        "boll_lower": 42.49,
+        "data_source": "eastmoney",
+        "stop_loss": 46.06,
+        "take_profit": 52.23,
+        "risk_reward": 3.3,
+        "buy_price": 47.48,
+        "sell_price": 52.23,
+        "stop_loss_short": 46.06,
+        "stop_loss_mid": 43.68,
+        "take_profit_short": 50.33,
+        "take_profit_mid": 52.23,
+        "total_score": 3.0,
+        "daily_score": 3.0,
+        "weekly_score": 0,
+        "daily_signals": [
+          "VWAP买入(97.1%)",
+          "KDJ偏低(K21)"
+        ],
+        "weekly_signals": [],
+        "daily_trend": "UP",
+        "weekly_trend": "UP",
+        "position": "20-30%",
+        "holding_period": "短线"
+      }
+    ],
+    "date": "2026-03-18",
+    "time": "16:28"
+  },
+  "review": {
+    "results": [
+      {
+        "code": "601088",
+        "name": "中国神华",
+        "buy_price": 47.48,
+        "target_price": 52.23,
+        "stop_loss": 46.06,
+        "take_profit": 50.33,
+        "current_price": 49.814694592511685,
+        "daily_change": 4.917216917674146,
+        "profit_pct": 4.917216917674146,
+        "status": "持有",
+        "correct": true,
+        "daily_score": 3.0
+      }
+    ],
+    "accuracy": 1.0,
+    "avg_profit": 4.917216917674146,
+    "total_profit": 4.917216917674146,
+    "correct_count": 1,
+    "total_count": 1
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "all_results": [
+    {
+      "strategy": "RSI均值回归",
+      "trades": 5,
+      "win_rate": 60.0,
+      "avg_profit": 2.95,
+      "total_return": 14.77,
+      "win_trades": 3,
+      "loss_trades": 2,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "双均线",
+      "trades": 9,
+      "win_rate": 33.33,
+      "avg_profit": 2.25,
+      "total_return": 20.21,
+      "win_trades": 3,
+      "loss_trades": 6,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "布林带",
+      "trades": 2,
+      "win_rate": 0.0,
+      "avg_profit": -4.47,
+      "total_return": -8.94,
+      "win_trades": 0,
+      "loss_trades": 2,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "MACD趋势",
+      "trades": 19,
+      "win_rate": 31.58,
+      "avg_profit": 0.09,
+      "total_return": 1.68,
+      "win_trades": 6,
+      "loss_trades": 13,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "KDJ超买超卖",
+      "trades": 1,
+      "win_rate": 100.0,
+      "avg_profit": 30.0,
+      "total_return": 30.0,
+      "win_trades": 1,
+      "loss_trades": 0,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "量价背离",
+      "trades": 8,
+      "win_rate": 25.0,
+      "avg_profit": -7.51,
+      "total_return": -60.06,
+      "win_trades": 2,
+      "loss_trades": 6,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "VWAP",
+      "trades": 3,
+      "win_rate": 100.0,
+      "avg_profit": 6.96,
+      "total_return": 20.88,
+      "win_trades": 3,
+      "loss_trades": 0,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "三重确认",
+      "trades": 20,
+      "win_rate": 15.0,
+      "avg_profit": -1.28,
+      "total_return": -25.66,
+      "win_trades": 3,
+      "loss_trades": 17,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "RSI均值回归",
+      "trades": 6,
+      "win_rate": 66.67,
+      "avg_profit": 2.71,
+      "total_return": 16.27,
+      "win_trades": 4,
+      "loss_trades": 2,
+      "stock": "中国石油",
+      "symbol": "sh601857"
+    },
+    {
+      "strategy": "双均线",
+      "trades": 21,
+      "win_rate": 23.81,
+      "avg_profit": -1.82,
+      "total_return": -38.12,
+      "win_trades": 5,
+      "loss_trades": 16,
+      "stock": "中国石油",
+      "symbol": "sh601857"
+    },
+    {
+      "strategy": "布林带",
+      "trades": 6,
+      "win_rate": 66.67,
+      "avg_profit": 4.99,
+      "total_return": 29.95,
+      "win_trades": 4,
+      "loss_trades": 2,
+      "stock": "中国石油",
+      "symbol": "sh601857"
+    },
+    {
+      "strategy": "MACD趋势",
+      "trades": 24,
+      "win_rate": 33.33,
+      "avg_profit": -1.11,
+      "total_return": -26.61,
+      "win_trades": 8,
+      "loss_trades": 16,
+      "stock": "中国石油",
+      "symbol": "sh601857"
+    },
+    {
+      "strategy": "量价背离",
+      "trades": 7,
+      "win_rate": 42.86,
+      "avg_profit": -3.69,
+      "total_return": -25.83,
+      "win_trades": 3,
+      "loss_trades": 4,
+      "stock": "中国石油",
+      "symbol": "sh601857"
+    },
+    {
+      "strategy": "VWAP",
+      "trades": 3,
+      "win_rate": 33.33,
+      "avg_profit": -1.75,
+      "total_return": -5.25,
+      "win_trades": 1,
+      "loss_trades": 2,
+      "stock": "中国石油",
+      "symbol": "sh601857"
+    },
+    {
+      "strategy": "三重确认",
+      "trades": 14,
+      "win_rate": 35.71,
+      "avg_profit": -0.7,
+      "total_return": -9.82,
+      "win_trades": 5,
+      "loss_trades": 9,
+      "stock": "中国石油",
+      "symbol": "sh601857"
+    },
+    {
+      "strategy": "RSI均值回归",
+      "trades": 7,
+      "win_rate": 71.43,
+      "avg_profit": 4.26,
+      "total_return": 29.82,
+      "win_trades": 5,
+      "loss_trades": 2,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    },
+    {
+      "strategy": "双均线",
+      "trades": 14,
+      "win_rate": 28.57,
+      "avg_profit": 2.12,
+      "total_return": 29.66,
+      "win_trades": 4,
+      "loss_trades": 10,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    },
+    {
+      "strategy": "布林带",
+      "trades": 4,
+      "win_rate": 0.0,
+      "avg_profit": -9.01,
+      "total_return": -36.04,
+      "win_trades": 0,
+      "loss_trades": 4,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    },
+    {
+      "strategy": "MACD趋势",
+      "trades": 17,
+      "win_rate": 52.94,
+      "avg_profit": 2.14,
+      "total_return": 36.46,
+      "win_trades": 9,
+      "loss_trades": 8,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    },
+    {
+      "strategy": "KDJ超买超卖",
+      "trades": 2,
+      "win_rate": 100.0,
+      "avg_profit": 18.44,
+      "total_return": 36.88,
+      "win_trades": 2,
+      "loss_trades": 0,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    },
+    {
+      "strategy": "量价背离",
+      "trades": 5,
+      "win_rate": 20.0,
+      "avg_profit": -14.21,
+      "total_return": -71.07,
+      "win_trades": 1,
+      "loss_trades": 4,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    },
+    {
+      "strategy": "VWAP",
+      "trades": 6,
+      "win_rate": 83.33,
+      "avg_profit": 6.75,
+      "total_return": 40.47,
+      "win_trades": 5,
+      "loss_trades": 1,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    },
+    {
+      "strategy": "三重确认",
+      "trades": 19,
+      "win_rate": 21.05,
+      "avg_profit": 0.4,
+      "total_return": 7.6,
+      "win_trades": 4,
+      "loss_trades": 15,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    }
+  ],
+  "high_win_rate": [
+    {
+      "strategy": "KDJ超买超卖",
+      "trades": 1,
+      "win_rate": 100.0,
+      "avg_profit": 30.0,
+      "total_return": 30.0,
+      "win_trades": 1,
+      "loss_trades": 0,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "VWAP",
+      "trades": 3,
+      "win_rate": 100.0,
+      "avg_profit": 6.96,
+      "total_return": 20.88,
+      "win_trades": 3,
+      "loss_trades": 0,
+      "stock": "三一重工",
+      "symbol": "sh600031"
+    },
+    {
+      "strategy": "KDJ超买超卖",
+      "trades": 2,
+      "win_rate": 100.0,
+      "avg_profit": 18.44,
+      "total_return": 36.88,
+      "win_trades": 2,
+      "loss_trades": 0,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    },
+    {
+      "strategy": "VWAP",
+      "trades": 6,
+      "win_rate": 83.33,
+      "avg_profit": 6.75,
+      "total_return": 40.47,
+      "win_trades": 5,
+      "loss_trades": 1,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    },
+    {
+      "strategy": "RSI均值回归",
+      "trades": 7,
+      "win_rate": 71.43,
+      "avg_profit": 4.26,
+      "total_return": 29.82,
+      "win_trades": 5,
+      "loss_trades": 2,
+      "stock": "中国海油",
+      "symbol": "sh600938"
+    }
+  ],
+  "timestamp": "2026-03-01T04:31:08.368356"
+}

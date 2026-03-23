@@ -1,0 +1,16 @@
+{
+  "code": "601088",
+  "name": "中国神华",
+  "current_price": 49.55,
+  "open": 48.61,
+  "high": 49.78,
+  "low": 48.31,
+  "volume": 437423,
+  "amount": 2158837828.0,
+  "change_pct": 0.16,
+  "pe": 111,
+  "pb": 5442,
+  "total_mv": 1.839319234,
+  "source": "eastmoney",
+  "timestamp": "2026-03-23T08:11:52.842171"
+}

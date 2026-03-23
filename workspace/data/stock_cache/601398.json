@@ -1,0 +1,16 @@
+{
+  "code": "601398",
+  "name": "工商银行",
+  "current_price": 7.5,
+  "open": 7.53,
+  "high": 7.61,
+  "low": 7.48,
+  "volume": 3912454,
+  "amount": 2951969564.0,
+  "change_pct": -0.4,
+  "pe": 102,
+  "pb": 828,
+  "total_mv": 0.757304325,
+  "source": "eastmoney",
+  "timestamp": "2026-03-23T08:11:51.687164"
+}

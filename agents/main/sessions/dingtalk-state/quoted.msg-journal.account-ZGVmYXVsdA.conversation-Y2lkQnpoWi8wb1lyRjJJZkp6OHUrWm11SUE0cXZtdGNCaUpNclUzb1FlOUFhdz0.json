@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774268538311,
+  "updatedAt": 1774268722513,
   "records": [
     {
       "msgId": "msgqXwwzglKWGf0XkylTX/Ohw==",
@@ -2341,6 +2341,18 @@
       "messageType": "text",
       "text": "重新提交到github中",
       "createdAt": 1774268538001
+    },
+    {
+      "msgId": "msgAtbeDFHxjw6EHCVexo/wvg==",
+      "messageType": "text",
+      "text": "不要排除工作空间，工作空间也要备份",
+      "createdAt": 1774268635754
+    },
+    {
+      "msgId": "msg6hIVoxHLA5EHfkM+cVo3zw==",
+      "messageType": "text",
+      "text": "方案3",
+      "createdAt": 1774268722164
     }
   ]
 }

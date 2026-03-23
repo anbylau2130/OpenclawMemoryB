@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-17T08:49:38.653115",
+  "results": {
+    "VWAP(92%)": {
+      "total_trades": 60,
+      "won_trades": 15,
+      "win_rate": 25.0,
+      "total_return": -866.5070066685186,
+      "avg_pnl": 0
+    },
+    "布林+RSI(70%)": {
+      "total_trades": 0,
+      "won_trades": 0,
+      "win_rate": 0,
+      "total_return": 0.0,
+      "avg_pnl": 0
+    }
+  },
+  "best_strategy": "VWAP(92%)"
+}

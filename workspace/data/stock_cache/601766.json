@@ -1,0 +1,16 @@
+{
+  "code": "601766",
+  "name": "中国中车",
+  "current_price": 6.32,
+  "open": 6.24,
+  "high": 6.4,
+  "low": 6.19,
+  "volume": 1923246,
+  "amount": 1210885147.0,
+  "change_pct": 1.28,
+  "pe": 135,
+  "pb": 686,
+  "total_mv": 0.347200083,
+  "source": "eastmoney",
+  "timestamp": "2026-03-23T08:11:53.229320"
+}

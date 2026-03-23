@@ -1,0 +1,16 @@
+{
+  "code": "601211",
+  "name": "国泰海通",
+  "current_price": 17.54,
+  "open": 17.49,
+  "high": 17.77,
+  "low": 17.49,
+  "volume": 739617,
+  "amount": 1303212605.0,
+  "change_pct": 0.23,
+  "pe": 94,
+  "pb": 1925,
+  "total_mv": 1.252159732,
+  "source": "eastmoney",
+  "timestamp": "2026-03-23T08:11:52.442387"
+}

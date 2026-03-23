@@ -1,0 +1,144 @@
+{
+  "date": "2026-03-20",
+  "type": "weekly",
+  "review": {
+    "results": [
+      {
+        "code": "601088",
+        "name": "中国神华",
+        "buy_price": 47.48,
+        "weekly_trend": "UP",
+        "weekly_score": 0,
+        "weekly_change": -6.810877382148167,
+        "weekly_high": 47.78225272064199,
+        "weekly_low": 41.00309181728641,
+        "holding_days": 1,
+        "correct": false
+      },
+      {
+        "code": "601318",
+        "name": "中国平安",
+        "buy_price": 196.05,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": -2.5607314686124587,
+        "weekly_high": 205.17126530553872,
+        "weekly_low": 179.48536719109103,
+        "holding_days": 1,
+        "correct": false
+      },
+      {
+        "code": "601288",
+        "name": "农业银行",
+        "buy_price": 151.79,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": -6.3223270453553635,
+        "weekly_high": 144.26634087099538,
+        "weekly_low": 133.44191410547683,
+        "holding_days": 1,
+        "correct": false
+      },
+      {
+        "code": "600585",
+        "name": "海螺水泥",
+        "buy_price": 108.8,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": 3.131480204150334,
+        "weekly_high": 116.57063922298839,
+        "weekly_low": 110.07488770894643,
+        "holding_days": 1,
+        "correct": true
+      },
+      {
+        "code": "601398",
+        "name": "工商银行",
+        "buy_price": 76.53,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": 2.2064891071781805,
+        "weekly_high": 84.29762735578295,
+        "weekly_low": 76.01274738688309,
+        "holding_days": 1,
+        "correct": true
+      },
+      {
+        "code": "601211",
+        "name": "国泰君安",
+        "buy_price": 26.73,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": 4.866299245471778,
+        "weekly_high": 28.049997669434727,
+        "weekly_low": 27.93302308402548,
+        "holding_days": 1,
+        "correct": true
+      },
+      {
+        "code": "600011",
+        "name": "华能国际",
+        "buy_price": 112.74,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": 1.8855007274301645,
+        "weekly_high": 122.30103655172593,
+        "weekly_low": 107.43448459225026,
+        "holding_days": 1,
+        "correct": true
+      },
+      {
+        "code": "601919",
+        "name": "中远海控",
+        "buy_price": 76.94,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": -8.791441569050273,
+        "weekly_high": 73.2145960587639,
+        "weekly_low": 66.35285531071997,
+        "holding_days": 1,
+        "correct": false
+      },
+      {
+        "code": "601766",
+        "name": "中国中车",
+        "buy_price": 143.96,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": 7.278728360676652,
+        "weekly_high": 166.54935402928658,
+        "weekly_low": 150.07135093516447,
+        "holding_days": 1,
+        "correct": true
+      },
+      {
+        "code": "000858",
+        "name": "五粮液",
+        "buy_price": 92.2,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": -0.7089190481479122,
+        "weekly_high": 95.20860854546201,
+        "weekly_low": 85.90862002987095,
+        "holding_days": 1,
+        "correct": false
+      },
+      {
+        "code": "600887",
+        "name": "伊利股份",
+        "buy_price": 173.61,
+        "weekly_trend": "UP",
+        "weekly_score": 3,
+        "weekly_change": 7.785501481390554,
+        "weekly_high": 189.85388684029462,
+        "weekly_low": 176.68759823421462,
+        "holding_days": 1,
+        "correct": true
+      }
+    ],
+    "trend_accuracy": 0.5454545454545454,
+    "correct_trends": 6,
+    "total_trends": 11,
+    "avg_weekly_change": 0.1781547829984989
+  }
+}

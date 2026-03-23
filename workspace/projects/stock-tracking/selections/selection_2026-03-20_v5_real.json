@@ -1,0 +1,48 @@
+{
+  "version": "V5",
+  "timestamp": "2026-03-20T08:32:25.015169",
+  "data_source": "real",
+  "total_analyzed": 30,
+  "selected_count": 1,
+  "stocks": [
+    {
+      "code": "601857",
+      "name": "中国石油",
+      "current_price": 12.48,
+      "change_pct": 5.23,
+      "score": 3.0,
+      "signals": [
+        "VWAP买入(96.0%)",
+        "KDJ偏低(K17)"
+      ],
+      "rsi": 45.04,
+      "kdj_k": 16.61,
+      "vwap": 13.0,
+      "boll_lower": 11.24,
+      "data_source": "eastmoney",
+      "stop_loss": 12.11,
+      "take_profit": 13.73,
+      "risk_reward": 3.3,
+      "buy_price": 12.48,
+      "sell_price": 13.73,
+      "stop_loss_short": 12.11,
+      "stop_loss_mid": 11.48,
+      "take_profit_short": 13.23,
+      "take_profit_mid": 13.73,
+      "total_score": 3.0,
+      "daily_score": 3.0,
+      "weekly_score": 0,
+      "daily_signals": [
+        "VWAP买入(96.0%)",
+        "KDJ偏低(K17)"
+      ],
+      "weekly_signals": [],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "position": "20-30%",
+      "holding_period": "短线"
+    }
+  ],
+  "date": "2026-03-20",
+  "time": "08:32"
+}

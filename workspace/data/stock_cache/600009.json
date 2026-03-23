@@ -1,0 +1,16 @@
+{
+  "code": "600009",
+  "name": "上海机场",
+  "current_price": 28.64,
+  "open": 29.09,
+  "high": 29.15,
+  "low": 28.5,
+  "volume": 125249,
+  "amount": 361285471.0,
+  "change_pct": -1.51,
+  "pe": 160,
+  "pb": 3199,
+  "total_mv": 0.656675409,
+  "source": "eastmoney",
+  "timestamp": "2026-03-23T08:11:54.581907"
+}

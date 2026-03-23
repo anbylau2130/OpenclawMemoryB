@@ -1,0 +1,16 @@
+{
+  "code": "000651",
+  "name": "格力电器",
+  "current_price": 38.22,
+  "open": 38.55,
+  "high": 38.77,
+  "low": 38.13,
+  "volume": 447600,
+  "amount": 1717253687.28,
+  "change_pct": -0.88,
+  "pe": 106,
+  "pb": 4242,
+  "total_mv": 3.83141979,
+  "source": "eastmoney",
+  "timestamp": "2026-03-23T08:11:54.290064"
+}

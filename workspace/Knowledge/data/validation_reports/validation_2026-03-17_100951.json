@@ -1,0 +1,38 @@
+{
+  "validation_date": "2026-03-17T10:09:51.575923",
+  "validation_period": "最近30天",
+  "total_stats": {
+    "total_selections": 1,
+    "total_trades": 0,
+    "total_win": 0,
+    "total_loss": 0,
+    "total_pnl": 0,
+    "by_version": {
+      "V5_Integrated_Demo": {
+        "selections": 1,
+        "trades": 0,
+        "wins": 0,
+        "pnl": 0
+      }
+    },
+    "overall_win_rate": 0
+  },
+  "daily_results": [
+    {
+      "date": "2026-03-17",
+      "version": "V5_Integrated_Demo",
+      "total_selected": 0,
+      "trades": [],
+      "summary": {
+        "total_trades": 0,
+        "win_trades": 0,
+        "loss_trades": 0,
+        "total_pnl": 0,
+        "win_rate": 0,
+        "avg_win": 0,
+        "avg_loss": 0,
+        "profit_factor": 0
+      }
+    }
+  ]
+}

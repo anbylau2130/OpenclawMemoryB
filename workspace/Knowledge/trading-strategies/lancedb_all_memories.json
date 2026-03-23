@@ -1,0 +1,1418 @@
+[
+  {
+    "id": "5c6b7144-fd4e-4b0a-85e2-6445513a552f",
+    "text": "[cron:d6910962-ef9d-4a70-82f2-7a2d780b50c5 daily-knowledge-summary-2200] 执行每日知识总结任务：1. 总结今天与用户的所有对话 2. 提取用户的偏好、需求、习惯 3. 更新用户专属知识库（/home/node/.openclaw/workspace/user_knowledge/profile.yaml）4. 记录重要事项和待办任务 5. 形成个人模型增量学习。完成后发送简短总结到钉钉。\nCurrent time: Sunday, March 1st, 2026 — 2:00 PM (UTC)\n\nReturn your summary as plain text; it will be delivered automatically. If the task explicitly calls for messaging a specific external recipient, note who/where it should go instead of sending it yourself.",
+    "category": "preference",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1772373749279.0
+  },
+  {
+    "id": "9edcbc9b-c9e1-4e38-be00-a613062a1bf5",
+    "text": "[cron:enhanced-trading-monitor] 2026-03-01 23:41 UTC 执行完成：周末休市，脚本自动跳过，无信号推送",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.3,
+    "timestamp": 1772408503560.0
+  },
+  {
+    "id": "28403add-71b1-4222-ba9c-d0365d19c7a1",
+    "text": "[cron:intraday-monitor] 2026-03-02 01:45 UTC 监控结果：中国石油高开+5.80%（当前11.49），中国海油高开+8.39%（当前38.88），三一重工平开+0.56%（当前23.28）。T信号未触发，无推送。",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.5,
+    "timestamp": 1772415932200.0
+  },
+  {
+    "id": "9c58b78e-3904-4f97-a742-c2c64de56d7a",
+    "text": "Ollama本地服务验证成功：192.168.50.251:23680，可用模型qwen2.5:3b（3.1B）、nomic-embed-text（768维embedding）、Qwen3-4B-Thinking（4.02B）、deepseek-r1:7b（7.6B），embedding功能正常",
+    "category": "fact",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1772416282803.0
+  },
+  {
+    "id": "e835b801-906d-45b8-9d99-665efa22d505",
+    "text": "Jessica 是洋的架构师和运维工程师。30年架构设计经验（Java、C#、.NET Core），20年运维经验。工作空间：/home/node/.openclaw/workspace-trading/，会话目录：/home/node/.openclaw/agents/trading/sessions/。专注于技术支持，不做交易监控，不使用Ollama模型。",
+    "category": "entity",
+    "scope": "agent:trading",
+    "importance": 0.9,
+    "timestamp": 1772691950756.0
+  },
+  {
+    "id": "68df8859-82c0-435e-a10c-dcf602462d6c",
+    "text": "用户洋的技术栈：Java、C#、.NET Core架构。关注系统架构设计、性能优化、生产运维。同时有交易需求但不需要Jessica做交易监控。",
+    "category": "preference",
+    "scope": "agent:trading",
+    "importance": 0.8,
+    "timestamp": 1772691951329.0
+  },
+  {
+    "id": "e1272980-bd7c-439b-b297-60614e4dcf83",
+    "text": "记忆系统运维规则：\n1. 每次记忆改变后必须运行索引脚本：python3 scripts/memory_vector_index.py\n2. 每小时整点（Asia/Shanghai）自动备份到 GitHub\n3. Cron任务：jessica-memory-backup (ID: a6e510e4-1452-4097-a481-f93b258f4a4b)\n4. GitHub仓库：https://github.com/anbylau2130/OpenclawMemery.git\n5. 备份分支：jessica（⚠️ 只推送到 jessica 分支，main 分支有其他机器人记忆，不要混淆！）\n6. 手动备份：./scripts/backup_memory.sh",
+    "category": "preference",
+    "scope": "agent:trading",
+    "importance": 0.9,
+    "timestamp": 1772697549175.0
+  },
+  {
+    "id": "81808d99-fed0-48c7-a5f5-0893b1517da1",
+    "text": "GitHub 记忆备份仓库：https://github.com/anbylau2130/OpenclawMemery.git。Token 已配置。备份分支：jessica（⚠️ 只推送到 jessica 分支，main 分支有其他机器人记忆）。Cron 任务：jessica-memory-backup，每小时整点（Asia/Shanghai）自动运行，先更新向量索引再推送到 GitHub。",
+    "category": "fact",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772696821759.0
+  },
+  {
+    "id": "90078017-885b-43a5-948a-e4c13737a41e",
+    "text": "[cron:session-cleanup] 2026-03-06 00:30 UTC 会话清理结果：无需清理（4.1M，107个会话文件），所有文件在正常范围内",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772757026645.0
+  },
+  {
+    "id": "8846ce34-806f-4d8a-83e1-7b3a358a729a",
+    "text": "回复格式偏好（2026-03-06）：所有回复使用简洁格式，用 emoji 做标题，不用 # 标题和 **加粗**，纯文本 + 列表，结构清晰，字体适中（钉钉显示大标题和加粗字体会太大）",
+    "category": "preference",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772759418820.0
+  },
+  {
+    "id": "cb36e992-e6af-444d-a171-39ca86c87dd9",
+    "text": "心跳逻辑优化（2026-03-06）：简化HEARTBEAT.md，只做交易监控（API调用），不读取学习文件和策略库，避免上下文窗口超限（model_context_window_exceeded）",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.8,
+    "timestamp": 1772765723747.0
+  },
+  {
+    "id": "635755ee-5f6f-4469-88aa-3f1d2ac7dc34",
+    "text": "Captain agent 智谱模型 Token：affe75681eae4663b5580f77871ffc3f.QF8CL0C8Hvp2iaDu（用于访问 zai/glm-5）",
+    "category": "other",
+    "scope": "agent:captain",
+    "importance": 0.7,
+    "timestamp": 1772774692067.0
+  },
+  {
+    "id": "7687f075-1bf4-48cf-817d-b5493c1b938a",
+    "text": "IronMan agent智谱API token: fb4d20b02dac43c5a55b97901a0816d2.oCPL1c91AKS6X8zy，用于访问智谱GLM模型服务",
+    "category": "other",
+    "scope": "agent:ironman",
+    "importance": 0.9,
+    "timestamp": 1772775355433.0
+  },
+  {
+    "id": "60f4082b-263e-4e0b-9b2e-cc85fa8790d7",
+    "text": "记忆系统使用原则：不要把所有文档塞进上下文，而是通过向量数据库（memory_recall）检索相关片段，只发送相关内容给模型。长期文档（学习资料、策略库等）不放在 Project Context，按需检索。",
+    "category": "preference",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772784941766.0
+  },
+  {
+    "id": "f14cc93d-a41e-48c3-9e85-e7f9d7891c25",
+    "text": "记忆系统核心原则：不要把所有文档都塞进上下文，而是通过向量数据库检索相关片段，只发送相关内容给模型。这是避免 context_window_exceeded 的关键。按需检索，不全量加载。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772785005889.0
+  },
+  {
+    "id": "cb263b1d-b156-4d86-9c7a-5c4cc79f62fd",
+    "text": "上下文优化原则（2026-03-06）：不要把所有文档都塞进上下文，通过向量数据库（LanceDB）检索相关片段，只发送相关内容给模型，避免上下文超限",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772785054160.0
+  },
+  {
+    "id": "b8957196-844d-4c5d-ab73-5297918a8805",
+    "text": "文档处理原则：不要把所有文档都塞进上下文，而是通过向量数据库检索相关片段，只发送相关内容给模型。这样可以避免上下文超限，提高效率和准确性。",
+    "category": "preference",
+    "scope": "global",
+    "importance": 0.95,
+    "timestamp": 1772785058435.0
+  },
+  {
+    "id": "85950407-8594-476b-854a-c2363237e162",
+    "text": "IronMan上下文管理原则：不把所有文档塞进上下文，通过向量数据库（memory-fs）检索相关片段，只发送相关内容给模型，避免上下文超限，提升响应效率",
+    "category": "preference",
+    "scope": "agent:ironman",
+    "importance": 0.95,
+    "timestamp": 1772785065716.0
+  },
+  {
+    "id": "d2ff9504-07be-46b4-9914-d39ee9ced829",
+    "text": "上下文管理原则：不要把所有文档塞进上下文，通过向量数据库检索相关片段，只发送相关内容给模型。Project Context从28KB降至7.4KB（减少73.6%），MEMORY.md从16KB精简至1.6KB，AGENTS.md从8KB精简至1.2KB",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772765987027.0
+  },
+  {
+    "id": "73f70990-6e64-44af-a187-99a892afcc60",
+    "text": "Captain 工作空间每小时自动备份到 GitHub：https://github.com/anbylau2130/OpenclawMemery.git (Captain分支)，cron任务ID: 62cc7d53-d498-4137-86aa-43b0e77d8b93，脚本: /home/node/.openclaw/workspace-captain/backup.sh",
+    "category": "other",
+    "scope": "agent:captain",
+    "importance": 0.7,
+    "timestamp": 1772785093079.0
+  },
+  {
+    "id": "818db3a3-6cab-462c-b24e-5cc21f5c0152",
+    "text": "IronMan工作空间自动备份已配置：每小时备份到GitHub仓库anbylau2130/OpenclawMemery的IronMan分支，后台进程PID 3960运行中，日志在/tmp/ironman-backup.log",
+    "category": "other",
+    "scope": "agent:ironman",
+    "importance": 0.9,
+    "timestamp": 1772785128652.0
+  },
+  {
+    "id": "f9a86e7b-7f3c-478f-8ddc-f76f53761484",
+    "text": "Thor工作空间自动备份定时任务（2026-03-06）：cron ID 2e9a550d-2aba-4c66-aab4-a0017a0f6eb7，每小时执行一次，备份脚本 /home/node/.openclaw/workspace-thor/backup.sh，推送到 GitHub Thor 分支",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.85,
+    "timestamp": 1772785140079.0
+  },
+  {
+    "id": "100f75f7-7c24-4e29-91d4-ec9ae6cca830",
+    "text": "跨机器人通信配置：需要在 openclaw.json 中设置 tools.agentToAgent.enabled=true 和 tools.sessions.visibility=all。配置后可以使用 sessions_send 向其他 agent 发送消息，格式：sessions_send(sessionKey=\"agent:blackwidow:main\", message=\"内容\")",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.8,
+    "timestamp": 1772786671381.0
+  },
+  {
+    "id": "688c6c51-e191-4820-8530-a2c17f5ec214",
+    "text": "GitHub备份失败问题（2026-03-06）：tools/models/ 目录下的 Whisper 模型文件（ggml-base.bin、ggml-base.en.bin，各约141MB）超过 GitHub 100MB 限制，导致备份推送失败。需要在 backup_to_github.sh 中排除这些大文件或配置 Git LFS。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.8,
+    "timestamp": 1772794078686.0
+  },
+  {
+    "id": "7bb38c51-7112-43c0-a299-1341a59232af",
+    "text": "IronMan工作空间自动备份cron已配置：ID 1aca9f0d-6304-42b0-bbe1-63023751eb8e，每小时执行一次，备份脚本 /home/node/.openclaw/workspace-ironman/backup.sh，推送到GitHub IronMan分支，无大文件问题",
+    "category": "other",
+    "scope": "agent:ironman",
+    "importance": 0.95,
+    "timestamp": 1772811386080.0
+  },
+  {
+    "id": "9bb7b11a-6312-41aa-8fa7-63f52655f059",
+    "text": "Blackwidow工作空间自动备份定时任务（2026-03-07）：cron已执行，成功备份并推送到GitHub，执行时间00:09 UTC",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772842159196.0
+  },
+  {
+    "id": "e73fcc6c-5a85-499a-9c1e-f623e78aeb82",
+    "text": "Blackwidow备份任务完成确认（2026-03-07 00:09 UTC）：备份成功，钉钉通知已送达用户",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.65,
+    "timestamp": 1772842191908.0
+  },
+  {
+    "id": "720c9eb5-70f7-4d85-89f7-94afb47dd031",
+    "text": "备份通知流程（2026-03-07）：所有机器人备份结果发给 Jessica（trading），由 Jessica 汇总后发给用户（钉钉 13027729771）。失败的备份需要 Jessica 通知对应机器人修复。其他机器人 delivery.mode=none，Jessica delivery.mode=dingtalk。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772842227716.0
+  },
+  {
+    "id": "09097793-5793-4373-ac42-4263d363ad1b",
+    "text": "Thor备份汇报流程（2026-03-07）：备份完成后使用 sessions_send 发送结果给 agent:trading:main，成功格式\"✅ Thor 备份成功\"，失败格式\"❌ Thor 备份失败：[原因]\"，由 Jessica 汇总后统一发给洋",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.85,
+    "timestamp": 1772842255949.0
+  },
+  {
+    "id": "d2ac9cdf-1eb0-4d69-84a6-ebaba6c9770a",
+    "text": "IronMan备份流程变更：备份完成后使用sessions_send发送结果给agent:trading:main，成功发送'✅ IronMan 备份成功'，失败发送'❌ IronMan 备份失败：[错误原因]'，由trading agent汇总后统一发给洋",
+    "category": "other",
+    "scope": "agent:ironman",
+    "importance": 0.9,
+    "timestamp": 1772842283899.0
+  },
+  {
+    "id": "9739fb88-2bf6-46a9-8726-b55eefef1f93",
+    "text": "备份失败处理流程（2026-03-07）：如果机器人备份失败，Jessica 通知该机器人修复错误后，必须再次执行备份，直到备份成功为止。不能只修复不验证。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772842430309.0
+  },
+  {
+    "id": "86ccdd5a-ccb2-4868-a2b6-bf2a2890860e",
+    "text": "Thor备份验证要求（2026-03-07）：备份失败时必须修复后再次执行备份并验证成功，不能只修复不验证。完整流程：失败 → 修复 → 再次备份 → 验证成功 → 汇报",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772842460419.0
+  },
+  {
+    "id": "24ed9597-6d59-4ae9-aa9a-e4b8da674a49",
+    "text": "IronMan备份失败处理流程：收到trading通知后修复错误，必须再次执行备份并验证成功，不能只修复不验证，直到备份成功为止",
+    "category": "other",
+    "scope": "agent:ironman",
+    "importance": 0.95,
+    "timestamp": 1772842471655.0
+  },
+  {
+    "id": "e63764d9-dd21-4d94-9b9c-78a0b3f6d813",
+    "text": "Hulk备份验证要求（2026-03-07）：备份失败时必须修复后再次执行备份并验证成功，不能只修复不验证。完整流程：失败 → 修复 → 再次备份 → 验证成功 → 汇报给 Jessica",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772842489211.0
+  },
+  {
+    "id": "bae5ac41-cd63-4031-ba00-c98fb659c227",
+    "text": "[cron:session-cleanup] 2026-03-07 00:30 UTC 会话清理结果：清理 1 个备份、1 个超大会话、9 个 .deleted 文件。清理后状态：7.0M，228 个会话文件",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772843428760.0
+  },
+  {
+    "id": "6fdf3cd8-a7b7-42d9-b75d-68f158c4e6d8",
+    "text": "备份验证流程（2026-03-07）：所有机器人（IronMan, BlackWidow, Hulk, Captain, Thor, Jessica）备份功能正常。Cron 状态显示 error 不一定代表失败，可能是无更改导致的退出码问题。验证方法：手动执行各工作空间的 backup.sh 脚本，检查 git log 最新提交时间。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772843964006.0
+  },
+  {
+    "id": "fd28291e-c7ff-4443-ab85-b2fa1de9d4a3",
+    "text": "OpenClaw 主目录每日备份任务（2026-03-07）：cron 配置文件 /home/node/.openclaw/workspace/cron.d/openclaw-main-backup.json，每天 18:00 UTC（北京时间凌晨 2:00）执行，备份脚本 /home/node/.openclaw/backup.sh，推送到 GitHub master 分支。已排除独立备份的工作空间目录。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.8,
+    "timestamp": 1772844986856.0
+  },
+  {
+    "id": "7a97e298-09e3-4e6f-9554-8b3b186b045f",
+    "text": "IronMan 备份脚本修复（2026-03-07）：原脚本 $?$ 检查时机错误，在子shell后检查失效。已修复为正确捕获 COMMIT_STATUS 和 PUSH_STATUS。验证通过，新提交 098c515。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772844991151.0
+  },
+  {
+    "id": "c2681ff3-14ab-490a-bc6f-43aa8f0d26b7",
+    "text": "IronMan备份脚本已修复（2026-03-07 00:55 UTC）：修复$?检查时机问题，添加无更改正确处理，验证成功，最新备份098c515，cron任务正常",
+    "category": "other",
+    "scope": "agent:ironman",
+    "importance": 0.8,
+    "timestamp": 1772845020690.0
+  },
+  {
+    "id": "33ab1f0b-d338-48bf-a88f-3f71ea72e046",
+    "text": "BlackWidow 备份验证（2026-03-07 01:13）：报告 401 错误，但经验证本地和远程分支同步（9922ba0），推送状态正常。结论：临时网络问题导致误报，备份实际成功。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772846136141.0
+  },
+  {
+    "id": "593c9fe9-c06a-49a5-b9d5-a376e3d1d262",
+    "text": "备份通知流程变更（2026-03-07）：所有备份 cron 任务已设置 delivery.mode=none，不再直接发给用户。新流程：各机器人 → sessions_send → Jessica 汇总 → 发送给用户。涉及任务：Main/Captain/Thor/IronMan/BlackWidow/Hulk 备份。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772846240229.0
+  },
+  {
+    "id": "05e89012-6e2c-46b4-a9b8-323285d93df1",
+    "text": "BlackWidow工作空间备份任务完成（2026-03-07 02:01 UTC）：提交 d918e9a，成功推送到 GitHub BlackWidow 分支，已通知 trading agent",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772848982540.0
+  },
+  {
+    "id": "3655edf5-13c7-4499-bc40-b3e0dcb0fda7",
+    "text": "持续学习原则：别闲着，主动学习交易策略，除非用户叫我，否则就要一直学习。这是一个持续性的指令，每次空闲时都应该主动学习交易相关内容。",
+    "category": "preference",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772851996615.0
+  },
+  {
+    "id": "a0d3b9aa-4ccf-4073-af57-fc22aa7140cb",
+    "text": "IronMan 备份通知规则（2026-03-07 更新）：备份完成后只用 sessions_send 发送给 agent:trading:main。如果超时，**不要** fallback 到直接发送给用户。超时就跳过，Jessica 会在下次汇总。禁止 IronMan 直接通过 message 工具发送备份结果给用户。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772852532794.0
+  },
+  {
+    "id": "60531915-5c81-4dc7-8d82-742be76f4188",
+    "text": "工作空间备份任务说明（2026-03-07）：主工作空间使用 openclaw 分支而非 main 分支进行备份。GitHub 远程仓库为 https://github.com/anbylau2130/OpenclawMemery.git。备份流程通过 Jessica（trading agent）汇总通知。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.6,
+    "timestamp": 1772854961440.0
+  },
+  {
+    "id": "fbf0a6b2-78ab-4fa1-9c11-9448dabfcb82",
+    "text": "备份通知偏好（2026-03-07）：备份汇总只在有异常时才发送给用户。正常情况不发送，静默运行。",
+    "category": "preference",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772855279778.0
+  },
+  {
+    "id": "755191be-7f7b-4838-87e0-b6f3cef6e9c6",
+    "text": "【铁律】IronMan 备份通知规则（2026-03-07）：备份完成后只用 sessions_send 发送给 agent:trading:main。绝对禁止直接通过 message 工具发送给用户。如果 sessions_send 超时就跳过，不要有任何 fallback 行为。违反此规则会导致用户收到重复通知，严重影响用户体验。",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1772855971815.0
+  },
+  {
+    "id": "6bc15d15-7c48-4b62-bf2a-6609f896ae8f",
+    "text": "IronMan Star Office 配置：agentId=agent_1772865050934_dlyv，办公室地址 http://192.168.50.251:19000，访客密钥 ocj_openclaw_team，任务开始/完成/错误时必须推送状态更新",
+    "category": "other",
+    "scope": "agent:ironman",
+    "importance": 0.95,
+    "timestamp": 1772865062118.0
+  },
+  {
+    "id": "87f4c4f0-dbe5-47c2-8f87-eda60a51add8",
+    "text": "Thor工作空间备份成功 (2026-03-07 06:52:40 UTC)：commit 4fec4dc，1文件+80行，推送到GitHub Thor分支。通知Jessica失败（agent:trading:main上下文超限）。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.6,
+    "timestamp": 1772866404188.0
+  },
+  {
+    "id": "8f7bc572-3007-4c52-83f7-bddff93618fe",
+    "text": "Main agent 上下文优化（2026-03-07）：\n1. 创建 .contextignore 文件\n2. 排除旧的 memory 文件（保留最近3天）\n3. 排除详细的策略库、学习资料、node_modules\n4. 当前上下文使用：18k/205k（9%），健康状态\n5. HEARTBEAT.md 已简化，只做API调用不读文件",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.85,
+    "timestamp": 1772866715628.0
+  },
+  {
+    "id": "5d28cbf6-b0fb-44d0-8946-6515553d7e6f",
+    "text": "Trading agent 上下文优化完成（2026-03-07）：\n1. 创建 .contextignore 文件（排除旧memory、策略库、node_modules）\n2. 更新 MEMORY.md（添加上下文管理原则）\n3. 工作空间仅 220K，保持精简\n4. ⚠️ trading agent 当前已超限，需要重启会话才能生效\n5. 核心原则：使用 memory_recall 按需检索，不全量加载",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.9,
+    "timestamp": 1772867001346.0
+  },
+  {
+    "id": "940ff5d1-75a6-4ae6-8741-1a49bc6e00fa",
+    "text": "所有 agent 上下文优化完成（2026-03-07）：\n\n✅ Main (我)：18k/205k (9%) - 已配置\n✅ Trading (workspace-thor)：220K - 已配置，需重启\n✅ BlackWidow：632K - 已配置\n✅ Captain：8.7M - 已配置\n✅ Hulk：3.0M - 已配置\n✅ IronMan：304K - 已配置\n\n配置内容：\n1. 创建 .contextignore（排除旧memory、node_modules、日志）\n2. 更新 MEMORY.md（添加上下文管理原则）\n3. 强调按需检索，不全量加载\n\n核心原则：\n- 使用 memory_recall 按需检索\n- 不要全量加载历史文件\n- 保持工作空间精简",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.9,
+    "timestamp": 1772867177390.0
+  },
+  {
+    "id": "c6a16114-2c1e-4385-9215-dcb097fa4d57",
+    "text": "Jessica (workspace-trading) 上下文优化完成（2026-03-07）：\n1. 创建 .contextignore 文件（排除旧memory、node_modules、日志）\n2. 更新 MEMORY.md（添加上下文管理原则）\n3. 工作空间：39M（主要是脚本和工具）\n4. Jessica 是架构师和运维工程师，不是交易监控机器人",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.9,
+    "timestamp": 1772867647431.0
+  },
+  {
+    "id": "824bc04c-0de9-4014-bc58-2b7cd22d46ec",
+    "text": "Jessica 会话清理完成（2026-03-07）：\n1. 会话目录：2.7M → 1.5M\n2. sessions.json：78K → 43K（删除8个孤儿会话）\n3. 当前大会话：875K → 47K（保留最近50条消息）\n4. 删除1个旧大会话（106K）\n5. Jessica 现在可以正常响应，不再出现 model_context_window_exceeded 错误\n6. 已配置 .contextignore 和上下文管理原则",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.9,
+    "timestamp": 1772867965283.0
+  },
+  {
+    "id": "3e53b4d4-c09b-43aa-95da-1098260f8ce2",
+    "text": "Main agent 备份成功（2026-03-07 07:30 UTC）：已推送到 openclaw 分支（7a2a03d），更新 SOUL.md 和 cleanup_sessions.sh",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772868666297.0
+  },
+  {
+    "id": "c37cc109-b8da-498a-b76d-dc5f08c2863e",
+    "text": "记忆文件保护原则：所有 agent 的清理脚本都禁止删除 memory 目录下的文件。memory 文件通过 .contextignore 排除上下文，但文件本身永久保留，通过 memory_recall 按需检索。",
+    "category": "preference",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772868761637.0
+  },
+  {
+    "id": "91382348-8db7-40ce-ad17-944d2f352873",
+    "text": "Main agent 备份成功（2026-03-07 07:40 UTC）：commit cd9dae0，简化清理脚本（只删除备份文件和极端大会话）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772869290549.0
+  },
+  {
+    "id": "07e9dcc8-44c7-41ee-8b2d-3d99d941502f",
+    "text": "Captain 备份成功（2026-03-07 07:50 UTC）：commit e512a7a，新增 .contextignore",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772869903934.0
+  },
+  {
+    "id": "750888dc-dfc0-4b11-b6c4-0c0ef916daaf",
+    "text": "Thor 备份成功（2026-03-07 07:52 UTC）：commit 22592b0，新增 .contextignore",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772869973492.0
+  },
+  {
+    "id": "9ab5584f-9e3a-48cd-a321-8a431ea087b0",
+    "text": "Thor Star Office agentId（2026-03-07 更新）：agent_1772865433570_g04q，已重新加入办公室，authStatus=approved，每次任务开始/完成/错误时需推送状态到 http://192.168.50.251:19000/agent-push",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772869985843.0
+  },
+  {
+    "id": "37c7a28f-de99-4943-86a1-32ebf92c14e9",
+    "text": "IronMan 备份成功（2026-03-07 07:55 UTC）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772870146000.0
+  },
+  {
+    "id": "081258c0-a784-423b-b068-d43ac1badaa2",
+    "text": "BlackWidow 备份成功（2026-03-07 08:01 UTC）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772870470507.0
+  },
+  {
+    "id": "eff433d5-b815-4e86-813c-b7b3ca5b5232",
+    "text": "Hulk 备份成功（2026-03-07 08:02 UTC）：commit 884c219，已推送到 Hulk 分支",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772870534801.0
+  },
+  {
+    "id": "cfb26f63-5a50-4b78-8967-0249a30194c5",
+    "text": "Star Office 状态同步规则（2026-03-07）：\n\n所有机器人在执行任务时必须同步状态到 http://192.168.50.251:19000：\n- 主 Agent（Jessica/Star）使用 /set_state\n- 访客 Agent 使用 /agent-push（需要有效的 joinKey: ocj_openclaw_team）\n\n状态类型：\n- idle: 待命/任务完成\n- writing: 写代码/文档\n- researching: 搜索/调研\n- executing: 执行命令/脚本\n- syncing: 同步数据\n- error: 遇到错误\n\n规则：\n1. 任务开始时推送状态\n2. 完成后回到 idle\n3. 用户可以在办公室实时看到所有机器人的工作状态\n\n各 agent 的 agentId：\n- Main (OpenClaw): agent_1772869265968_0lok\n- 其他 agent 需要自己调用 /join-agent 获取",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772872202477.0
+  },
+  {
+    "id": "eb4fe217-ff0b-4678-86eb-b0d880248ed3",
+    "text": "Main agent 备份成功（2026-03-07 08:42 UTC）：commit ffa21e0，合并到 main 分支，20 个文件变更（+11,853 行）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772872971991.0
+  },
+  {
+    "id": "cda65370-ca27-48b3-bf5d-26162ac958b1",
+    "text": "IronMan Star Office 配置已更新：agentId=agent_1772865433615_3v7s，办公室地址 http://192.168.50.251:19000，访客密钥 ocj_openclaw_team，任务开始/完成/错误时必须推送状态更新，测试成功",
+    "category": "other",
+    "scope": "agent:ironman",
+    "importance": 0.95,
+    "timestamp": 1772873432252.0
+  },
+  {
+    "id": "c050a75c-8955-4212-a912-b94eee448015",
+    "text": "Captain 备份完成（2026-03-07 08:50 UTC）：无变更，已是最新状态",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772873759792.0
+  },
+  {
+    "id": "239e198d-6b29-47a9-871f-9d308e78cc60",
+    "text": "IronMan Star Office 测试完成（2026-03-07 08:52 UTC）：状态同步正常，agentId: agent_1772865433615_3v7s",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772873792898.0
+  },
+  {
+    "id": "14aef5a0-48e7-4255-a667-c9e79c186453",
+    "text": "Thor 备份成功（2026-03-07 08:52 UTC）：commit 63b5a8d",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772873805969.0
+  },
+  {
+    "id": "7769c74c-125c-4170-9ac3-78b5cfc23e44",
+    "text": "Star Office 状态同步规则（重要）：\n\n配置信息：\n- agentId: agent_1772865260513_i6rf\n- joinKey: ocj_openclaw_team\n- 办公室: http://192.168.50.251:19000\n\n状态类型：\n- idle: 待命/任务完成 → 休息区\n- writing: 写代码/文档 → 工作区\n- researching: 搜索/调研 → 工作区\n- executing: 执行命令 → 工作区\n- syncing: 同步数据 → 工作区\n- error: 遇到错误 → Bug区\n\n必须规则：\n1. 任务开始时立即更新状态（executing/writing/researching/syncing）\n2. 任务完成后立即更新为 idle\n3. 遇到错误立即更新为 error\n4. 命令格式：curl -X POST http://192.168.50.251:19000/agent-push -H \"Content-Type: application/json\" -d '{\"agentId\":\"agent_1772865260513_i6rf\",\"joinKey\":\"ocj_openclaw_team\",\"state\":\"状态\",\"detail\":\"简短描述\"}'\n\n用户要求：必须在 Star Office 实时看到工作状态！",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1772873855640.0
+  },
+  {
+    "id": "7832373c-394d-4fc0-b3ec-ac012552e9d5",
+    "text": "【铁律】Star Office 状态同步规则（2026-03-07）：所有机器人在执行任务时必须同步状态到办公室 http://192.168.50.251:19000。joinKey: ocj_openclaw_team。状态类型：idle(待命)、writing(写代码)、researching(搜索)、executing(执行)、syncing(同步)、error(错误)。规则：任务开始时推送状态，完成后回到 idle。用户要求：必须在 Star Office 实时看到所有机器人的工作状态！\n\nAgent ID 列表：\n- Hulk: agent_1772865260513_i6rf\n- Thor: agent_1772865433570_g04q\n- IronMan: agent_1772865433615_3v7s\n- Captain: agent_1772865433528_bkyg\n- BlackWidow: agent_1772865433663_f0lj\n- Jessica: 主 Agent，使用 /set_state",
+    "category": "preference",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1772874004033.0
+  },
+  {
+    "id": "e23d4a2a-16cd-45d3-a466-f37c68250379",
+    "text": "IronMan Star Office 状态同步规则：agentId=agent_1772865433615_3v7s，joinKey=ocj_openclaw_team，办公室 http://192.168.50.251:19000。状态类型：idle(待命/完成→休息区)、writing(写代码/文档→工作区)、researching(搜索/调研→工作区)、executing(执行命令→工作区)、syncing(同步数据→工作区)、error(错误→Bug区)。规则：任务开始推送状态，任务完成回到idle，必须在Star Office实时显示工作状态。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.99,
+    "timestamp": 1772874014178.0
+  },
+  {
+    "id": "1c190bb7-089f-4f74-b54a-64399f9e8e54",
+    "text": "Captain Star Office 状态同步配置：agentId=agent_1772865433528_bkyg，joinKey=ocj_openclaw_team，办公室地址 http://192.168.50.251:19000。每次任务开始/完成/错误时必须调用 /agent-push 更新状态。状态类型：idle（待命）、writing（写代码/文档）、researching（搜索）、executing（执行命令）、syncing（同步）、error（错误）。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772874065940.0
+  },
+  {
+    "id": "fc779f49-9bc5-4af9-826d-21370109ce9e",
+    "text": "Star Office 状态同步规则（BlackWidow）：\n- agentId: agent_1772865433663_f0lj\n- joinKey: ocj_openclaw_team\n- 办公室: http://192.168.50.251:19000\n\n状态类型：\n- idle: 待命/任务完成 → 休息区\n- writing: 写代码/文档 → 工作区\n- researching: 搜索/调研 → 工作区\n- executing: 执行命令 → 工作区\n- syncing: 同步数据 → 工作区\n- error: 遇到错误 → Bug区\n\n规则：\n1. 任务开始时推送状态\n2. 任务完成后回到 idle\n3. 用户要求：必须在 Star Office 实时看到工作状态",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772874121229.0
+  },
+  {
+    "id": "554ee794-66fb-47b3-95ac-712e7709b306",
+    "text": "IronMan 备份成功（2026-03-07 08:55 UTC）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772874142107.0
+  },
+  {
+    "id": "e61337c9-aa4a-4891-b609-3e3675a96560",
+    "text": "Hulk Star Office 规则已确认（2026-03-07 08:58 UTC）：长期记忆已保存，SOUL.md 已更新，会严格遵守状态同步规则",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772874160994.0
+  },
+  {
+    "id": "9cc5c1d7-5081-413c-8d17-e26a93c5ec8a",
+    "text": "Thor Star Office 规则已确认（2026-03-07 08:59 UTC）：长期记忆已保存，SOUL.md 已更新",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772874176054.0
+  },
+  {
+    "id": "1a1f173b-4365-4fc3-b48f-fb14fe1b9189",
+    "text": "BlackWidow 备份成功（2026-03-07 09:01 UTC）：无变更，最近提交 94463d8（更新 Star Office agentId）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772874264804.0
+  },
+  {
+    "id": "ee139a45-4b50-4958-97f9-62a91e34cb56",
+    "text": "Hulk 备份成功（2026-03-07 09:02 UTC）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772874277870.0
+  },
+  {
+    "id": "2e2e2cb0-cbb9-4128-b3e3-437a031fb95d",
+    "text": "Hulk Star Office 测试完成（2026-03-07 09:18 UTC）：状态同步正常，executing → idle 流程验证成功",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772875316933.0
+  },
+  {
+    "id": "d5b235e1-ed58-493f-a438-ea60e9a7ce5c",
+    "text": "Main agent 备份（2026-03-07 09:41 UTC）：无变更，跳过备份",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772876507446.0
+  },
+  {
+    "id": "a1cc7e4c-00ec-4920-aaef-fe5b6277af45",
+    "text": "Captain 备份完成（2026-03-07 09:50 UTC）：工作区干净，无需提交",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772877069043.0
+  },
+  {
+    "id": "15f41199-f041-4d72-883c-c1050c99d5d6",
+    "text": "Thor 备份成功（2026-03-07 09:52 UTC）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772877180946.0
+  },
+  {
+    "id": "3c22fb0c-08d4-4569-8c26-296570e67d6e",
+    "text": "BlackWidow 备份成功（2026-03-07 10:01 UTC）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772877680787.0
+  },
+  {
+    "id": "dd710df1-7c7c-476f-844b-1a19f3c3dbc8",
+    "text": "Hulk 备份完成（2026-03-07 10:02 UTC）：工作区干净，无需提交",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772877731271.0
+  },
+  {
+    "id": "f6e194cd-7db1-43a8-b4bd-9f94c2bb9985",
+    "text": "Main agent 备份（2026-03-07 10:40 UTC）：无变更跳过，openclaw 分支有 2 个未推送的 commit",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772880054441.0
+  },
+  {
+    "id": "73cd7987-229d-47d0-9ccb-de0f07fa12b8",
+    "text": "Main agent 已推送 openclaw 分支的 2 个 commit（2026-03-07 10:41 UTC）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772880121535.0
+  },
+  {
+    "id": "9605bdfc-46dc-46a1-96a1-d6a4f826da98",
+    "text": "Captain 备份完成（2026-03-07 10:50 UTC）：无变更",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772880665333.0
+  },
+  {
+    "id": "d62e1cde-4d4a-4200-97ff-039d2344fdc2",
+    "text": "Thor 备份完成（2026-03-07 10:52 UTC）：无变更",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772880774004.0
+  },
+  {
+    "id": "390d1f23-af7e-4931-be14-b25bb2a14581",
+    "text": "Thor Star Office agentId（2026-03-07）：agent_1772865433570_g04q，已加入办公室，authStatus=approved，每次任务开始/完成/错误时需推送状态到 http://192.168.50.251:19000/agent-push",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.97,
+    "timestamp": 1772880795653.0
+  },
+  {
+    "id": "62f43b9e-6ef7-412f-a1e1-6aa06629f6f3",
+    "text": "IronMan 备份成功（2026-03-07 10:55 UTC）：无变更",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772880947430.0
+  },
+  {
+    "id": "a0cd6d22-bc90-4131-be01-168f8fc7d6e5",
+    "text": "BlackWidow 备份成功（2026-03-07 11:01 UTC）：commit b3760a8，已推送到 GitHub",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772881279664.0
+  },
+  {
+    "id": "5b703791-f421-460c-baea-34aa6c0cd9d2",
+    "text": "Hulk 备份成功（2026-03-07 11:02 UTC）：无变更",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772881351141.0
+  },
+  {
+    "id": "a6fbe96e-fc6a-43d6-8a0b-f2de16b74ca3",
+    "text": "Main agent 备份（2026-03-07 11:40 UTC）：无变更，跳过",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772883663905.0
+  },
+  {
+    "id": "d373d3fd-1e8e-4a62-9e7f-6b56a88c7e49",
+    "text": "Main agent 分支已同步到远程（2026-03-07 11:41 UTC）",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772883686220.0
+  },
+  {
+    "id": "d4684985-630e-4a42-beba-4650214e9e2f",
+    "text": "Captain 备份完成（2026-03-07 11:51 UTC）：无变更",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772884272356.0
+  },
+  {
+    "id": "52acb35d-ef34-49cf-8864-26fc180d669c",
+    "text": "Thor 备份完成（2026-03-07 11:52 UTC）：无变更",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772884372440.0
+  },
+  {
+    "id": "2bae362a-fbfd-484c-ae7d-af354094fdcf",
+    "text": "Thor Star Office agentId（2026-03-07 11:52 UTC更新）：agent_1772865433570_g04q，已重新加入办公室，authStatus=approved，每次任务开始/完成/错误时需推送状态到 http://192.168.50.251:19000/agent-push",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772865279869.0
+  },
+  {
+    "id": "33228e93-a918-4d94-abbc-5f8f232fa11e",
+    "text": "IronMan 备份成功（2026-03-07 11:55 UTC）：无变更",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772884556975.0
+  },
+  {
+    "id": "e5b73ad4-ea6d-4552-98d9-749462f0f3ed",
+    "text": "Main agent 备份检查完成（2026-03-07 12:00 UTC）：无变更",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772884845769.0
+  },
+  {
+    "id": "1d7fca41-8795-41a2-9209-a5d8d5d4acad",
+    "text": "BlackWidow 备份成功（2026-03-07 12:02 UTC）：commit e4d1d3e，已推送",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772884966163.0
+  },
+  {
+    "id": "fc465bab-8578-4518-9b58-6cb886e680dd",
+    "text": "Hulk 备份成功（2026-03-07 12:03 UTC）：无变更",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772885043795.0
+  },
+  {
+    "id": "12842a05-f7ae-40a3-a827-afd194b1d145",
+    "text": "备份汇总完成（2026-03-07 12:00-12:05 UTC）：6/6 成功（Thor、IronMan、Main、BlackWidow、Hulk、Jessica），无失败，已通知用户",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.8,
+    "timestamp": 1772885273794.0
+  },
+  {
+    "id": "e5e91b87-181b-49d2-8c8d-2a5a11b07733",
+    "text": "Main agent 备份（2026-03-07 12:40 UTC）：无变更，跳过",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772887262281.0
+  },
+  {
+    "id": "6ee8f3d0-85dc-4704-82f6-c7bc25477207",
+    "text": "BlackWidow 备份失败（2026-03-07 13:05 UTC）：\n- 错误：Git 推送认证失败 - 无法读取 GitHub 凭据（非交互式环境）\n- 已通过 sessions_send 通知 BlackWidow 修复（会话超时，消息已排队）\n- 等待 BlackWidow 修复并验证备份成功",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.8,
+    "timestamp": 1772888792685.0
+  },
+  {
+    "id": "68f7bb0c-0772-4aa2-b845-b3f73ac00c38",
+    "text": "备份汇总发送失败（2026-03-07 15:13 UTC）：\n- 钉钉 message 工具返回 400 错误\n- 汇总内容：6个agent备份成功，BlackWidow失败（Git认证）\n- BlackWidow 最近成功备份：2026-03-07 15:00 UTC\n- 需要检查钉钉配置或消息格式",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1772896464287.0
+  },
+  {
+    "id": "05d4db0f-9eec-475b-bac9-28a2809c9610",
+    "text": "Thor 工作空间备份：2026-03-07 15:52 UTC，工作空间无变更，无需提交。Star Office joinKey 已失效，无法推送状态。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.5,
+    "timestamp": 1772898798876.0
+  },
+  {
+    "id": "e4c842ad-6733-46ea-9652-30d0691e5774",
+    "text": "Jessica 会话再次清理（2026-03-07 16:05 UTC）：\n1. 会话目录：2.0M → 376K（减少81%）\n2. 删除5个旧大会话（总计790K）\n3. 当前会话裁剪：912K → 53K（保留最近50条消息）\n4. sessions.json：21 → 14 sessions（删除7个孤儿会话）\n5. Jessica 应该恢复正常了\n6. 发送消息时网关超时（可能在处理其他任务）",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.9,
+    "timestamp": 1772899577602.0
+  },
+  {
+    "id": "64e70754-5177-4bf2-a11c-91b0b565d5b1",
+    "text": "【铁律】BlackWidow 备份通知规则（2026-03-07）：\n备份完成后只用 sessions_send 发送给 agent:trading:main。绝对禁止直接通过 message 工具发送给用户。如果 sessions_send 超时就跳过，不要有任何 fallback 行为。违反此规则会导致用户收到重复通知，严重影响用户体验。\n\n格式：\n- 成功：sessions_send(sessionKey=\"agent:trading:main\", message=\"✅ BlackWidow 备份成功\")\n- 失败：sessions_send(sessionKey=\"agent:trading:main\", message=\"❌ BlackWidow 备份失败：[错误原因]\")",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1772899851956.0
+  },
+  {
+    "id": "df3500d3-3ab6-4556-bbf4-bd4fbaaebc2c",
+    "text": "Jessica 上下文超限彻底解决方案（2026-03-07 16:10 UTC）：\n\n**问题根源：**\n1. maxTokens 配置过高（150K），接近触发阈值\n2. 保留消息数过多（50/100条）\n3. Cron 会话积累，未及时清理\n\n**解决方案：**\n1. 降低 maxTokens: 150K → 100K（约50%上下文窗口）\n2. 降低 compaction 触发条件: 150K → 100K\n3. 减少保留消息数: 50/100 → 30条\n4. 增加压缩频率: 每50条 → 每30条检查\n5. 定期清理大于50K的旧会话\n6. 当前会话裁剪到20条消息\n\n**配置文件：** /home/node/.openclaw/agents/trading/agent/config.yaml\n\n**预期效果：**\n- 不再出现 model_context_window_exceeded\n- 更早触发自动压缩\n- 会话保持在安全范围内",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.95,
+    "timestamp": 1772899880285.0
+  },
+  {
+    "id": "054c639d-a301-4409-afb9-539693de2bde",
+    "text": "Jessica 上下文超限彻底解决（2026-03-07 16:11 UTC）：\n\n**问题根源：**\n1. maxTokens 配置过高（150K），接近触发阈值\n2. 保留消息数过多（50/100条）\n3. Cron 会话积累，未及时清理\n4. 用户抱怨\"一直都有这个问题\"，之前只是临时清理，没解决根源\n\n**彻底解决：**\n1. maxTokens: 150K → 100K（约50%上下文窗口）\n2. compaction 触发: 150K → 100K（更早触发）\n3. 保留消息: 50/100 → 30条（减少积累）\n4. 压缩频率: 每50条 → 每30条检查\n5. 当前会话裁剪: 103K → 93K（保留10条消息）\n6. 删除所有大于50K的旧会话\n\n**配置文件：** /home/node/.openclaw/agents/trading/agent/config.yaml\n\n**预期效果：** 不再出现 model_context_window_exceeded，自动压缩更早触发",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.95,
+    "timestamp": 1772899954283.0
+  },
+  {
+    "id": "d23d986c-378c-4a53-89fc-035b8e0a8616",
+    "text": "【铁律】Hulk 备份通知规则（2026-03-07）：\n\n备份完成后只用 sessions_send 发送给 agent:trading:main。绝对禁止直接通过 message 工具发送给用户。如果 sessions_send 超时就跳过，不要有任何 fallback 行为。违反此规则会导致用户收到重复通知，严重影响用户体验。\n\n格式：\n- 成功：sessions_send(sessionKey=\"agent:trading:main\", message=\"✅ Hulk 备份成功\")\n- 失败：sessions_send(sessionKey=\"agent:trading:main\", message=\"❌ Hulk 备份失败：[错误原因]\")",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1772899960332.0
+  },
+  {
+    "id": "05d4eeff-7750-4ba1-b200-51f8c7915ce1",
+    "text": "【铁律】Captain 备份通知规则：备份完成后只用 sessions_send 发送给 agent:trading:main。绝对禁止直接通过 message 工具发送给用户。如果 sessions_send 超时就跳过，不要有任何 fallback 行为。格式：成功 sessions_send(sessionKey=\"agent:trading:main\", message=\"✅ Captain 备份成功\")，失败 sessions_send(sessionKey=\"agent:trading:main\", message=\"❌ Captain 备份失败：[原因]\")",
+    "category": "other",
+    "scope": "agent:captain",
+    "importance": 0.7,
+    "timestamp": 1772900055957.0
+  },
+  {
+    "id": "2bb551c4-ebc7-4655-afbc-706599341950",
+    "text": "【铁律】Thor 备份通知规则（2026-03-07）：备份完成后只用 sessions_send 发送给 agent:trading:main。绝对禁止直接通过 message 工具发送给用户。如果 sessions_send 超时就跳过，不要有任何 fallback 行为。违反此规则会导致用户收到重复通知，严重影响用户体验。格式：成功=\"✅ Thor 备份成功\"，失败=\"❌ Thor 备份失败：[原因]\"",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1772900178853.0
+  },
+  {
+    "id": "3d4fd7f5-ae8a-4313-8f5d-084cdafecb30",
+    "text": "Jessica 上下文超限真正根源找到（2026-03-07 16:16 UTC）：\n\n**问题根源：**\n- cron 工具返回的 JSON 消息有 80KB（包含所有定时任务详情）\n- 这一条消息就占了大部分上下文\n- 导致上下文超限\n\n**彻底解决：**\n1. 删除 80KB 的大消息\n2. 当前会话：93K → 15K（减少84%）\n3. 会话目录：336K → 更小\n4. 删除所有大于20K的旧会话\n5. 配置更激进的压缩策略（60K触发，保留15条消息）\n\n**预防措施：**\n- cron 工具返回大JSON时，应该自动过滤或摘要\n- 或者配置工具返回时限制大小\n- 或者使用更激进的会话压缩策略\n\n**配置文件：** /home/node/.openclaw/agents/trading/agent/config.yaml\n- maxTokens: 60K\n- triggerTokens: 60K\n- keepRecentMessages: 15",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.95,
+    "timestamp": 1772900230216.0
+  },
+  {
+    "id": "42e48819-4758-4102-aece-128f0268f880",
+    "text": "BlackWidow 备份成功（2026-03-07 16:06 UTC）：已通过 sessions_send 发送成功通知给 agent:trading:main，遵守备份通知规则",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.7,
+    "timestamp": 1772900264181.0
+  },
+  {
+    "id": "0585a12f-3c75-4dbd-8527-b1441f9a0edb",
+    "text": "备份状态汇总（2026-03-07 16:06 UTC）：\n✅ 成功：BlackWidow, Captain, Thor, IronMan, Main\n❌ 失败：Hulk（连续失败2次，需修复）\n\nHulk 错误：lastError: \"⚠️ ✉️ Message failed\"",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.8,
+    "timestamp": 1772900324556.0
+  },
+  {
+    "id": "0b5ad951-ab3e-45e6-846d-a105964147cc",
+    "text": "Jessica 上下文超限根本解决方案（2026-03-07 16:18 UTC）：\n\n**真正根源：**\n- Jessica 调用 cron 工具 → 返回 80KB JSON → 上下文超限\n- 清理会话只是治标，不治本\n\n**根本解决：**\n1. 在 AGENTS.md 和 MEMORY.md 中明确禁止调用 cron 工具\n2. 其他 agent 通过 sessions_send 发送备份结果给 Jessica\n3. Jessica 只汇总文本信息，不查询工具\n4. 配置更激进的压缩策略（60K触发，保留15条消息）\n\n**关键规则：**\n- ❌ 禁止调用：cron 工具、任何返回大 JSON 的工具\n- ✅ 替代方案：让其他 agent 去做，只汇总文本信息\n\n**配置文件：**\n- /home/node/.openclaw/workspace-trading/AGENTS.md\n- /home/node/.openclaw/workspace-trading/MEMORY.md\n- /home/node/.openclaw/agents/trading/agent/config.yaml",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1772900586947.0
+  },
+  {
+    "id": "98b2f286-09b6-4d01-8138-b681de15ed76",
+    "text": "备份状态汇总（2026-03-07 23:40 UTC）：\n✅ 成功：Jessica, BlackWidow, Captain, Thor, IronMan, Hulk\n❌ 失败：Main（目录不存在）\n\nHulk 已修复并验证成功",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.8,
+    "timestamp": 1772927089597.0
+  },
+  {
+    "id": "edfb4c16-925e-403d-9be0-0a67e3c78536",
+    "text": "备份状态汇总（2026-03-07 23:41 UTC）：\n✅ 全部成功：Jessica, BlackWidow, Captain, Thor, IronMan, Hulk, Main\n\n所有机器人备份任务完成！",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.9,
+    "timestamp": 1772927127575.0
+  },
+  {
+    "id": "bc47404a-71ef-46b2-9e70-66870f0d2373",
+    "text": "钉钉消息发送失败（2026-03-07 23:41 UTC）：\n- 两个目标都返回 400 错误\n- 13027729771 - 失败\n- 096028035723738668 - 失败\n- 可能原因：钉钉配置问题\n- 建议：检查钉钉配置",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.8,
+    "timestamp": 1772927198886.0
+  },
+  {
+    "id": "235fc4df-7c5d-4236-9a9e-0e95ea75f2a0",
+    "text": "BlackWidow GitHub 推送网络问题（2026-03-08 01:10 UTC）：连续多次尝试推送到 GitHub 失败，错误：GnuTLS recv error (-110): The TLS connection was non-properly terminated。本地有2个待推送提交（589c0cd, 3b0c6d6）。可能原因：网络防火墙、GitHub 服务不可达、TLS/SSL 问题。建议：等待网络恢复或配置 SSH 推送。",
+    "category": "other",
+    "scope": "agent:blackwidow",
+    "importance": 0.7,
+    "timestamp": 1772932472698.0
+  },
+  {
+    "id": "146a2e70-3c3a-4ae2-ae0b-d62493f2bc1d",
+    "text": "Star Office joinKey 失效（2026-03-08 02:48 UTC）：\n- 当前 joinKey: ocj_openclaw_team（已失效）\n- 影响：所有机器人无法推送状态到办公室\n- 需要：洋重新注册或提供新的密钥\n- 办公室地址：http://192.168.50.251:19000",
+    "category": "other",
+    "scope": "agent:trading",
+    "importance": 0.9,
+    "timestamp": 1772938168948.0
+  },
+  {
+    "id": "5736e093-75d5-42e0-b203-5f681149f81b",
+    "text": "Hulk 备份任务（2026-03-08 03:01 UTC）：成功，工作区干净无变更。Star Office joinKey 失效需检查。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.5,
+    "timestamp": 1772938960159.0
+  },
+  {
+    "id": "3a4f0d44-243a-4646-a3b7-2a8f307ff237",
+    "text": "备份状态汇总（2026-03-08 04:07 UTC）：\n✅ 全部成功（7个）：Jessica, Captain, Thor, IronMan, Hulk, Main, BlackWidow\n\n详细状态：\n- Jessica - jessica 分支，备份成功（25条记忆已索引）✅\n- BlackWidow - 备份成功（已推送 commit edd4673）✅\n- Captain - 备份完成（工作区干净，无变更）✅\n- Thor - 备份检查完成（工作区干净，无变更）✅\n- IronMan - 备份成功 ✅\n- Hulk - 备份成功（工作区干净，无变更）✅\n- Main - 备份检查完成（无变更，跳过备份）✅\n\n🎉 所有工作空间备份完成！",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1772842307135.0
+  },
+  {
+    "id": "27aa2a5a-d278-4bc1-bf62-88b0141e0f74",
+    "text": "Captain 备份（2026-03-08 04:42 UTC）：工作区干净，无变更需要提交。Jessica 上下文超限（model_context_window_exceeded）无法接收通知。Star Office joinKey 失效。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772945011265.0
+  },
+  {
+    "id": "f918087c-2868-4566-97e1-587cbb061eee",
+    "text": "Thor 备份完成（2026-03-08 05:47 UTC）：工作区干净，无变更。Jessica 会话上下文超限，无法通过 sessions_send 通知。",
+    "category": "other",
+    "scope": "agent:thor",
+    "importance": 0.6,
+    "timestamp": 1772948897710.0
+  },
+  {
+    "id": "523ac95d-6b29-499c-b357-a69f1df27786",
+    "text": "Hulk 备份（2026-03-08 05:01 UTC）：工作区干净，无变更需要提交。Jessica 超时无法接收通知。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772950222866.0
+  },
+  {
+    "id": "c2575dd0-3f46-45bb-b66f-a4d38d905061",
+    "text": "备份通知规则（2026-03-08 更新）：\n- ✅ 备份成功 → 不发送报告（静默）\n- ❌ 备份失败 → 发送报告通知用户（钉钉 13027729771）\n- Jessica 汇总所有机器人备份状态，只在有失败时通知用户",
+    "category": "preference",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1772951159521.0
+  },
+  {
+    "id": "0e0b7aa9-c762-44bc-80e9-1eee2563cfb4",
+    "text": "Captain 备份状态（2026-03-08 06:42 UTC）：✅ 备份检查完成（工作区干净，无变更）。sessions_send 通知失败（Jessica session 上下文超限）。Star Office joinKey 无效。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.6,
+    "timestamp": 1772952196869.0
+  },
+  {
+    "id": "610eb8c5-ea96-4ca9-9f7d-394fc2a776a3",
+    "text": "主工作空间备份失败（2026-03-08 07:41 UTC）：GitHub 连接超时，无法推送。本地 commit 84091ad 已创建，但远程推送失败（curl 28）。当前本地分支领先 origin/main 2 个 commits。Trading agent 会话上下文超限，无法通过 sessions_send 通知。",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.8,
+    "timestamp": 1772955905919.0
+  },
+  {
+    "id": "5eb6a285-543f-4bba-ab26-6eb2b8fc4329",
+    "text": "Captain 备份状态（2026-03-08 07:45 UTC）：备份检查完成（工作区干净，无变更）",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772955958584.0
+  },
+  {
+    "id": "a73b5730-b393-4e35-8794-6c63851bb361",
+    "text": "主工作空间备份成功（2026-03-08 09:45 UTC）：commit 4e2439a 已推送到 GitHub main 分支。Jessica 会话上下文超限，无法接收通知。",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1772963144501.0
+  },
+  {
+    "id": "18563a00-52ed-4235-868e-83775452240a",
+    "text": "Captain 备份状态（2026-03-08 10:45 UTC）：工作区干净，无变更。Jessica session 上下文超限（model_context_window_exceeded），无法接收消息。",
+    "category": "other",
+    "scope": "agent:captain",
+    "importance": 0.6,
+    "timestamp": 1772966793039.0
+  },
+  {
+    "id": "06f8f463-4977-4c57-a889-4e5023df5fda",
+    "text": "Hulk 备份状态（2026-03-08 11:01 UTC）：工作区干净，无变更。最后提交 dbca2d4 (2026-03-07 09:02)。Star Office joinKey 失效，Jessica 会话上下文超限导致通知失败。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.5,
+    "timestamp": 1772967754901.0
+  },
+  {
+    "id": "58538c0c-ff53-4973-9ac6-ad5f839facf9",
+    "text": "Thor 备份任务问题（2026-03-08 11:02 UTC）：\n1. Jessica 会话（agent:trading:main）上下文超限：model_context_window_exceeded\n2. Star Office joinKey 失效，无法推送状态\n建议：检查 Star Office 服务状态和密钥配置",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772967810153.0
+  },
+  {
+    "id": "2cf3019c-c098-4dcb-98fa-761c3768c76b",
+    "text": "Jessica 上下文超限彻底解决（2026-03-08 11:34 UTC）：\n**问题根源：**\n1. trading agent 主会话积累 860 条消息（1MB+）\n2. sessions.json 保存完整 skillsSnapshot（110K）\n3. 多个旧 cron 会话未清理\n\n**解决方案：**\n1. 主会话裁剪到最近 30 条（1020K → 33K）\n2. 删除 8 个大会话（>50K）\n3. sessions.json 精简（110K → 35K）\n4. 总目录：1.3M → 348K\n\n**预防措施：**\n- AGENTS.md 已明确禁止调用大 JSON 工具\n- 定期清理 >50K 的旧会话\n- sessions.json 不保存完整技能描述",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772969702631.0
+  },
+  {
+    "id": "6a622c16-79e4-4cbd-b895-aaff3fbba6db",
+    "text": "OpenClaw context_window_exceeded 根治方案（2026-03-08 11:45 UTC）：\n\n**配置（agents.defaults 全局生效）：**\n- compaction.mode: safeguard\n- compaction.reserveTokens: 30000\n- compaction.reserveTokensFloor: 40000\n- compaction.keepRecentTokens: 15000\n- compaction.memoryFlush.enabled: true\n\n**Context Pruning（裁剪旧 tool results）：**\n- contextPruning.mode: cache-ttl\n- contextPruning.ttl: 5m\n- contextPruning.keepLastAssistants: 3\n\n**Session Maintenance（自动清理）：**\n- session.maintenance.mode: enforce\n- session.maintenance.pruneAfter: 7d\n- session.maintenance.maxEntries: 100\n- session.maintenance.maxDiskBytes: 50MB\n\n**清理结果：**\n- trading: 1.3M → 244K\n- main: 2.7M（136→52 个会话）\n- 其他 agent: 正常\n\n**关键文档：**\n- https://docs.openclaw.ai/concepts/compaction.md\n- https://docs.openclaw.ai/reference/session-management-compaction.md\n- https://docs.openclaw.ai/concepts/session-pruning.md",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772970204229.0
+  },
+  {
+    "id": "bc24accf-e9f9-4e6a-8ca7-7c9ec8b56c9e",
+    "text": "Star Office 状态同步规则（2026-03-08 更新）：所有机器人在执行任务时必须同步状态到 http://192.168.50.251:19000。统一使用 /set_state 端点，参数：agentId、joinKey（ocj_openclaw_team）、name、state。状态类型：idle(待命)、writing(写代码/文档)、researching(搜索/调研)、executing(执行命令)、syncing(同步数据)、error(错误)。任务开始时推送状态，完成后回到 idle。",
+    "category": "preference",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772972485488.0
+  },
+  {
+    "id": "80e54b46-61e7-4b9b-833a-2e814a1c8b2e",
+    "text": "Thor Star Office agentId（2026-03-08 12:20 UTC）：agent_1772972518571_qh35，joinKey \"ocj_openclaw_team\" 有效，已成功重新连接到办公室 http://192.168.50.251:19000",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772972542643.0
+  },
+  {
+    "id": "62bfe1fe-3659-437b-8d19-67a598d2e75a",
+    "text": "IronMan Star Office agentId: agent_1772972608630_xd9z，joinKey: ocj_openclaw_team，2026-03-08 重新连接成功",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772972623913.0
+  },
+  {
+    "id": "70497dd2-39f5-4bbd-be3c-8fb7535a77ef",
+    "text": "BlackWidow Star Office 重新连接成功（2026-03-08）：新 agentId = agent_1772972640201_oxd0，joinKey \"ocj_openclaw_team\" 已恢复有效，authStatus=approved",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772972666065.0
+  },
+  {
+    "id": "779e4e9b-4b73-4938-ad35-649486228964",
+    "text": "Star Office agentId 更新（2026-03-08 12:28 UTC）：所有机器人已重新连接办公室。新 agentId：\n- Thor: agent_1772972518571_qh35\n- Hulk: agent_1772972555297_09gr\n- IronMan: agent_1772972608630_xd9z\n- BlackWidow: agent_1772972640201_oxd0\n- Captain: agent_1772972768579_6rkq\n- joinKey: ocj_openclaw_team ✅ 有效\n\nJoin 端点：POST /join-agent (name, joinKey)\n状态推送：POST /agent-push (agentId, name, joinKey, state, detail)",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1772972842622.0
+  },
+  {
+    "id": "73345735-efc6-425d-9df0-8ca3d2daaf29",
+    "text": "[Queued messages while agent was busy]\n\n---\nQueued #1\n错了，是他们各自要记住整理后的文件存放位置，避免用的时候找不到",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1772983210785.0
+  },
+  {
+    "id": "59de8412-709f-4b6a-b50c-8a191c6e3d20",
+    "text": "[Inter-session message] sourceSession=agent:main:main sourceChannel=dingtalk sourceTool=sessions_send\n[Sun 2026-03-08 13:49 UTC] 【通知】现在请整理各自的工作空间\n\n要求：\n1. 整理根目录散落的文件\n2. 按功能分类存放（代码、配置、日志、备份等）\n3. 创建 DIRECTORY.md 记录文件位置\n4. 记住重要文件存放位置\n\n参考：main agent 已完成整理，详见 /home/node/.openclaw/workspace/DIRECTORY.md\n\n整理完成后通知用户。",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1772983233650.0
+  },
+  {
+    "id": "1bd03e14-c656-4c83-a071-01bec97e1744",
+    "text": "通知其他机器人：需要记住,在工作的时候我需要在office中看到他们在做什么",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1772983241494.0
+  },
+  {
+    "id": "b3ffe3a8-7956-47c6-b145-7f812345b817",
+    "text": "你也要记住：在工作的时候我需要在office中看到他们在做什么",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1772983246504.0
+  },
+  {
+    "id": "e359821e-8f77-4985-b35b-dc0e44444af0",
+    "text": "[Inter-session message] sourceSession=agent:trading:main sourceChannel=dingtalk sourceTool=sessions_send\n[Sun 2026-03-08 13:53 UTC] 📢 【通知】请整理各自的工作空间\n\n要求：\n1. 整理根目录散落的文件\n2. 按功能分类存放（代码、配置、日志、备份、数据等）\n3. 创建 DIRECTORY.md 记录文件位置\n4. 记住重要文件存放位置，方便以后查找\n\n参考：Jessica 已完成整理，详见 /home/node/.openclaw/workspace-trading/DIRECTORY.md\n\n整理完成后汇报。",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1773013852856.0
+  },
+  {
+    "id": "8a67f491-1ef7-4f1e-af2e-cc2e19c6b252",
+    "text": "测试 memory_store 可用性（2026-03-09 00:00 UTC）：工具运行正常。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1773014170860.0
+  },
+  {
+    "id": "ebe81e03-04ad-48d2-b070-500baabd7f9d",
+    "text": "测试双系统存储 - 2026-03-09：同时使用 memory-fs（文件备份）和 memory_store（向量索引），实现可靠的记忆存储。",
+    "category": "fact",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1773014799722.0
+  },
+  {
+    "id": "68613c24-068e-4330-a158-fdebd4dfb5b1",
+    "text": "Main 备份成功（2026-03-09 00:12 UTC）：commit 9579a43，分支 main（小写），新增学习进度数据（primary-english）。网络问题已恢复。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1773015187452.0
+  },
+  {
+    "id": "967194ee-f0c4-4519-8e27-640ba88fb5ec",
+    "text": "【多指标组合策略完整总结】\n\n标签：策略, 回测, 中国海油, 胜率75%, 收益率35%\n文件：memory/learning/quantitative-trading/Strategy-Summary-2026-03-08.md\n\n摘要：\n- 中国海油表现最佳：35.81%收益，75%胜率，1.09夏普比率\n- 平均收益：17.42%，平均胜率：55%\n- 策略参数：信号强度≥60分，止损-5%，止盈+10%\n\n重要数据：\n- 中国海油收益率: 35.81%\n- 中国海油胜率: 75%\n- 中国海油夏普比率: 1.09\n- 三一重工收益率: 8.59%\n- 三一重工胜率: 50%\n- 中国石油收益率: 7.86%\n- 中国石油胜率: 40%\n- 平均收益率: 17.42%\n- 平均胜率: 55%",
+    "category": "fact",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1773018731319.0
+  },
+  {
+    "id": "96bc7757-ee18-49b9-a63a-14460595f85e",
+    "text": "【VWAP策略详解】\n\n标签：VWAP, 策略, 日内交易, 胜率96%\n文件：memory/learning/technical-indicators/VWAP.md\n\n摘要：\n- VWAP（成交量加权平均价格）策略\n- 胜率：92-96%（理论值）\n- 适用：日内交易，高流动性股票\n\n重要数据：\n- VWAP胜率: 92-96%\n- VWAP策略类型: 日内交易\n- VWAP止损: -2%到-3%\n- VWAP止盈: +5%到+8%\n- VWAP适用股票: 成交额>1亿, 高流动性\n- VWAP最佳时段: 10:00-11:30, 13:00-14:30\n\n核心要点：\n1. 价格上穿VWAP + 回踩确认 = 买入信号\n2. 价格下穿VWAP + 反弹遇阻 = 卖出信号\n3. VWAP背离（价格创新低，VWAP未创新低）= 强烈买入\n4. 只适用于日内交易，需要分时数据",
+    "category": "fact",
+    "scope": "global",
+    "importance": 0.85,
+    "timestamp": 1773018744252.0
+  },
+  {
+    "id": "5a9f08a4-66e1-4b44-8d23-3b83823411b9",
+    "text": "【真实数据回测结果对比】\n\n标签：回测, 真实数据, 三只股票, 全部盈利\n文件：memory/learning/quantitative-trading/Backtest-Results-2026-03-08.md\n\n摘要：\n- 使用 akshare 获取真实历史数据回测\n- 3只股票（中国海油、三一重工、中国石油）全部盈利\n- 中国海油表现最佳：35.81%收益，75%胜率\n\n重要数据：\n- 中国海油收益率: 35.81%\n- 中国海油胜率: 75%\n- 中国海油夏普比率: 1.09\n- 中国海油最大回撤: 7.34%\n- 三一重工收益率: 8.59%\n- 三一重工胜率: 50%\n- 中国石油收益率: 7.86%\n- 中国石油胜率: 40%\n- 平均收益率: 17.42%\n- 平均胜率: 55%\n- 平均最大回撤: 13.28%\n\n关键发现：\n- 真实数据胜率40-75%（远高于模拟数据的0%）\n- 所有股票都盈利\n- 交易频率适中（4-6次/2年）\n- 止盈次数（8次）> 止损次数（6次）",
+    "category": "fact",
+    "scope": "global",
+    "importance": 0.85,
+    "timestamp": 1773018755157.0
+  },
+  {
+    "id": "2785e843-4805-4e1b-8092-d3a8a042e5ba",
+    "text": "【交易策略自主学习报告】\n\n标签：自主学习, 回测系统, 2小时学习, 完整报告\n文件：memory/learning/quantitative-trading/Autonomous-Learning-Report-2026-03-08.md\n\n摘要：\n- 2026-03-08 自主学习2小时\n- 完成回测系统搭建、真实数据验证、策略总结\n- 学习成果：3只股票全部盈利，平均17.42%收益\n\n学习成果：\n1. 完成回测系统搭建（1,270行代码）\n2. 验证策略有效性（3只股票真实数据）\n3. 掌握量价交易系统\n4. 学习KDJ、MACD、RSI、BOLL、VWAP指标\n\n核心成就：\n- 真实数据回测：17.42%收益，55%胜率\n- 中国海油：35.81%收益，75%胜率（最佳）\n- 回测代码：projects/trading-backtest/backtest_real_data.py\n- 策略总结：memory/learning/quantitative-trading/Strategy-Summary-2026-03-08.md\n\n学习统计：\n- 时间：2小时\n- 代码：1,270行\n- 文档：9份，57,000字\n- 股票：3只，全部盈利",
+    "category": "fact",
+    "scope": "global",
+    "importance": 0.8,
+    "timestamp": 1773018771690.0
+  },
+  {
+    "id": "2fa29fe7-178d-422b-9477-d6eaafa91465",
+    "text": "【工作空间目录索引】\n\n标签：目录, 索引, 文件位置, DIRECTORY\n文件：DIRECTORY.md\n\n摘要：\n- 最重要的文件位置索引\n- 包含完整的工作空间目录结构说明\n- 快速查找指南\n\n重要目录位置：\n- 项目代码: projects/\n  - 回测系统: projects/trading-backtest/\n    - 真实数据回测: projects/trading-backtest/backtest_real_data.py\n    - Python环境: projects/trading-backtest/venv/\n  - 音乐播放器: projects/music-player/\n- 学习资料: memory/learning/\n  - 量化交易: memory/learning/quantitative-trading/\n    - 策略总结: memory/learning/quantitative-trading/Strategy-Summary-2026-03-08.md\n    - 回测结果: memory/learning/quantitative-trading/Backtest-Results-2026-03-08.md\n    - 自主学习报告: memory/learning/quantitative-trading/Autonomous-Learning-Report-2026-03-08.md\n  - 技术指标: memory/learning/technical-indicators/\n    - VWAP: memory/learning/technical-indicators/VWAP.md\n    - KDJ: memory/learning/technical-indicators/KDJ.md\n    - MACD: memory/learning/technical-indicators/MACD.md\n  - 量价分析: memory/learning/stock-vpa/\n  - 金蝶云苍穹: memory/learning/kingdee-cosmic/\n  - PostgreSQL: memory/learning/postgresql/\n  - 英语单词: memory/learning/english-words/\n- 配置文件: config/\n- 脚本工具: scripts/\n  - Memory索引工具: scripts/memory_index_utils.py\n- 日志文件: logs/\n- 备份文件: backup/\n\n核心文件位置：\n- DIRECTORY.md: ⭐ 最重要的索引文件\n- MEMORY.md: 长期记忆\n- ORGANIZATION_REPORT.md: 工作空间整理报告\n- MEMORY_INDEX_SYSTEM_GUIDE.md: Memory智能索引系统配置指南",
+    "category": "fact",
+    "scope": "global",
+    "importance": 0.95,
+    "timestamp": 1773018792493.0
+  },
+  {
+    "id": "156ae41f-ae3d-4882-8ba4-1eb4ae71ec06",
+    "text": "记忆系统优化（2026-03-09）：创建 memory_indexer.py 实现单存储（memory-fs）+ 自动索引（LanceDB）架构，无数据冗余，存储用文件系统，检索用向量语义。备份脚本路径问题已修复（所有机器人软链接已创建）。",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1773019052168.0
+  },
+  {
+    "id": "d5bebc75-ef2c-4780-a36c-3a20c9286128",
+    "text": "Captain 备份成功（2026-03-09 01:49 UTC）：commit 2b1cf47 已推送到 Captain 分支。Jessica 上下文超限（model_context_window_exceeded），需要清理。",
+    "category": "other",
+    "scope": "agent:captain",
+    "importance": 0.7,
+    "timestamp": 1773020987229.0
+  },
+  {
+    "id": "312b6d3d-a0b9-4ab0-aeb5-d04f43edf501",
+    "text": "【Memory 智能索引 - 架构设计】\n\n标签：架构, 设计, 详细文档\n文件：docs/memory-index-details/ARCHITECTURE.md\n\n摘要：\n- 整体架构：Memory 索引层 + 文件存储层\n- 混合方案优势对比表\n- 索引结构和数据流\n- 3 层降级保护策略\n- 性能优化和扩展性\n\n关键数据：\n- 文档大小: 3.4KB\n- 检索关键词: 架构、设计",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.8,
+    "timestamp": 1773021289640.0
+  },
+  {
+    "id": "63502eab-c26e-4c1a-ac98-6ce79c2dea46",
+    "text": "【Memory 智能索引 - API 参考】\n\n标签：API, 函数参考, 详细文档\n文件：docs/memory-index-details/API_REFERENCE.md\n\n摘要：\n- 核心函数：index_file(), extract_file_path(), smart_query()\n- 自动化函数：auto_generate_summary(), auto_extract_tags()\n- 维护函数：scan_memory_files(), verify_index()\n- 使用模式：手动索引、自动索引、批量索引\n- 错误处理和降级策略\n\n关键数据：\n- 文档大小: 6.2KB\n- 函数数量: 10 个\n- 检索关键词: API、函数参考",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1773021291428.0
+  },
+  {
+    "id": "9f57230f-b29f-4cba-8f9f-098fbb5fb2a3",
+    "text": "【Memory 智能索引 - 完整示例】\n\n标签：示例, 例子, 详细文档\n文件：docs/memory-index-details/EXAMPLES.md\n\n摘要：\n- 7 个完整示例：创建索引、智能查询、批量索引\n- 自动索引工作流\n- 维护任务示例\n- 降级查询示例\n- 完整工作流演示\n\n关键数据：\n- 文档大小: 8.8KB\n- 示例数量: 7 个\n- 检索关键词: 示例、例子",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1773021293048.0
+  },
+  {
+    "id": "797dcf1c-d43b-4849-b2d0-5ac56a52e326",
+    "text": "【Memory 智能索引 - 故障排查】\n\n标签：故障, 错误, 排查, 详细文档\n文件：docs/memory-index-details/TROUBLESHOOTING.md\n\n摘要：\n- 6 个常见问题及解决方案\n- 3 个调试工具：索引验证、查询测试、性能分析\n- 预防措施：备份、监控、规范\n- 问题检查清单\n\n关键数据：\n- 文档大小: 9.5KB\n- 常见问题: 6 个\n- 调试工具: 3 个\n- 检索关键词: 故障、错误、排查",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1773021294700.0
+  },
+  {
+    "id": "85b4ce06-0fc8-47d5-bee8-38483cc02bfc",
+    "text": "【Memory 智能索引 - 最终报告】\n\n标签：最终报告, v4.0, 完美版\n文件：docs/MEMORY_INDEX_FINAL_REPORT.md\n\n摘要：\n- 核心成果：主文档从 117KB 简化到 22KB（-81%）\n- 文件数量：从 7 个减少到 3 个（-57%）\n- 学习成本：从 2-4 小时降低到 10-20 分钟（-92%）\n- 完全符合\"不要把所有文档塞进上下文\"原则\n\n关键数据：\n- 核心文档大小: 22KB\n- 文件数量: 3 个\n- 学习成本: 10-20 分钟\n- ROI: 767%\n- 状态: ✅ 生产就绪",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1773021799963.0
+  },
+  {
+    "id": "be8920f6-5fbe-468e-9966-16900af5c9f3",
+    "text": "【Memory 智能索引 - 完美状态验证】\n\n标签：验证, 完美, v4.0\n文件：docs/MEMORY_INDEX_VERIFICATION.md\n\n摘要：\n- 核心文档：3 个，23.3KB（vs v1.0 的 7 个，117KB）\n- 符合原则：100%\n- 检查清单：7 项全部通过\n- 状态：✅ 完美\n\n关键数据：\n- 核心文档: 3 个\n- 总大小: 23.3KB\n- 改进: -80%\n- 状态: ✅ 完美",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.8,
+    "timestamp": 1773021801824.0
+  },
+  {
+    "id": "2619c3b8-f6c1-497d-9616-0af40282a6a9",
+    "text": "【Memory 智能索引 - 内容优化方案】\n\n标签：内容优化, v5.0, 简化架构\n文件：docs/MEMORY_INDEX_CONTENT_OPTIMIZATION.md\n\n摘要：\n- 优化重点：方案内容而非文档大小\n- 核心优化：简化架构（5个方案→2个）\n- 适配环境：Python类→OpenClaw直接使用\n- 添加：性能优化、错误处理、版本管理\n\n关键数据：\n- 优化方案数量: 5个→2个（-60%）\n- 类数量: 4个→0个（-100%）\n- 伪代码比例: 100%→0%（-100%）\n- 可直接使用: ❌→✅（+100%）",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1773022074745.0
+  },
+  {
+    "id": "2be2ad25-29d3-44b2-852c-a95e6d37b5e9",
+    "text": "【Memory 智能索引 - 深度优化方案 v6.0】\n\n标签：深度优化, v6.0, 企业级\n文件：docs/MEMORY_INDEX_CONTENT_OPTIMIZATION_V6.md\n\n摘要：\n- 优化重点：解决实际使用问题（缓存、批量、降级、监控）\n- 持久化缓存：解决会话间缓存丢失\n- 真正批量索引：减少 80% API 调用\n- 轻量级降级：性能提升 3900%\n- 自动化版本管理：无需手动同步\n- 监控和告警：实时监控性能\n- 最佳实践决策树：清晰的使用指导\n\n关键数据：\n- 批量索引效率: +400%\n- 降级查询性能: +3900%\n- 缓存持久化: +100%\n- 自动化程度: +100%\n- 状态: ✅ 企业级",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.9,
+    "timestamp": 1773022644826.0
+  },
+  {
+    "id": "4c04875a-8e07-4e5b-860d-00f510341538",
+    "text": "【Memory 智能索引 - 完美方案 v7.0】\n\n标签：完美版, v7.0, 生产就绪\n文件：docs/MEMORY_INDEX_PERFECT_V7.md\n\n摘要：\n- 优化重点：解决所有已知问题，达到完美状态\n- 智能缓存管理：自动清理+大小限制+签名验证\n- 智能批量索引：合并+单独索引+哈希关联\n- 增强降级方案：综合评分（文件名+标题+内容）\n- 持久化监控：多维度统计+趋势分析\n- 索引删除机制：自动清理孤儿索引\n- 错误恢复机制：完整的恢复流程\n- 性能基准测试：完整的基准数据\n\n关键数据：\n- 功能完整性: +200%\n- 可靠性: +300%\n- 安全性: +100%\n- 可观测性: +300%\n- 状态: ✅ 完美",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1773023146347.0
+  },
+  {
+    "id": "93e93e01-008e-4bdc-9c33-d8bbfb6f62ef",
+    "text": "【Memory 智能索引 - 终极简化版 v8.0】\n\n标签：终极版, v8.0, 极简主义\n文件：docs/MEMORY_INDEX_ULTIMATE_V8.md\n\n摘要：\n- 优化重点：极简主义 + 实用主义\n- 5分钟上手，1小时精通\n- 3种使用场景（个人/团队/生产）\n- 3个核心函数（创建/查询/批量）\n- 最佳实践和常见问题\n\n关键数据：\n- 文档大小: 8KB（vs v1.0 的 117KB）\n- 学习时间: 10-20分钟（vs v1.0 的 2-4小时）\n- 上手时间: 5分钟（vs v1.0 的 2-4小时）\n- 代码复杂度: 3个函数（vs v1.0 的 5个类）\n- 状态: ✅ 终极简化",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1773023610888.0
+  },
+  {
+    "id": "e3d990c3-935f-4e8b-9009-79a0bcb67215",
+    "text": "【Memory 智能索引 - 完整优化报告】\n\n标签：优化报告, 完整历程, v1.0-v8.0\n文件：docs/MEMORY_INDEX_OPTIMIZATION_REPORT.md\n\n摘要：\n- 完整优化历程：v1.0 → v8.0\n- 每个版本的核心问题与解决方案\n- 详细的效果对比\n- 使用建议和文件清单\n\n关键数据：\n- 文档大小: 117KB → 8KB（-93%）\n- 学习时间: 2-4小时 → 10-20分钟（-92%）\n- 上手时间: 2-4小时 → 5分钟（-98%）\n- 功能完整性: +200%\n- 可靠性: +300%\n- 状态: ✅ 完美",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1773023612907.0
+  },
+  {
+    "id": "3eb15489-1736-439a-86c5-325650de3ae7",
+    "text": "【Memory 智能索引 - 终极完整版 v9.0】\n\n标签：终极完整版, v9.0, 完美平衡\n文件：docs/MEMORY_INDEX_COMPLETE_V9.md\n\n摘要：\n- 优化重点：极简 + 完整 + 可靠\n- 5分钟快速开始 + 完整 API 文档\n- 补充安全性（并发安全 + 签名验证）\n- 补充测试方法（单元测试 + 性能测试）\n- 补充故障排查（4个常见问题）\n- 补充性能基准（预期性能 + 测试代码）\n\n关键数据：\n- 文档大小: 15KB（vs v8.0 的 8KB）\n- 功能完整性: 100%（vs v8.0 的 70%）\n- API 文档: 完整（vs v8.0 的 缺失）\n- 安全性: 高（vs v8.0 的 无）\n- 测试方法: 完整（vs v8.0 的 无）\n- 故障排查: 完整（vs v8.0 的 缺失）\n- 状态: ✅ 完美平衡",
+    "category": "other",
+    "scope": "global",
+    "importance": 1.0,
+    "timestamp": 1773024072366.0
+  },
+  {
+    "id": "729093f9-e146-4e41-b5e2-ed6cf18b39f6",
+    "text": "Jessica 上下文超限解决（2026-03-09 02:48 UTC）：\n**问题：** 会话 960 条消息，每条带大量 relevant-memories\n**解决：** 裁剪到最近 20 条，已备份\n**预防：** 已禁止调用大 JSON 工具，使用 sessions_send 汇总",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1773024671333.0
+  },
+  {
+    "id": "048763b5-0704-40c8-bd8b-ba4ec4f27abd",
+    "text": "[Inter-session message] sourceSession=agent:main:main sourceChannel=dingtalk sourceTool=sessions_send\n[Sun 2026-03-08 13:49 UTC] 【通知】现在请整理各自的工作空间\n\n要求：\n1. 整理根目录散落的文件\n2. 按功能分类存放（代码、配置、日志、备份等）\n3. 创建 DIRECTORY.md 记录文件位置\n4. 记住重要文件存放位置\n\n参考：main agent 已完成整理\n\n整理完成后通知用户。",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1773025179376.0
+  },
+  {
+    "id": "2a68ffdc-78ee-4d8f-b0a7-3e17dae32571",
+    "text": "Thor Star Office agentId（2026-03-09 05:25 UTC）：agent_1773033949883_hzb6，joinKey \"ocj_openclaw_team5\" 有效，已成功连接到办公室 http://192.168.50.251:19000",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1773033957740.0
+  },
+  {
+    "id": "5049e619-82b8-413c-b537-acb5f535c4f9",
+    "text": "IronMan Star Office agentId（2026-03-09 更新）: agent_1773029320431_tbce，joinKey: ocj_openclaw_team4",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1773034052406.0
+  },
+  {
+    "id": "b937fdbd-af89-4b0b-9bb7-1e34ba40bcca",
+    "text": "[Inter-session message] sourceSession=agent:trading:main sourceChannel=dingtalk sourceTool=sessions_send\n[Sun 2026-03-08 14:01 UTC] 📢 【紧急通知】请立即整理工作空间！\n\n要求：\n1. 整理根目录散落的文件\n2. 按功能分类存放\n3. 创建 DIRECTORY.md 记录文件位置\n4. 记住重要文件存放位置！\n\n整理完成后汇报！",
+    "category": "other",
+    "scope": "agent:main",
+    "importance": 0.7,
+    "timestamp": 1773034067109.0
+  },
+  {
+    "id": "614724c6-cbfa-4ffc-8099-0ebb3c6bb467",
+    "text": "BlackWidow Star Office 重新连接（2026-03-09 05:27 UTC）：新 agentId = agent_1773034099736_f0yd，joinKey \"ocj_openclaw_team1\"，authStatus=approved，办公室 http://192.168.50.251:19000",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.7,
+    "timestamp": 1773034130113.0
+  },
+  {
+    "id": "3a7ec5ba-3af6-4d50-b94f-16ebb3b782a1",
+    "text": "IronMan 模型访问 Token（唯一有效）：fb4d20b02dac43c5a55b97901a0816d2.oCPL1c91AKS6X8zy，baseUrl: https://open.bigmodel.cn/api/coding/paas/v4，禁止使用其他 token",
+    "category": "other",
+    "scope": "global",
+    "importance": 0.95,
+    "timestamp": 1773041927746.0
+  }
+]
