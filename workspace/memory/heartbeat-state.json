@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T07:06:18+08:00",
+  "last_check": "2026-03-24T07:43:13+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 23,
-      "uptime_hours": 14.9
+      "uptime_hours": 15.5
     },
     "alert_queue": {
       "count": 0,
@@ -13,23 +13,29 @@
     "scheduled_tasks": {
       "next_window": "08:00-09:00",
       "task": "选股",
-      "minutes_until": 54
+      "minutes_until": 17,
+      "status": "即将开始"
     },
     "trading_monitor": {
       "status": "非交易时段",
       "next_start": "09:30"
     },
+    "edict_service": {
+      "port_7891": "OFFLINE",
+      "reason": "项目已移除",
+      "action": "无需启动"
+    },
     "data_source": {
-      "sina_api": "OK (HTTP 200)",
-      "status": "ready"
+      "sina_api": "ready",
+      "status": "三重备份（新浪/东财/腾讯）"
     },
     "system_resources": {
-      "uptime": "14小时55分",
-      "load_avg": [0.63, 1.27, 1.58],
+      "uptime": "15小时32分",
+      "load_avg": [2.94, 1.72, 1.56],
       "memory": {
         "total": "15Gi",
-        "available": "7.6Gi",
-        "used_percent": 49
+        "available": "7.5Gi",
+        "used_percent": 50
       }
     },
     "processes": {
@@ -41,6 +47,6 @@
   "overall_status": "healthy",
   "issues": [],
   "next_actions": [
-    "08:00自动选股任务（54分钟后）"
+    "08:00自动选股任务（17分钟后）"
   ]
 }
