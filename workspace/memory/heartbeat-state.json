@@ -1,55 +1,50 @@
 {
-  "last_check": "2026-03-23T22:26:00+08:00",
+  "last_check": "2026-03-24T00:01:00+08:00",
   "check_results": {
     "gateway": {
       "status": "disabled",
-      "alert": "Gateway 服务未启动，消息接收功能不可用",
+      "alert": "Gateway 服务未启动,消息接收功能不可用",
       "action": "运行 'openclaw gateway start' 启动服务"
     },
     "alert_queue": {
       "status": "empty",
       "count": 0,
-      "note": "告警队列为空，无需推送"
+      "note": "告警队列为空,无需推送"
     },
     "scheduled_tasks": {
-      "status": "completed",
-      "current_time": "22:26",
+      "status": "outside_window",
+      "current_time": "00:01",
       "windows": {
-        "stock_selection": "08:00-09:00 (已完成)",
-        "review": "16:00-17:00 (已完成)",
-        "learning": "19:00-23:00 (已完成，19:20 执行)"
+        "stock_selection": "08:00-09:00 (未到)",
+        "review": "16:00-17:00 (未到)",
+        "learning": "19:00-23:00 (未到)"
       },
-      "learning_note": "/root/.openclaw/workspace/Knowledge/trading-strategies/learning/learning_2026-03-23.md"
+      "note": "凌晨时段,无定时任务窗口"
     },
     "trading_monitor": {
       "status": "outside_trading_hours",
       "trading_hours": "09:30-15:00",
-      "note": "非交易时段，监控未启动"
+      "note": "非交易时段,监控未启动"
     },
-    "edict_service": {
-      "status": "not_found",
-      "note": "Edict 项目不存在于 projects/ 目录"
-    },
-    "pm2": {
-      "status": "installed",
-      "version": "6.0.14",
-      "note": "PM2 已安装但无运行服务"
+    "daily_note": {
+      "status": "created",
+      "note": "今日记忆文件已创建",
+      "file": "memory/2026-03-24.md"
     },
     "system_resources": {
-      "uptime": "6小时15分",
-      "load_avg": [2.22, 3.52, 3.46],
+      "uptime": "7小时50分",
+      "load_avg": [3.91, 2.40, 2.26],
       "memory": {
         "total": "15Gi",
-        "used": "7.8Gi",
-        "available": "7.6Gi"
+        "used": "7.7Gi",
+        "available": "7.7Gi"
       },
       "status": "healthy"
     }
   },
-  "overall_status": "warning",
-  "notes": "学习任务已启动，告警队列为空，系统资源正常",
+  "overall_status": "healthy",
+  "notes": "凌晨时段,无定时任务,系统资源正常,告警队列为空",
   "action_required": [
-    "启动 Gateway 服务: openclaw gateway start",
-    "检查学习任务执行状态（PID 11610）"
+    "启动 Gateway 服务 (如需接收消息)"
   ]
 }
