@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774268342295,
+  "updatedAt": 1774276325374,
   "records": [
     {
       "msgId": "msgI4YT80sCOsngYFKPsMRceA==",
@@ -31,6 +31,12 @@
       "messageType": "text",
       "text": "错了，你都改了哪些文件？",
       "createdAt": 1774268342049
+    },
+    {
+      "msgId": "msg9S8P0jy3mFfWQQw0+nnhyg==",
+      "messageType": "text",
+      "text": "下面是tang-sansheng下agent对应的dingtalk参数，我需要你帮我配置到openclaw.json中：\n御史台\nAgentId：4378623307\nClient ID：dingt5gxbqpnjbssi8ix\nClient Secret：xonSznY1R9R8TimxFkq29STD4XdG3xp-Duh9ERhTRhOAv7rOZSlxo8wSNhhnqngu\nRobotCode：dingt5gxbqpnjbssi8ix\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n史官\nAgentId：4378693146\nClient ID：dinguuxqijyomimp1r3i\nClient Secret：kRIoFfPpEsCpEZRXu2CwZjQcPXKvLsqiELiWWTnnAiDWqji1SpvVbynbpBeWat5B\nRobotCode：dinguuxqijyomimp1r3i\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n中书省\nAgentId：4359227207\nClient ID：dinggmudgjnnsy58wnmg\nClient Secret：uHkg4xRrWCXqJCRT_DsKLP6U8aPVHesEXLm9K2-i3FgMAcwgtNGiFrxPwAEoKykP\nRobotCode：dinggmudgjnnsy58wnmg\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n门下省\nAgentId：4359089863\nClient ID：dingjnyq2dki0ublgy9h\nClient Secret：LVw-AwDOY11aPDJjkyVL_7qihCdKOEk7JHPnlq-sdzakrRsm1O0ACLjHQjRIVvdE\nRobotCode：dingjnyq2dki0ublgy9h\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n尚书省\nAgentId：4359302593\nClient ID：dingwtxon2k4w5wyovka\nClient Secret：49ctnbPHe9YYPJtfzdINsoAi0Iz6kH4DkXmZXaYtv_Piv3v2aYYSZPiYHTd2bjj2\nRobotCode：dingwtxon2k4w5wyovka\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n兵部\nAgentId：4359241931\nClient ID：dingd7rsbwkpovlconni\nClient Secret：ibI4i8wu3dqWFsRCLYKf7naUROACswdKiockig5wyw1fmDq_NXThOdjhkMXkNBXO\nRobotCode：dingd7rsbwkpovlconni\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n礼部\nAgentId：4359402265\nClient ID：dingwiikp3ehhtpldjjd\nClient Secret：XDju8V_QPaSGUuoMQeZu_tZWDi4Z2qC1qmKR1BFNGH71sAU8Qp6bfK-bcGwkVdLh\nRobotCode：dingwiikp3ehhtpldjjd\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n刑部\nAgentId：4359435206\nClient ID：ding7jhvfg5mg3vmu2ic\nClient Secret：moM4AIPqZUIB1qs1MoVvOSvZEY4XOOJgs3g8TsWL_g80E1pX3mFY31NTPaE40jNz\nRobotCode：ding7jhvfg5mg3vmu2ic\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n户部\nAgentId：4359256960\nClient ID：dingcofbbrbuphduuctd\nClient Secret：qdaHQZMaqlh6a9wfEKDWZ3Nq0uHthI34050siq5TedojYi_b5zVIGn1GvmewTujW\nRobotCode：dingcofbbrbuphduuctd\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n工部\nAgentId：4359265988\nClient ID：dingdaiudstpjyn6ix1i\nClient Secret：nsp6XRGEPVEEz8neNSoARHIf_52soD5XTxDt11cjMgbU-LyV_YBjZM6e0AceOYDA\nRobotCode：dingdaiudstpjyn6ix1i\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n吏部\nAgentId：4359467128\nClient ID：dingsgwdrym5vfev3hf6\nClient Secret：eUd983Sd8YvS71V9jQtpO2CdEaf3i3nxHAPOkOUPuyWWnnUVaVBK1gczdzV8n1aB\nRobotCode：dingsgwdrym5vfev3hf6\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351",
+      "createdAt": 1774276325061
     }
   ]
 }

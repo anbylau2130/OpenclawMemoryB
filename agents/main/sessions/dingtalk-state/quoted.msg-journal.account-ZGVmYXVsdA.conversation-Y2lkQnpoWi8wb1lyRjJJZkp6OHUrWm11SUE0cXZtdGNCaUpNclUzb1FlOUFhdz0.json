@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774268722513,
+  "updatedAt": 1774276082530,
   "records": [
     {
       "msgId": "msgqXwwzglKWGf0XkylTX/Ohw==",
@@ -2353,6 +2353,102 @@
       "messageType": "text",
       "text": "方案3",
       "createdAt": 1774268722164
+    },
+    {
+      "msgId": "msgl++YFeYbp3EU20N4OOgpow==",
+      "messageType": "text",
+      "text": "我已经在/root/.openclaw/tang-sansheng中设置了https://github.com/wanikua/danghuangshang 项目中的唐三省制，现在需要在ming-neige文件夹中设置https://github.com/wanikua/danghuangshang中的明朝内阁制,项目已经保存到了/root/.openclaw/workspace/projects/danghuangshang",
+      "createdAt": 1774269254086
+    },
+    {
+      "msgId": "msgOFis4x/nQ4BHPMm1iaF4AA==",
+      "messageType": "text",
+      "text": "根据/root/.openclaw/tang-sansheng/openclaw.json配置明内阁的openclaw.json并保存到ming-neige文件夹中",
+      "createdAt": 1774269640006
+    },
+    {
+      "msgId": "msgMdh8lJBIkZLzUIk94K9IYg==",
+      "messageType": "text",
+      "text": "修改ming-neige中的openclaw.json。jessica和main要默认带过去，其他的配置都不变",
+      "createdAt": 1774270452718
+    },
+    {
+      "msgId": "msgRfK8vc+oXGuWgGiOWTXjIA==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774270816446
+    },
+    {
+      "msgId": "msgWpjJIAGSjH6DTXLuOxtrwg==",
+      "messageType": "text",
+      "text": "给我们的tang-sansheng中的agent安装 https://github.com/wanikua/danghuangshang/tree/main/skills 中提到的skil",
+      "createdAt": 1774272198363
+    },
+    {
+      "msgId": "msgRVRZjkbKSfIyZaQZR45mIw==",
+      "messageType": "text",
+      "text": "学习 https://github.com/snarktank/ralph ，ralph loop 的方法论，然后给我总结",
+      "createdAt": 1774273403722
+    },
+    {
+      "msgId": "msgQptMwfw1LcJqVLNUc41Vog==",
+      "messageType": "text",
+      "text": "Ralph Loop 他这个是给 claude code 写的，你能不能改造以后，变成你自己的 skill",
+      "createdAt": 1774273648972
+    },
+    {
+      "msgId": "msgrMFPOSZvtwIsiKVopN9GXg==",
+      "messageType": "text",
+      "text": "Ralph Loop 他这个是给 claude code 写的，你能不能改造以后，变成你自己的 skill",
+      "createdAt": 1774273808876
+    },
+    {
+      "msgId": "msg4J3lxAlWaJwxxulrbPojrw==",
+      "messageType": "text",
+      "text": "这是我的claude code中的mcp，你看你能用不能？\n \"mcpServers\": {\n    \"puppeteer\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-puppeteer\"\n      ],\n      \"env\": {}\n    },\n    \"memory\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-memory\"\n      ],\n      \"env\": {}\n    },\n    \"playwright\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"@playwright/mcp@latest\"\n      ],\n      \"env\": {}\n    },\n    \"filesystem\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-filesystem\",\n        \"e:/aicode\"\n      ],\n      \"env\": {}\n    },\n    \"thinking\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@modelcontextprotocol/server-sequential-thinking\"\n      ],\n      \"env\": {}\n    },\n    \"fetch\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@kazuph/mcp-fetch\"\n      ],\n      \"env\": {}\n    },\n    \"context7\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@upstash/context7-mcp@latest\"\n      ],\n      \"env\": {}\n    },\n    \"glm-camp\": {\n      \"type\": \"http\",\n      \"url\": \"https://open.bigmodel.cn/api/mcp/glm_camp/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer 9a2015ae22554b318a6319b61b18ebe9.gZauH5xn1jEZ6Jog\"\n      }\n    },\n    \"chrome-devtools\": {\n      \"type\": \"stdio\",\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"chrome-devtools-mcp@latest\"\n      ],\n      \"env\": {}\n    }\n  }",
+      "createdAt": 1774274011564
+    },
+    {
+      "msgId": "msglFniwF7T5LAh6eR6+mtsgw==",
+      "messageType": "text",
+      "text": "把你的所有skill全部补充到tang-sansheng和ming-neige下的agent中",
+      "createdAt": 1774274305352
+    },
+    {
+      "msgId": "msgDAjg0fT607SYFzbJIcuBWg==",
+      "messageType": "text",
+      "text": "还有个问题，你能使用lsp么？",
+      "createdAt": 1774274766567
+    },
+    {
+      "msgId": "msgE8RhM5tkFe2d2T7Qe+vzGg==",
+      "messageType": "text",
+      "text": "学习 https://github.com/microsoft/lsprotocol  的方法论，然后给我总结",
+      "createdAt": 1774275097546
+    },
+    {
+      "msgId": "msgeUxmmEoc79zkYF0/Oc9cqQ==",
+      "messageType": "richText",
+      "text": "lsprotocol 他这个是给 claude code 写 中的lsp，你能不能改造以后，变成你自己的 skill，主要是Dotnet和python，还有sqlserver",
+      "createdAt": 1774275350567
+    },
+    {
+      "msgId": "msgG10GoMqjsbJBMZBDVIBqfA==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774275857483
+    },
+    {
+      "msgId": "msgDP+PMr0x2iH+Cs4Ez9I4Xw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774275897599
+    },
+    {
+      "msgId": "msgtc+eVoxMLswmOgDVTAmB1w==",
+      "messageType": "text",
+      "text": "刚才补充的skills全部写入到每个agent的TOOLS.md中，告诉agent如何使用这些skills",
+      "createdAt": 1774276082361
     }
   ]
 }

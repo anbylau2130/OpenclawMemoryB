@@ -1,54 +1,55 @@
 {
-  "last_check": "2026-03-23T20:20:00+08:00",
+  "last_check": "2026-03-23T22:26:00+08:00",
   "check_results": {
     "gateway": {
-      "status": "not_running",
-      "alert": "Gateway 未运行，消息接收功能不可用"
+      "status": "disabled",
+      "alert": "Gateway 服务未启动，消息接收功能不可用",
+      "action": "运行 'openclaw gateway start' 启动服务"
     },
     "alert_queue": {
       "status": "empty",
-      "count": 0
+      "count": 0,
+      "note": "告警队列为空，无需推送"
     },
     "scheduled_tasks": {
       "status": "completed",
-      "current_time": "20:20",
-      "learning": {
-        "time": "19:20:44",
-        "status": "completed",
-        "report": "/root/.openclaw/workspace/Knowledge/trading-strategies/learning/learning_2026-03-23.md",
-        "notification_sent": true,
-        "topic": "技术指标优化"
-      },
+      "current_time": "22:26",
       "windows": {
         "stock_selection": "08:00-09:00 (已完成)",
         "review": "16:00-17:00 (已完成)",
-        "learning": "19:00-23:00 (已完成)"
-      }
+        "learning": "19:00-23:00 (已完成，19:20 执行)"
+      },
+      "learning_note": "/root/.openclaw/workspace/Knowledge/trading-strategies/learning/learning_2026-03-23.md"
     },
     "trading_monitor": {
       "status": "outside_trading_hours",
       "trading_hours": "09:30-15:00",
       "note": "非交易时段，监控未启动"
     },
+    "edict_service": {
+      "status": "not_found",
+      "note": "Edict 项目不存在于 projects/ 目录"
+    },
+    "pm2": {
+      "status": "installed",
+      "version": "6.0.14",
+      "note": "PM2 已安装但无运行服务"
+    },
     "system_resources": {
-      "uptime": "4小时10分",
-      "load_avg": [4.03, 3.85, 3.43],
+      "uptime": "6小时15分",
+      "load_avg": [2.22, 3.52, 3.46],
       "memory": {
-        "total": "15GB",
-        "used": "8.1GB",
-        "available": "1.0GB"
+        "total": "15Gi",
+        "used": "7.8Gi",
+        "available": "7.6Gi"
       },
-      "swap": {
-        "total": "10GB",
-        "used": "426MB"
-      },
-      "status": "healthy",
-      "note": "系统负载恢复正常(4.03)"
+      "status": "healthy"
     }
   },
-  "overall_status": "healthy",
-  "notes": "所有定时任务已完成，告警队列为空，系统负载恢复正常",
+  "overall_status": "warning",
+  "notes": "学习任务已启动，告警队列为空，系统资源正常",
   "action_required": [
-    "启动 Gateway: openclaw gateway start"
+    "启动 Gateway 服务: openclaw gateway start",
+    "检查学习任务执行状态（PID 11610）"
   ]
 }
