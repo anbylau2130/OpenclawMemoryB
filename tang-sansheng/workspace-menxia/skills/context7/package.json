@@ -1,0 +1,17 @@
+{
+  "name": "context7-skill",
+  "version": "1.0.0",
+  "description": "Context7 MCP - Intelligent documentation search and context",
+  "type": "module",
+  "scripts": {
+    "search": "npx tsx query.ts search",
+    "context": "npx tsx query.ts context"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "keywords": ["context7", "documentation", "search", "llm"],
+  "license": "MIT"
+}

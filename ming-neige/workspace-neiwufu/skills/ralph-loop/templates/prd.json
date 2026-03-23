@@ -1,0 +1,25 @@
+{
+  "branchName": "feature/your-feature-name",
+  "projectName": "项目名称",
+  "description": "项目描述",
+  "userStories": [
+    {
+      "id": "story-1",
+      "title": "任务标题",
+      "priority": 1,
+      "passes": false,
+      "acceptance": [
+        "验收标准 1",
+        "验收标准 2",
+        "验收标准 3"
+      ],
+      "notes": "实现备注（可选）"
+    }
+  ],
+  "metadata": {
+    "createdAt": "2026-03-23",
+    "updatedAt": "2026-03-23",
+    "totalStories": 1,
+    "completedStories": 0
+  }
+}
