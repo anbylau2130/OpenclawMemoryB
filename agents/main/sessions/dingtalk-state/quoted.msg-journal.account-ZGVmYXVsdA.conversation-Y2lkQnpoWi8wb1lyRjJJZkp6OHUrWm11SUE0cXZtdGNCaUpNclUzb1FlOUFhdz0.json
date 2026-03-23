@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774256546038,
+  "updatedAt": 1774267227654,
   "records": [
     {
       "msgId": "msgqXwwzglKWGf0XkylTX/Ohw==",
@@ -2305,6 +2305,36 @@
       "messageType": "text",
       "text": "我是说把.openclaw目录推送到github",
       "createdAt": 1774256545726
+    },
+    {
+      "msgId": "msgEWPecGKHGSYHc5qF1qM5HA==",
+      "messageType": "text",
+      "text": "/root/.openclaw/workspace/projects/danghuangshang这个项目中的configs/tang-sansheng中的文件需要如何配置到每个agent中",
+      "createdAt": 1774265259506
+    },
+    {
+      "msgId": "msgyWoCFIlen5yL7j4xleehsw==",
+      "messageType": "text",
+      "text": "你要查看项目中的脚本，看他是怎么用的，然后我们只更新agent中workspace的md文件",
+      "createdAt": 1774265506129
+    },
+    {
+      "msgId": "msg0uW9WFV2bNxTzqw7Zea4lA==",
+      "messageType": "text",
+      "text": "清理下.openclaw中无用的文件，然后放入到backup文件夹。",
+      "createdAt": 1774266032838
+    },
+    {
+      "msgId": "msg2pTFEQd/pftWkeXojFaWxA==",
+      "messageType": "text",
+      "text": "执行，在文件夹中给出移动报告",
+      "createdAt": 1774266198058
+    },
+    {
+      "msgId": "msgsNzm8jER/d1gC33uaLbAag==",
+      "messageType": "text",
+      "text": ".openclaw目录推送到github",
+      "createdAt": 1774267227349
     }
   ]
 }
