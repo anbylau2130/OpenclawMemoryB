@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T06:06:17+08:00",
+  "last_check": "2026-03-24T07:06:18+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 23,
-      "uptime_hours": 13.9
+      "uptime_hours": 14.9
     },
     "alert_queue": {
       "count": 0,
@@ -13,25 +13,34 @@
     "scheduled_tasks": {
       "next_window": "08:00-09:00",
       "task": "选股",
-      "hours_until": 1.9
+      "minutes_until": 54
     },
     "trading_monitor": {
       "status": "非交易时段",
       "next_start": "09:30"
     },
+    "data_source": {
+      "sina_api": "OK (HTTP 200)",
+      "status": "ready"
+    },
     "system_resources": {
-      "uptime": "13小时55分",
-      "load_avg": [1.09, 1.24, 1.05],
+      "uptime": "14小时55分",
+      "load_avg": [0.63, 1.27, 1.58],
       "memory": {
         "total": "15Gi",
-        "available": "7.7Gi",
+        "available": "7.6Gi",
         "used_percent": 49
       }
+    },
+    "processes": {
+      "openclaw": "running (PID 1)",
+      "gateway": "running (PID 23)",
+      "zombie_processes": 2
     }
   },
   "overall_status": "healthy",
   "issues": [],
   "next_actions": [
-    "等待08:00自动选股任务（约2小时后）"
+    "08:00自动选股任务（54分钟后）"
   ]
 }
