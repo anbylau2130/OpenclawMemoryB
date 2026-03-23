@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T00:01:00+08:00",
+  "last_check": "2026-03-24T00:34:00+08:00",
   "check_results": {
     "gateway": {
-      "status": "disabled",
-      "alert": "Gateway 服务未启动,消息接收功能不可用",
-      "action": "运行 'openclaw gateway start' 启动服务"
+      "status": "running",
+      "alert": null,
+      "action": null
     },
     "alert_queue": {
       "status": "empty",
@@ -13,7 +13,7 @@
     },
     "scheduled_tasks": {
       "status": "outside_window",
-      "current_time": "00:01",
+      "current_time": "00:34",
       "windows": {
         "stock_selection": "08:00-09:00 (未到)",
         "review": "16:00-17:00 (未到)",
@@ -32,8 +32,8 @@
       "file": "memory/2026-03-24.md"
     },
     "system_resources": {
-      "uptime": "7小时50分",
-      "load_avg": [3.91, 2.40, 2.26],
+      "uptime": "8小时24分",
+      "load_avg": [1.70, 1.61, 2.02],
       "memory": {
         "total": "15Gi",
         "used": "7.7Gi",
@@ -47,4 +47,7 @@
   "action_required": [
     "启动 Gateway 服务 (如需接收消息)"
   ]
+}
+��列为空,Gateway已启动",
+  "action_required": []
 }
