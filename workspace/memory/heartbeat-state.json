@@ -1,53 +1,61 @@
 {
-  "last_check": "2026-03-24T00:34:00+08:00",
+  "last_check": "2026-03-24T04:06:31+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
-      "alert": null,
-      "action": null
+      "pid": 23,
+      "uptime_hours": 11.9
     },
     "alert_queue": {
-      "status": "empty",
       "count": 0,
-      "note": "告警队列为空,无需推送"
+      "status": "empty"
     },
     "scheduled_tasks": {
-      "status": "outside_window",
-      "current_time": "00:34",
-      "windows": {
-        "stock_selection": "08:00-09:00 (未到)",
-        "review": "16:00-17:00 (未到)",
-        "learning": "19:00-23:00 (未到)"
-      },
-      "note": "凌晨时段,无定时任务窗口"
+      "next_window": "08:00-09:00",
+      "task": "选股",
+      "hours_until": 3.9
     },
     "trading_monitor": {
-      "status": "outside_trading_hours",
-      "trading_hours": "09:30-15:00",
-      "note": "非交易时段,监控未启动"
+      "status": "非交易时段",
+      "next_start": "09:30"
     },
-    "daily_note": {
-      "status": "created",
-      "note": "今日记忆文件已创建",
-      "file": "memory/2026-03-24.md"
+    "edict_service": {
+      "port_7891": "OFFLINE",
+      "reason": "项目已移除",
+      "action": "无需启动"
+    },
+    "pm2": {
+      "status": "running",
+      "services": 0,
+      "note": "Edict项目不存在"
     },
     "system_resources": {
-      "uptime": "8小时24分",
-      "load_avg": [1.70, 1.61, 2.02],
+      "uptime": "11小时55分",
+      "load_avg": [1.02, 0.84, 1.00],
       "memory": {
         "total": "15Gi",
-        "used": "7.7Gi",
-        "available": "7.7Gi"
+        "available": "7.7Gi",
+        "used_percent": 49
       },
-      "status": "healthy"
+      "swap": {
+        "total": "10Gi",
+        "used": "1.5Gi",
+        "available": "9.1Gi"
+      }
+    },
+    "processes": {
+      "openclaw": "running (PID 1)",
+      "gateway": "running (PID 23)",
+      "zombie_processes": 2
+    },
+    "git": {
+      "status": "dirty",
+      "note": "大量待提交文件，等待工作时间处理"
     }
   },
   "overall_status": "healthy",
-  "notes": "凌晨时段,无定时任务,系统资源正常,告警队列为空",
-  "action_required": [
-    "启动 Gateway 服务 (如需接收消息)"
+  "issues": [],
+  "next_actions": [
+    "等待08:00自动选股任务"
   ]
-}
-��列为空,Gateway已启动",
-  "action_required": []
 }
