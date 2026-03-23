@@ -1,0 +1,9 @@
+{
+  "agent:hanlin_zhang:subagent:a58b7ff4-f00f-4141-9338-4b87f7d9d61b": {
+    "sessionId": "01d50dab-96b2-453d-a252-d7aa06152b49",
+    "updatedAt": 1774142841549,
+    "spawnDepth": 1,
+    "subagentRole": "leaf",
+    "subagentControlScope": "none"
+  }
+}

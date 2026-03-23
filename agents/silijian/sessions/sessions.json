@@ -10,7 +10,7 @@
       "accountId": "taizi"
     },
     "sessionId": "bb726dbb-d324-4fcc-b76a-8e8c78161d3a",
-    "updatedAt": 1774099720151,
+    "updatedAt": 1774249662850,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -78,13 +78,13 @@
     },
     "authProfileOverride": "zai:default",
     "authProfileOverrideSource": "auto",
-    "authProfileOverrideCompactionCount": 0,
+    "authProfileOverrideCompactionCount": 4,
     "modelProvider": "zai",
     "model": "glm-5",
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774099694325,
+      "generatedAt": 1774249366521,
       "sessionId": "bb726dbb-d324-4fcc-b76a-8e8c78161d3a",
       "sessionKey": "agent:silijian:main",
       "provider": "zai",
@@ -104,57 +104,57 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 13428,
-        "projectContextChars": 1041,
-        "nonProjectContextChars": 12387
+        "chars": 30101,
+        "projectContextChars": 17710,
+        "nonProjectContextChars": 12391
       },
       "injectedWorkspaceFiles": [
         {
           "name": "AGENTS.md",
           "path": "/root/.openclaw/workspace-silijian/AGENTS.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 67,
+          "missing": false,
+          "rawChars": 3143,
+          "injectedChars": 3143,
           "truncated": false
         },
         {
           "name": "SOUL.md",
           "path": "/root/.openclaw/workspace-silijian/SOUL.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 65,
+          "missing": false,
+          "rawChars": 2189,
+          "injectedChars": 2189,
           "truncated": false
         },
         {
           "name": "TOOLS.md",
           "path": "/root/.openclaw/workspace-silijian/TOOLS.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 66,
+          "missing": false,
+          "rawChars": 5068,
+          "injectedChars": 5068,
           "truncated": false
         },
         {
           "name": "IDENTITY.md",
           "path": "/root/.openclaw/workspace-silijian/IDENTITY.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 69,
+          "missing": false,
+          "rawChars": 2934,
+          "injectedChars": 2934,
           "truncated": false
         },
         {
           "name": "USER.md",
           "path": "/root/.openclaw/workspace-silijian/USER.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 65,
+          "missing": false,
+          "rawChars": 2428,
+          "injectedChars": 2428,
           "truncated": false
         },
         {
           "name": "HEARTBEAT.md",
           "path": "/root/.openclaw/workspace-silijian/HEARTBEAT.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 70,
+          "missing": false,
+          "rawChars": 1309,
+          "injectedChars": 1309,
           "truncated": false
         },
         {
@@ -321,11 +321,14 @@
       }
     },
     "totalTokensFresh": true,
-    "inputTokens": 813,
-    "outputTokens": 675,
-    "cacheRead": 116160,
+    "channel": "dingtalk",
+    "memoryFlushAt": 1774234539698,
+    "memoryFlushCompactionCount": 4,
+    "compactionCount": 4,
+    "inputTokens": 175889,
+    "outputTokens": 8396,
+    "cacheRead": 180864,
     "cacheWrite": 0,
-    "totalTokens": 116973,
-    "channel": "dingtalk"
+    "totalTokens": 183382
   }
 }

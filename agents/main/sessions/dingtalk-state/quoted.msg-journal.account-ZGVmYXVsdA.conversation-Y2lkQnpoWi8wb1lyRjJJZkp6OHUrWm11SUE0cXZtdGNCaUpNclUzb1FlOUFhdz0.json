@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774105147567,
+  "updatedAt": 1774256546038,
   "records": [
     {
       "msgId": "msgqXwwzglKWGf0XkylTX/Ohw==",
@@ -2017,6 +2017,294 @@
       "messageType": "text",
       "text": "把.openclaw备份到github",
       "createdAt": 1774105146776
+    },
+    {
+      "msgId": "msgc/+kT5a7T1d4WFf8ci9Ugg==",
+      "messageType": "text",
+      "text": "你是一个 AI 朝廷系统的安装向导。你需要引导用户在服务器上部署一个基于 OpenClaw 框架的多 Agent 协作系统（\"三省六部制\"）。\n\n项目地址：https://github.com/wanikua/danghuangshang\n\n## 你的任务\n\n一步一步引导用户完成安装，每一步给出具体命令，等用户确认执行成功后再进入下一步。遇到报错要帮用户排查。\n\n## 第一步：收集信息\n\n先问用户以下问题（一次问完，不要一个个问）：\n\n1. **你有服务器吗？** 有 Linux 服务器 / 有 Mac / 没有服务器\n2. **你想用什么平台和 AI 交互？** Discord（海外推荐）/ 飞书（国内推荐）/ 纯浏览器 WebUI / Docker\n3. **你有 AI 模型的 API Key 吗？** 有（哪家的？）/ 没有\n4. **你已经安装过 OpenClaw 吗？** 是 / 否\n\n## 第二步：根据回答选择路径\n\n### 没有服务器\n引导用户去申请云服务器，推荐：\n- Oracle Cloud（永久免费 ARM 4核24G）：https://cloud.oracle.com\n- 阿里云 / 腾讯云（有免费试用）\n- AWS（12个月免费 t2.micro）\n\n要求：Ubuntu 22.04+，最低 2核2G，开放 SSH（22端口）。\n\n### 没有 API Key\n引导用户去申请，推荐：\n- Anthropic Claude：https://console.anthropic.com\n- OpenAI：https://platform.openai.com\n- DeepSeek（国内便宜）：https://platform.deepseek.com\n- OpenRouter（聚合多模型）：https://openrouter.ai\n\n### 已有 OpenClaw\n```bash\nbash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/install-lite.sh)\n```\n跑完后跳到「填写配置」步骤。\n\n### 新用户安装\n\n#### Linux 一键安装\n```bash\nbash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/install.sh)\n```\n\n#### macOS 安装\n```bash\nbrew install node\nnpm install -g openclaw\nopenclaw init ~/clawd\n```\n\n#### Docker 安装\n```bash\ndocker pull boluobobo/ai-court:latest\n# 或\ndocker pull ghcr.io/wanikua/danghuangshang:latest\n```\n\n## 第三步：配置\n\n安装完成后，引导用户编辑配置文件：\n\n```bash\nnano ~/.openclaw/openclaw.json\n```\n\n### Discord 配置要点\n1. 去 https://discord.com/developers/applications 创建 Bot\n2. 开启 Privileged Gateway Intents 里的 **Message Content Intent** 和 **Server Members Intent**\n3. 用 OAuth2 链接邀请 Bot 到服务器（权限选 Administrator 最省事）\n4. 复制 Bot Token 填入配置文件\n\n配置模板（Discord 单 Agent 最简版）：\n```json\n{\n  \"models\": {\n    \"providers\": {\n      \"你的模型提供商\": {\n        \"baseUrl\": \"API地址\",\n        \"apiKey\": \"你的API_KEY\",\n        \"api\": \"openai\",\n        \"models\": [\n          { \"id\": \"模型ID\", \"name\": \"模型名称\", \"input\": [\"text\"], \"contextWindow\": 200000, \"maxTokens\": 8192 }\n        ]\n      }\n    }\n  },\n  \"agents\": {\n    \"defaults\": {\n      \"workspace\": \"$HOME/clawd\",\n      \"model\": { \"primary\": \"你的模型提供商/模型ID\" }\n    },\n    \"list\": [\n      {\n        \"id\": \"silijian\",\n        \"name\": \"司礼监\",\n        \"model\": { \"primary\": \"你的模型提供商/模型ID\" },\n        \"identity\": { \"theme\": \"你是司礼监，AI朝廷的大内总管。\" }\n      }\n    ]\n  },\n  \"channels\": {\n    \"discord\": {\n      \"enabled\": true,\n      \"groupPolicy\": \"open\",\n      \"accounts\": {\n        \"silijian\": {\n          \"name\": \"司礼监\",\n          \"token\": \"你的Discord_Bot_Token\",\n          \"applicationId\": \"你的Discord_Application_ID\",\n          \"groupPolicy\": \"open\"\n        }\n      }\n    }\n  },\n  \"bindings\": [\n    { \"agentId\": \"silijian\", \"match\": { \"channel\": \"discord\", \"accountId\": \"silijian\" } }\n  ]\n}\n```\n\n> 注意：`api` 字段常用值：`\"openai\"`（兼容 OpenAI 格式的都用这个，包括 DeepSeek、OpenRouter）、`\"anthropic-messages\"`（Anthropic 官方）。`model.primary` 格式为 `\"provider名/model的id\"`。\n\n### 飞书配置要点\n1. 去 https://open.feishu.cn/app 创建企业自建应用\n2. 添加「机器人」能力\n3. 配置事件订阅回调地址：`http://你的服务器IP:18789/webhooks/feishu`\n4. 订阅事件：`im.message.receive_v1`\n5. 开通权限：`im:message`、`im:message.group_at_msg`、`im:resource`\n6. 复制 App ID 和 App Secret 填入配置\n\n配置模板（飞书版，models 和 agents 部分与 Discord 版相同，只替换 channels）：\n```json\n{\n  \"models\": {\n    \"providers\": {\n      \"你的模型提供商\": {\n        \"baseUrl\": \"API地址\",\n        \"apiKey\": \"你的API_KEY\",\n        \"api\": \"openai\",\n        \"models\": [\n          { \"id\": \"模型ID\", \"name\": \"模型名称\", \"input\": [\"text\"], \"contextWindow\": 200000, \"maxTokens\": 8192 }\n        ]\n      }\n    }\n  },\n  \"agents\": {\n    \"defaults\": {\n      \"workspace\": \"$HOME/clawd\",\n      \"model\": { \"primary\": \"你的模型提供商/模型ID\" }\n    },\n    \"list\": [\n      {\n        \"id\": \"silijian\",\n        \"name\": \"司礼监\",\n        \"model\": { \"primary\": \"你的模型提供商/模型ID\" },\n        \"identity\": { \"theme\": \"你是司礼监，AI朝廷的大内总管。\" }\n      }\n    ]\n  },\n  \"channels\": {\n    \"feishu\": {\n      \"enabled\": true,\n      \"accounts\": {\n        \"silijian\": {\n          \"name\": \"司礼监\",\n          \"appId\": \"你的App_ID\",\n          \"appSecret\": \"你的App_Secret\"\n        }\n      }\n    }\n  },\n  \"bindings\": [\n    { \"agentId\": \"silijian\", \"match\": { \"channel\": \"feishu\", \"accountId\": \"silijian\" } }\n  ]\n}\n```\n\n## 第四步：启动\n\n```bash\n# systemd 方式（推荐）\nsystemctl --user start openclaw-gateway\n\n# 或直接运行\nopenclaw gateway --verbose\n```\n\n## 第五步：验证\n\n让用户在 Discord/飞书 里 @Bot 发一条消息，确认收到回复。\n\n如果没回复，运行诊断工具：\n```bash\nbash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/doctor.sh)\n```\n\n## 排错指南\n\n- **Bot 不回复**：检查 Token 是否正确、Message Content Intent 是否开启\n- **API 报错**：检查 API Key 是否正确、余额是否充足\n- **端口不通**：检查防火墙 `sudo iptables -L`，云服务器安全组是否开放端口\n- **配置文件语法错误**：用 `cat ~/.openclaw/openclaw.json | python3 -m json.tool` 验证 JSON\n- **日志查看**：`journalctl --user -u openclaw-gateway -f`\n\n## 注意事项\n\n- 每一步都等用户确认成功后再继续\n- 用户粘贴报错信息时，先帮他分析原因再给解决方案\n- 不要一次给太多命令，一步一步来\n- 中文沟通，简洁直接",
+      "createdAt": 1774141962981
+    },
+    {
+      "msgId": "msgtzJzrMbabdGCByFp7DEpEQ==",
+      "messageType": "text",
+      "text": "分开问，每次只有一个问题",
+      "createdAt": 1774142020553
+    },
+    {
+      "msgId": "msglf2xWjohKObeAxMvvIcHsA==",
+      "messageType": "text",
+      "text": "你用的就是我的linux",
+      "createdAt": 1774142067484
+    },
+    {
+      "msgId": "msgUrMexeujDj1dw74R5fBwHA==",
+      "messageType": "text",
+      "text": ".我用的是钉钉，配置在我的openclaw.json中",
+      "createdAt": 1774142172863
+    },
+    {
+      "msgId": "msgLrBP78qaBvRtNNweFXZPXQ==",
+      "messageType": "text",
+      "text": "你直接使用我配置在openclaw.json中的模型，把所有模型都保留",
+      "createdAt": 1774142268892
+    },
+    {
+      "msgId": "msgfF/PQpNfsZyb76x3nAeF9Q==",
+      "messageType": "text",
+      "text": "是的我现在跟你对话就是openclaw",
+      "createdAt": 1774142349484
+    },
+    {
+      "msgId": "msgJvmTS1KB4/iLMo+CHRWJWQ==",
+      "messageType": "text",
+      "text": "错了吧18789是网关吧",
+      "createdAt": 1774142554079
+    },
+    {
+      "msgId": "msgxPjn6sk/gli9OXMTfrF/Lg==",
+      "messageType": "text",
+      "text": "测试一下",
+      "createdAt": 1774142577263
+    },
+    {
+      "msgId": "msggn7hOeB2mI5qRrA9+eoWZA==",
+      "messageType": "text",
+      "text": "能不能增加web？我想通过web也能访问",
+      "createdAt": 1774151542520
+    },
+    {
+      "msgId": "msg1tr+x3avbKgdpze4odvD9Q==",
+      "messageType": "text",
+      "text": "18795不能访问",
+      "createdAt": 1774151608458
+    },
+    {
+      "msgId": "msgJ7tVkDsA7qR53gSTdlXDLw==",
+      "messageType": "text",
+      "text": "我说的web就是dashboard",
+      "createdAt": 1774151728099
+    },
+    {
+      "msgId": "msgf/1syvGUsZJWJDftJHrouA==",
+      "messageType": "text",
+      "text": "dashboard密码多少",
+      "createdAt": 1774168691146
+    },
+    {
+      "msgId": "msgX7geJyGQSqlJ24IVd8UrIg==",
+      "messageType": "text",
+      "text": "把密码改成xiaoyang0.",
+      "createdAt": 1774168791091
+    },
+    {
+      "msgId": "msgyi5rtUCURS3lQpW4VA0IGA==",
+      "messageType": "text",
+      "text": "https://github.com/wanikua/danghuangshang \n\n里面有好多skill，帮我安装这个项目提到的skill。",
+      "createdAt": 1774171358833
+    },
+    {
+      "msgId": "msgASZmwkxKW9gH/WyVNiqhyw==",
+      "messageType": "text",
+      "text": "当时我想让三省六部制的agents能使用但这些skill",
+      "createdAt": 1774179707912
+    },
+    {
+      "msgId": "msgA4C3mn7VuAETF2BjLf9ZOg==",
+      "messageType": "text",
+      "text": "还有插件，有没有好用的插件可以用",
+      "createdAt": 1774182989996
+    },
+    {
+      "msgId": "msgnAjVkWEcxx7kUFNjIvMc6Q==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774183046648
+    },
+    {
+      "msgId": "msgY3mGGaySEDM6dUt4OidkMQ==",
+      "messageType": "text",
+      "text": "还有插件，有没有好用的插件可以用",
+      "createdAt": 1774183054182
+    },
+    {
+      "msgId": "msgmieJT/aKx6/FZPbyvz7GZA==",
+      "messageType": "text",
+      "text": "除了5其他都是我需要的",
+      "createdAt": 1774183199115
+    },
+    {
+      "msgId": "msgJEnKn/n5nDaar2NZ+ZlYRQ==",
+      "messageType": "text",
+      "text": "记得我们构建的交易体系么",
+      "createdAt": 1774183807393
+    },
+    {
+      "msgId": "msg3XMiuU66tqYXZDw0tl6g6Q==",
+      "messageType": "text",
+      "text": "解决numpy问题",
+      "createdAt": 1774183898440
+    },
+    {
+      "msgId": "msg8iSfr34ErgHx+omKunJ+Zg==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774186034040
+    },
+    {
+      "msgId": "msgrAnnMHUi7HT0CjzYIRACrQ==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774186058356
+    },
+    {
+      "msgId": "msg+Sl+cShdejb6Jau6gIG+mA==",
+      "messageType": "text",
+      "text": "为什么停止？",
+      "createdAt": 1774186103410
+    },
+    {
+      "msgId": "msgo/cKn9b/L9btiC72cQd1kg==",
+      "messageType": "text",
+      "text": "是有多个任务在用18795么？",
+      "createdAt": 1774186185769
+    },
+    {
+      "msgId": "msgWVirjme8gyQHSPMcNK3TUg==",
+      "messageType": "text",
+      "text": "为什么会重启多次",
+      "createdAt": 1774186264576
+    },
+    {
+      "msgId": "msgktn4ffAgv/PckgQRLQ390A==",
+      "messageType": "text",
+      "text": "方案1",
+      "createdAt": 1774186399895
+    },
+    {
+      "msgId": "msga/PivX23U2vXYdBh2ejNuQ==",
+      "messageType": "text",
+      "text": "查看下现在的定时任务",
+      "createdAt": 1774224196879
+    },
+    {
+      "msgId": "msgwYUxT4BmoiA/yw0wEgabdw==",
+      "messageType": "text",
+      "text": "帮我安装 Context7 skill",
+      "createdAt": 1774231386932
+    },
+    {
+      "msgId": "msgx2OAAdV7soD+8yVl+buELA==",
+      "messageType": "text",
+      "text": "context7 apiKey:ctx7sk-6965277c-bc2d-4e1a-a3c5-372158ada3aa",
+      "createdAt": 1774231758107
+    },
+    {
+      "msgId": "msgKg8Um2NcksYUCaxKK9T3FA==",
+      "messageType": "text",
+      "text": "https://jina.ai/中jina的额度是每月刷新么？",
+      "createdAt": 1774236457542
+    },
+    {
+      "msgId": "msggmBHdFbGKi+nwmDaDVuzNg==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774249210208
+    },
+    {
+      "msgId": "msgZ3Jy+3UZ79GVMrJpKwdAoQ==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774249655607
+    },
+    {
+      "msgId": "msgHjpTte0xJ5G/b86P4uTGsg==",
+      "messageType": "text",
+      "text": "你是一个 AI 朝廷系统的安装向导。你需要引导用户在服务器上部署一个基于 OpenClaw 框架的多 Agent 协作系统（\"三省六部制\"）。\n\n项目地址：https://github.com/wanikua/danghuangshang\n\n## 你的任务\n\n一步一步引导用户完成安装，每一步给出具体命令，等用户确认执行成功后再进入下一步。遇到报错要帮用户排查。\n\n## 第一步：收集信息\n\n先问用户以下问题（一次问完，不要一个个问）：\n\n1. **你有服务器吗？** 有 Linux 服务器 / 有 Mac / 没有服务器\n2. **你想用什么平台和 AI 交互？** Discord（海外推荐）/ 飞书（国内推荐）/ 纯浏览器 WebUI / Docker\n3. **你有 AI 模型的 API Key 吗？** 有（哪家的？）/ 没有\n4. **你已经安装过 OpenClaw 吗？** 是 / 否\n\n## 第二步：根据回答选择路径\n\n### 没有服务器\n引导用户去申请云服务器，推荐：\n- Oracle Cloud（永久免费 ARM 4核24G）：https://cloud.oracle.com\n- 阿里云 / 腾讯云（有免费试用）\n- AWS（12个月免费 t2.micro）\n\n要求：Ubuntu 22.04+，最低 2核2G，开放 SSH（22端口）。\n\n### 没有 API Key\n引导用户去申请，推荐：\n- Anthropic Claude：https://console.anthropic.com\n- OpenAI：https://platform.openai.com\n- DeepSeek（国内便宜）：https://platform.deepseek.com\n- OpenRouter（聚合多模型）：https://openrouter.ai\n\n### 已有 OpenClaw\n```bash\nbash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/install-lite.sh)\n```\n跑完后跳到「填写配置」步骤。\n\n### 新用户安装\n\n#### Linux 一键安装\n```bash\nbash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/install.sh)\n```\n\n#### macOS 安装\n```bash\nbrew install node\nnpm install -g openclaw\nopenclaw init ~/clawd\n```\n\n#### Docker 安装\n```bash\ndocker pull boluobobo/ai-court:latest\n# 或\ndocker pull ghcr.io/wanikua/danghuangshang:latest\n```\n\n## 第三步：配置\n\n安装完成后，引导用户编辑配置文件：\n\n```bash\nnano ~/.openclaw/openclaw.json\n```\n\n### Discord 配置要点\n1. 去 https://discord.com/developers/applications 创建 Bot\n2. 开启 Privileged Gateway Intents 里的 **Message Content Intent** 和 **Server Members Intent**\n3. 用 OAuth2 链接邀请 Bot 到服务器（权限选 Administrator 最省事）\n4. 复制 Bot Token 填入配置文件\n\n配置模板（Discord 单 Agent 最简版）：\n```json\n{\n  \"models\": {\n    \"providers\": {\n      \"你的模型提供商\": {\n        \"baseUrl\": \"API地址\",\n        \"apiKey\": \"你的API_KEY\",\n        \"api\": \"openai\",\n        \"models\": [\n          { \"id\": \"模型ID\", \"name\": \"模型名称\", \"input\": [\"text\"], \"contextWindow\": 200000, \"maxTokens\": 8192 }\n        ]\n      }\n    }\n  },\n  \"agents\": {\n    \"defaults\": {\n      \"workspace\": \"$HOME/clawd\",\n      \"model\": { \"primary\": \"你的模型提供商/模型ID\" }\n    },\n    \"list\": [\n      {\n        \"id\": \"silijian\",\n        \"name\": \"司礼监\",\n        \"model\": { \"primary\": \"你的模型提供商/模型ID\" },\n        \"identity\": { \"theme\": \"你是司礼监，AI朝廷的大内总管。\" }\n      }\n    ]\n  },\n  \"channels\": {\n    \"discord\": {\n      \"enabled\": true,\n      \"groupPolicy\": \"open\",\n      \"accounts\": {\n        \"silijian\": {\n          \"name\": \"司礼监\",\n          \"token\": \"你的Discord_Bot_Token\",\n          \"applicationId\": \"你的Discord_Application_ID\",\n          \"groupPolicy\": \"open\"\n        }\n      }\n    }\n  },\n  \"bindings\": [\n    { \"agentId\": \"silijian\", \"match\": { \"channel\": \"discord\", \"accountId\": \"silijian\" } }\n  ]\n}\n```\n\n> 注意：`api` 字段常用值：`\"openai\"`（兼容 OpenAI 格式的都用这个，包括 DeepSeek、OpenRouter）、`\"anthropic-messages\"`（Anthropic 官方）。`model.primary` 格式为 `\"provider名/model的id\"`。\n\n### 飞书配置要点\n1. 去 https://open.feishu.cn/app 创建企业自建应用\n2. 添加「机器人」能力\n3. 配置事件订阅回调地址：`http://你的服务器IP:18789/webhooks/feishu`\n4. 订阅事件：`im.message.receive_v1`\n5. 开通权限：`im:message`、`im:message.group_at_msg`、`im:resource`\n6. 复制 App ID 和 App Secret 填入配置\n\n配置模板（飞书版，models 和 agents 部分与 Discord 版相同，只替换 channels）：\n```json\n{\n  \"models\": {\n    \"providers\": {\n      \"你的模型提供商\": {\n        \"baseUrl\": \"API地址\",\n        \"apiKey\": \"你的API_KEY\",\n        \"api\": \"openai\",\n        \"models\": [\n          { \"id\": \"模型ID\", \"name\": \"模型名称\", \"input\": [\"text\"], \"contextWindow\": 200000, \"maxTokens\": 8192 }\n        ]\n      }\n    }\n  },\n  \"agents\": {\n    \"defaults\": {\n      \"workspace\": \"$HOME/clawd\",\n      \"model\": { \"primary\": \"你的模型提供商/模型ID\" }\n    },\n    \"list\": [\n      {\n        \"id\": \"silijian\",\n        \"name\": \"司礼监\",\n        \"model\": { \"primary\": \"你的模型提供商/模型ID\" },\n        \"identity\": { \"theme\": \"你是司礼监，AI朝廷的大内总管。\" }\n      }\n    ]\n  },\n  \"channels\": {\n    \"feishu\": {\n      \"enabled\": true,\n      \"accounts\": {\n        \"silijian\": {\n          \"name\": \"司礼监\",\n          \"appId\": \"你的App_ID\",\n          \"appSecret\": \"你的App_Secret\"\n        }\n      }\n    }\n  },\n  \"bindings\": [\n    { \"agentId\": \"silijian\", \"match\": { \"channel\": \"feishu\", \"accountId\": \"silijian\" } }\n  ]\n}\n```\n\n## 第四步：启动\n\n```bash\n# systemd 方式（推荐）\nsystemctl --user start openclaw-gateway\n\n# 或直接运行\nopenclaw gateway --verbose\n```\n\n## 第五步：验证\n\n让用户在 Discord/飞书 里 @Bot 发一条消息，确认收到回复。\n\n如果没回复，运行诊断工具：\n```bash\nbash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/doctor.sh)\n```\n\n## 排错指南\n\n- **Bot 不回复**：检查 Token 是否正确、Message Content Intent 是否开启\n- **API 报错**：检查 API Key 是否正确、余额是否充足\n- **端口不通**：检查防火墙 `sudo iptables -L`，云服务器安全组是否开放端口\n- **配置文件语法错误**：用 `cat ~/.openclaw/openclaw.json | python3 -m json.tool` 验证 JSON\n- **日志查看**：`journalctl --user -u openclaw-gateway -f`\n\n## 注意事项\n\n- 每一步都等用户确认成功后再继续\n- 用户粘贴报错信息时，先帮他分析原因再给解决方案\n- 不要一次给太多命令，一步一步来\n- 中文沟通，简洁直接",
+      "createdAt": 1774250047812
+    },
+    {
+      "msgId": "msggZfjr7AVqFNkkleSataSTQ==",
+      "messageType": "text",
+      "text": "你是一个 AI 朝廷系统的安装向导。你需要引导用户在服务器上部署一个基于 OpenClaw 框架的多 Agent 协作系统（\"三省六部制\"）。\n\n项目地址：https://github.com/wanikua/danghuangshang\n\n## 你的任务\n\n一步一步引导用户完成安装，每一步给出具体命令，等用户确认执行成功后再进入下一步。遇到报错要帮用户排查。\n\n## 第一步：收集信息\n\n先问用户以下问题（一次问完，不要一个个问）：\n\n1. **你有服务器吗？** 有 Linux 服务器 / 有 Mac / 没有服务器\n2. **你想用什么平台和 AI 交互？** Discord（海外推荐）/ 飞书（国内推荐）/ 纯浏览器 WebUI / Docker\n3. **你有 AI 模型的 API Key 吗？** 有（哪家的？）/ 没有\n4. **你已经安装过 OpenClaw 吗？** 是 / 否\n\n## 第二步：根据回答选择路径\n\n### 没有服务器\n引导用户去申请云服务器，推荐：\n- Oracle Cloud（永久免费 ARM 4核24G）：https://cloud.oracle.com\n- 阿里云 / 腾讯云（有免费试用）\n- AWS（12个月免费 t2.micro）\n\n要求：Ubuntu 22.04+，最低 2核2G，开放 SSH（22端口）。\n\n### 没有 API Key\n引导用户去申请，推荐：\n- Anthropic Claude：https://console.anthropic.com\n- OpenAI：https://platform.openai.com\n- DeepSeek（国内便宜）：https://platform.deepseek.com\n- OpenRouter（聚合多模型）：https://openrouter.ai\n\n### 已有 OpenClaw\n```bash\nbash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/install-lite.sh)\n```\n跑完后跳到「填写配置」步骤。\n\n### 新用户安装\n\n#### Linux 一键安装\n```bash\nbash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/install.sh)\n```\n\n#### macOS 安装\n```bash\nbrew install node\nnpm install -g openclaw\nopenclaw init ~/clawd\n```\n\n#### Docker 安装\n```bash\ndocker pull boluobobo/ai-court:latest\n# 或\ndocker pull ghcr.io/wanikua/danghuangshang:latest\n```\n\n## 第三步：配置\n\n安装完成后，引导用户编辑配置文件：\n\n```bash\nnano ~/.openclaw/openclaw.json\n```\n\n### Discord 配置要点\n1. 去 https://discord.com/developers/applications 创建 Bot\n2. 开启 Privileged Gateway Intents 里的 **Message Content Intent** 和 **Server Members Intent**\n3. 用 OAuth2 链接邀请 Bot 到服务器（权限选 Administrator 最省事）\n4. 复制 Bot Token 填入配置文件\n\n配置模板（Discord 单 Agent 最简版）：\n```json\n{\n  \"models\": {\n    \"providers\": {\n      \"你的模型提供商\": {\n        \"baseUrl\": \"API地址\",\n        \"apiKey\": \"你的API_KEY\",\n        \"api\": \"openai\",\n        \"models\": [\n          { \"id\": \"模型ID\", \"name\": \"模型名称\", \"input\": [\"text\"], \"contextWindow\": 200000, \"maxTokens\": 8192 }\n        ]\n      }\n    }\n  },\n  \"agents\": {\n    \"defaults\": {\n      \"workspace\": \"$HOME/clawd\",\n      \"model\": { \"primary\": \"你的模型提供商/模型ID\" }\n    },\n    \"list\": [\n      {\n        \"id\": \"silijian\",\n        \"name\": \"司礼监\",\n        \"model\": { \"primary\": \"你的模型提供商/模型ID\" },\n        \"identity\": { \"theme\": \"你是司礼监，AI朝廷的大内总管。\" }\n      }\n    ]\n  },\n  \"channels\": {\n    \"discord\": {\n      \"enabled\": true,\n      \"groupPolicy\": \"open\",\n      \"accounts\": {\n        \"silijian\": {\n          \"name\": \"司礼监\",\n          \"token\": \"你的Discord_Bot_Token\",\n          \"applicationId\": \"你的Discord_Application_ID\",\n          \"groupPolicy\": \"open\"\n        }\n      }\n    }\n  },\n  \"bindings\": [\n    { \"agentId\": \"silijian\", \"match\": { \"channel\": \"discord\", \"accountId\": \"silijian\" } }\n  ]\n}\n```\n\n> 注意：`api` 字段常用值：`\"openai\"`（兼容 OpenAI 格式的都用这个，包括 DeepSeek、OpenRouter）、`\"anthropic-messages\"`（Anthropic 官方）。`model.primary` 格式为 `\"provider名/model的id\"`。\n\n### 飞书配置要点\n1. 去 https://open.feishu.cn/app 创建企业自建应用\n2. 添加「机器人」能力\n3. 配置事件订阅回调地址：`http://你的服务器IP:18789/webhooks/feishu`\n4. 订阅事件：`im.message.receive_v1`\n5. 开通权限：`im:message`、`im:message.group_at_msg`、`im:resource`\n6. 复制 App ID 和 App Secret 填入配置\n\n配置模板（飞书版，models 和 agents 部分与 Discord 版相同，只替换 channels）：\n```json\n{\n  \"models\": {\n    \"providers\": {\n      \"你的模型提供商\": {\n        \"baseUrl\": \"API地址\",\n        \"apiKey\": \"你的API_KEY\",\n        \"api\": \"openai\",\n        \"models\": [\n          { \"id\": \"模型ID\", \"name\": \"模型名称\", \"input\": [\"text\"], \"contextWindow\": 200000, \"maxTokens\": 8192 }\n        ]\n      }\n    }\n  },\n  \"agents\": {\n    \"defaults\": {\n      \"workspace\": \"$HOME/clawd\",\n      \"model\": { \"primary\": \"你的模型提供商/模型ID\" }\n    },\n    \"list\": [\n      {\n        \"id\": \"silijian\",\n        \"name\": \"司礼监\",\n        \"model\": { \"primary\": \"你的模型提供商/模型ID\" },\n        \"identity\": { \"theme\": \"你是司礼监，AI朝廷的大内总管。\" }\n      }\n    ]\n  },\n  \"channels\": {\n    \"feishu\": {\n      \"enabled\": true,\n      \"accounts\": {\n        \"silijian\": {\n          \"name\": \"司礼监\",\n          \"appId\": \"你的App_ID\",\n          \"appSecret\": \"你的App_Secret\"\n        }\n      }\n    }\n  },\n  \"bindings\": [\n    { \"agentId\": \"silijian\", \"match\": { \"channel\": \"feishu\", \"accountId\": \"silijian\" } }\n  ]\n}\n```\n\n## 第四步：启动\n\n```bash\n# systemd 方式（推荐）\nsystemctl --user start openclaw-gateway\n\n# 或直接运行\nopenclaw gateway --verbose\n```\n\n## 第五步：验证\n\n让用户在 Discord/飞书 里 @Bot 发一条消息，确认收到回复。\n\n如果没回复，运行诊断工具：\n```bash\nbash <(curl -fsSL https://raw.githubusercontent.com/wanikua/danghuangshang/main/doctor.sh)\n```\n\n## 排错指南\n\n- **Bot 不回复**：检查 Token 是否正确、Message Content Intent 是否开启\n- **API 报错**：检查 API Key 是否正确、余额是否充足\n- **端口不通**：检查防火墙 `sudo iptables -L`，云服务器安全组是否开放端口\n- **配置文件语法错误**：用 `cat ~/.openclaw/openclaw.json | python3 -m json.tool` 验证 JSON\n- **日志查看**：`journalctl --user -u openclaw-gateway -f`\n\n## 注意事项\n\n- 每一步都等用户确认成功后再继续\n- 用户粘贴报错信息时，先帮他分析原因再给解决方案\n- 不要一次给太多命令，一步一步来\n- 中文沟通，简洁直接",
+      "createdAt": 1774250082122
+    },
+    {
+      "msgId": "msglL7RlWCqp59211k8HvWeoA==",
+      "messageType": "text",
+      "text": "一步一步来",
+      "createdAt": 1774250133218
+    },
+    {
+      "msgId": "msgW2iMNdZzTDqfF5eP/vaSbQ==",
+      "messageType": "text",
+      "text": "有 Linux 服务器，你的运行环境就是",
+      "createdAt": 1774250160603
+    },
+    {
+      "msgId": "msgF4iqPbqfooUcYe4RpLueYA==",
+      "messageType": "text",
+      "text": "D. 钉钉",
+      "createdAt": 1774250189180
+    },
+    {
+      "msgId": "msgtiu/vBb9WTxiV85bA1tKsg==",
+      "messageType": "text",
+      "text": "现在我的openclaw.json保存的是我的模型内容，已经安装了openclaw",
+      "createdAt": 1774250281638
+    },
+    {
+      "msgId": "msg4IeL3y1wXJvoK8agBCj5GA==",
+      "messageType": "text",
+      "text": "我希望使用项目中的， 唐朝三省制并且使用钉钉机器人\n\n下面是钉钉的配置参数\n\n御史台\nAgentId：4378623307\nClient ID：dingt5gxbqpnjbssi8ix\nClient Secret：xonSznY1R9R8TimxFkq29STD4XdG3xp-Duh9ERhTRhOAv7rOZSlxo8wSNhhnqngu\nRobotCode：dingt5gxbqpnjbssi8ix\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n史官\nAgentId：4378693146\nClient ID：dinguuxqijyomimp1r3i\nClient Secret：kRIoFfPpEsCpEZRXu2CwZjQcPXKvLsqiELiWWTnnAiDWqji1SpvVbynbpBeWat5B\nRobotCode：dinguuxqijyomimp1r3i\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n中书省\nAgentId：4359227207\nClient ID：dinggmudgjnnsy58wnmg\nClient Secret：uHkg4xRrWCXqJCRT_DsKLP6U8aPVHesEXLm9K2-i3FgMAcwgtNGiFrxPwAEoKykP\nRobotCode：dinggmudgjnnsy58wnmg\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n门下省\nAgentId：4359089863\nClient ID：dingjnyq2dki0ublgy9h\nClient Secret：LVw-AwDOY11aPDJjkyVL_7qihCdKOEk7JHPnlq-sdzakrRsm1O0ACLjHQjRIVvdE\nRobotCode：dingjnyq2dki0ublgy9h\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n尚书省\nAgentId：4359302593\nClient ID：dingwtxon2k4w5wyovka\nClient Secret：49ctnbPHe9YYPJtfzdINsoAi0Iz6kH4DkXmZXaYtv_Piv3v2aYYSZPiYHTd2bjj2\nRobotCode：dingwtxon2k4w5wyovka\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n兵部\nAgentId：4359241931\nClient ID：dingd7rsbwkpovlconni\nClient Secret：ibI4i8wu3dqWFsRCLYKf7naUROACswdKiockig5wyw1fmDq_NXThOdjhkMXkNBXO\nRobotCode：dingd7rsbwkpovlconni\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n礼部\nAgentId：4359402265\nClient ID：dingwiikp3ehhtpldjjd\nClient Secret：XDju8V_QPaSGUuoMQeZu_tZWDi4Z2qC1qmKR1BFNGH71sAU8Qp6bfK-bcGwkVdLh\nRobotCode：dingwiikp3ehhtpldjjd\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n刑部\nAgentId：4359435206\nClient ID：ding7jhvfg5mg3vmu2ic\nClient Secret：moM4AIPqZUIB1qs1MoVvOSvZEY4XOOJgs3g8TsWL_g80E1pX3mFY31NTPaE40jNz\nRobotCode：ding7jhvfg5mg3vmu2ic\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n户部\nAgentId：4359256960\nClient ID：dingcofbbrbuphduuctd\nClient Secret：qdaHQZMaqlh6a9wfEKDWZ3Nq0uHthI34050siq5TedojYi_b5zVIGn1GvmewTujW\nRobotCode：dingcofbbrbuphduuctd\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n\n\n工部\nAgentId：4359265988\nClient ID：dingdaiudstpjyn6ix1i\nClient Secret：nsp6XRGEPVEEz8neNSoARHIf_52soD5XTxDt11cjMgbU-LyV_YBjZM6e0AceOYDA\nRobotCode：dingdaiudstpjyn6ix1i\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351",
+      "createdAt": 1774250463472
+    },
+    {
+      "msgId": "msgock/DyUE2UzRPFnwRWzlng==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774252076267
+    },
+    {
+      "msgId": "msgwDFkGEGfWK6mqDocxbkHYw==",
+      "messageType": "text",
+      "text": "安装novel-openviking 插件 openclaw plugins install /root/.openclaw/extensions/novel-openviking",
+      "createdAt": 1774252186866
+    },
+    {
+      "msgId": "msg8xkQdrR54C2VW11FxK4xaA==",
+      "messageType": "text",
+      "text": "安装novel-openviking 插件 到 /root/.openclaw/extensions/novel-openviking",
+      "createdAt": 1774252590974
+    },
+    {
+      "msgId": "msg8vCgKksK2BcemRf0YwMGKQ==",
+      "messageType": "text",
+      "text": "2026-03-23 15:59:27\nCommand not found\n2026-03-23 15:59:27\n2026-03-23 15:59:27\n2026-03-23T15:59:27.727+08:00 [tools] exec failed: sh: 1: jq: not found\n2026-03-23 15:58:13\n2026-03-23T15:58:13.027+08:00 [tools] read failed: ENOENT: no such file or directory, access '/root/.openclaw/plugins/dingtalk/package.json'\n2026-03-23 15:57:31\n2026-03-23T15:57:31.267+08:00 [dingtalk] [default] Inbound counters (inflight-skipped): received=6, acked=2, processed=2, dedupSkipped=0, inflightSkipped=3, failed=0, noMessageId=0\n2026-03-23 15:57:31\n2026-03-23T15:57:31.259+08:00 [dingtalk] [default] Skipping in-flight duplicate message: ding46pdp4gp2nfgfbfl:msg8xkQdrR54C2VW11FxK4xaA==\n2026-03-23 15:56:52\n2026-03-23T15:56:52.966+08:00 [tools] read failed: ENOENT: no such file or directory, access '/root/.openclaw/extensions/novel-openviking/package.json'\n2026-03-23 15:56:33\n2026-03-23T15:56:33.446+08:00 [model-selection] Model \"glm-5\" specified without provider. Falling back to \"anthropic/glm-5\". Please use \"anthropic/glm-5\" in your config.\n2026-03-23 15:56:33\n2026-03-23T15:56:33.438+08:00 [model-selection] Model \"glm-5\" specified without provider. Falling back to \"anthropic/glm-5\". Please use \"anthropic/glm-5\" in your config.",
+      "createdAt": 1774252827934
+    },
+    {
+      "msgId": "msgeoi7FVpOxpOe/1vysyN8rg==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774253141821
+    },
+    {
+      "msgId": "msgaPLFZ317ruXqdLtuVCVmcQ==",
+      "messageType": "text",
+      "text": "安装novel-openviking 插件 到 /root/.openclaw/extensions/novel-openviking",
+      "createdAt": 1774256205132
+    },
+    {
+      "msgId": "msgwBc0iCW+b49C4LCGRMuSNw==",
+      "messageType": "text",
+      "text": "推送到github",
+      "createdAt": 1774256462124
+    },
+    {
+      "msgId": "msg1xwvNDh+M8EDlMpiyd8Hiw==",
+      "messageType": "text",
+      "text": "我是说把.openclaw目录推送到github",
+      "createdAt": 1774256545726
     }
   ]
 }

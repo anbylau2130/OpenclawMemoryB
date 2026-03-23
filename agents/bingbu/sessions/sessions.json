@@ -1,0 +1,9 @@
+{
+  "agent:bingbu:subagent:42617499-e1b0-4435-8d4b-ebed6392cb00": {
+    "sessionId": "5370d1ae-0b55-4ac4-99c6-ba41820c9e77",
+    "updatedAt": 1774142841515,
+    "spawnDepth": 1,
+    "subagentRole": "leaf",
+    "subagentControlScope": "none"
+  }
+}

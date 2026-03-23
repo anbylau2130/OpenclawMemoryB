@@ -1,0 +1,226 @@
+{
+  "branchName": "feature/add-user-authentication",
+  "projectName": "My Application",
+  "description": "为系统添加完整的用户认证功能",
+  "userStories": [
+    {
+      "id": "story-001",
+      "title": "创建登录页面组件",
+      "priority": 1,
+      "passes": false,
+      "acceptanceCriteria": [
+        "创建 LoginForm.tsx 组件",
+        "包含用户名和密码输入框",
+        "包含提交按钮和忘记密码链接",
+        "显示错误消息（用户名或密码错误）",
+        "登录成功后跳转到仪表板",
+        "添加表单验证",
+        "Verify in browser using dev-browser skill"
+      ],
+      "implementation": {
+        "files": [
+          "src/components/auth/LoginForm.tsx",
+          "src/components/auth/LoginForm.test.tsx"
+        ],
+        "dependencies": ["react-hook-form", "yup"]
+      }
+    },
+    {
+      "id": "story-002",
+      "title": "创建注册页面组件",
+      "priority": 2,
+      "passes": false,
+      "acceptanceCriteria": [
+        "创建 RegisterForm.tsx 组件",
+        "包含用户名、邮箱、密码、确认密码输入框",
+        "密码强度指示器",
+        "发送验证邮件",
+        "注册成功后跳转到登录页",
+        "添加表单验证",
+        "Verify in browser using dev-browser skill"
+      ],
+      "implementation": {
+        "files": [
+          "src/components/auth/RegisterForm.tsx",
+          "src/components/auth/RegisterForm.test.tsx"
+        ],
+        "dependencies": ["react-hook-form", "yup", "zxcvbn"]
+      }
+    },
+    {
+      "id": "story-003",
+      "title": "实现登录 API 端点",
+      "priority": 3,
+      "passes": false,
+      "acceptanceCriteria": [
+        "POST /api/auth/login 端点",
+        "验证用户名和密码",
+        "返回 JWT token 和 refresh token",
+        "返回用户基本信息",
+        "错误处理（用户不存在、密码错误）",
+        "添加速率限制（防止暴力破解）",
+        "添加单元测试"
+      ],
+      "implementation": {
+        "files": [
+          "src/api/auth/login.ts",
+          "src/api/auth/login.test.ts"
+        ],
+        "dependencies": ["bcrypt", "jsonwebtoken", "express-rate-limit"]
+      }
+    },
+    {
+      "id": "story-004",
+      "title": "实现注册 API 端点",
+      "priority": 4,
+      "passes": false,
+      "acceptanceCriteria": [
+        "POST /api/auth/register 端点",
+        "验证用户名、邮箱、密码格式",
+        "检查用户名和邮箱是否已存在",
+        "密码加密存储（bcrypt）",
+        "发送验证邮件",
+        "返回成功消息",
+        "添加单元测试"
+      ],
+      "implementation": {
+        "files": [
+          "src/api/auth/register.ts",
+          "src/api/auth/register.test.ts"
+        ],
+        "dependencies": ["bcrypt", "nodemailer"]
+      }
+    },
+    {
+      "id": "story-005",
+      "title": "实现 JWT 认证中间件",
+      "priority": 5,
+      "passes": false,
+      "acceptanceCriteria": [
+        "创建 authenticateToken 中间件",
+        "验证 JWT token 有效性",
+        "从 token 提取用户信息",
+        "将用户信息添加到 request 对象",
+        "返回 401 未授权错误",
+        "处理 token 过期",
+        "添加单元测试"
+      ],
+      "implementation": {
+        "files": [
+          "src/middleware/auth.ts",
+          "src/middleware/auth.test.ts"
+        ],
+        "dependencies": ["jsonwebtoken"]
+      }
+    },
+    {
+      "id": "story-006",
+      "title": "实现 token 刷新功能",
+      "priority": 6,
+      "passes": false,
+      "acceptanceCriteria": [
+        "POST /api/auth/refresh 端点",
+        "验证 refresh token",
+        "生成新的 access token",
+        "返回新的 token",
+        "错误处理",
+        "添加单元测试"
+      ],
+      "implementation": {
+        "files": [
+          "src/api/auth/refresh.ts",
+          "src/api/auth/refresh.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "story-007",
+      "title": "实现登出功能",
+      "priority": 7,
+      "passes": false,
+      "acceptanceCriteria": [
+        "POST /api/auth/logout 端点",
+        "将 refresh token 加入黑名单",
+        "清除客户端 cookie",
+        "返回成功消息",
+        "添加单元测试"
+      ],
+      "implementation": {
+        "files": [
+          "src/api/auth/logout.ts",
+          "src/api/auth/logout.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "story-008",
+      "title": "添加密码重置功能",
+      "priority": 8,
+      "passes": false,
+      "acceptanceCriteria": [
+        "创建 ForgotPassword.tsx 组件",
+        "POST /api/auth/forgot-password 端点",
+        "生成重置 token",
+        "发送重置邮件",
+        "创建 ResetPassword.tsx 组件",
+        "POST /api/auth/reset-password 端点",
+        "验证重置 token",
+        "更新密码",
+        "Verify in browser using dev-browser skill"
+      ],
+      "implementation": {
+        "files": [
+          "src/components/auth/ForgotPassword.tsx",
+          "src/components/auth/ResetPassword.tsx",
+          "src/api/auth/forgot-password.ts",
+          "src/api/auth/reset-password.ts",
+          "src/api/auth/forgot-password.test.ts",
+          "src/api/auth/reset-password.test.ts"
+        ]
+      }
+    },
+    {
+      "id": "story-009",
+      "title": "添加用户资料页面",
+      "priority": 9,
+      "passes": false,
+      "acceptanceCriteria": [
+        "创建 Profile.tsx 组件",
+        "显示用户信息（用户名、邮箱、创建时间）",
+        "编辑用户信息功能",
+        "修改密码功能",
+        "上传头像功能",
+        "Verify in browser using dev-browser skill"
+      ],
+      "implementation": {
+        "files": [
+          "src/components/profile/Profile.tsx",
+          "src/components/profile/EditProfile.tsx",
+          "src/components/profile/ChangePassword.tsx",
+          "src/api/user/profile.ts",
+          "src/api/user/change-password.ts"
+        ]
+      }
+    },
+    {
+      "id": "story-010",
+      "title": "添加集成测试",
+      "priority": 10,
+      "passes": false,
+      "acceptanceCriteria": [
+        "完整登录流程测试",
+        "完整注册流程测试",
+        "密码重置流程测试",
+        "token 刷新流程测试",
+        "认证保护路由测试",
+        "所有测试通过"
+      ],
+      "implementation": {
+        "files": [
+          "tests/integration/auth.test.ts",
+          "tests/integration/user.test.ts"
+        ]
+      }
+    }
+  ]
+}

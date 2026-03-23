@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774081363547,
+  "updatedAt": 1774230925975,
   "records": [
     {
       "msgId": "msg2Vkh7nk6XY5cQkUGswbo8g==",
@@ -55,6 +55,42 @@
       "messageType": "text",
       "text": "1",
       "createdAt": 1774081363237
+    },
+    {
+      "msgId": "msg3LFpbsY0V9jQoTfRKObqJQ==",
+      "messageType": "text",
+      "text": "安装skill https://clawhub.ai/paulshe/china-stock-analysis",
+      "createdAt": 1774230516674
+    },
+    {
+      "msgId": "msgoSPbLWN9yrIG0sCFj1lxOA==",
+      "messageType": "text",
+      "text": "你的工作空间在哪里",
+      "createdAt": 1774230713687
+    },
+    {
+      "msgId": "msgx5FUP+cP0xUpwJjkd0yhfQ==",
+      "messageType": "text",
+      "text": "那你为什么要把文件解压缩到/root/.openclaw/workspace/skills/",
+      "createdAt": 1774230785706
+    },
+    {
+      "msgId": "msgZkSrNAI6t7/c2/gxRW0KfQ==",
+      "messageType": "text",
+      "text": "这些skill不应该放在你的工作空间内么",
+      "createdAt": 1774230848175
+    },
+    {
+      "msgId": "msgW1K4z3Odw7OMusqlfO0mlA==",
+      "messageType": "text",
+      "text": "不需要其他agents看到，就你能用就行了",
+      "createdAt": 1774230917538
+    },
+    {
+      "msgId": "msggUW8+G33METwpT4rQNZFhQ==",
+      "messageType": "file",
+      "text": "<media:file> (china-stock-analysis-1.0.0.zip)",
+      "createdAt": 1774230925797
     }
   ]
 }

@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "updatedAt": 1774248930440,
+  "records": [
+    {
+      "msgId": "msg4YfQqXwUw2pUUfsdbfvSIA==",
+      "messageType": "text",
+      "text": "刚才的配置有问题，我已经修正了",
+      "createdAt": 1774245554911
+    },
+    {
+      "msgId": "msg/Lj0Yzg2kAk9HW6prJ/OeA==",
+      "messageType": "text",
+      "text": "2",
+      "createdAt": 1774245692800
+    },
+    {
+      "msgId": "msgxxZWXOLYLHigg7u6UV7GEQ==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774246377275
+    },
+    {
+      "msgId": "msgmOhFfgpJIS9IPBNVD0Wegw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774246819627
+    },
+    {
+      "msgId": "msg3d8ZBJ3r/5Ao18pfBTjLEg==",
+      "messageType": "text",
+      "text": "但是这跟https://github.com/wanikua/danghuangshang项目的配置不一致呀",
+      "createdAt": 1774246899430
+    },
+    {
+      "msgId": "msg/jLbAxQesZJSJwcSSRo00A==",
+      "messageType": "text",
+      "text": "我需要按照https://github.com/wanikua/danghuangshang这个项目配置三省六部，其他的内容保持不变，只配置三省六部的内容，严格按照项目配置，但是目录按照我设置的workspace目录进行保存，还有我已使用的是channel是dingtalk",
+      "createdAt": 1774247560165
+    },
+    {
+      "msgId": "msgBV0JI5xBEjbDgUWb7I8Anw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774248112307
+    },
+    {
+      "msgId": "msgSMumSqGF4aN1VFiIOHxU1A==",
+      "messageType": "text",
+      "text": "??",
+      "createdAt": 1774248894924
+    },
+    {
+      "msgId": "msgPDVXetctShVJTjkP67EYFQ==",
+      "messageType": "text",
+      "text": "HTTP 403: forbidden: Request not allowed",
+      "createdAt": 1774248929951
+    }
+  ]
+}

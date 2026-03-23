@@ -1,0 +1,207 @@
+# Ralph Progress Log
+
+> **学习记录** - 迭代过程中发现的所有模式和经验
+
+---
+
+## 2026-03-23 - 迭代 1-3
+
+### 迭代 1: 创建登录页面组件 ✅
+
+**完成的任务**: story-001
+
+**学到的经验**:
+- React Hook Form 与 Yup 集成非常顺畅，使用 `@hookform/resolvers/yup`
+- 表单验证错误消息应该清晰具体，不要使用通用消息
+- 登录失败时应该清除密码字段，防止用户重复提交
+- 使用 `react-hot-toast` 显示错误消息比 alert 更友好
+- 表单提交时应该禁用提交按钮，防止重复提交
+
+**遇到的陷阱**:
+- ❌ 不要在 useEffect 中直接设置表单值，会导致无限循环
+- ❌ 不要忘记处理网络错误，显示友好的错误消息
+- ❌ 不要在客户端存储密码，即使是为了自动填充
+
+**发现的模式**:
+- 表单组件结构: `{ComponentName}.tsx` + `{ComponentName}.test.tsx`
+- 测试文件应该放在 `__tests__/` 目录
+- 使用 `data-testid` 属性便于测试选择器
+
+**代码质量**:
+- TypeScript: ✅ 无类型错误
+- Tests: ✅ 5/5 通过
+- Lint: ✅ 无警告
+
+**提交**: `feat(auth): add login form component`
+
+---
+
+### 迭代 2: 创建注册页面组件 ✅
+
+**完成的任务**: story-002
+
+**学到的经验**:
+- 密码强度检查使用 `zxcvbn` 库，不要自己实现
+- 密码确认应该在客户端验证，不要发送到服务器
+- 验证邮件应该包含过期时间（例如 24 小时）
+- 注册成功后应该自动登录用户，提升用户体验
+- 使用 `react-router-dom` 的 `useNavigate` 进行页面跳转
+
+**遇到的陷阱**:
+- ❌ 不要在密码强度检查中包含用户名等个人信息
+- ❌ 不要发送明文密码到服务器验证
+- ❌ 不要在 URL 中包含敏感信息（如 token），使用 POST body
+
+**发现的模式**:
+- 邮件发送应该异步处理，不要阻塞用户注册流程
+- 验证 token 应该存储在数据库中，而不是 session
+- 密码重置链接应该是单次使用的
+
+**代码质量**:
+- TypeScript: ✅ 无类型错误
+- Tests: ✅ 7/7 通过
+- Lint: ✅ 无警告
+
+**提交**: `feat(auth): add registration form component`
+
+---
+
+### 迭代 3: 实现登录 API 端点 ✅
+
+**完成的任务**: story-003
+
+**学到的经验**:
+- 使用 `bcrypt.compare` 验证密码，不要自己实现
+- JWT token 应该包含最少的用户信息（userId, username）
+- Refresh token 应该存储在 httpOnly cookie 中，防止 XSS
+- 使用 `express-rate-limit` 防止暴力破解
+- 登录失败时应该返回通用错误消息，不要透露用户是否存在
+
+**遇到的陷阱**:
+- ❌ 不要在 JWT token 中存储敏感信息（密码、权限）
+- ❌ 不要使用同步的 bcrypt 方法，会导致性能问题
+- ❌ 不要在错误消息中透露"用户不存在"和"密码错误"的区别
+
+**发现的模式**:
+- API 响应格式: `{ success: boolean, data?: any, error?: string }`
+- 错误处理中间件应该统一处理所有 API 错误
+- 使用 `asyncHandler` 包装异步路由处理器
+
+**代码质量**:
+- TypeScript: ✅ 无类型错误
+- Tests: ✅ 6/6 通过
+- Lint: ✅ 无警告
+
+**提交**: `feat(api): add login endpoint`
+
+---
+
+## 2026-03-23 - 迭代 4-6
+
+### 迭代 4: 实现注册 API 端点 ✅
+
+**完成的任务**: story-004
+
+**学到的经验**:
+- 用户名和邮箱应该唯一索引，防止重复
+- 密码应该在注册时就加密，不要存储明文
+- 验证邮件应该使用队列异步发送，防止阻塞
+- 注册成功后应该创建用户会话记录
+
+**遇到的陷阱**:
+- ❌ 不要在数据库中存储明文密码，即使是临时存储
+- ❌ 不要使用用户的邮箱作为主键，邮箱可能会变
+- ❌ 不要在验证邮件中包含密码重置链接
+
+**代码质量**:
+- TypeScript: ✅ 无类型错误
+- Tests: ✅ 8/8 通过
+- Lint: ✅ 无警告
+
+**提交**: `feat(api): add registration endpoint`
+
+---
+
+### 迭代 5: 实现 JWT 认证中间件 ✅
+
+**完成的任务**: story-005
+
+**学到的经验**:
+- 中间件应该返回 401 而不是 403，因为用户未认证
+- Token 应该从 `Authorization: Bearer <token>` header 中提取
+- 过期的 token 应该返回特定错误码，便于前端刷新 token
+- 中间件应该将用户信息添加到 `req.user`，便于后续使用
+
+**遇到的陷阱**:
+- ❌ 不要在中间件中查询数据库获取用户信息，性能问题
+- ❌ 不要忽略 token 验证错误，应该返回 401
+- ❌ 不要在 token 中存储大量信息，会增加请求大小
+
+**代码质量**:
+- TypeScript: ✅ 无类型错误
+- Tests: ✅ 5/5 通过
+- Lint: ✅ 无警告
+
+**提交**: `feat(middleware): add JWT authentication middleware`
+
+---
+
+### 迭代 6: 实现 token 刷新功能 ✅
+
+**完成的任务**: story-006
+
+**学到的经验**:
+- Refresh token 应该有过期时间（例如 7 天）
+- 新的 access token 应该有更短的过期时间（例如 15 分钟）
+- Refresh token 应该存储在数据库中，便于撤销
+- 刷新时应该返回新的 refresh token，实现滚动刷新
+
+**遇到的陷阱**:
+- ❌ 不要在 refresh token 中存储用户信息，应该存储在数据库中
+- ❌ 不要让 refresh token 永不过期，安全风险
+- ❌ 不要在 URL 中传递 refresh token，使用 POST body 或 cookie
+
+**代码质量**:
+- TypeScript: ✅ 无类型错误
+- Tests: ✅ 4/4 通过
+- Lint: ✅ 无警告
+
+**提交**: `feat(api): add token refresh endpoint`
+
+---
+
+## 总体模式总结
+
+### 成功模式
+1. ✅ 每个组件都有对应的测试文件
+2. ✅ API 响应格式统一
+3. ✅ 错误处理统一
+4. ✅ 使用 TypeScript strict 模式
+5. ✅ 所有测试通过后才提交
+
+### 常见陷阱
+1. ❌ 不要在客户端存储敏感信息
+2. ❌ 不要在 URL 中传递 token
+3. ❌ 不要使用同步的加密方法
+4. ❌ 不要在错误消息中透露系统细节
+5. ❌ 不要忘记处理网络错误
+
+### 性能优化
+- 使用 httpOnly cookie 存储 refresh token
+- 使用异步邮件发送
+- 使用数据库索引加速查询
+- 使用 rate limiting 防止滥用
+
+### 安全最佳实践
+- 密码使用 bcrypt 加密（cost factor 10-12）
+- JWT token 包含最少信息
+- Refresh token 有过期时间
+- 验证邮件有过期时间
+- 所有敏感操作都需要认证
+
+---
+
+**最后更新**: 2026-03-23
+**总迭代次数**: 6
+**完成任务**: 6/10
+**剩余任务**: 4

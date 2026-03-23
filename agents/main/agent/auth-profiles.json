@@ -24,7 +24,7 @@
   },
   "usageStats": {
     "zai:default": {
-      "lastUsed": 1774103504586,
+      "lastUsed": 1774256524426,
       "errorCount": 0,
       "lastFailureAt": 1773215880792
     },
@@ -35,7 +35,7 @@
     },
     "zai:edict": {
       "errorCount": 0,
-      "lastUsed": 1774079491101
+      "lastUsed": 1774183376301
     }
   }
 }
