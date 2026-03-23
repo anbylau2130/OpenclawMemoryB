@@ -1,0 +1,118 @@
+-- =============================================
+-- 存储过程
+-- 自动生成
+-- =============================================
+
+{% for type_def in types %}
+-- =============================================
+-- 存储过程: 创建{{ type_def.name }}
+-- =============================================
+CREATE PROCEDURE sp_Create{{ type_def.name }}
+    {% for col in type_def.sql_columns %}
+    @{{ col.name }} {{ col.type }}{% if not col.primary_key %}{% endif %}{% if not loop.last %},{% endif %}
+    
+    {% endfor %}
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    INSERT INTO {{ type_def.get('table_name', type_def.name) }} (
+        {% for col in type_def.sql_columns %}
+        {% if not col.identity %}
+        {{ col.name }}{% if not loop.last %},{% endif %}
+        {% endif %}
+        {% endfor %}
+    )
+    VALUES (
+        {% for col in type_def.sql_columns %}
+        {% if not col.identity %}
+        @{{ col.name }}{% if not loop.last %},{% endif %}
+        {% endif %}
+        {% endfor %}
+    );
+    
+    SELECT SCOPE_IDENTITY() AS Id;
+END
+GO
+
+-- =============================================
+-- 存储过程: 获取{{ type_def.name }} by ID
+-- =============================================
+CREATE PROCEDURE sp_Get{{ type_def.name }}ById
+    {% for col in type_def.sql_columns %}
+    {% if col.primary_key %}
+    @{{ col.name }} {{ col.type }}
+    {% endif %}
+    {% endfor %}
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    SELECT *
+    FROM {{ type_def.get('table_name', type_def.name) }}
+    WHERE {{ col.name }} = @{{ col.name }};
+END
+GO
+
+-- =============================================
+-- 存储过程: 获取所有{{ type_def.name }}
+-- =============================================
+CREATE PROCEDURE sp_GetAll{{ type_def.name }}s
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    SELECT *
+    FROM {{ type_def.get('table_name', type_def.name) }}
+    ORDER BY {% for col in type_def.sql_columns %}{% if col.primary_key %}{{ col.name }}{% endif %}{% endfor %};
+END
+GO
+
+-- =============================================
+-- 存储过程: 更新{{ type_def.name }}
+-- =============================================
+CREATE PROCEDURE sp_Update{{ type_def.name }}
+    {% for col in type_def.sql_columns %}
+    @{{ col.name }} {{ col.type }}{% if not loop.last %},{% endif %}
+    
+    {% endfor %}
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    UPDATE {{ type_def.get('table_name', type_def.name) }}
+    SET 
+        {% for col in type_def.sql_columns %}
+        {% if not col.primary_key %}
+        {{ col.name }} = @{{ col.name }}{% if not loop.last %},{% endif %}
+        {% endif %}
+        {% endfor %}
+    WHERE {% for col in type_def.sql_columns %}{% if col.primary_key %}{{ col.name }} = @{{ col.name }}{% endif %}{% endfor %};
+    
+    SELECT @@ROWCOUNT AS AffectedRows;
+END
+GO
+
+-- =============================================
+-- 存储过程: 删除{{ type_def.name }}
+-- =============================================
+CREATE PROCEDURE sp_Delete{{ type_def.name }}
+    {% for col in type_def.sql_columns %}
+    {% if col.primary_key %}
+    @{{ col.name }} {{ col.type }}
+    {% endif %}
+    {% endfor %}
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    DELETE FROM {{ type_def.get('table_name', type_def.name) }}
+    WHERE {% for col in type_def.sql_columns %}{% if col.primary_key %}{{ col.name }} = @{{ col.name }}{% endif %}{% endfor %};
+    
+    SELECT @@ROWCOUNT AS AffectedRows;
+END
+GO
+
+{% endfor %}
+
+PRINT '✅ 存储过程创建完成';

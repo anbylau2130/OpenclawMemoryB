@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+{% if type_def.dotnet_properties | selectattr('enum') | list %}
+namespace {{ namespace }}.Enums
+{
+    {% for prop in type_def.dotnet_properties if prop.enum %}
+    /// <summary>
+    /// {{ prop.description or prop.name }} 枚举
+    /// </summary>
+    public enum {{ type_def.name }}{{ prop.name }}
+    {
+        {% for value in prop.enum %}
+        [Display(Name = "{{ value }}")]
+        {{ value | upper }},
+        {% endfor %}
+    }
+    {% endfor %}
+}
+{% endif %}
+
+namespace {{ namespace }}.Models
+{
+    /// <summary>
+    /// {{ type_def.description or type_def.name }}
+    /// </summary>
+    [Table("{{ type_def.get('table_name', type_def.name | lower) }}")]
+    public class {{ type_def.name }}
+    {
+        {% for prop in type_def.dotnet_properties %}
+        {% if prop.primary_key %}
+        [Key]
+        {% if prop.identity or prop.type == 'int' %}
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        {% endif %}
+        {% endif %}
+        {% if prop.foreign_key %}
+        [ForeignKey("{{ prop.foreign_key.split('.')[0] }}")]
+        {% endif %}
+        {% if prop.max_length %}
+        [MaxLength({{ prop.max_length }})]
+        {% endif %}
+        {% if prop.required %}
+        [Required]
+        {% endif %}
+        {% if prop.description %}
+        [Display(Name = "{{ prop.description }}")]
+        {% endif %}
+        public {{ prop.type }}{{ ' ?' if not prop.required }} {{ prop.name }} { get; set; }{{ ' = null!;' if prop.required }}
+        
+        {% endfor %}
+        
+        /// <summary>
+        /// 转换为字典
+        /// </summary>
+        public Dictionary<string, object> ToDictionary()
+        {
+            return new Dictionary<string, object>
+            {
+                {% for prop in type_def.dotnet_properties %}
+                { "{{ prop.name }}", {{ prop.name }} },
+                {% endfor %}
+            };
+        }
+    }
+}

@@ -1,0 +1,26 @@
+"""
+{{ namespace }} 数据模型
+
+自动生成的数据模型包
+"""
+
+from typing import List
+
+{% for type_def in types %}
+from .{{ type_def.name.lower() }} import {{ type_def.name }}
+{% endfor %}
+
+__all__ = [
+    {% for type_def in types %}
+    "{{ type_def.name }}",
+    {% endfor %}
+]
+
+
+def get_all_models() -> List[type]:
+    """获取所有模型类"""
+    return [
+        {% for type_def in types %}
+        {{ type_def.name }},
+        {% endfor %}
+    ]

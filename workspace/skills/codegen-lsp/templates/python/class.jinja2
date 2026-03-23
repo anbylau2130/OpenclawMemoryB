@@ -1,0 +1,54 @@
+"""
+{{ type_def.description or type_def.name }}
+"""
+{% for prop in type_def.python_properties %}
+{%- if prop.enum %}
+from enum import Enum
+
+
+class {{ type_def.name }}{{ prop.name | title }}(Enum):
+    """{{ prop.description or prop.name }} 枚举"""
+    {% for value in prop.enum %}
+    {{ value.upper() }} = "{{ value }}"
+    {% endfor %}
+
+
+{% endfor -%}
+from dataclasses import dataclass
+{% if 'datetime' in type_def.python_properties | map(attribute='type') | list %}
+from datetime import datetime
+{% endif %}
+{% if 'Decimal' in type_def.python_properties | map(attribute='type') | list %}
+from decimal import Decimal
+{% endif %}
+{% if 'UUID' in type_def.python_properties | map(attribute='type') | list %}
+from uuid import UUID
+{% endif %}
+from typing import Optional, List, Any
+
+
+@dataclass
+class {{ type_def.name }}:
+    """{{ type_def.description or type_def.name }}"""
+    {% for prop in type_def.python_properties %}
+    
+    {{ prop.name }}: {{ prop.type }}{% if not prop.required %} | None = None{% else %}{% endif %}
+    """{{ prop.description }}"""
+    {% endfor %}
+    
+    def to_dict(self) -> dict:
+        """转换为字典"""
+        return {
+            {% for prop in type_def.python_properties %}
+            "{{ prop.name }}": self.{{ prop.name }},
+            {% endfor %}
+        }
+    
+    @classmethod
+    def from_dict(cls, data: dict) -> "{{ type_def.name }}":
+        """从字典创建"""
+        return cls(
+            {% for prop in type_def.python_properties %}
+            {{ prop.name }}=data.get("{{ prop.name }}"),
+            {% endfor %}
+        )

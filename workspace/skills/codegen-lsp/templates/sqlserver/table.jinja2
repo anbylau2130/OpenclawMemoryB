@@ -1,0 +1,40 @@
+-- =============================================
+-- {{ database }} 数据库表结构
+-- 自动生成 - {{ types | length }} 个表
+-- =============================================
+
+{% for type_def in types %}
+-- =============================================
+-- 表: {{ type_def.get('table_name', type_def.name) }}
+-- {{ type_def.description or type_def.name }}
+-- =============================================
+CREATE TABLE {{ type_def.get('table_name', type_def.name) }} (
+    {% for col in type_def.sql_columns %}
+    {{ col.name }} {{ col.type }}{% if col.identity %} IDENTITY(1,1){% endif %}{% if col.primary_key %} PRIMARY KEY{% endif %}{% if col.required and not col.primary_key %} NOT NULL{% endif %}{% if col.default is defined %} DEFAULT {{ col.default }}{% endif %}{% if col.foreign_key %} CONSTRAINT FK_{{ type_def.name }}_{{ col.foreign_key.split('.')[0] }} REFERENCES {{ col.foreign_key.split('.')[0] }}({{ col.foreign_key.split('.')[1] }}){% endif %}{% if not loop.last %},{% endif %}
+    
+    {% endfor %}
+);
+
+{% if type_def.indexes is defined %}
+{% for index in type_def.indexes %}
+CREATE {% if index.unique %}UNIQUE {% endif %}INDEX IX_{{ type_def.get('table_name', type_def.name) }}_{{ index.columns | join('_') }}
+ON {{ type_def.get('table_name', type_def.name) }} ({{ index.columns | join(', ') }});
+
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+-- =============================================
+-- 创建默认索引
+-- =============================================
+{% for type_def in types %}
+{% for col in type_def.sql_columns %}
+{% if col.foreign_key %}
+CREATE INDEX IX_{{ type_def.get('table_name', type_def.name) }}_{{ col.name }}
+ON {{ type_def.get('table_name', type_def.name) }} ({{ col.name }});
+
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+PRINT '✅ 数据库表创建完成';

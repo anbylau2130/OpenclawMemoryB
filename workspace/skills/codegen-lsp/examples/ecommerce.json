@@ -1,0 +1,91 @@
+{
+  "namespace": "MyApp.Models",
+  "database": "MyAppDb",
+  "types": [
+    {
+      "name": "User",
+      "description": "用户实体",
+      "table_name": "users",
+      "properties": [
+        {
+          "name": "Id",
+          "type": "integer",
+          "description": "用户ID",
+          "primary_key": true,
+          "identity": true
+        },
+        {
+          "name": "Username",
+          "type": "string",
+          "description": "用户名",
+          "required": true,
+          "max_length": 100
+        },
+        {
+          "name": "Email",
+          "type": "string",
+          "description": "邮箱地址",
+          "required": true,
+          "max_length": 255
+        },
+        {
+          "name": "CreatedAt",
+          "type": "datetime",
+          "description": "创建时间",
+          "required": false
+        }
+      ],
+      "indexes": [
+        {"columns": ["Email"], "unique": true}
+      ]
+    },
+    {
+      "name": "Order",
+      "description": "订单实体",
+      "table_name": "orders",
+      "properties": [
+        {
+          "name": "Id",
+          "type": "integer",
+          "description": "订单ID",
+          "primary_key": true,
+          "identity": true
+        },
+        {
+          "name": "UserId",
+          "type": "integer",
+          "description": "用户ID",
+          "required": true,
+          "foreign_key": "User.Id"
+        },
+        {
+          "name": "Total",
+          "type": "decimal",
+          "description": "订单总额",
+          "required": true,
+          "precision": 18,
+          "scale": 2
+        },
+        {
+          "name": "Status",
+          "type": "string",
+          "description": "订单状态",
+          "required": true,
+          "max_length": 20,
+          "enum": ["pending", "paid", "shipped", "completed"]
+        },
+        {
+          "name": "CreatedAt",
+          "type": "datetime",
+          "description": "创建时间",
+          "required": false,
+          "default": "GETUTCDATE()"
+        }
+      ],
+      "indexes": [
+        {"columns": ["UserId"], "unique": false},
+        {"columns": ["Status"], "unique": false}
+      ]
+    }
+  ]
+}
