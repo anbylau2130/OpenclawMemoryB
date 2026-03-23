@@ -325,7 +325,7 @@
       "accountId": "taizi"
     },
     "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
-    "updatedAt": 1774253355580,
+    "updatedAt": 1774268391081,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -415,15 +415,12 @@
       ],
       "version": 0
     },
-    "authProfileOverride": "anthropic:default",
-    "authProfileOverrideSource": "auto",
-    "authProfileOverrideCompactionCount": 0,
     "modelProvider": "zai",
     "model": "glm-5",
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774253226437,
+      "generatedAt": 1774268345995,
       "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
       "sessionKey": "agent:zhongshu:main",
       "provider": "zai",
@@ -443,25 +440,25 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 14394,
-        "projectContextChars": 1237,
-        "nonProjectContextChars": 13157
+        "chars": 16088,
+        "projectContextChars": 2937,
+        "nonProjectContextChars": 13151
       },
       "injectedWorkspaceFiles": [
         {
           "name": "AGENTS.md",
           "path": "/root/.openclaw/tang-sansheng/workspace-zhongshu/AGENTS.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 81,
+          "missing": false,
+          "rawChars": 279,
+          "injectedChars": 279,
           "truncated": false
         },
         {
           "name": "SOUL.md",
           "path": "/root/.openclaw/tang-sansheng/workspace-zhongshu/SOUL.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 79,
+          "missing": false,
+          "rawChars": 1583,
+          "injectedChars": 1583,
           "truncated": false
         },
         {
@@ -483,9 +480,9 @@
         {
           "name": "USER.md",
           "path": "/root/.openclaw/tang-sansheng/workspace-zhongshu/USER.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 79,
+          "missing": false,
+          "rawChars": 77,
+          "injectedChars": 77,
           "truncated": false
         },
         {
@@ -668,13 +665,13 @@
       }
     },
     "totalTokensFresh": true,
-    "fallbackNoticeSelectedModel": "anthropic/glm-5",
-    "fallbackNoticeActiveModel": "zai/glm-5",
-    "fallbackNoticeReason": "model not found",
-    "inputTokens": 93794,
-    "outputTokens": 902,
-    "cacheRead": 23168,
+    "inputTokens": 20586,
+    "outputTokens": 1282,
+    "cacheRead": 141056,
     "cacheWrite": 0,
-    "totalTokens": 101401
+    "totalTokens": 141742,
+    "authProfileOverride": "zai:default",
+    "authProfileOverrideSource": "auto",
+    "authProfileOverrideCompactionCount": 0
   }
 }

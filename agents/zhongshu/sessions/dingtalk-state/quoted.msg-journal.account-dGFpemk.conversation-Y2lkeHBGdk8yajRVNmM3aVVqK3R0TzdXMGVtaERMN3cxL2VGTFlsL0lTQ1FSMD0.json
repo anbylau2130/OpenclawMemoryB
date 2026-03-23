@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774253222871,
+  "updatedAt": 1774268342295,
   "records": [
     {
       "msgId": "msgI4YT80sCOsngYFKPsMRceA==",
@@ -13,6 +13,24 @@
       "messageType": "text",
       "text": "？",
       "createdAt": 1774253222547
+    },
+    {
+      "msgId": "msgteM+/1hcxphSaABpsB0V1w==",
+      "messageType": "text",
+      "text": "我们的tang-sansheng已经配置完成了,为他们安装https://github.com/wanikua/danghuangshang/tree/main/scripts/middleware中所提到的skill",
+      "createdAt": 1774267324301
+    },
+    {
+      "msgId": "msg10Xo7EG+7zgjM7ALUOGbwA==",
+      "messageType": "richText",
+      "text": "对不起我错了，是我们的tang-sansheng已经配置完成了,为他们安装https://github.com/wanikua/danghuangshang 项目中所提到的skill",
+      "createdAt": 1774267806862
+    },
+    {
+      "msgId": "msgWfUonPXbuZP+XgJHuu7ucA==",
+      "messageType": "text",
+      "text": "错了，你都改了哪些文件？",
+      "createdAt": 1774268342049
     }
   ]
 }

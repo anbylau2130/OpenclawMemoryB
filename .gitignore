@@ -4,9 +4,9 @@
 **/.openclaw-install-stage-*/
 
 # 工作空间子仓库
-workspace/
-workspace-*/
-**/workspace-*/
+#workspace/
+#workspace-*/
+#**/workspace-*/
 
 # 临时备份
 **/backups/
@@ -28,3 +28,8 @@ workspace-*/
 **/logs/*.log
 backup_*/
 ming-neige/
+
+# 工作空间目录（包含独立仓库）
+workspace/
+workspace-jessica/
+tang-sansheng/
