@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774314429694,
+  "updatedAt": 1774316432448,
   "records": [
     {
       "msgId": "msgRZPaSUrDHed7S0NBTKs0og==",
@@ -79,6 +79,12 @@
       "messageType": "text",
       "text": "充分利用self-improving-agent",
       "createdAt": 1774314429313
+    },
+    {
+      "msgId": "msght4S27awD6T3WadtA/1vww==",
+      "messageType": "text",
+      "text": "记录我的每次对话(只保留私聊)，并且保存到docs/Conversation中，每天的对话存放一个md文件，只保存我说的内容。",
+      "createdAt": 1774316432126
     }
   ]
 }

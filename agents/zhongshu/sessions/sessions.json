@@ -325,7 +325,7 @@
       "accountId": "zhongshu"
     },
     "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
-    "updatedAt": 1774315251375,
+    "updatedAt": 1774316714321,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -420,7 +420,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774315088289,
+      "generatedAt": 1774316400164,
       "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
       "sessionKey": "agent:zhongshu:main",
       "provider": "zai",
@@ -664,18 +664,17 @@
         ]
       }
     },
-    "totalTokensFresh": true,
-    "inputTokens": 11182,
-    "outputTokens": 4517,
-    "cacheRead": 152704,
+    "totalTokensFresh": false,
+    "inputTokens": 19304,
+    "outputTokens": 6845,
+    "cacheRead": 0,
     "cacheWrite": 0,
     "authProfileOverride": "zai:edict",
     "authProfileOverrideSource": "auto",
     "authProfileOverrideCompactionCount": 1,
     "memoryFlushAt": 1774312712840,
     "memoryFlushCompactionCount": 1,
-    "compactionCount": 1,
-    "totalTokens": 154789
+    "compactionCount": 2
   },
   "agent:zhongshu:dingtalk:group:096028035723738668": {
     "chatType": "group",

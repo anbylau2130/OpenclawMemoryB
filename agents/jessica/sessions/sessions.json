@@ -10,7 +10,7 @@
       "accountId": "jessica"
     },
     "sessionId": "ee357db7-8445-46d2-92a5-7089e3694f30",
-    "updatedAt": 1774314529570,
+    "updatedAt": 1774316465195,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -73,7 +73,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774314433390,
+      "generatedAt": 1774316434212,
       "sessionId": "ee357db7-8445-46d2-92a5-7089e3694f30",
       "sessionKey": "agent:jessica:main",
       "provider": "zai",
@@ -305,14 +305,14 @@
         ]
       }
     },
-    "inputTokens": 169176,
-    "outputTokens": 5732,
-    "cacheRead": 75479,
+    "inputTokens": 74246,
+    "outputTokens": 2059,
+    "cacheRead": 78397,
     "cacheWrite": 0,
     "totalTokensFresh": true,
     "memoryFlushAt": 1773635070783,
     "memoryFlushCompactionCount": 0,
-    "totalTokens": 75568
+    "totalTokens": 78514
   },
   "agent:jessica:dingtalk:group:096028035723738668": {
     "chatType": "group",

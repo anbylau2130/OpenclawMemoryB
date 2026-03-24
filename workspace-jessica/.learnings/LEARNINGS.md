@@ -120,6 +120,37 @@ PPT美化必须保留原模板背景和布局
 
 ---
 
+## [LRN-20260324-005] conversation_logging_requirement
+
+**Logged**: 2026-03-24T09:40:00+08:00
+**Priority**: high
+**Status**: promoted
+**Area**: config
+
+### Summary
+用户要求记录每次对话（私聊）到 docs/Conversation 目录，每天一个md文件，只保存用户说的内容
+
+### Details
+- 只记录私聊，不记录群聊
+- 每天创建一个新的md文件（格式：YYYY-MM-DD.md）
+- 只记录用户发送的消息，不记录AI回复
+- 保存到 /root/.openclaw/workspace-jessica/docs/Conversation/
+
+### Suggested Action
+- 在 AGENTS.md 中添加会话启动时记录规则
+- 每次收到私聊消息时，立即追加到当天文件
+- 格式：`## [HH:MM] 用户消息内容`
+
+### Metadata
+- Source: user_feedback
+- Tags: conversation_logging, privacy, user_messages
+- Promoted: AGENTS.md
+- Recurrence-Count: 1
+- First-Seen: 2026-03-24
+- Last-Seen: 2026-03-24
+
+---
+
 ## [LRN-20260323-004] message_delivery_issues
 
 **Logged**: 2026-03-23T23:22:00+08:00

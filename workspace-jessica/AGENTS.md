@@ -24,6 +24,26 @@ You wake up fresh each session. These files are your continuity:
 - **Daily notes:** `memory/YYYY-MM-DD.md` (create `memory/` if needed) — raw logs of what happened
 - **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
 
+**📝 Conversation Logging - User Messages Only**
+
+**When:** Every message from user in private chat (私聊)
+
+**Where:** `docs/Conversation/YYYY-MM-DD.md`
+
+**What to record:**
+- User's message content
+- Timestamp
+- No system messages or AI responses
+
+**Format:**
+```markdown
+## [HH:MM] User message content
+
+---
+```
+
+**IMPORTANT:** Only log private chat messages (direct chats with user). Do NOT record group chats.
+
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
 ### 🧠 MEMORY.md - Your Long-Term Memory

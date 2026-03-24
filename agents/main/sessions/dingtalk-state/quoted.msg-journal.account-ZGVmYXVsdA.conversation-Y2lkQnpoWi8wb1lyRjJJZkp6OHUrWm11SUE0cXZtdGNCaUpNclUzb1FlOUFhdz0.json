@@ -1,31 +1,7 @@
 {
   "version": 1,
-  "updatedAt": 1774315365838,
+  "updatedAt": 1774316850624,
   "records": [
-    {
-      "msgId": "msgpFh3hjhwUAKZ8I9RfCKP0g==",
-      "messageType": "text",
-      "text": "https://github.com/anbylau2130/OpenclawMemery.git",
-      "createdAt": 1773710835985
-    },
-    {
-      "msgId": "msgg/jxi8bTxQ4c6QlXcH83Ew==",
-      "messageType": "text",
-      "text": "私有仓库",
-      "createdAt": 1773710838866
-    },
-    {
-      "msgId": "msglG/hUfV978dm3QJkAYzg8A==",
-      "messageType": "text",
-      "text": "github-token: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",
-      "createdAt": 1773710899756
-    },
-    {
-      "msgId": "msg3wy5MCihkhhIF+45OPz9eg==",
-      "messageType": "text",
-      "text": "记得你所学习的内容要以md的形式存储到Knowledge目录中，不能只靠嘴巴记忆",
-      "createdAt": 1773711600121
-    },
     {
       "msgId": "msgqMsHbhC8NoQjAicOwJMlCQ==",
       "messageType": "text",
@@ -2485,6 +2461,18 @@
       "messageType": "text",
       "text": "备份到github",
       "createdAt": 1774315365481
+    },
+    {
+      "msgId": "msgOOUYxt3udj7fDQ/mcVrw9A==",
+      "messageType": "text",
+      "text": "记录我的每次对话(只保留私聊)，并且保存到docs/Conversation中，每天的对话存放一个md文件，只保存我说的内容。",
+      "createdAt": 1774316426617
+    },
+    {
+      "msgId": "msgBbZg84F6do+9S+AbgmMaYg==",
+      "messageType": "text",
+      "text": "备份到github",
+      "createdAt": 1774316850247
     }
   ]
 }
