@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T13:28:58+08:00",
+  "last_check": "2026-03-24T14:28:34+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 16,
-      "uptime_hours": 2.1,
+      "uptime_hours": 3.1,
       "restart_time": "11:24"
     },
     "alert_queue": {
@@ -16,16 +16,16 @@
       "status": "healthy"
     },
     "zombie_processes": {
-      "count": 48,
-      "trend": "稳定（47→48）",
+      "count": 50,
+      "trend": "稳定（48→50）",
       "note": "轻微增加，无紧急风险"
     },
     "trading_monitor": {
       "status": "下午交易时段",
       "market_open": "13:00",
-      "current_time": "13:28",
-      "running_minutes": 28,
-      "note": "下午开盘28分钟"
+      "current_time": "14:28",
+      "running_minutes": 88,
+      "note": "下午开盘1小时28分钟"
     },
     "scheduled_tasks": {
       "selection": {
@@ -36,7 +36,7 @@
       },
       "review": {
         "window": "16:00-17:00",
-        "status": "⏸️ 未到（2小时32分钟后）"
+        "status": "⏸️ 未到（1小时32分钟后）"
       },
       "learning": {
         "window": "19:00-23:00",
@@ -44,19 +44,19 @@
       }
     },
     "system_resources": {
-      "uptime": "21小时17分",
-      "load_avg": [1.63, 1.45, 1.62],
+      "uptime": "22小时17分",
+      "load_avg": [3.74, 5.11, 3.94],
       "load_status": "✅ 正常",
       "memory": {
         "total": "15GB",
-        "available": "7.4GB",
+        "available": "7.5GB",
         "used_percent": 50
       }
     },
     "conversation_recording": {
       "system": "✅ 已启用",
       "file": "docs/Conversation/2026-03-24.md",
-      "total_conversations": 23
+      "total_conversations": 24
     }
   },
   "selected_stocks": [
@@ -75,6 +75,6 @@
   "issues": [],
   "next_actions": [
     "继续下午交易时段监控",
-    "16:00-17:00复盘任务（2小时32分钟后）"
+    "16:00-17:00复盘任务（1小时32分钟后）"
   ]
 }
