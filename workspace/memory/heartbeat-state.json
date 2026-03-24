@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T12:25:08+08:00",
+  "last_check": "2026-03-24T12:55:29+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 16,
-      "uptime_minutes": 61,
+      "uptime_minutes": 91,
       "restart_time": "11:24"
     },
     "alert_queue": {
@@ -16,16 +16,19 @@
       "status": "healthy"
     },
     "zombie_processes": {
-      "count": 41,
-      "note": "僵尸进程持续增加，需关注"
+      "count": 42,
+      "trend": "持续增加（从41增至42）",
+      "note": "需要重启Gateway清理"
     },
     "trading_monitor": {
       "status": "午间休市",
       "market_open": "09:30",
       "market_break": "11:30-13:00",
-      "current_time": "12:25",
-      "running_minutes": 175,
-      "note": "已开盘2小时55分钟，午间休市中"
+      "current_time": "12:55",
+      "running_minutes": 205,
+      "afternoon_open": "13:00",
+      "countdown": "5分钟",
+      "note": "午间休市即将结束"
     },
     "scheduled_tasks": {
       "selection": {
@@ -36,7 +39,7 @@
       },
       "review": {
         "window": "16:00-17:00",
-        "status": "⏸️ 未到（3小时35分钟后）"
+        "status": "⏸️ 未到（3小时5分钟后）"
       },
       "learning": {
         "window": "19:00-23:00",
@@ -44,8 +47,8 @@
       }
     },
     "system_resources": {
-      "uptime": "19小时74分",
-      "load_avg": [2.12, 2.04, 2.46],
+      "uptime": "20小时44分",
+      "load_avg": [0.89, 1.60, 1.85],
       "load_status": "✅ 正常",
       "memory": {
         "total": "15GB",
@@ -56,7 +59,7 @@
     "conversation_recording": {
       "system": "✅ 已启用",
       "file": "docs/Conversation/2026-03-24.md",
-      "total_conversations": 19
+      "total_conversations": 20
     }
   },
   "selected_stocks": [
@@ -73,10 +76,10 @@
   ],
   "overall_status": "healthy",
   "issues": [
-    "41个僵尸进程（持续增加）"
+    "42个僵尸进程（持续增加）"
   ],
   "next_actions": [
-    "等待13:00下午开盘",
-    "16:00-17:00复盘任务（3小时35分钟后）"
+    "等待13:00下午开盘（5分钟后）",
+    "16:00-17:00复盘任务（3小时5分钟后）"
   ]
 }
