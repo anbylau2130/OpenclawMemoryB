@@ -1,0 +1,83 @@
+{
+  "version": "V5",
+  "timestamp": "2026-03-24T08:18:19.325787",
+  "data_source": "real",
+  "total_analyzed": 30,
+  "selected_count": 2,
+  "stocks": [
+    {
+      "code": "601398",
+      "name": "工商银行",
+      "current_price": 7.25,
+      "change_pct": -3.33,
+      "score": 4.0,
+      "signals": [
+        "VWAP买入(97.7%)",
+        "KDJ超卖(K13)"
+      ],
+      "rsi": 43.57,
+      "kdj_k": 13.36,
+      "vwap": 7.42,
+      "boll_lower": 6.65,
+      "data_source": "eastmoney",
+      "stop_loss": 7.03,
+      "take_profit": 7.98,
+      "risk_reward": 3.3,
+      "buy_price": 7.25,
+      "sell_price": 7.98,
+      "stop_loss_short": 7.03,
+      "stop_loss_mid": 6.67,
+      "take_profit_short": 7.69,
+      "take_profit_mid": 7.98,
+      "total_score": 4.0,
+      "daily_score": 4.0,
+      "weekly_score": 0,
+      "daily_signals": [
+        "VWAP买入(97.7%)",
+        "KDJ超卖(K13)"
+      ],
+      "weekly_signals": [],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "position": "20-30%",
+      "holding_period": "中线"
+    },
+    {
+      "code": "002415",
+      "name": "海康威视",
+      "current_price": 30.01,
+      "change_pct": -4.12,
+      "score": 3.0,
+      "signals": [
+        "VWAP强买(94.9%)"
+      ],
+      "rsi": 45.57,
+      "kdj_k": 33.73,
+      "vwap": 31.62,
+      "boll_lower": 27.19,
+      "data_source": "eastmoney",
+      "stop_loss": 29.11,
+      "take_profit": 33.01,
+      "risk_reward": 3.3,
+      "buy_price": 30.01,
+      "sell_price": 33.01,
+      "stop_loss_short": 29.11,
+      "stop_loss_mid": 27.61,
+      "take_profit_short": 31.81,
+      "take_profit_mid": 33.01,
+      "total_score": 3.0,
+      "daily_score": 3.0,
+      "weekly_score": 0,
+      "daily_signals": [
+        "VWAP强买(94.9%)"
+      ],
+      "weekly_signals": [],
+      "daily_trend": "UP",
+      "weekly_trend": "UP",
+      "position": "20-30%",
+      "holding_period": "短线"
+    }
+  ],
+  "date": "2026-03-24",
+  "time": "08:18"
+}

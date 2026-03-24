@@ -10,7 +10,7 @@
       "accountId": "jessica"
     },
     "sessionId": "ee357db7-8445-46d2-92a5-7089e3694f30",
-    "updatedAt": 1774231006269,
+    "updatedAt": 1774314529570,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -73,7 +73,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774230959569,
+      "generatedAt": 1774314433390,
       "sessionId": "ee357db7-8445-46d2-92a5-7089e3694f30",
       "sessionKey": "agent:jessica:main",
       "provider": "zai",
@@ -89,13 +89,13 @@
         "totalNearLimit": false
       },
       "sandbox": {
-        "mode": "off",
+        "mode": "non-main",
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 24808,
+        "chars": 24790,
         "projectContextChars": 12873,
-        "nonProjectContextChars": 11935
+        "nonProjectContextChars": 11917
       },
       "injectedWorkspaceFiles": [
         {
@@ -305,14 +305,14 @@
         ]
       }
     },
-    "inputTokens": 4250,
-    "outputTokens": 1295,
-    "cacheRead": 130227,
+    "inputTokens": 169176,
+    "outputTokens": 5732,
+    "cacheRead": 75479,
     "cacheWrite": 0,
     "totalTokensFresh": true,
     "memoryFlushAt": 1773635070783,
     "memoryFlushCompactionCount": 0,
-    "totalTokens": 131503
+    "totalTokens": 75568
   },
   "agent:jessica:dingtalk:group:096028035723738668": {
     "chatType": "group",

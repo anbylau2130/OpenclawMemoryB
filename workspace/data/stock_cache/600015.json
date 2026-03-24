@@ -1,16 +1,16 @@
 {
   "code": "600015",
   "name": "华夏银行",
-  "current_price": 7.18,
+  "current_price": 6.94,
   "open": 7.13,
-  "high": 7.24,
-  "low": 7.12,
-  "volume": 716917,
-  "amount": 515228105.0,
-  "change_pct": 0.7,
-  "pe": 85,
-  "pb": 784,
+  "high": 7.14,
+  "low": 6.92,
+  "volume": 1057294,
+  "amount": 740695116.0,
+  "change_pct": -3.34,
+  "pe": 138,
+  "pb": 790,
   "total_mv": 1.709087166,
   "source": "eastmoney",
-  "timestamp": "2026-03-23T08:11:54.847660"
+  "timestamp": "2026-03-24T08:18:19.060703"
 }

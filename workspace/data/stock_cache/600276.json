@@ -1,16 +1,16 @@
 {
   "code": "600276",
   "name": "恒瑞医药",
-  "current_price": 55.14,
-  "open": 56.19,
-  "high": 56.76,
-  "low": 55.05,
-  "volume": 347395,
-  "amount": 1936270337.0,
-  "change_pct": -1.57,
-  "pe": 97,
-  "pb": 6162,
+  "current_price": 52.78,
+  "open": 54.18,
+  "high": 54.35,
+  "low": 52.41,
+  "volume": 487702,
+  "amount": 2600360832.0,
+  "change_pct": -4.28,
+  "pe": 129,
+  "pb": 6065,
   "total_mv": 0.866505401,
   "source": "eastmoney",
-  "timestamp": "2026-03-23T08:11:54.009266"
+  "timestamp": "2026-03-24T08:18:18.176068"
 }

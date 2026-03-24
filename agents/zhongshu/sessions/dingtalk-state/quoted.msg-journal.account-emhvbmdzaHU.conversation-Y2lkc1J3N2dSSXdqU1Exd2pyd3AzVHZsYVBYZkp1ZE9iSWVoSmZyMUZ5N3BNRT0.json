@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "updatedAt": 1774315086137,
+  "records": [
+    {
+      "msgId": "msgHx6itZn8bQp3AGzav0i37A==",
+      "messageType": "text",
+      "text": "测试一下三省六部",
+      "createdAt": 1774276926180
+    },
+    {
+      "msgId": "msg6iFyWGpWE+j+4EYMJiTH8g==",
+      "messageType": "text",
+      "text": "现在根据/root/.openclaw/knowledge-base/金蝶云苍穹 目录的文档来使用.net core 10 来重写金蝶云苍穹的所有功能。项目中不使用关于金蝶的任何名称，项目名称使用：云天佑。你需要充分利用我们的工具和skills来完成整个项目，我要去睡觉了，你要自行完成整个项目。直到交付为止。包括前台测试和后台测试。因为明天早上要上线。你的所有问题都用最优方案来实现。充分利用三省六部的流程来完成整个开发工作。前台设计要使用frontend-design。api接口的实现也要完全按照金蝶云苍穹的实现方式来实现。后台使用DDD，微服务来实现，组件要最小化原则进行复用。而且需要遵循/root/.openclaw/tang-sansheng/CLAUDE.md中的原则，我觉得你最好把这个原则通知给三省六部的成员agent，写入他们的AGENTS.md中然后再开始我们的项目。就这样。我要去睡觉了",
+      "createdAt": 1774278480999
+    },
+    {
+      "msgId": "msgBQbwfl4h23nhI7U4vzWHMQ==",
+      "messageType": "text",
+      "text": "还有记得要开发低代码平台，这个是我们最重要的功能模块，因为云苍穹就是一个低代码平台，所有的开发都是基于低代码平台来做的。",
+      "createdAt": 1774278567857
+    },
+    {
+      "msgId": "msgCWDCFD/se++tgDIfnMaDbA==",
+      "messageType": "text",
+      "text": "A",
+      "createdAt": 1774278930962
+    },
+    {
+      "msgId": "msgv3gRUlATPXggOaAHuCNTww==",
+      "messageType": "text",
+      "text": "不对吧你有没有学习文档，文档里云苍穹是postgre数据库",
+      "createdAt": 1774279045084
+    },
+    {
+      "msgId": "msgXTYNWRduDVGcmToPFE2eew==",
+      "messageType": "text",
+      "text": "而且你的好多都是错的并没有按照我的要求来完成",
+      "createdAt": 1774279207265
+    },
+    {
+      "msgId": "msgfPERFw3+ch/CZ5pIOh28Cw==",
+      "messageType": "text",
+      "text": "记住，我要求的是功能完全一致",
+      "createdAt": 1774279303915
+    },
+    {
+      "msgId": "msgORj76aIanS9mg/DKHK/xJQ==",
+      "messageType": "text",
+      "text": "后台要使用.net core 10,C#语言做开发",
+      "createdAt": 1774279445394
+    },
+    {
+      "msgId": "msgguWHbTZsD5kkb3qFKfAPhQ==",
+      "messageType": "text",
+      "text": "如果功能开发完成之后，你需要根据文档进行对功能点一一核对，然后迭代100次进行核查功能点是否完整，如果不完整就持续起草方案然后开发，最终完成所有前后台的测试和功能的测试才叫做真正的完成，所有功能严格依照文档，有不明白的地方就去查阅文档。如果我们本地文档不完整就去官方论坛找答案。晚安，不要让我失望",
+      "createdAt": 1774280038001
+    },
+    {
+      "msgId": "msgUSgrEjpnqRNk18YNF67TDA==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774304423111
+    },
+    {
+      "msgId": "msgtcAFryN7cOaYAhF1bd6Hlw==",
+      "messageType": "text",
+      "text": "继续",
+      "createdAt": 1774307570668
+    },
+    {
+      "msgId": "msgPWxlfMWyc9URZxU9fO9RFQ==",
+      "messageType": "text",
+      "text": "？？低代码平台的开发情况如何？",
+      "createdAt": 1774309591912
+    },
+    {
+      "msgId": "msg09mf9EOoJGkT9vXFXhujiw==",
+      "messageType": "text",
+      "text": "你现在需要继续工作不要停止",
+      "createdAt": 1774311164108
+    },
+    {
+      "msgId": "msgHFDWwe0LGrpLs19A0b+0AQ==",
+      "messageType": "text",
+      "text": "我有疑问，你是在调用所有的三省六部协同工作么？",
+      "createdAt": 1774311819647
+    },
+    {
+      "msgId": "msgB/RRW0c4zaeBYN+Zfhtmrg==",
+      "messageType": "text",
+      "text": "为什么没有权限，你的配置不是跟https://github.com/wanikua/danghuangshang上的一致么？",
+      "createdAt": 1774312111031
+    },
+    {
+      "msgId": "msguR9gLQpX3Xqgea0f6stAhg==",
+      "messageType": "text",
+      "text": "你好像没有用到我给你配置的self-improving-agent吧？",
+      "createdAt": 1774312588522
+    },
+    {
+      "msgId": "msgZ9NfVosTN9cqtXiHnsiEpw==",
+      "messageType": "text",
+      "text": "通知所有其他三省六部的agent也要使用self-improving-agent",
+      "createdAt": 1774312911635
+    },
+    {
+      "msgId": "msg88TT72Kz7yvf9Rtv6GolBg==",
+      "messageType": "text",
+      "text": "告诉所有三省六部的agent，他们要充分利用我配置的skills",
+      "createdAt": 1774313149070
+    },
+    {
+      "msgId": "msgCD0FabMmtK1kIm/9a57XTQ==",
+      "messageType": "text",
+      "text": "让他们启用所有的skill，skill是工具，帮助你们提升效率的",
+      "createdAt": 1774313384954
+    },
+    {
+      "msgId": "msgUBUXwFzpVzURcLSrFjglwg==",
+      "messageType": "text",
+      "text": "告诉所有的三省六部agent文件/root/.openclaw/tang-sansheng/CLAUDE.md是我们的开发规范，要严格遵守这个规范进行开发，不行就把这个规范配置到所有agent的AGENTS.md中，让他们记住规范",
+      "createdAt": 1774313777850
+    },
+    {
+      "msgId": "msggZpDkL7mRaKiGrtiKudTlw==",
+      "messageType": "text",
+      "text": "为每个agent成员规范文件存储，所有文件分类存储，可以参考/root/.openclaw/workspace 来规划我们的目录结构，让每个agent的工作目录始终保持整洁",
+      "createdAt": 1774314079626
+    },
+    {
+      "msgId": "msgxlxWzjEwowE5cWouVk/vHA==",
+      "messageType": "text",
+      "text": "但是其他的部门没有回复给我",
+      "createdAt": 1774314333444
+    },
+    {
+      "msgId": "msgQrrMDoz8Avih2ptxDiXnDQ==",
+      "messageType": "text",
+      "text": "按你给的文档，整理你的工作目录把，太乱了",
+      "createdAt": 1774314401208
+    },
+    {
+      "msgId": "msg5JnwtlK0dZsCD6+gSZNU8g==",
+      "messageType": "text",
+      "text": "你需要让每个agent都知道以后该怎么存放文件，要严格遵守",
+      "createdAt": 1774314539626
+    },
+    {
+      "msgId": "msgD0sviRdlBtiEByZhgEezWg==",
+      "messageType": "text",
+      "text": "为什么其他六部的成员没有收到文件存放规范的通知？",
+      "createdAt": 1774314911786
+    },
+    {
+      "msgId": "msgOVAs002/H5NoStzs8KA2nA==",
+      "messageType": "text",
+      "text": "通知所有三省六部成员，我更新了ClAUDE.md",
+      "createdAt": 1774315085847
+    }
+  ]
+}

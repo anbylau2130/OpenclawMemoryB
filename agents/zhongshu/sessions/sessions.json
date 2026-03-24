@@ -322,18 +322,18 @@
       "chatType": "direct",
       "from": "096028035723738668",
       "to": "096028035723738668",
-      "accountId": "taizi"
+      "accountId": "zhongshu"
     },
     "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
-    "updatedAt": 1774276809875,
+    "updatedAt": 1774315251375,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
-      "accountId": "taizi"
+      "accountId": "zhongshu"
     },
     "lastChannel": "dingtalk",
     "lastTo": "096028035723738668",
-    "lastAccountId": "taizi",
+    "lastAccountId": "zhongshu",
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -420,7 +420,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774276329408,
+      "generatedAt": 1774315088289,
       "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
       "sessionKey": "agent:zhongshu:main",
       "provider": "zai",
@@ -440,9 +440,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 16088,
-        "projectContextChars": 2937,
-        "nonProjectContextChars": 13151
+        "chars": 21865,
+        "projectContextChars": 8693,
+        "nonProjectContextChars": 13172
       },
       "injectedWorkspaceFiles": [
         {
@@ -464,9 +464,9 @@
         {
           "name": "TOOLS.md",
           "path": "/root/.openclaw/tang-sansheng/workspace-zhongshu/TOOLS.md",
-          "missing": true,
-          "rawChars": 0,
-          "injectedChars": 80,
+          "missing": false,
+          "rawChars": 5836,
+          "injectedChars": 5836,
           "truncated": false
         },
         {
@@ -665,13 +665,38 @@
       }
     },
     "totalTokensFresh": true,
-    "inputTokens": 212278,
-    "outputTokens": 14951,
-    "cacheRead": 89280,
+    "inputTokens": 11182,
+    "outputTokens": 4517,
+    "cacheRead": 152704,
     "cacheWrite": 0,
-    "totalTokens": 89352,
-    "authProfileOverride": "zai:default",
+    "authProfileOverride": "zai:edict",
     "authProfileOverrideSource": "auto",
-    "authProfileOverrideCompactionCount": 0
+    "authProfileOverrideCompactionCount": 1,
+    "memoryFlushAt": 1774312712840,
+    "memoryFlushCompactionCount": 1,
+    "compactionCount": 1,
+    "totalTokens": 154789
+  },
+  "agent:zhongshu:dingtalk:group:096028035723738668": {
+    "chatType": "group",
+    "channel": "dingtalk",
+    "groupId": "096028035723738668",
+    "displayName": "dingtalk:g-096028035723738668",
+    "origin": {
+      "label": "dingtalk:group:096028035723738668",
+      "provider": "dingtalk",
+      "surface": "dingtalk",
+      "chatType": "group",
+      "from": "dingtalk:group:096028035723738668",
+      "to": "channel:096028035723738668",
+      "accountId": "xingbu"
+    },
+    "sessionId": "860db9c4-b48b-4efb-aee1-1124b6dd3d77",
+    "updatedAt": 1774278999103,
+    "deliveryContext": {
+      "channel": "dingtalk"
+    },
+    "lastChannel": "dingtalk",
+    "sessionFile": "/root/.openclaw/agents/zhongshu/sessions/860db9c4-b48b-4efb-aee1-1124b6dd3d77.jsonl"
   }
 }

@@ -1,16 +1,16 @@
 {
   "code": "000858",
   "name": "五 粮 液",
-  "current_price": 102.4,
-  "open": 102.53,
-  "high": 103.18,
-  "low": 101.9,
-  "volume": 102865,
-  "amount": 1053023021.84,
-  "change_pct": -0.13,
-  "pe": 67,
-  "pb": 11278,
+  "current_price": 100.23,
+  "open": 101.4,
+  "high": 101.78,
+  "low": 100.04,
+  "volume": 205190,
+  "amount": 2064661956.26,
+  "change_pct": -2.12,
+  "pe": 143,
+  "pb": 11264,
   "total_mv": 5.54184671,
   "source": "eastmoney",
-  "timestamp": "2026-03-23T08:11:53.754925"
+  "timestamp": "2026-03-24T08:18:17.898633"
 }

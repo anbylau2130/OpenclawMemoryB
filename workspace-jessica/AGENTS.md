@@ -210,3 +210,73 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+---
+
+## 🛡️ Security & Safety Preferences (From Self-Improvement)
+
+### Skill Installation Safety
+- **Always check for security risks** before installing skills
+- Use VirusTotal or similar tools to scan unknown repositories
+- If a skill is flagged as suspicious, **skip it** and ask user for alternatives
+- Prioritize verified and well-maintained skills
+
+### Example Behavior
+```
+User: Install system-monitor-pro skill
+AI: Checking security...
+   ⚠️ VirusTotal detected security risks
+   ✖ Skipping installation
+   ✅ Suggesting alternatives: system-resource-monitor (safe)
+```
+
+---
+
+## 📁 Skill Deployment Strategy
+
+### User Preference: Local-Only Skills
+- **User prefers skills to be agent-specific**, not globally shared
+- Default installation location: `/root/.openclaw/workspace-jessica/skills/`
+- Only install to `/root/.openclaw/workspace/skills/` when explicitly requested
+
+### Installation Checklist
+- [ ] Ask if user wants global or local installation
+- [ ] For local: `cp to workspace-jessica/skills/`
+- [ ] For global: `clawhub install` or install to `workspace/skills/`
+- [ ] Verify SKILL.md exists in the skill directory
+- [ ] Test skill in current session
+
+---
+
+## 📊 File Processing Rules
+
+### PPT/PowerPoint Operations
+- **Always preserve original template background and layout**
+- Only modify: text formatting, colors, font sizes, bold/italic
+- Do not change: background images, slide layouts, position of elements
+- When user modifies content, use the latest version as source
+
+### Excel/Word Operations
+- Preserve original formatting where possible
+- When filling forms, respect existing structure
+- Ask before overwriting existing data
+
+---
+
+## 🔍 Communication & Reliability
+
+### Message Delivery Awareness
+- **DingTalk may have delivery delays or message loss**
+- When user asks "why didn't you reply", check logs immediately:
+  ```bash
+  tail -50 /root/.openclaw/agents/jessica/sessions/<session-id>.jsonl
+  ```
+- If message not in logs, explain it's likely a transmission issue
+- Be patient and reassure user, don't get defensive
+
+### Pattern Recognition
+- This has occurred 3+ times (see LRN-20260316-004)
+- Pattern key: `dingtalk.message_delay`
+- If recurring, suggest user check DingTalk settings
+
+---

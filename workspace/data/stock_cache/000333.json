@@ -1,16 +1,16 @@
 {
   "code": "000333",
   "name": "美的集团",
-  "current_price": 75.12,
-  "open": 75.92,
-  "high": 76.15,
-  "low": 75.12,
-  "volume": 219126,
-  "amount": 1657477564.34,
-  "change_pct": -1.16,
-  "pe": 105,
-  "pb": 8360,
+  "current_price": 73.37,
+  "open": 73.95,
+  "high": 73.97,
+  "low": 72.35,
+  "volume": 462008,
+  "amount": 3377621417.85,
+  "change_pct": -2.33,
+  "pe": 215,
+  "pb": 8263,
   "total_mv": 4.982507813,
   "source": "eastmoney",
-  "timestamp": "2026-03-23T08:11:54.166918"
+  "timestamp": "2026-03-24T08:18:18.317296"
 }

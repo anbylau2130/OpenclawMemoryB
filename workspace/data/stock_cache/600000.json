@@ -1,16 +1,16 @@
 {
   "code": "600000",
   "name": "浦发银行",
-  "current_price": 10.28,
-  "open": 10.33,
-  "high": 10.46,
-  "low": 10.28,
-  "volume": 748836,
-  "amount": 776364417.0,
-  "change_pct": -0.39,
-  "pe": 98,
-  "pb": 1135,
+  "current_price": 9.86,
+  "open": 10.23,
+  "high": 10.23,
+  "low": 9.85,
+  "volume": 933945,
+  "amount": 933688844.0,
+  "change_pct": -4.09,
+  "pe": 130,
+  "pb": 1131,
   "total_mv": 1.501748719,
   "source": "eastmoney",
-  "timestamp": "2026-03-23T08:11:51.555388"
+  "timestamp": "2026-03-24T08:18:15.604452"
 }

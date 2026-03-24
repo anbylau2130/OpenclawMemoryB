@@ -1,16 +1,16 @@
 {
   "code": "601988",
   "name": "中国银行",
-  "current_price": 5.51,
-  "open": 5.52,
-  "high": 5.58,
-  "low": 5.49,
-  "volume": 2593771,
-  "amount": 1436384092.0,
-  "change_pct": -0.36,
-  "pe": 89,
-  "pb": 608,
+  "current_price": 5.39,
+  "open": 5.49,
+  "high": 5.5,
+  "low": 5.32,
+  "volume": 4331485,
+  "amount": 2331714888.0,
+  "change_pct": -2.18,
+  "pe": 146,
+  "pb": 606,
   "total_mv": 0.551375408,
   "source": "eastmoney",
-  "timestamp": "2026-03-23T08:11:52.164798"
+  "timestamp": "2026-03-24T08:18:16.161115"
 }

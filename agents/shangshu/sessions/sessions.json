@@ -1,7 +1,7 @@
 {
   "agent:shangshu:main": {
     "sessionId": "6c3ccd37-531b-4c98-a4a6-9a80fd2f311d",
-    "updatedAt": 1774248933931,
+    "updatedAt": 1774279018455,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -101,16 +101,16 @@
     },
     "lastChannel": "dingtalk",
     "lastAccountId": "taizi",
-    "modelProvider": "anthropic",
-    "model": "claude-sonnet-4-5",
-    "contextTokens": 200000,
+    "modelProvider": "zai",
+    "model": "glm-5",
+    "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774248933166,
+      "generatedAt": 1774278957118,
       "sessionId": "6c3ccd37-531b-4c98-a4a6-9a80fd2f311d",
       "sessionKey": "agent:shangshu:main",
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-5",
+      "provider": "zai",
+      "model": "glm-5",
       "workspaceDir": "/root/.openclaw/workspace-shangshu",
       "bootstrapMaxChars": 20000,
       "bootstrapTotalMaxChars": 150000,
@@ -126,9 +126,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 14214,
+        "chars": 13721,
         "projectContextChars": 1041,
-        "nonProjectContextChars": 13173
+        "nonProjectContextChars": 12680
       },
       "injectedWorkspaceFiles": [
         {
@@ -265,7 +265,7 @@
           },
           {
             "name": "message",
-            "summaryChars": 97,
+            "summaryChars": 89,
             "schemaChars": 4860,
             "propertiesCount": 91
           },
@@ -337,7 +337,7 @@
           },
           {
             "name": "image",
-            "summaryChars": 260,
+            "summaryChars": 201,
             "schemaChars": 342,
             "propertiesCount": 6
           },
@@ -350,14 +350,12 @@
         ]
       }
     },
-    "inputTokens": 34276,
-    "outputTokens": 3584,
-    "cacheRead": 70848,
+    "inputTokens": 92111,
+    "outputTokens": 895,
+    "cacheRead": 468288,
     "cacheWrite": 0,
-    "totalTokensFresh": false,
+    "totalTokensFresh": true,
     "channel": "dingtalk",
-    "authProfileOverride": "anthropic:default",
-    "authProfileOverrideSource": "auto",
-    "authProfileOverrideCompactionCount": 0
+    "totalTokens": 94798
   }
 }

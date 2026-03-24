@@ -1,49 +1,7 @@
 {
   "version": 1,
-  "updatedAt": 1774276865967,
+  "updatedAt": 1774315365838,
   "records": [
-    {
-      "msgId": "msgqXwwzglKWGf0XkylTX/Ohw==",
-      "messageType": "text",
-      "text": "胜率太低了，优化我们的方案把，或者找其他更可靠的策略，你需要自行完成，然后通知我",
-      "createdAt": 1773708184833
-    },
-    {
-      "msgId": "msg0Ne8x+/L+Mnj8ZUUgD2zFg==",
-      "messageType": "text",
-      "text": "我们的交易体系文档在哪里？",
-      "createdAt": 1773708790573
-    },
-    {
-      "msgId": "msg+QEhD8jNAlaTMtJmx6/WKQ==",
-      "messageType": "text",
-      "text": "目前的体系还是不够完整，需要迭代，直到我们的体系健壮，完整，并且胜率有保障",
-      "createdAt": 1773708907886
-    },
-    {
-      "msgId": "msg/xj8ue4hg0/sWETFxxkd3A==",
-      "messageType": "text",
-      "text": "继续",
-      "createdAt": 1773709428790
-    },
-    {
-      "msgId": "msgoOa1dBCEahfJB5qnD09Y2w==",
-      "messageType": "text",
-      "text": "你可以参照https://github.com/anbylau2130/OpenclawMemery这个项目，这个项目中有回测数据的获取方法，每个分支的内容不同，你需要从不同的分支找，我忘记在哪个分支了，你找找看",
-      "createdAt": 1773709904483
-    },
-    {
-      "msgId": "msg55xjxDs1sWYX4tp+/ENxEw==",
-      "messageType": "text",
-      "text": "https://github.com/anbylau2130/OpenclawMemery 这个项目是我之前机器人的工作空间，每个分支都不同，他们有不同的记忆，你可以提取有用的，关于交易相关的记忆，然后保存为你的记忆，项目地址没错。",
-      "createdAt": 1773710322514
-    },
-    {
-      "msgId": "msgHXUoVMjccihEqkdBystCXw==",
-      "messageType": "text",
-      "text": "同过这个项目提取关于交易相关的记忆，保存为你的记忆。用到我们的系统中，项目中有完善的回测机制",
-      "createdAt": 1773710461045
-    },
     {
       "msgId": "msgpFh3hjhwUAKZ8I9RfCKP0g==",
       "messageType": "text",
@@ -2455,6 +2413,78 @@
       "messageType": "text",
       "text": "提交备份到github",
       "createdAt": 1774276865795
+    },
+    {
+      "msgId": "msgoo2HIYYis5lO2G6e/0IyRg==",
+      "messageType": "text",
+      "text": "我给你新增了三个skills，brains、frontend-design,skill-creator，把这三个skills补充到tang-sansheng和ming-neige下的agent中,并完善Tools.md",
+      "createdAt": 1774277336714
+    },
+    {
+      "msgId": "msg6+NjPrKXvsN4gquLNLiQ3w==",
+      "messageType": "text",
+      "text": "我给你新增了三个skills，brains、frontend-design,skill-creator，把这三个skills补充到tang-sansheng和ming-neige下的agent中,并完善Tools.md",
+      "createdAt": 1774277376812
+    },
+    {
+      "msgId": "msgqHh7c6t/dDvsbV2gwhO34A==",
+      "messageType": "text",
+      "text": "中书省外做什么",
+      "createdAt": 1774304706698
+    },
+    {
+      "msgId": "msgHE4UhQTvxVpBp82wcjwjpA==",
+      "messageType": "text",
+      "text": "继续完成所有开发任务",
+      "createdAt": 1774308926882
+    },
+    {
+      "msgId": "msg81eS+UOXJuxgqm0xDJsNjw==",
+      "messageType": "text",
+      "text": "你不用参与开发，我发错了，是发给中书省的消息",
+      "createdAt": 1774309487005
+    },
+    {
+      "msgId": "msgJDH8aHYEyHg1wOCfKHEd2A==",
+      "messageType": "text",
+      "text": "低代码平台呢？",
+      "createdAt": 1774309545703
+    },
+    {
+      "msgId": "msgQpHLBNsyFfvoyez1YjWYsw==",
+      "messageType": "text",
+      "text": "18795没有运行",
+      "createdAt": 1774310228901
+    },
+    {
+      "msgId": "msg+HX+EZU2Dpy5EbHXubYRUg==",
+      "messageType": "text",
+      "text": "密码多少",
+      "createdAt": 1774310341321
+    },
+    {
+      "msgId": "msgqqYcZOq14rzgqHaVPhHDgQ==",
+      "messageType": "text",
+      "text": "密码是多少",
+      "createdAt": 1774310884876
+    },
+    {
+      "msgId": "msgt2yOn1xQbz2j31nifing9g==",
+      "messageType": "text",
+      "text": "但是我为什么在gui中看不到他们在做什么？",
+      "createdAt": 1774311276707
+    },
+    {
+      "msgId": "msg0fYliWQj2mx3VUSd00NMRQ==",
+      "messageType": "text",
+      "text": "你有使用self-improving-agent么？",
+      "createdAt": 1774312959366
+    },
+    {
+      "msgId": "msg3vW7dA5EkvQu7Xy7+unYDA==",
+      "messageType": "text",
+      "text": "备份到github",
+      "createdAt": 1774315365481
     }
   ]
 }

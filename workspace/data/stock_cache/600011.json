@@ -1,16 +1,16 @@
 {
   "code": "600011",
   "name": "华能国际",
-  "current_price": 7.54,
-  "open": 7.49,
-  "high": 7.68,
-  "low": 7.45,
-  "volume": 1316296,
-  "amount": 997050828.0,
-  "change_pct": 0.8,
-  "pe": 106,
-  "pb": 823,
+  "current_price": 7.34,
+  "open": 7.48,
+  "high": 7.51,
+  "low": 7.28,
+  "volume": 1293638,
+  "amount": 956302722.0,
+  "change_pct": -2.65,
+  "pe": 112,
+  "pb": 829,
   "total_mv": 0.945395392,
   "source": "eastmoney",
-  "timestamp": "2026-03-23T08:11:54.703277"
+  "timestamp": "2026-03-24T08:18:18.912779"
 }
