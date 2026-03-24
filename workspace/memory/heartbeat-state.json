@@ -1,33 +1,61 @@
 {
-  "last_check": "2026-03-24T08:18:11+08:00",
+  "last_check": "2026-03-24T08:50:21+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 23,
-      "uptime_hours": 16.1
+      "uptime_hours": 16.65
     },
     "alert_queue": {
       "count": 0,
       "status": "empty"
     },
     "scheduled_tasks": {
-      "current_window": "08:00-09:00",
-      "task": "选股",
-      "status": "✅ 已执行",
-      "result": "选出2支股票",
-      "executed_at": "08:18:11"
+      "selection": {
+        "window": "08:00-09:00",
+        "status": "✅ 已完成",
+        "executed_at": "08:18",
+        "result": "选出2支股票"
+      },
+      "review": {
+        "window": "16:00-17:00",
+        "status": "⏸️ 未到"
+      },
+      "learning": {
+        "window": "19:00-23:00",
+        "status": "⏸️ 未到"
+      }
     },
     "trading_monitor": {
       "status": "非交易时段",
-      "next_start": "09:30（1小时12分钟后）"
+      "next_start": "09:30（40分钟后）"
     },
-    "data_source": {
-      "sina_api": "ready",
-      "status": "三重备份（新浪/东财/腾讯）"
+    "selected_stocks": [
+      {
+        "code": "601398",
+        "name": "工商银行",
+        "price": 7.25,
+        "score": 4.0,
+        "signals": ["VWAP买入(97.7%)", "KDJ超卖(K13)"]
+      },
+      {
+        "code": "002415",
+        "name": "海康威视",
+        "price": 30.01,
+        "score": 3.0,
+        "signals": ["VWAP强买(94.9%)"]
+      }
+    ],
+    "boluo_gui": {
+      "port_18795": "running",
+      "pid": 30485,
+      "status": "healthy",
+      "uptime_minutes": 44
     },
     "system_resources": {
-      "uptime": "16小时07分",
-      "load_avg": [1.37, 2.03, 1.84],
+      "uptime": "16小时39分",
+      "load_avg": [4.26, 3.31, 2.31],
+      "load_status": "较高（有后台任务运行）",
       "memory": {
         "total": "15Gi",
         "available": "7.5Gi",
@@ -37,18 +65,15 @@
     "processes": {
       "openclaw": "running (PID 1)",
       "gateway": "running (PID 23)",
+      "boluo_gui": "running (PID 30485)",
       "zombie_processes": 3
-    },
-    "boluo_gui": {
-      "port_18795": "running",
-      "pid": 30485,
-      "status": "healthy"
     }
   },
   "overall_status": "healthy",
   "issues": [],
   "next_actions": [
-    "09:30启动交易监控（1小时12分钟后）",
+    "09:30开盘 - 40分钟后",
+    "09:30启动交易监控",
     "16:00-17:00复盘任务"
   ]
 }
