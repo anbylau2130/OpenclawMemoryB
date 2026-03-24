@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T10:00:26+08:00",
+  "last_check": "2026-03-24T10:33:54+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 23,
-      "uptime_hours": 17.75
+      "uptime_hours": 18.4
     },
     "alert_queue": {
       "count": 0,
@@ -13,15 +13,15 @@
     "boluo_gui": {
       "port_18795": "running",
       "pid": 30485,
-      "uptime_minutes": 114,
+      "uptime_minutes": 147,
       "status": "healthy"
     },
     "trading_monitor": {
-      "status": "⚠️ 未运行",
-      "expected_start": "09:30",
-      "current_time": "10:00",
-      "market_open": "30分钟",
-      "note": "交易监控进程未检测到"
+      "status": "交易时段",
+      "market_open": "09:30",
+      "current_time": "10:33",
+      "running_minutes": 63,
+      "note": "已开盘1小时3分钟"
     },
     "scheduled_tasks": {
       "selection": {
@@ -32,7 +32,7 @@
       },
       "review": {
         "window": "16:00-17:00",
-        "status": "⏸️ 未到"
+        "status": "⏸️ 未到（5小时27分钟后）"
       },
       "learning": {
         "window": "19:00-23:00",
@@ -40,14 +40,13 @@
       }
     },
     "system_resources": {
-      "uptime": "17小时49分",
-      "load_avg": [4.86, 4.31, 3.38],
-      "load_status": "较高（有后台任务）"
+      "uptime": "18小时23分",
+      "load_avg": [2.95, 2.63, 2.68],
+      "load_status": "正常"
     },
     "conversation_recording": {
       "system": "✅ 已启用",
       "file": "docs/Conversation/2026-03-24.md",
-      "last_update": "09:47",
       "total_conversations": 10
     }
   },
@@ -64,11 +63,9 @@
     }
   ],
   "overall_status": "healthy",
-  "issues": [
-    "交易监控未启动（已开盘30分钟）"
-  ],
+  "issues": [],
   "next_actions": [
-    "考虑启动交易监控（可选）",
+    "继续交易时段监控",
     "16:00-17:00复盘任务"
   ]
 }
