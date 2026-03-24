@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774329119010,
+  "updatedAt": 1774329354101,
   "records": [
     {
       "msgId": "msgHx6itZn8bQp3AGzav0i37A==",
@@ -307,6 +307,12 @@
       "messageType": "text",
       "text": "⚠️ Agent failed before reply: Sandbox mode requires Docker, but the \"docker\" command was not found in PATH. Install Docker (and ensure \"docker\" is available), or set agents.defaults.sandbox.mode=off to disable sandboxing. Logs: openclaw logs --follow",
       "createdAt": 1774329118610
+    },
+    {
+      "msgId": "msg6M7lHwCkRM693wEMNH2cuw==",
+      "messageType": "text",
+      "text": "Agent failed before reply: Sandbox mode requires Docker, but the \"docker\" command was not found in PATH. Install Docker (and ensure \"docker\" is available), or set agents.defaults.sandbox.mode=off to disable sandboxing. Logs: openclaw logs --follow",
+      "createdAt": 1774329353500
     }
   ]
 }
