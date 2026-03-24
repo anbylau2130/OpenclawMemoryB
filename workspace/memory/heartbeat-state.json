@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T15:30:17+08:00",
+  "last_check": "2026-03-24T16:00:25+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 16,
-      "uptime_hours": 4.1,
+      "uptime_hours": 4.6,
       "restart_time": "11:24"
     },
     "alert_queue": {
@@ -16,16 +16,16 @@
       "status": "healthy"
     },
     "zombie_processes": {
-      "count": 51,
-      "trend": "稳定（50→51）",
+      "count": 52,
+      "trend": "稳定（51→52）",
       "note": "轻微增加，无紧急风险"
     },
     "trading_monitor": {
-      "status": "收盘后",
+      "status": "复盘完成",
       "market_close": "15:00",
-      "current_time": "15:30",
-      "minutes_after_close": 30,
-      "note": "收盘后30分钟"
+      "current_time": "16:00",
+      "minutes_after_close": 60,
+      "note": "复盘任务已执行"
     },
     "scheduled_tasks": {
       "selection": {
@@ -36,46 +36,52 @@
       },
       "review": {
         "window": "16:00-17:00",
-        "status": "⏳ **即将开始（30分钟后）**",
-        "countdown": "30分钟"
+        "status": "✅ **已完成**",
+        "executed_at": "16:00",
+        "accuracy": "50.0%",
+        "avg_return": "-1.24%",
+        "total_return": "-2.48%",
+        "best_stock": "002415 海康威视 (+1.19%)",
+        "worst_stock": "601398 工商银行 (-3.67%)"
       },
       "learning": {
         "window": "19:00-23:00",
-        "status": "⏸️ 未到（3.5小时后）"
+        "status": "⏸️ 未到（3小时后）"
       }
     },
     "system_resources": {
-      "uptime": "23小时19分",
-      "load_avg": [0.82, 0.98, 1.38],
+      "uptime": "23小时49分",
+      "load_avg": [2.11, 2.28, 2.09],
       "load_status": "✅ 正常",
       "memory": {
         "total": "15GB",
-        "available": "7.6GB",
-        "used_percent": 49
+        "available": "7.0GB",
+        "used_percent": 50
       }
     },
     "conversation_recording": {
       "system": "✅ 已启用",
       "file": "docs/Conversation/2026-03-24.md",
-      "total_conversations": 26
+      "total_conversations": 27
     }
   },
   "selected_stocks": [
     {
       "code": "601398",
       "name": "工商银行",
-      "score": 4.0
+      "score": 4.0,
+      "performance": "-3.67%"
     },
     {
       "code": "002415",
       "name": "海康威视",
-      "score": 3.0
+      "score": 3.0,
+      "performance": "+1.19%"
     }
   ],
   "overall_status": "healthy",
   "issues": [],
   "next_actions": [
-    "复盘任务即将开始（16:00，30分钟后）",
-    "19:00-23:00学习任务"
+    "19:00-23:00学习任务（3小时后）"
   ]
 }
