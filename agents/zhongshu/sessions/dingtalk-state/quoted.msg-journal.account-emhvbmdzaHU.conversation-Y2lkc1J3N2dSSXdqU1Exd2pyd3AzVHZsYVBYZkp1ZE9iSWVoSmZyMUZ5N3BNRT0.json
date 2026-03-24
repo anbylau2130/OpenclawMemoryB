@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": 1774329354101,
+  "updatedAt": 1774347354089,
   "records": [
     {
       "msgId": "msgHx6itZn8bQp3AGzav0i37A==",
@@ -313,6 +313,120 @@
       "messageType": "text",
       "text": "Agent failed before reply: Sandbox mode requires Docker, but the \"docker\" command was not found in PATH. Install Docker (and ensure \"docker\" is available), or set agents.defaults.sandbox.mode=off to disable sandboxing. Logs: openclaw logs --follow",
       "createdAt": 1774329353500
+    },
+    {
+      "msgId": "msgcdLLepWzuJht53PxNHr1TQ==",
+      "messageType": "text",
+      "text": "修改三省六部中的所有的Agent的AGENTS.md，让他们充分利用现有的Skill，self-improving-agent是最重要的避免问题多次发生的技能现在就开始配置使用",
+      "createdAt": 1774329590820
+    },
+    {
+      "msgId": "msghdd94si8d42pIyQ0EKQzow==",
+      "messageType": "text",
+      "text": "有点问题，修改每个三省六部的AGENTS.md，会话信息是在每个agent的工作空间保存，不是维护到一个统一的文件中，这样会造成冲突。",
+      "createdAt": 1774329878237
+    },
+    {
+      "msgId": "msgaJkh4lRr8L5+ZLoZ9kH5DQ==",
+      "messageType": "text",
+      "text": "还是有问题，修改每个三省六部的AGENTS.md，会话信息是在每个agent的工作空间保存，不是维护到一个统一的文件中，这样会造成冲突。我说的会话信息是tang-sansheng/docs/Conversation下的保存的笔下的会话信息，每个agent把跟自己的对话保存到各自工作空间的docs/Conversationz中而不是tang-sansheng/docs/Conversation。还有你的工作目录越来越乱，你需要建立一个FOLDERS.md用来保存你的目录结构，并修改AGENTS.md每次都按照FOLDERS.md中的规范来保存和查阅文件。同时三省六部的agent都要设置",
+      "createdAt": 1774330936807
+    },
+    {
+      "msgId": "msgRQd/tqfb7yuxVtDkMM9zZg==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774331563210
+    },
+    {
+      "msgId": "msg7YVaazUv6SwsACtZwt9Wtg==",
+      "messageType": "text",
+      "text": "还是有问题，修改每个三省六部的AGENTS.md，会话信息是在每个agent的工作空间保存，不是维护到一个统一的文件中，这样会造成冲突。我说的会话信息是tang-sansheng/docs/Conversation下的保存的笔下的会话信息，每个agent把跟自己的对话保存到各自工作空间的docs/Conversationz中而不是tang-sansheng/docs/Conversation。还有你的工作目录越来越乱，你需要建立一个FOLDERS.md用来保存你的目录结构，并修改AGENTS.md每次都按照FOLDERS.md中的规范来保存和查阅文件。同时三省六部的agent都要设置",
+      "createdAt": 1774337609619
+    },
+    {
+      "msgId": "msgXkoTwMwAB+ZLSRXFbr0iTQ==",
+      "messageType": "text",
+      "text": "整理你的工作空间，保持整洁",
+      "createdAt": 1774338200483
+    },
+    {
+      "msgId": "msghnBspLMWLSXDFCyCphaenA==",
+      "messageType": "text",
+      "text": "测试一个流程，看看兵部是否报错",
+      "createdAt": 1774338556800
+    },
+    {
+      "msgId": "msgNDh+6VO10+s/PaZIn7zJcg==",
+      "messageType": "text",
+      "text": "把我和你昨天的对话也写到工作空间的docs/conversation文件夹",
+      "createdAt": 1774338885739
+    },
+    {
+      "msgId": "msgrfarcmESVIxjPxzHEoHMoQ==",
+      "messageType": "text",
+      "text": "前天的对话也写到这个文件把",
+      "createdAt": 1774339016033
+    },
+    {
+      "msgId": "msgB4HAK22ZNHCQTrxK364vGw==",
+      "messageType": "text",
+      "text": "前天的对话有么？",
+      "createdAt": 1774339091111
+    },
+    {
+      "msgId": "msgsKFDAYrq7PM+Vghbmfes1g==",
+      "messageType": "text",
+      "text": "能不能把前天还有昨天我和太子的对话提取出来",
+      "createdAt": 1774339258661
+    },
+    {
+      "msgId": "msgiAtMXhkplrHOfUZtk5YGGg==",
+      "messageType": "text",
+      "text": "从向量数据库能不能获取到？",
+      "createdAt": 1774339747921
+    },
+    {
+      "msgId": "msg11KAP3TOKurAR8a9ScVYjg==",
+      "messageType": "audio",
+      "text": "好，现在现在你可以去那个点openclaw。跟目录下的呃project吧，里面有一个knowledge。嗯，杠base文件夹里面存的是呃，金蝶云苍穹的完整的文档。",
+      "createdAt": 1774343752023
+    },
+    {
+      "msgId": "msgGjkPxwo2w157RKbBl6WVAQ==",
+      "messageType": "audio",
+      "text": "那现在我们就要根据这个呃今天云苍穹的文档来构建我们自己的项目。我希望的是所有的功能都保持一致。云苍穹里有的，我们也要有。然后比他的更好用然后首先的话",
+      "createdAt": 1774344450990
+    },
+    {
+      "msgId": "msgQ9GVq58oX32Z50BCs5hiLA==",
+      "messageType": "audio",
+      "text": "你需要你需要完整的探索这个文档的内容，然后先设计架构，然后根据它的功能，然后设计我们的架构，把我们的架构先设计出来。",
+      "createdAt": 1774344474079
+    },
+    {
+      "msgId": "msgEAarV3PJ3g2aEaW8gaaUyw==",
+      "messageType": "audio",
+      "text": "还有记得你要调用三省六部的整个流程来完成这个任务。",
+      "createdAt": 1774344529619
+    },
+    {
+      "msgId": "msgS3fUKmx6BroQ921B4VTJrQ==",
+      "messageType": "text",
+      "text": "我觉得应该给你配置唤醒门下省的权限？不然你没办法让门下省干活",
+      "createdAt": 1774347212860
+    },
+    {
+      "msgId": "msgo6quxDp9MexXToziBO/VUA==",
+      "messageType": "text",
+      "text": "但是如果我睡觉了你就没办法工作了",
+      "createdAt": 1774347326536
+    },
+    {
+      "msgId": "msgawzNiYU16gnp8wsMBeI18A==",
+      "messageType": "text",
+      "text": "中书省不就是应该可以唤醒门下省么",
+      "createdAt": 1774347353860
     }
   ]
 }

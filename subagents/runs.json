@@ -1,39 +1,4 @@
 {
   "version": 2,
-  "runs": {
-    "4224e08d-ea66-4381-becf-8383cb6c6c1b": {
-      "runId": "4224e08d-ea66-4381-becf-8383cb6c6c1b",
-      "childSessionKey": "agent:shangshu:subagent:cf9562e7-35ec-43c3-ac03-c829009df53f",
-      "controllerSessionKey": "agent:shangshu:main",
-      "requesterSessionKey": "agent:shangshu:main",
-      "requesterOrigin": {
-        "channel": "dingtalk",
-        "to": "096028035723738668",
-        "accountId": "shangshu"
-      },
-      "requesterDisplayKey": "agent:shangshu:main",
-      "task": "【尚书省紧急任务：组织所有agents执行六大核心任务】\n\n**任务目标**：\n让所有agents（三省六部+御史台+史官）立即执行以下六项任务。\n\n---\n\n## 📋 六大核心任务\n\n### 1️⃣ 启用技能系统\n**要求**：\n- 立即启用 `self-improving-agent` 和29个其他skill\n- **必须严格遵守** `/root/.openclaw/tang-sansheng/CLAUDE.md`\n- 文件存放规范：`Knowledge/standards/三省六部文件存放规范_v1.0.md`\n\n**执行步骤**：\n1. 读取CLAUDE.md了解配置要求\n2. 检查可用skills\n3. 为每个agent配置相应技能\n\n---\n\n### 2️⃣ 建立项目目录结构\n**要求**：\n- `workspace-bingbu/projects/` - 学习项目、个人任务\n- `tang-sansheng/projects/` - 跨部门项目\n\n**执行步骤**：\n1. 创建目录结构\n2. 建立README说明文件\n3. 配置权限\n\n---\n\n### 3️⃣ 记录陛下对话\n**要求**：\n- 位置：`docs/Conversation/`\n- 文件：`YYYYMMDD.md`（今天：`20260324.md`）\n- 内容：只保存陛下说的话\n- 格式：`HH:MM 陛下：[内容]`\n\n**执行步骤**：\n1. 创建docs/Conversation目录\n2. 创建今天的对话记录文件\n3. 配置自动记录机制\n\n---\n\n### 4️⃣ 创建STATUS.md\n**要求**：\n- 位置：`workspace-bingbu/STATUS.md`\n- 内容：\n  - 当前任务\n  - 今日完成\n  - 下一步计划\n\n**执行步骤**：\n1. 创建STATUS.md模板\n2. 填充当前状态\n3. 建立更新机制\n\n---\n\n### 5️⃣ Star Office状态同步\n**要求**：\n- 遵守：`tang-sansheng/docs/OPENCLAW_AGENT_CONFIG.md`\n- **禁止推送**：用户信息、密钥信息\n- **在线第一件事**：加入Office（必须先加入再工作）\n- **状态一致性**：工作时同时更改状态并发送工作内容\n\n**执行步骤**：\n1. 读取OPENCLAW_AGENT_CONFIG.md\n2. 验证所有agents已加入Office\n3. 建立状态同步机制\n4. 测试状态推送\n\n---\n\n### 6️⃣ 文件存放规范化\n**要求**：\n- 遵守：`Knowledge/standards/三省六部文件存放规范_v1.0.md`\n- 所有agents统一使用规范\n\n**执行步骤**：\n1. 读取文件存放规范\n2. 创建规范文档\n3. 通知所有agents遵守\n\n---\n\n## 🎯 执行计划\n\n**需要spawn的agents**：\n1. 中书省（zhongshu）- 决策起草\n2. 门下省（menxia）- 审核规范\n3. 兵部（bingbu）- 创建STATUS.md\n4. 工部（gongbu）- 建立目录结构\n5. 史官（shiguan）- 记录对话\n\n**验证要求**：\n- 所有目录创建成功\n- 所有配置文件就位\n- Office状态同步正常\n- 文件存放规范发布\n\n**重要提示**：\n- 必须先加入Office再开始工作\n- 状态更新和工作内容同步推送\n- 严格遵守CLAUDE.md和文件存放规范\n\n请尚书省立即组织执行！",
-      "cleanup": "keep",
-      "expectsCompletionMessage": true,
-      "spawnMode": "run",
-      "label": "组织所有agents执行六大任务",
-      "model": "zai/glm-5",
-      "workspaceDir": "/root/.openclaw/workspace-shangshu",
-      "runTimeoutSeconds": 300,
-      "createdAt": 1774328168876,
-      "startedAt": 1774328177603,
-      "archiveAtMs": 1774331768876,
-      "cleanupHandled": true,
-      "retainAttachmentsOnKeep": false,
-      "endedAt": 1774328218388,
-      "outcome": {
-        "status": "ok"
-      },
-      "endedReason": "subagent-complete",
-      "frozenResultText": "【尚书省】已读取配置文件。文件存放规范文件缺失，臣将创建。先检查当前目录结构：",
-      "frozenResultCapturedAt": 1774328218502,
-      "endedHookEmittedAt": 1774328308626,
-      "cleanupCompletedAt": 1774328308646
-    }
-  }
+  "runs": {}
 }

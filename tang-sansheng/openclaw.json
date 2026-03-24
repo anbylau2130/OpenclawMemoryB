@@ -340,7 +340,10 @@
         "sandbox": {
           "mode": "off"
         },
-        "workspace": "/root/.openclaw/tang-sansheng/workspace-zhongshu"
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-zhongshu",
+        "subagents": {
+          "allowAgents": ["menxia"]
+        }
       },
       {
         "id": "menxia",
@@ -354,7 +357,10 @@
         "sandbox": {
           "mode": "off"
         },
-        "workspace": "/root/.openclaw/tang-sansheng/workspace-menxia"
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-menxia",
+        "subagents": {
+          "allowAgents": ["shangshu"]
+        }
       },
       {
         "id": "yushitai",

@@ -1,265 +1,7 @@
 {
   "version": 1,
-  "updatedAt": 1774329530695,
+  "updatedAt": 1774347462253,
   "records": [
-    {
-      "msgId": "msgNr4jxXausPqbeAHtv5O9OA==",
-      "messageType": "text",
-      "text": "我配置过了，你检查一下",
-      "createdAt": 1773725143376
-    },
-    {
-      "msgId": "msgsDDgjRM9e5uDr4MW7818kQ==",
-      "messageType": "text",
-      "text": "？你的工作空间是什么",
-      "createdAt": 1773725295155
-    },
-    {
-      "msgId": "msgJ542aEOpWGJ7yjORk/ZdEg==",
-      "messageType": "text",
-      "text": "为什么太子的工作空间和你一样？",
-      "createdAt": 1773725368854
-    },
-    {
-      "msgId": "msg/se8uV3ETEnadPfvhgXByQ==",
-      "messageType": "text",
-      "text": "哪里配置的有问题，太子说他的工作空间是/root/.openclaw/workspace",
-      "createdAt": 1773726155197
-    },
-    {
-      "msgId": "msgU30QrWI6RGVWMKjD9aLH9A==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773726452090
-    },
-    {
-      "msgId": "msgsoUKOnj/Yofo2M3dOQ6tSw==",
-      "messageType": "text",
-      "text": "我需要怎么改，才能让\n \"taizi\": {\n                    \"clientId\": \"dingyhlhrphf9uxwp5u3\",\n                    \"clientSecret\": \"8GQXzXWOLZqQ7UyNtbMU12Q0_-mA3c7trPM_A5XNIDA0LjepnThuzky23YGcCi_G\",\n                    \"robotCode\": \"dingyhlhrphf9uxwp5u3\",\n                    \"corpId\": \"ding3cecc6cee84e6509a1320dcb25e91351\",\n                    \"agentId\": \"4346325687\",\n                    \"dmPolicy\": \"open\",\n                    \"groupPolicy\": \"open\",\n                    \"messageType\": \"markdown\",\n                    \"userPhone\": \"13027729771\",\n                    \"allowFrom\": [\n                        \"*\"\n                    ]\n                }\n\n\n这段配置指向taizi",
-      "createdAt": 1773728278278
-    },
-    {
-      "msgId": "msgnbc4OZrjy7/WOQGVT/PjnA==",
-      "messageType": "text",
-      "text": "bindings：\n        {\n            \"agentId\": \"taizi\",\n            \"match\": {\n                \"channel\": \"dingtalk\",\n                \"accountId\": \"4346325687\"\n            }\n        }\n\nchanels.dingtalk.accouts.taizi\n\"taizi\": {\n                    \"clientId\": \"dingyhlhrphf9uxwp5u3\",\n                    \"clientSecret\": \"8GQXzXWOLZqQ7UyNtbMU12Q0_-mA3c7trPM_A5XNIDA0LjepnThuzky23YGcCi_G\",\n                    \"robotCode\": \"dingyhlhrphf9uxwp5u3\",\n                    \"corpId\": \"ding3cecc6cee84e6509a1320dcb25e91351\",\n                    \"agentId\": \"4346325687\",\n                    \"dmPolicy\": \"open\",\n                    \"groupPolicy\": \"open\",\n                    \"messageType\": \"markdown\",\n                    \"userPhone\": \"13027729771\",\n                    \"allowFrom\": [\n                        \"*\"\n                    ]\n                }\n\n哪里有问题",
-      "createdAt": 1773728489957
-    },
-    {
-      "msgId": "msgfr5XtIIrWQxfwJbPAEX0Hg==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773728799619
-    },
-    {
-      "msgId": "msgzwAzwgdMVy+E8TZc/H2zBg==",
-      "messageType": "text",
-      "text": "先把.openclaw文件夹提交到github然后再修改",
-      "createdAt": 1773728990083
-    },
-    {
-      "msgId": "msgcnh+KDiE8DBTrP3fFcxwYA==",
-      "messageType": "text",
-      "text": "https://github.com/anbylau2130/OpenclawMemoryB.git",
-      "createdAt": 1773729398960
-    },
-    {
-      "msgId": "msgCzSpnick5dWILOYm2sw7fA==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773729587641
-    },
-    {
-      "msgId": "msgYsdDQLRQ7M31TVi4gAgrSg==",
-      "messageType": "text",
-      "text": "继续",
-      "createdAt": 1773729781934
-    },
-    {
-      "msgId": "msgYsdDQLRQ7M31TVi4gAgrSg==",
-      "messageType": "text",
-      "text": "继续",
-      "createdAt": 1773729781934
-    },
-    {
-      "msgId": "msgTCYbjFpLaSDfwaLeHgBB+A==",
-      "messageType": "text",
-      "text": "现在配置已经完成了，问题也修复了提交到github把",
-      "createdAt": 1773730580384
-    },
-    {
-      "msgId": "msg3Bfq/ZyH9z4XddyGuX+zhw==",
-      "messageType": "text",
-      "text": "你生成ssh，让我配置到github",
-      "createdAt": 1773730623403
-    },
-    {
-      "msgId": "msgHKpzWRypFhfGODD3fQkOnw==",
-      "messageType": "text",
-      "text": "我发现heartbeat.md的交易时段（9:30-15:00）监控，这个需要发送到工作通知里",
-      "createdAt": 1773730871833
-    },
-    {
-      "msgId": "msgtes79nMzuw7IoR20uWYZSQ==",
-      "messageType": "text",
-      "text": "先试一下能不能发送成功",
-      "createdAt": 1773730929516
-    },
-    {
-      "msgId": "msgqmuQj6UsDouUOWlfAnVmUw==",
-      "messageType": "text",
-      "text": "工作通知:cuixiaoyang2130 还没有收到信息",
-      "createdAt": 1773731161944
-    },
-    {
-      "msgId": "msgy3xQg36m99tvSuYiBiYPoQ==",
-      "messageType": "text",
-      "text": "心跳使用的是我们最新的脚本么？",
-      "createdAt": 1773731249342
-    },
-    {
-      "msgId": "msgndPZDaSoIKbLLPKNYTG2Rg==",
-      "messageType": "text",
-      "text": "没有发送到工作空间",
-      "createdAt": 1773731320127
-    },
-    {
-      "msgId": "msgchdfFH3bUqqOxblzqAvySg==",
-      "messageType": "text",
-      "text": "我是说推送消息要推到工作通知里，工作通知没有收到",
-      "createdAt": 1773731380356
-    },
-    {
-      "msgId": "msgOBgaVxemGtU5VZGqfuFGMQ==",
-      "messageType": "text",
-      "text": "你发送的是钉钉对话，不是工作通知",
-      "createdAt": 1773731460472
-    },
-    {
-      "msgId": "msgrDz5GWBriaPBqVJAjlJ9gg==",
-      "messageType": "text",
-      "text": "增加robots配置",
-      "createdAt": 1773731572701
-    },
-    {
-      "msgId": "msg/Y3ooH38PIeZZ9jOPfFCiw==",
-      "messageType": "text",
-      "text": "我想让所有的定时任务通知都发送到工作空间",
-      "createdAt": 1773731621121
-    },
-    {
-      "msgId": "msgdsItAMYrm+yJK3Wvhfl0Fg==",
-      "messageType": "text",
-      "text": "实现工作通知",
-      "createdAt": 1773731906414
-    },
-    {
-      "msgId": "msgcESLcFRn+PaCqAWf+OVk3w==",
-      "messageType": "text",
-      "text": "？？",
-      "createdAt": 1773732213824
-    },
-    {
-      "msgId": "msgU69A2shO+lSjDwhdijFzow==",
-      "messageType": "text",
-      "text": "没收到工作通知",
-      "createdAt": 1773732271356
-    },
-    {
-      "msgId": "msgXXNgr3sDQ8VkADtDIgcOmg==",
-      "messageType": "text",
-      "text": "已开通",
-      "createdAt": 1773732453264
-    },
-    {
-      "msgId": "msgVFkTusuOAWYiYKZVusOFrA==",
-      "messageType": "text",
-      "text": "还是对话，不是工作通知",
-      "createdAt": 1773732703141
-    },
-    {
-      "msgId": "msgRJg9xVb2S3uk0ORvzTmVJQ==",
-      "messageType": "text",
-      "text": "你刚才发了一条工作通知\n$🎉 钉钉工作通知已就绪！\n\n$✅ userId获取成功\n$✅ 权限已开通\n$✅ 工作通知发送正常\n\n现在可以接收交易告警了！",
-      "createdAt": 1773732752943
-    },
-    {
-      "msgId": "msg0U+Vv80TjAiKJS4PjGR8iw==",
-      "messageType": "text",
-      "text": "检查heartbeat.md中是否使用这个脚本发送通知到工作空间",
-      "createdAt": 1773732924214
-    },
-    {
-      "msgId": "msgeBQfSnUzSL5H5tYMgSZtvg==",
-      "messageType": "text",
-      "text": "再测试一下吧",
-      "createdAt": 1773733017398
-    },
-    {
-      "msgId": "msgGzgP7UQZr4MnKNcelydC6Q==",
-      "messageType": "text",
-      "text": "还想没收到",
-      "createdAt": 1773733131543
-    },
-    {
-      "msgId": "msggKTwz9NBB3yaGQbFF+WBAQ==",
-      "messageType": "text",
-      "text": "这次成功了\n 详细测试 - 15:39\n\nagentId: 4271180067\nuserId: 096028035723738668\n\n请确认是否收到此消息",
-      "createdAt": 1773733186483
-    },
-    {
-      "msgId": "msgln1smo29B81onmS32OGNlw==",
-      "messageType": "text",
-      "text": "测试agentId #1\n\nagentId: 4271180067\n时间: 15:40",
-      "createdAt": 1773733235739
-    },
-    {
-      "msgId": "msg710P5/dCEVk1sJNfkpB98w==",
-      "messageType": "text",
-      "text": "提交到github",
-      "createdAt": 1773735756540
-    },
-    {
-      "msgId": "msg70/rV8jqwt1rzF91P92dDQ==",
-      "messageType": "text",
-      "text": "https://github.com/anbylau2130/OpenclawMemoryB",
-      "createdAt": 1773737932072
-    },
-    {
-      "msgId": "msgykWPhkOs3pz8tHSnDQDZtA==",
-      "messageType": "text",
-      "text": "2",
-      "createdAt": 1773738094125
-    },
-    {
-      "msgId": "msg/QVeSef535mjv3JTitCXyw==",
-      "messageType": "text",
-      "text": "完成",
-      "createdAt": 1773738201410
-    },
-    {
-      "msgId": "msgdtwM5nEXNA9VJGUrkeKfYQ==",
-      "messageType": "text",
-      "text": "所有文件都要上传",
-      "createdAt": 1773742404828
-    },
-    {
-      "msgId": "msgEiQ0aubSwG2LZmdVTy1DuA==",
-      "messageType": "audio",
-      "text": "一起申请。",
-      "createdAt": 1773742438123
-    },
-    {
-      "msgId": "msgt/J1McEqFQ7Mzo2JE67zOg==",
-      "messageType": "text",
-      "text": "为什么7891没有运行",
-      "createdAt": 1773742587253
-    },
-    {
-      "msgId": "msgJ7oY/xDYdRC6tQ9P1fOtRA==",
-      "messageType": "text",
-      "text": "需要设置重启后自动运行",
-      "createdAt": 1773742640179
-    },
     {
       "msgId": "msgXFf2kHnBLxFYOfBSK/kLXA==",
       "messageType": "text",
@@ -2341,6 +2083,48 @@
       "messageType": "text",
       "text": "Edit: in ~/.openclaw/workspace/docs/Conversation/2026-03-24.md (73 chars) failed",
       "createdAt": 1774329530346
+    },
+    {
+      "msgId": "msgPta7gbIEYZW6PpYQoxz0NA==",
+      "messageType": "text",
+      "text": "能不能提取昨天我和太子的对话内容",
+      "createdAt": 1774339979319
+    },
+    {
+      "msgId": "msghBOEyf6o7Z7FFLaRnAdKeg==",
+      "messageType": "text",
+      "text": "前天的对话也保存一下",
+      "createdAt": 1774340190466
+    },
+    {
+      "msgId": "msgY4ACFQmwky/i+GNUARfkaQ==",
+      "messageType": "text",
+      "text": "能不能还原云天佑项目",
+      "createdAt": 1774340382028
+    },
+    {
+      "msgId": "msgs3LOUit8Wg5tmfHv6flAyQ==",
+      "messageType": "text",
+      "text": "不是这个项目，这个项目是后面才做的，我想还原的是和太子对话开发的Tianyou项目",
+      "createdAt": 1774340665890
+    },
+    {
+      "msgId": "msgp0DYB1Zaa2+0sJKUgO5psQ==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774342060178
+    },
+    {
+      "msgId": "msgMn7x/BHcI3oYyLnS18X22A==",
+      "messageType": "text",
+      "text": "对话历史也不对，我想让你恢复我说了什么",
+      "createdAt": 1774343239186
+    },
+    {
+      "msgId": "msgCkAkwv03qn2rPehqc+V6nQ==",
+      "messageType": "text",
+      "text": "备份到github",
+      "createdAt": 1774347462076
     }
   ]
 }

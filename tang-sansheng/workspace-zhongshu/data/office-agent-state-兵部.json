@@ -1,6 +1,6 @@
 {
-  "agentId": "agent_1774328356708_4mpn",
-  "joined": true,
+  "agentId": null,
+  "joined": false,
   "joinKey": "ocj_example_team_01",
   "agentName": "兵部"
 }

@@ -101,20 +101,6 @@
 
 每个agent的state.json文件应放在各自的workspace目录：
 
-```
-/root/.openclaw/workspace-clawd/clawd-zhongshu/state.json
-/root/.openclaw/workspace-clawd/clawd-menxia/state.json
-/root/.openclaw/workspace-clawd/clawd-shangshu/state.json
-/root/.openclaw/workspace-clawd/clawd-yushitai/state.json
-/root/.openclaw/workspace-clawd/clawd-bingbu/state.json
-/root/.openclaw/workspace-clawd/clawd-hubu/state.json
-/root/.openclaw/workspace-clawd/clawd-libu/state.json
-/root/.openclaw/workspace-clawd/clawd-gongbu/state.json
-/root/.openclaw/workspace-clawd/clawd-xingbu/state.json
-/root/.openclaw/workspace-clawd/clawd-libu2/state.json
-/root/.openclaw/workspace-clawd/clawd-shiguan/state.json
-```
-
 ---
 
 ## 四、更新频率要求

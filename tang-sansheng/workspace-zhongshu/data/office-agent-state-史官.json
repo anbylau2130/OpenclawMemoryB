@@ -1,6 +1,6 @@
 {
-  "agentId": "agent_1774328362725_c6kz",
-  "joined": true,
+  "agentId": null,
+  "joined": false,
   "joinKey": "ocj_example_team_01",
   "agentName": "史官"
 }

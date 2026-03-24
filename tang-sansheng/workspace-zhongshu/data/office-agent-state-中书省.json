@@ -1,6 +1,6 @@
 {
-  "agentId": "agent_1774328352807_rueq",
-  "joined": true,
+  "agentId": null,
+  "joined": false,
   "joinKey": "ocj_example_team_01",
   "agentName": "中书省"
 }
