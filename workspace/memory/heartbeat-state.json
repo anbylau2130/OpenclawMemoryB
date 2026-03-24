@@ -1,10 +1,11 @@
 {
-  "last_check": "2026-03-24T11:28:31+08:00",
+  "last_check": "2026-03-24T11:55:18+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 16,
-      "uptime_hours": 19.3
+      "uptime_minutes": 31,
+      "restart_time": "11:24"
     },
     "alert_queue": {
       "count": 0,
@@ -14,19 +15,16 @@
       "port_18795": "running",
       "status": "healthy"
     },
-    "chromium_issue": {
-      "status": "✅ 已解决",
-      "problem": "GPU进程占用302% CPU（swiftshader软件渲染）",
-      "solution": "进程已自动终止",
-      "before": "系统负载7.48",
-      "after": "系统负载2.76"
+    "zombie_processes": {
+      "count": 30,
+      "note": "需要重启Gateway清理"
     },
     "trading_monitor": {
       "status": "交易时段",
       "market_open": "09:30",
-      "current_time": "11:28",
-      "running_minutes": 118,
-      "note": "已开盘1小时58分钟"
+      "current_time": "11:55",
+      "running_minutes": 145,
+      "note": "已开盘2小时25分钟"
     },
     "scheduled_tasks": {
       "selection": {
@@ -37,7 +35,7 @@
       },
       "review": {
         "window": "16:00-17:00",
-        "status": "⏸️ 未到（4小时32分钟后）"
+        "status": "⏸️ 未到（4小时5分钟后）"
       },
       "learning": {
         "window": "19:00-23:00",
@@ -45,14 +43,25 @@
       }
     },
     "system_resources": {
-      "uptime": "19小时17分",
-      "load_avg": [2.76, 6.34, 6.49],
-      "load_status": "✅ 正常（已从7.48降至2.76）"
+      "uptime": "19小时44分",
+      "load_avg": [2.83, 1.81, 2.75],
+      "load_status": "✅ 正常",
+      "memory": {
+        "total": "15GB",
+        "available": "7.6GB",
+        "used_percent": 49
+      }
+    },
+    "resource_optimization": {
+      "office_push_terminated": "✅ 已完成",
+      "memory_freed": "286MB",
+      "before": "7.7GB used",
+      "after": "7.8GB used (含缓存增加)"
     },
     "conversation_recording": {
       "system": "✅ 已启用",
       "file": "docs/Conversation/2026-03-24.md",
-      "total_conversations": 14
+      "total_conversations": 18
     }
   },
   "selected_stocks": [
@@ -68,9 +77,12 @@
     }
   ],
   "overall_status": "healthy",
-  "issues": [],
+  "issues": [
+    "30个僵尸进程（需重启Gateway）"
+  ],
   "next_actions": [
     "继续交易时段监控",
-    "16:00-17:00复盘任务（4小时32分钟后）"
+    "16:00-17:00复盘任务（4小时5分钟后）",
+    "可选：重启Gateway清理僵尸进程"
   ]
 }
