@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T11:55:18+08:00",
+  "last_check": "2026-03-24T12:25:08+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 16,
-      "uptime_minutes": 31,
+      "uptime_minutes": 61,
       "restart_time": "11:24"
     },
     "alert_queue": {
@@ -16,15 +16,16 @@
       "status": "healthy"
     },
     "zombie_processes": {
-      "count": 30,
-      "note": "需要重启Gateway清理"
+      "count": 41,
+      "note": "僵尸进程持续增加，需关注"
     },
     "trading_monitor": {
-      "status": "交易时段",
+      "status": "午间休市",
       "market_open": "09:30",
-      "current_time": "11:55",
-      "running_minutes": 145,
-      "note": "已开盘2小时25分钟"
+      "market_break": "11:30-13:00",
+      "current_time": "12:25",
+      "running_minutes": 175,
+      "note": "已开盘2小时55分钟，午间休市中"
     },
     "scheduled_tasks": {
       "selection": {
@@ -35,7 +36,7 @@
       },
       "review": {
         "window": "16:00-17:00",
-        "status": "⏸️ 未到（4小时5分钟后）"
+        "status": "⏸️ 未到（3小时35分钟后）"
       },
       "learning": {
         "window": "19:00-23:00",
@@ -43,25 +44,19 @@
       }
     },
     "system_resources": {
-      "uptime": "19小时44分",
-      "load_avg": [2.83, 1.81, 2.75],
+      "uptime": "19小时74分",
+      "load_avg": [2.12, 2.04, 2.46],
       "load_status": "✅ 正常",
       "memory": {
         "total": "15GB",
-        "available": "7.6GB",
+        "available": "7.7GB",
         "used_percent": 49
       }
-    },
-    "resource_optimization": {
-      "office_push_terminated": "✅ 已完成",
-      "memory_freed": "286MB",
-      "before": "7.7GB used",
-      "after": "7.8GB used (含缓存增加)"
     },
     "conversation_recording": {
       "system": "✅ 已启用",
       "file": "docs/Conversation/2026-03-24.md",
-      "total_conversations": 18
+      "total_conversations": 19
     }
   },
   "selected_stocks": [
@@ -78,11 +73,10 @@
   ],
   "overall_status": "healthy",
   "issues": [
-    "30个僵尸进程（需重启Gateway）"
+    "41个僵尸进程（持续增加）"
   ],
   "next_actions": [
-    "继续交易时段监控",
-    "16:00-17:00复盘任务（4小时5分钟后）",
-    "可选：重启Gateway清理僵尸进程"
+    "等待13:00下午开盘",
+    "16:00-17:00复盘任务（3小时35分钟后）"
   ]
 }
