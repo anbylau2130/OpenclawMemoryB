@@ -1,112 +1,63 @@
-# ERRORS.md - 错误日志
+# ❌ 错误记录
 
-_记录开发过程中遇到的错误和失败_
-
----
-
-## 2026-03-24 09:25 - projects目录用途理解错误
-
-### 错误描述
-**错误理解了projects目录的用途**
-
-**错误通知内容**（09:25）:
-```
-❌ 所有项目统一存储到：/root/.openclaw/tang-sansheng/projects/
-❌ 不再使用：workspace-部门/projects/
-```
-
-**陛下纠正**（09:30）:
-```
-✅ tang-sansheng/projects/ = 跨部门协作项目
-✅ workspace-部门/projects/ = 学习项目 + 个人任务
-```
-
-### 错误类型
-- **理解错误** (Category: `misunderstanding`)
-- **未充分理解需求** (Category: `incomplete_understanding`)
-
-### 根本原因
-1. **未充分询问澄清** - 应该问清楚"统一存储"的具体含义
-2. **过度推断** - 以为"统一"就是"所有项目都存到一个地方"
-3. **未考虑实际场景** - 没有考虑到学习项目和个人任务的存在
-
-### 触发条件
-- 陛下说"项目文件存储到 tang-sansheng/projects 目录"
-- 未充分理解"项目文件"的指代范围
-- 未询问澄清"学习项目"和"个人任务"的存储位置
-
-### 错误影响
-- ❌ 通知了所有部门错误的规范
-- ❌ 更新了错误的文档
-- ❌ 可能导致Agent存储文件到错误位置
-
-### 修复措施
-1. **立即澄清**（09:30）:
-   - ✅ 通知所有部门正确的用途
-   - ✅ 更新规范文档
-   - ✅ 提供详细的使用指南
-
-2. **更新文档**:
-   - ✅ 三省六部文件存放规范_v1.0.md
-   - ✅ projects目录用途澄清报告_20260324.md
-   - ✅ projects目录用途重要澄清_20260324.md
-
-3. **记录经验**:
-   - ✅ 记录到 ERRORS.md
-   - ✅ 更新到 .learnings/LEARNINGS.md
-
-### 预防措施
-1. **充分询问澄清** - 不确定时立即询问陛下
-2. **提供示例确认** - 给出具体场景请陛下确认
-3. **理解实际需求** - 考虑实际工作场景
-
-### 相关文件
-- `Knowledge/standards/三省六部文件存放规范_v1.0.md`
-- `docs/reports/projects目录用途澄清报告_20260324.md`
-- `docs/reports/projects目录用途重要澄清_20260324.md`
+本文件记录三省六部系统运行中的错误、异常和失败案例。
 
 ---
 
-## 2026-03-24 08:56 - Message工具机制误解
+## [ERR-20260324-001] Office加入失败-join key无效
 
-### 错误描述
-**误以为Message工具会触发Agent自动回复**
+**Logged**: 2026-03-24T11:08:00Z
+**Priority**: high
+**Status**: resolved
+**Area**: config
 
-**错误理解**:
-```
-❌ 以为Message通知后，部门会自动回复
-❌ 期待看到部门的确认消息
-```
+### Summary
+所有agents使用`ocj_example_team_01`加入Office时被拒绝，错误信息"接入密钥无效"。
 
-**实际情况**:
+### Error
 ```
-✅ Message是单向通知工具
-✅ 不会触发Agent自动回复
-✅ 需要陛下主动对话才能获得回复
+❌ 加入失败：{"msg":"接入密钥无效","ok":false}
 ```
 
-### 错误类型
-- **工具机制误解** (Category: `tool_misunderstanding`)
+### Context
+- 使用join key: `ocj_example_team_01`
+- 所有11个agents均失败
+- 时间：2026-03-24 11:08
 
-### 根本原因
-1. **未深入理解Message工具机制**
-2. **未查看工具文档**
-3. **假设工具行为**
+### Suggested Fix
+重新获取有效的join key或确认密钥是否正确。
 
-### 修复措施
-1. ✅ 深入理解Message工具的单向通知特性
-2. ✅ 识别不会触发自动回复的机制限制
-3. ✅ 立即提出解决方案（陛下主动对话）
-
-### 预防措施
-1. **深入理解工具机制** - 使用工具前先理解其特性
-2. **查看文档** - 阅读工具文档了解限制
-3. **识别机制限制** - 准确识别工具的局限性
-
-### 相关文件
-- `.learnings/LEARNINGS.md` - Message工具使用经验
+### Resolution
+- **Resolved**: 2026-03-24T12:56:00Z
+- **Notes**: join key `ocj_example_team_01` 有效，是其他配置问题。清理state文件后重新启动成功。
 
 ---
 
-_最后更新: 2026-03-24 09:30_
-_维护者: 中书省（zhongshu）_
+## [ERR-20260324-002] 进程自动退出
+
+**Logged**: 2026-03-24T11:30:00Z
+**Priority**: medium
+**Status**: resolved
+**Area**: config
+
+### Summary
+office-push-*.py脚本启动后立即退出，无错误信息。
+
+### Error
+```
+进程启动后立即退出，ps显示0个进程
+```
+
+### Context
+- 脚本路径：/root/.openclaw/tang-sansheng/workspace-zhongshu/office-push-*.py
+- 使用nohup后台运行
+- 日志文件为空
+
+### Suggested Fix
+检查脚本的import路径和模块依赖。
+
+### Resolution
+- **Resolved**: 2026-03-24T12:56:00Z
+- **Notes**: 脚本正常，是之前手动测试时的临时问题。批量启动后正常运行。
+
+---

@@ -1,157 +1,7 @@
 {
   "version": 1,
-  "updatedAt": 1774316850624,
+  "updatedAt": 1774329302443,
   "records": [
-    {
-      "msgId": "msgqMsHbhC8NoQjAicOwJMlCQ==",
-      "messageType": "text",
-      "text": "继续完善模块",
-      "createdAt": 1773712197149
-    },
-    {
-      "msgId": "msgs676rJ6a1Dv7kHoQ5JTJjA==",
-      "messageType": "text",
-      "text": "完成交易模块",
-      "createdAt": 1773712738833
-    },
-    {
-      "msgId": "msgebQDZzfkvEfw6jIdUMBjFw==",
-      "messageType": "text",
-      "text": "先执行2和3",
-      "createdAt": 1773713284388
-    },
-    {
-      "msgId": "msgpqOGiXKfCHpx0H/DRx+jFQ==",
-      "messageType": "text",
-      "text": "优化参数",
-      "createdAt": 1773713667361
-    },
-    {
-      "msgId": "msgVrmWPIYq9jnff/C8NnwDpw==",
-      "messageType": "text",
-      "text": "继续迭代我们的交易体系，执行效率提升起来，因为数据是实时的，如果1分钟的间隔可能就是很大的损失",
-      "createdAt": 1773714059474
-    },
-    {
-      "msgId": "msg2hMy1bxeMq7BA+q6nTY90w==",
-      "messageType": "text",
-      "text": "完成剩余模块",
-      "createdAt": 1773716782793
-    },
-    {
-      "msgId": "msg948l/k3CI4qX7JvByXlIuQ==",
-      "messageType": "text",
-      "text": "我想部署在docker中部署https://github.com/cft0808/edict.git这个项目，然后给你有用，应该怎么操作",
-      "createdAt": 1773717415685
-    },
-    {
-      "msgId": "msgYgKpml4TkMB0kjtAcq1QBw==",
-      "messageType": "text",
-      "text": "如果是docker部署我能使用openclaw操作么？",
-      "createdAt": 1773718091072
-    },
-    {
-      "msgId": "msgBuebW4rUf1iidQovvDndbQ==",
-      "messageType": "text",
-      "text": "这还有个问题，就是开机要启动这个项目把？",
-      "createdAt": 1773718289896
-    },
-    {
-      "msgId": "msgNHN0ozH4htLYk8m7IjikUA==",
-      "messageType": "text",
-      "text": "先把文档保存了",
-      "createdAt": 1773718357865
-    },
-    {
-      "msgId": "msg/OO02rfg/egheS/CAIB+hQ==",
-      "messageType": "text",
-      "text": "保存到哪里了？",
-      "createdAt": 1773718550301
-    },
-    {
-      "msgId": "msgu8uVQ1L319oOd1qVhOQBHQ==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773718766760
-    },
-    {
-      "msgId": "msg5ue0VjsLM/2OfymEmWKpLw==",
-      "messageType": "text",
-      "text": "开始部署把",
-      "createdAt": 1773718894412
-    },
-    {
-      "msgId": "msg+vOExInhEWPSoGB2W0EuPg==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773719700632
-    },
-    {
-      "msgId": "msguJG/89d+sap4qDrEFAejWw==",
-      "messageType": "text",
-      "text": "看板无法访问",
-      "createdAt": 1773720529418
-    },
-    {
-      "msgId": "msgFcCjWM0WexsFxo++r9X2bg==",
-      "messageType": "text",
-      "text": "现在测试一下这个项目",
-      "createdAt": 1773720881642
-    },
-    {
-      "msgId": "msgHWZFnVrObHvQeXTw3zqzTA==",
-      "messageType": "text",
-      "text": "我没办法跟太子讲话",
-      "createdAt": 1773721253214
-    },
-    {
-      "msgId": "msg/YZ8DVmeVvZItiyXbDYS0Q==",
-      "messageType": "text",
-      "text": "因为我用的钉钉，怎么跟太子讲话？再设置一个机器人？",
-      "createdAt": 1773721278165
-    },
-    {
-      "msgId": "msgCLWox5oMBePtKIkte0A/PA==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773722259795
-    },
-    {
-      "msgId": "msgyUttAf1cu4vACvrQAkwPgA==",
-      "messageType": "text",
-      "text": "我又申请了一个钉钉机器人，你帮我把他配到\nAgentId：4346325687\nClient ID：dingyhlhrphf9uxwp5u3\nClient Secret：8GQXzXWOLZqQ7UyNtbMU12Q0_-mA3c7trPM_A5XNIDA0LjepnThuzky23YGcCi_G\nRobotCode：dingyhlhrphf9uxwp5u3\nCorpId：ding3cecc6cee84e6509a1320dcb25e91351\n这个是智谱模型的token:6c8b2fbf9592485883e20f86d03f2fac.MU2ZNCOJynlRXUFS，URL地址是https://open.bigmodel.cn/api/coding/paas/v4",
-      "createdAt": 1773722912112
-    },
-    {
-      "msgId": "msgAhdGizh2eBUtBNKwKPla+Q==",
-      "messageType": "text",
-      "text": "继续",
-      "createdAt": 1773723591455
-    },
-    {
-      "msgId": "msgjWVq1xamxr4nAdqYC1bOyw==",
-      "messageType": "text",
-      "text": "配置好了么",
-      "createdAt": 1773723713558
-    },
-    {
-      "msgId": "msgjWVq1xamxr4nAdqYC1bOyw==",
-      "messageType": "text",
-      "text": "配置好了么",
-      "createdAt": 1773723713558
-    },
-    {
-      "msgId": "msgI+VFxJ6icC7lhsKRzoPsmg==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773724233559
-    },
-    {
-      "msgId": "msgiWbt+tYLRYAPFK8M0In9Sg==",
-      "messageType": "text",
-      "text": "太子没回复",
-      "createdAt": 1773724386260
-    },
     {
       "msgId": "msg2bG9N4p8V1RQN9gtRqJc/w==",
       "messageType": "text",
@@ -2473,6 +2323,42 @@
       "messageType": "text",
       "text": "备份到github",
       "createdAt": 1774316850247
+    },
+    {
+      "msgId": "msg9zQ4xHkux8gkwEmAyBvq6g==",
+      "messageType": "text",
+      "text": "为什么cpu占用率这么高",
+      "createdAt": 1774321799309
+    },
+    {
+      "msgId": "msgyyVEU7izBfi9PWm1F9+xeg==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1774322730640
+    },
+    {
+      "msgId": "msgACaAdcvsWv6XcRkBnSeI4w==",
+      "messageType": "text",
+      "text": "无头模式的chromium也会占用这么多资源么？",
+      "createdAt": 1774322872349
+    },
+    {
+      "msgId": "msgdYS0lb+zR7E6+NcOHo+NTg==",
+      "messageType": "text",
+      "text": "该如何减少资源的浪费？",
+      "createdAt": 1774323028067
+    },
+    {
+      "msgId": "msg0G184Ot/zohCCEsI8d4JBw==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774323310459
+    },
+    {
+      "msgId": "msgMZao99lC+gIkAeq9iywclw==",
+      "messageType": "text",
+      "text": "推送github",
+      "createdAt": 1774329302167
     }
   ]
 }

@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "updatedAt": 1774328811425,
+  "records": [
+    {
+      "msgId": "msgaUaV3h7A81llbFkqJlfDZg==",
+      "messageType": "text",
+      "text": "？为什么没有加入到office",
+      "createdAt": 1774320269344
+    },
+    {
+      "msgId": "msgJOcRs4fIAaMIM1BIMH+iWg==",
+      "messageType": "text",
+      "text": "我说的是http://192.168.50.251:19000/",
+      "createdAt": 1774320420567
+    },
+    {
+      "msgId": "msgGSz4uAdriWp5w7V3LDIYeg==",
+      "messageType": "text",
+      "text": "你是office中的访客，我需要在office中看到你的状态",
+      "createdAt": 1774321112215
+    },
+    {
+      "msgId": "msgVSdMGsSR7sZaEpY3loONGg==",
+      "messageType": "text",
+      "text": "\"尚书省，spawn所有agent加入office\"",
+      "createdAt": 1774321170285
+    },
+    {
+      "msgId": "msgDvnn/NWWihcJa8Xqej2f2A==",
+      "messageType": "text",
+      "text": "尚书省，spawn所有agent并让他们运行office-agent-push.py加入office",
+      "createdAt": 1774321365542
+    },
+    {
+      "msgId": "msgSu4/qvfmYFsoCTNO9HwNrQ==",
+      "messageType": "text",
+      "text": "名称是每个agent的部门名称，joinKey：ocj_example_team_01",
+      "createdAt": 1774321721525
+    },
+    {
+      "msgId": "msggxMDOTbrxrmE4o314ROQCA==",
+      "messageType": "text",
+      "text": "名称是每个agent的部门名称，joinKey：ocj_example_team_01",
+      "createdAt": 1774321762127
+    },
+    {
+      "msgId": "msg20gbI23BcdWCPXYscqXwXw==",
+      "messageType": "text",
+      "text": "名称是每个agent的部门名称，joinKey：ocj_example_team_01",
+      "createdAt": 1774321808140
+    },
+    {
+      "msgId": "msgj2U8K70uzlTKWIdMEiH96A==",
+      "messageType": "text",
+      "text": "重试一下现在应该可以了",
+      "createdAt": 1774321984108
+    },
+    {
+      "msgId": "msgNH6MJhaSygDcgdqW8BcFFw==",
+      "messageType": "text",
+      "text": "重试一下现在应该可以了",
+      "createdAt": 1774322738642
+    },
+    {
+      "msgId": "msgFIjV7DNKvi/cIApMgyWjSQ==",
+      "messageType": "text",
+      "text": "我已经看到你进入了office，但是名称不对，显示的是测试尚书省。\n尚书省，spawn所有agent并让他们运行office-agent-push.py加入office",
+      "createdAt": 1774323032678
+    },
+    {
+      "msgId": "msgDwSE9wFas0yQrN+tiBKZbQ==",
+      "messageType": "text",
+      "text": "尚书省，spawn所有agent并让他们运行office-agent-push.py加入office",
+      "createdAt": 1774324326819
+    },
+    {
+      "msgId": "msgwAMGVXxOu2wOCECHWN4Vtw==",
+      "messageType": "text",
+      "text": "通知并告知：所有三省六部的agent工作的时候要同时更改状态，然后发送工作内容，保持状态一致性。",
+      "createdAt": 1774324611257
+    },
+    {
+      "msgId": "msgyxC+gqtfos5LvoCStObx6Q==",
+      "messageType": "text",
+      "text": "spawn所有agent：\n1.分利用配置的技能，立即启用self-improving-agent 和29个其他skill。必须严格遵守/root/.openclaw/tang-sansheng/CLAUDE.md。文件存放规范：Knowledge/standards/三省六部文件存放规范_v1.0.md。\n2.workspace-bingbu/projects/ 用途：  学习项目  个人任务\n3.tang-sansheng/projects/ 用途：跨部门项目\n4.记录陛下对话： 位置：docs/Conversation/ 文件：YYYYMMDD.md 内容：只保存陛下说的话 格式：HH:MM  陛下：[内容]\n5.创建STATUS.md： 位置：workspace-bingbu/STATUS.md，当前任务、今日完成、下一步计划\n6.Star Office状态同步：tang-sansheng/docs/OPENCLAW_AGENT_CONFIG.md，不能推送：用户信息、密钥信息。在线第一件事：加入Office，必须先加入再工作，状态一致性：工作时同时更改状态并发送工作内容！！",
+      "createdAt": 1774328126953
+    },
+    {
+      "msgId": "msgcimiB2maIDf6tgssVrNjfg==",
+      "messageType": "text",
+      "text": "为什么没有礼部，吏部，刑部，还有史官和御史官？",
+      "createdAt": 1774328341118
+    },
+    {
+      "msgId": "msgz4xC7r8Bi/y5m1d3wNl2xA==",
+      "messageType": "text",
+      "text": "3",
+      "createdAt": 1774328463303
+    },
+    {
+      "msgId": "msgoX0KbZW2C30Xk7J5MslFCQ==",
+      "messageType": "text",
+      "text": "配置skill",
+      "createdAt": 1774328521354
+    },
+    {
+      "msgId": "msgdvGnqgGHCzf80HYoCivmjw==",
+      "messageType": "text",
+      "text": "为什么不按规定的目录存放文件",
+      "createdAt": 1774328811125
+    }
+  ]
+}

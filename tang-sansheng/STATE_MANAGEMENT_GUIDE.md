@@ -1,0 +1,153 @@
+# 📋 三省六部状态管理指南
+
+## 重要通知
+**所有agents工作时必须遵守此状态同步规范，确保办公室看板实时准确！**
+
+---
+
+## 一、状态管理规范
+
+### 1️⃣ 工作开始时 - 立即更新状态
+```json
+{
+  "state": "working",
+  "detail": "正在执行【具体任务名称】",
+  "updated_at": "2026-03-24T12:00:00Z"
+}
+```
+
+**示例**：
+```json
+{
+  "state": "working",
+  "detail": "正在执行文档抓取任务-第3批次（共601篇）",
+  "updated_at": "2026-03-24T12:00:00Z"
+}
+```
+
+---
+
+### 2️⃣ 工作进行中 - 每15分钟更新
+```json
+{
+  "state": "working",
+  "detail": "【任务名称】- 进度XX%，预计XX分钟后完成",
+  "updated_at": "2026-03-24T12:15:00Z"
+}
+```
+
+**示例**：
+```json
+{
+  "state": "working",
+  "detail": "文档抓取-进度45%（已完成270/601篇），预计40分钟后完成",
+  "updated_at": "2026-03-24T12:15:00Z"
+}
+```
+
+---
+
+### 3️⃣ 工作完成时 - 立即切回待命
+```json
+{
+  "state": "idle",
+  "detail": "已完成【任务名称】，待命中",
+  "updated_at": "2026-03-24T12:30:00Z"
+}
+```
+
+**示例**：
+```json
+{
+  "state": "idle",
+  "detail": "已完成文档抓取任务（601篇全部完成），待命中",
+  "updated_at": "2026-03-24T12:30:00Z"
+}
+```
+
+---
+
+### 4️⃣ 遇到错误时 - 标记错误状态
+```json
+{
+  "state": "error",
+  "detail": "【任务名称】遇到错误：【具体错误信息】",
+  "updated_at": "2026-03-24T12:05:00Z"
+}
+```
+
+**示例**：
+```json
+{
+  "state": "error",
+  "detail": "文档抓取遇到429速率限制，等待2分钟后重试",
+  "updated_at": "2026-03-24T12:05:00Z"
+}
+```
+
+---
+
+## 二、状态映射规则
+
+| state值 | 办公室区域 | 图标 | 说明 |
+|---------|-----------|------|------|
+| `working` | 工作区 (main) | 💼 | 正在执行任务 |
+| `idle` | 休息区 (breakroom) | 🛋️ | 待命中/已完成任务 |
+| `error` | bug区 (error) | 🐛 | 遇到错误/异常 |
+
+---
+
+## 三、状态文件位置
+
+每个agent的state.json文件应放在各自的workspace目录：
+
+```
+/root/.openclaw/workspace-clawd/clawd-zhongshu/state.json
+/root/.openclaw/workspace-clawd/clawd-menxia/state.json
+/root/.openclaw/workspace-clawd/clawd-shangshu/state.json
+/root/.openclaw/workspace-clawd/clawd-yushitai/state.json
+/root/.openclaw/workspace-clawd/clawd-bingbu/state.json
+/root/.openclaw/workspace-clawd/clawd-hubu/state.json
+/root/.openclaw/workspace-clawd/clawd-libu/state.json
+/root/.openclaw/workspace-clawd/clawd-gongbu/state.json
+/root/.openclaw/workspace-clawd/clawd-xingbu/state.json
+/root/.openclaw/workspace-clawd/clawd-libu2/state.json
+/root/.openclaw/workspace-clawd/clawd-shiguan/state.json
+```
+
+---
+
+## 四、更新频率要求
+
+- ✅ **任务开始时**：立即更新
+- ✅ **任务进行中**：每15分钟更新一次
+- ✅ **任务完成时**：立即更新
+- ✅ **遇到错误时**：立即更新
+
+---
+
+## 五、常见问题
+
+**Q: 状态多久会同步到办公室？**
+A: 脚本每15秒读取一次state.json并推送到办公室
+
+**Q: 如果忘记更新状态会怎样？**
+A: 超过600秒（10分钟）未更新，脚本会自动将状态改为idle
+
+**Q: 状态描述要写多详细？**
+A: 简明扼要，包含：任务名称、进度百分比、预计完成时间
+
+---
+
+## 六、立即执行
+
+**所有agents收到此通知后**：
+1. 在各自workspace创建 `state.json` 文件
+2. 初始状态设为 `idle`
+3. 下次执行任务时严格按照本指南更新状态
+
+---
+
+**发布时间**：2026-03-24 12:00
+**发布部门**：尚书省（奉太子令）
+**适用范围**：三省六部所有agents
