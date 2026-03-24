@@ -1,85 +1,14 @@
 {
-  "last_check": "2026-03-24T16:27:45+08:00",
+  "last_check": "2026-03-24T17:19:15+08:00",
   "check_results": {
-    "gateway": {
-      "status": "running",
-      "pid": 16,
-      "uptime_hours": 5.1,
-      "restart_time": "11:24"
-    },
-    "alert_queue": {
-      "count": 0,
-      "status": "empty"
-    },
-    "boluo_gui": {
-      "port_18795": "running",
-      "status": "healthy"
-    },
-    "zombie_processes": {
-      "count": 56,
-      "trend": "稳定（52→56）",
-      "note": "轻微增加，无紧急风险"
-    },
-    "trading_monitor": {
-      "status": "收盘后",
-      "market_close": "15:00",
-      "current_time": "16:27",
-      "minutes_after_close": 87,
-      "note": "收盘后1小时27分钟"
-    },
+    "gateway": {"status": "running", "pid": 16, "uptime_hours": 5.9},
+    "alert_queue": {"count": 0, "status": "empty"},
+    "trading_monitor": {"status": "收盘后", "minutes_after_close": 139},
     "scheduled_tasks": {
-      "selection": {
-        "window": "08:00-09:00",
-        "status": "✅ 已完成",
-        "executed_at": "08:18",
-        "result": "选出2支股票"
-      },
-      "review": {
-        "window": "16:00-17:00",
-        "status": "✅ 已完成",
-        "executed_at": "16:00",
-        "accuracy": "50.0%",
-        "avg_return": "-1.24%",
-        "total_return": "-2.48%"
-      },
-      "learning": {
-        "window": "19:00-23:00",
-        "status": "⏸️ 未到（2.5小时后）"
-      }
-    },
-    "system_resources": {
-      "uptime": "23小时46分",
-      "load_avg": [0.70, 0.77, 0.81],
-      "load_status": "✅ 正常",
-      "memory": {
-        "total": "15GB",
-        "available": "7.4GB",
-        "used_percent": 50
-      }
-    },
-    "conversation_recording": {
-      "system": "✅ 已启用",
-      "file": "docs/Conversation/2026-03-24.md",
-      "total_conversations": 30
+      "selection": {"status": "✅ 已完成", "time": "08:18"},
+      "review": {"status": "✅ 已完成", "time": "16:00"},
+      "learning": {"status": "⏸️ 1小时41分钟后", "window": "19:00-23:00"}
     }
   },
-  "selected_stocks": [
-    {
-      "code": "601398",
-      "name": "工商银行",
-      "score": 4.0,
-      "performance": "-3.67%"
-    },
-    {
-      "code": "002415",
-      "name": "海康威视",
-      "score": 3.0,
-      "performance": "+1.19%"
-    }
-  ],
-  "overall_status": "healthy",
-  "issues": [],
-  "next_actions": [
-    "19:00-23:00学习任务（2.5小时后）"
-  ]
+  "overall_status": "healthy"
 }
