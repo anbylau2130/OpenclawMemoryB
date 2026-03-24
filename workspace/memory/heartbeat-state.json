@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T09:25:02+08:00",
+  "last_check": "2026-03-24T10:00:26+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 23,
-      "uptime_hours": 17.23
+      "uptime_hours": 17.75
     },
     "alert_queue": {
       "count": 0,
@@ -13,8 +13,15 @@
     "boluo_gui": {
       "port_18795": "running",
       "pid": 30485,
-      "uptime_minutes": 79,
+      "uptime_minutes": 114,
       "status": "healthy"
+    },
+    "trading_monitor": {
+      "status": "⚠️ 未运行",
+      "expected_start": "09:30",
+      "current_time": "10:00",
+      "market_open": "30分钟",
+      "note": "交易监控进程未检测到"
     },
     "scheduled_tasks": {
       "selection": {
@@ -32,21 +39,16 @@
         "status": "⏸️ 未到"
       }
     },
-    "trading_monitor": {
-      "status": "非交易时段",
-      "market_open": "09:30",
-      "countdown": "5分钟"
-    },
     "system_resources": {
-      "uptime": "17小时14分",
-      "load_avg": [4.05, 2.93, 2.37],
-      "load_status": "正常（可接受范围）"
+      "uptime": "17小时49分",
+      "load_avg": [4.86, 4.31, 3.38],
+      "load_status": "较高（有后台任务）"
     },
-    "backup_status": {
-      "last_backup": "2026-03-24 09:22",
-      "commit_id": "611b15b",
-      "files_backed_up": 322,
-      "pushed_to_github": "✅ 成功"
+    "conversation_recording": {
+      "system": "✅ 已启用",
+      "file": "docs/Conversation/2026-03-24.md",
+      "last_update": "09:47",
+      "total_conversations": 10
     }
   },
   "selected_stocks": [
@@ -62,8 +64,11 @@
     }
   ],
   "overall_status": "healthy",
+  "issues": [
+    "交易监控未启动（已开盘30分钟）"
+  ],
   "next_actions": [
-    "09:30开盘（5分钟后）",
-    "09:30启动交易监控"
+    "考虑启动交易监控（可选）",
+    "16:00-17:00复盘任务"
   ]
 }
