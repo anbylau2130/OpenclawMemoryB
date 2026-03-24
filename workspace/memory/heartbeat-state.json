@@ -1,37 +1,33 @@
 {
-  "last_check": "2026-03-24T07:43:13+08:00",
+  "last_check": "2026-03-24T08:18:11+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 23,
-      "uptime_hours": 15.5
+      "uptime_hours": 16.1
     },
     "alert_queue": {
       "count": 0,
       "status": "empty"
     },
     "scheduled_tasks": {
-      "next_window": "08:00-09:00",
+      "current_window": "08:00-09:00",
       "task": "选股",
-      "minutes_until": 17,
-      "status": "即将开始"
+      "status": "✅ 已执行",
+      "result": "选出2支股票",
+      "executed_at": "08:18:11"
     },
     "trading_monitor": {
       "status": "非交易时段",
-      "next_start": "09:30"
-    },
-    "edict_service": {
-      "port_7891": "OFFLINE",
-      "reason": "项目已移除",
-      "action": "无需启动"
+      "next_start": "09:30（1小时12分钟后）"
     },
     "data_source": {
       "sina_api": "ready",
       "status": "三重备份（新浪/东财/腾讯）"
     },
     "system_resources": {
-      "uptime": "15小时32分",
-      "load_avg": [2.94, 1.72, 1.56],
+      "uptime": "16小时07分",
+      "load_avg": [1.37, 2.03, 1.84],
       "memory": {
         "total": "15Gi",
         "available": "7.5Gi",
@@ -41,12 +37,18 @@
     "processes": {
       "openclaw": "running (PID 1)",
       "gateway": "running (PID 23)",
-      "zombie_processes": 2
+      "zombie_processes": 3
+    },
+    "boluo_gui": {
+      "port_18795": "running",
+      "pid": 30485,
+      "status": "healthy"
     }
   },
   "overall_status": "healthy",
   "issues": [],
   "next_actions": [
-    "08:00自动选股任务（17分钟后）"
+    "09:30启动交易监控（1小时12分钟后）",
+    "16:00-17:00复盘任务"
   ]
 }
