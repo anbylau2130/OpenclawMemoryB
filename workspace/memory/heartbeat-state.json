@@ -1,10 +1,10 @@
 {
-  "last_check": "2026-03-24T12:55:29+08:00",
+  "last_check": "2026-03-24T13:26:14+08:00",
   "check_results": {
     "gateway": {
       "status": "running",
       "pid": 16,
-      "uptime_minutes": 91,
+      "uptime_hours": 2.1,
       "restart_time": "11:24"
     },
     "alert_queue": {
@@ -16,19 +16,16 @@
       "status": "healthy"
     },
     "zombie_processes": {
-      "count": 42,
-      "trend": "持续增加（从41增至42）",
+      "count": 47,
+      "trend": "持续增加（从42增至47）",
       "note": "需要重启Gateway清理"
     },
     "trading_monitor": {
-      "status": "午间休市",
-      "market_open": "09:30",
-      "market_break": "11:30-13:00",
-      "current_time": "12:55",
-      "running_minutes": 205,
-      "afternoon_open": "13:00",
-      "countdown": "5分钟",
-      "note": "午间休市即将结束"
+      "status": "下午交易时段",
+      "market_open": "13:00",
+      "current_time": "13:26",
+      "running_minutes": 26,
+      "note": "下午开盘26分钟"
     },
     "scheduled_tasks": {
       "selection": {
@@ -39,7 +36,7 @@
       },
       "review": {
         "window": "16:00-17:00",
-        "status": "⏸️ 未到（3小时5分钟后）"
+        "status": "⏸️ 未到（2小时34分钟后）"
       },
       "learning": {
         "window": "19:00-23:00",
@@ -47,19 +44,19 @@
       }
     },
     "system_resources": {
-      "uptime": "20小时44分",
-      "load_avg": [0.89, 1.60, 1.85],
+      "uptime": "21小时15分",
+      "load_avg": [1.91, 1.66, 1.69],
       "load_status": "✅ 正常",
       "memory": {
         "total": "15GB",
-        "available": "7.7GB",
-        "used_percent": 49
+        "available": "7.5GB",
+        "used_percent": 50
       }
     },
     "conversation_recording": {
       "system": "✅ 已启用",
       "file": "docs/Conversation/2026-03-24.md",
-      "total_conversations": 20
+      "total_conversations": 22
     }
   },
   "selected_stocks": [
@@ -76,10 +73,10 @@
   ],
   "overall_status": "healthy",
   "issues": [
-    "42个僵尸进程（持续增加）"
+    "47个僵尸进程（持续增加）"
   ],
   "next_actions": [
-    "等待13:00下午开盘（5分钟后）",
-    "16:00-17:00复盘任务（3小时5分钟后）"
+    "继续下午交易时段监控",
+    "16:00-17:00复盘任务（2小时34分钟后）"
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "agentId": "agent_1774328355681_mptg",
-  "joined": true,
+  "agentId": null,
+  "joined": false,
   "joinKey": "ocj_example_team_01",
   "agentName": "御史台"
 }
