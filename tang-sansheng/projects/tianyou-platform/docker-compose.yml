@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  # PostgreSQL 数据库
+  postgres:
+    image: postgres:15-alpine
+    container_name: tianyou-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: tianyou_admin
+      POSTGRES_PASSWORD: Tianyou@2026!
+      POSTGRES_DB: tianyou_platform
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    networks:
+      - tianyou-network
+
+  # Redis 缓存
+  redis:
+    image: redis:7-alpine
+    container_name: tianyou-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - tianyou-network
+
+  # RabbitMQ 消息队列
+  rabbitmq:
+    image: rabbitmq:3.12-management-alpine
+    container_name: tianyou-rabbitmq
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin@123
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - tianyou-network
+
+  # Tianyou API
+  tianyou-api:
+    build:
+      context: ./backend
+      dockerfile: src/Tianyou.Api/Dockerfile
+    container_name: tianyou-api
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=tianyou_platform;Username=tianyou_admin;Password=Tianyou@2026!"
+      Redis__ConnectionString: "redis:6379"
+      RabbitMQ__Host: rabbitmq
+    ports:
+      - "5000:80"
+      - "5001:443"
+    depends_on:
+      - postgres
+      - redis
+      - rabbitmq
+    networks:
+      - tianyou-network
+
+  # Tianyou Web (Blazor WebAssembly)
+  tianyou-web:
+    build:
+      context: ./frontend/Tianyou.Web
+      dockerfile: Dockerfile
+    container_name: tianyou-web
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - tianyou-api
+    networks:
+      - tianyou-network
+
+volumes:
+  postgres_data:
+  redis_data:
+  rabbitmq_data:
+
+networks:
+  tianyou-network:
+    driver: bridge
