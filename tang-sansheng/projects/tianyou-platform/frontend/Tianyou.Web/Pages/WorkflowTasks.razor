@@ -1,0 +1,123 @@
+@page "/workflows/tasks"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>📋 我的待办任务</h3>
+
+<div class="mb-3">
+    <button class="btn btn-secondary" @onclick="LoadTasks">🔄 刷新</button>
+</div>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (tasks == null || tasks.Count == 0)
+{
+    <div class="alert alert-success">
+        ✅ 暂无待办任务
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var task in tasks)
+        {
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@task.TaskName</h5>
+                        <p class="card-text text-muted">@task.WorkflowName</p>
+                        <div class="mb-2">
+                            <span class="badge @GetPriorityBadge(task.Priority)">@task.Priority</span>
+                            <span class="badge bg-secondary">@task.Status</span>
+                        </div>
+                        <p class="card-text">
+                            <small class="text-muted">创建于 @task.CreatedAt.ToString("yyyy-MM-dd HH:mm")</small>
+                        </p>
+                        <button class="btn btn-primary btn-sm" @onclick="() => CompleteTask(task.TaskId)">完成</button>
+                        <button class="btn btn-info btn-sm" @onclick="() => ViewDetail(task.InstanceId)">查看详情</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<TaskDto> tasks = new();
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTasks();
+    }
+
+    private async Task LoadTasks()
+    {
+        loading = true;
+        try
+        {
+            var response = await Http.GetFromJsonAsync<ApiResponse<List<TaskDto>>>("api/workflows/my-tasks");
+            if (response?.Success == true)
+            {
+                tasks = response.Data ?? new List<TaskDto>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private async Task CompleteTask(Guid taskId)
+    {
+        try
+        {
+            await Http.PostAsync($"api/workflows/tasks/{taskId}/complete", null);
+            await LoadTasks();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"完成任务失败: {ex.Message}");
+        }
+    }
+
+    private void ViewDetail(Guid instanceId)
+    {
+        NavManager.NavigateTo($"/workflows/instances/{instanceId}");
+    }
+
+    private string GetPriorityBadge(string priority) => priority switch
+    {
+        "高" => "bg-danger",
+        "中" => "bg-warning",
+        "低" => "bg-info",
+        _ => "bg-secondary"
+    };
+
+    public class TaskDto
+    {
+        public Guid TaskId { get; set; }
+        public string TaskName { get; set; } = "";
+        public string WorkflowName { get; set; } = "";
+        public string Priority { get; set; } = "中";
+        public string Status { get; set; } = "";
+        public DateTime CreatedAt { get; set; }
+        public Guid InstanceId { get; set; }
+    }
+
+    public class ApiResponse<T>
+    {
+        public bool Success { get; set; }
+        public T? Data { get; set; }
+        public string? Message { get; set; }
+    }
+}

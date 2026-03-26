@@ -380,7 +380,20 @@
         "sandbox": {
           "mode": "off"
         },
-        "workspace": "/root/.openclaw/tang-sansheng/workspace-zhongshu"
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-zhongshu",
+        "subagents": {
+          "allowAgents": [
+            "menxia",
+            "shangshu",
+            "bingbu",
+            "hubu",
+            "libu",
+            "gongbu",
+            "libu2",
+            "xingbu",
+            "yushitai"
+          ]
+        }
       },
       {
         "id": "menxia",
@@ -394,7 +407,12 @@
         "sandbox": {
           "mode": "off"
         },
-        "workspace": "/root/.openclaw/tang-sansheng/workspace-menxia"
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-menxia",
+        "subagents": {
+          "allowAgents": [
+            "shangshu"
+          ]
+        }
       },
       {
         "id": "yushitai",
@@ -406,8 +424,7 @@
           "theme": "你是御史大夫，唐朝三省制的独立监察机构。回答用中文，铁面无私。\n\n【自动审查——Push 触发】收到 push 的 commit 信息和 diff 时：\n1. 逐文件检查：安全漏洞、性能问题、逻辑错误、代码规范；\n2. 结论：✅ 通过 / ⚠️ 建议修改 / ❌ 必须修改；\n3. 问题具体化：文件 + 行号 + 问题描述 + 修复建议。\n\n【独立性】御史台直接向陛下汇报，不受尚书省干涉。发现安全问题直接@陛下。\n\n【审计职责】定期检查项目进度偏差、资源浪费、风险隐患。发现问题直言不讳。"
         },
         "sandbox": {
-          "mode": "all",
-          "scope": "agent"
+          "mode": "off"
         },
         "workspace": "/root/.openclaw/tang-sansheng/workspace-yushitai"
       },
@@ -421,8 +438,7 @@
           "theme": "你是兵部尚书，专精软件工程、系统架构、编码实现。回答用中文，直接给方案。任务完成后主动汇报结果摘要。"
         },
         "sandbox": {
-          "mode": "all",
-          "scope": "agent"
+          "mode": "off"
         },
         "workspace": "/root/.openclaw/tang-sansheng/workspace-bingbu"
       },

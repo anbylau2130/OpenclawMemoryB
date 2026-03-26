@@ -1,0 +1,150 @@
+@inject Tianyou.Web.Services.AuthService AuthService
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">🌟 天佑平台</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> 🏠 首页
+            </NavLink>
+        </div>
+        
+        @if (IsAuthenticated)
+        {
+            <div class="nav-item px-3">
+                <div class="nav-link disabled text-uppercase fw-bold small">数据管理</div>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="entities">
+                    <span class="bi bi-database-nav-menu" aria-hidden="true"></span> 📊 实体管理
+                </NavLink>
+            </div>
+            
+            <div class="nav-item px-3">
+                <div class="nav-link disabled text-uppercase fw-bold small">表单设计</div>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="forms">
+                    <span class="bi bi-file-earmark-text-nav-menu" aria-hidden="true"></span> 📝 表单管理
+                </NavLink>
+            </div>
+            
+            <div class="nav-item px-3">
+                <div class="nav-link disabled text-uppercase fw-bold small">工作流</div>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="workflows">
+                    <span class="bi bi-diagram-3-nav-menu" aria-hidden="true"></span> 🔄 工作流管理
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="workflows/my-tasks">
+                    <span class="bi bi-check2-square-nav-menu" aria-hidden="true"></span> ✅ 我的待办
+                </NavLink>
+            </div>
+            
+            <div class="nav-item px-3">
+                <div class="nav-link disabled text-uppercase fw-bold small">系统管理</div>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="admin/users">
+                    <span class="bi bi-people-nav-menu" aria-hidden="true"></span> 👥 用户管理
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="admin/roles">
+                    <span class="bi bi-shield-lock-nav-menu" aria-hidden="true"></span> 🔐 角色管理
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="admin/plugins">
+                    <span class="bi bi-puzzle-nav-menu" aria-hidden="true"></span> 🧩 插件管理
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="admin/tenants">
+                    <span class="bi bi-building-nav-menu" aria-hidden="true"></span> 🏢 租户管理
+                </NavLink>
+            </div>
+            
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="notifications">
+                    <span class="bi bi-bell-nav-menu" aria-hidden="true"></span> 🔔 通知中心
+                    @if (UnreadCount > 0)
+                    {
+                        <span class="badge bg-danger ms-1">@UnreadCount</span>
+                    }
+                </NavLink>
+            </div>
+            
+            <hr class="my-2" />
+            
+            <div class="nav-item px-3">
+                <a class="nav-link" href="#" @onclick="HandleLogout">
+                    <span class="bi bi-box-arrow-right-nav-menu" aria-hidden="true"></span> 🚪 登出
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="login">
+                    <span class="bi bi-box-arrow-in-right-nav-menu" aria-hidden="true"></span> 🔐 登录
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-link" href="register">
+                    <span class="bi bi-person-plus-nav-menu" aria-hidden="true"></span> ✨ 注册
+                </NavLink>
+            </div>
+        }
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+    private bool IsAuthenticated = false;
+    private int UnreadCount = 0;
+    
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await CheckAuthentication();
+    }
+    
+    private async Task CheckAuthentication()
+    {
+        IsAuthenticated = await AuthService.IsAuthenticatedAsync();
+        // TODO: Load unread notification count
+        if (IsAuthenticated)
+        {
+            UnreadCount = 3; // Mock value
+        }
+        StateHasChanged();
+    }
+    
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+    
+    private async Task HandleLogout()
+    {
+        await AuthService.LogoutAsync();
+        IsAuthenticated = false;
+        UnreadCount = 0;
+        NavigationManager.NavigateTo("/login");
+    }
+    
+    [Inject]
+    private NavigationManager NavigationManager { get; set; } = default!;
+}

@@ -1,0 +1,148 @@
+@page "/entities/{EntityId:guid}"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>📋 实体详情</h3>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (entity == null)
+{
+    <div class="alert alert-warning">实体不存在</div>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5>@entity.EntityName</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th width="150">表名：</th>
+                            <td><code>@entity.TableName</code></td>
+                        </tr>
+                        <tr>
+                            <th>描述：</th>
+                            <td>@entity.Description</td>
+                        </tr>
+                        <tr>
+                            <th>创建时间：</th>
+                            <td>@entity.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            @if (fields != null && fields.Count > 0)
+            {
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h5>字段列表 (@fields.Count)</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>字段名</th>
+                                    <th>类型</th>
+                                    <th>必填</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var field in fields)
+                                {
+                                    <tr>
+                                        <td>@field.FieldName</td>
+                                        <td><span class="badge bg-info">@field.FieldType</span></td>
+                                        <td>@(field.IsRequired ? "✓" : "-")</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <button class="btn btn-secondary" @onclick="GoBack">← 返回列表</button>
+        <button class="btn btn-success" @onclick="ManageData">管理数据</button>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Guid EntityId { get; set; }
+
+    private EntityDto? entity;
+    private List<FieldDto> fields = new();
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadEntity();
+    }
+
+    private async Task LoadEntity()
+    {
+        loading = true;
+        try
+        {
+            var response = await Http.GetFromJsonAsync<ApiResponse<EntityDto>>($"api/entities/{EntityId}");
+            if (response?.Success == true)
+            {
+                entity = response.Data;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private void GoBack()
+    {
+        NavManager.NavigateTo("/entities");
+    }
+
+    private void ManageData()
+    {
+        NavManager.NavigateTo($"/entities/{EntityId}/data");
+    }
+
+    public class EntityDto
+    {
+        public Guid EntityId { get; set; }
+        public string EntityName { get; set; } = "";
+        public string TableName { get; set; } = "";
+        public string? Description { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class FieldDto
+    {
+        public string FieldName { get; set; } = "";
+        public string FieldType { get; set; } = "";
+        public bool IsRequired { get; set; }
+    }
+
+    public class ApiResponse<T>
+    {
+        public bool Success { get; set; }
+        public T? Data { get; set; }
+        public string? Message { get; set; }
+    }
+}

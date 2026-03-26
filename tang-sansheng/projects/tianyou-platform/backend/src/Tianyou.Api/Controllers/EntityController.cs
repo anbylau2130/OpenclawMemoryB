@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Tianyou.Application.Services;
+using Tianyou.Api.Authorization;
 
 namespace Tianyou.Api.Controllers;
 
@@ -14,7 +15,7 @@ public class EntityController : ControllerBase
 {
     private readonly EntityService _entityService;
     private readonly ILogger<EntityController> _logger;
-    
+
     public EntityController(EntityService entityService, ILogger<EntityController> logger)
     {
         _entityService = entityService;
@@ -25,8 +26,10 @@ public class EntityController : ControllerBase
     /// 创建实体定义
     /// </summary>
     [HttpPost]
+    [RequirePermission(PermissionPolicy.Permissions.EntityCreate)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> CreateEntity([FromBody] CreateEntityRequest request)
     {
         try
@@ -62,8 +65,10 @@ public class EntityController : ControllerBase
     /// 添加字段
     /// </summary>
     [HttpPost("{entityId}/fields")]
+    [RequirePermission(PermissionPolicy.Permissions.EntityCreate)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> AddField(Guid entityId, [FromBody] AddFieldRequest request)
     {
         try
@@ -103,7 +108,9 @@ public class EntityController : ControllerBase
     /// 获取所有实体
     /// </summary>
     [HttpGet]
+    [RequirePermission(PermissionPolicy.Permissions.EntityRead)]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> GetEntities()
     {
         var entities = await _entityService.GetEntitiesAsync();
@@ -127,7 +134,9 @@ public class EntityController : ControllerBase
     /// 获取实体详情
     /// </summary>
     [HttpGet("{entityId}")]
+    [RequirePermission(PermissionPolicy.Permissions.EntityRead)]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetEntity(Guid entityId)
     {
@@ -165,8 +174,10 @@ public class EntityController : ControllerBase
     /// 创建数据
     /// </summary>
     [HttpPost("{entityId}/data")]
+    [RequirePermission(PermissionPolicy.Permissions.EntityCreate)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> CreateData(Guid entityId, [FromBody] Dictionary<string, object> data)
     {
         try
@@ -199,7 +210,9 @@ public class EntityController : ControllerBase
     /// 查询数据列表
     /// </summary>
     [HttpGet("{entityId}/data")]
+    [RequirePermission(PermissionPolicy.Permissions.EntityRead)]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> QueryData(Guid entityId, [FromQuery] int page = 1, [FromQuery] int pageSize = 20)
     {
         var dataList = await _entityService.QueryDataAsync(entityId, page, pageSize);
@@ -217,8 +230,10 @@ public class EntityController : ControllerBase
     /// 更新数据
     /// </summary>
     [HttpPut("data/{dataId}")]
+    [RequirePermission(PermissionPolicy.Permissions.EntityUpdate)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> UpdateData(Guid dataId, [FromBody] Dictionary<string, object> data)
     {
         try
@@ -251,8 +266,10 @@ public class EntityController : ControllerBase
     /// 删除数据
     /// </summary>
     [HttpDelete("data/{dataId}")]
+    [RequirePermission(PermissionPolicy.Permissions.EntityDelete)]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> DeleteData(Guid dataId)
     {
         try

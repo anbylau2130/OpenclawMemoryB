@@ -1,16 +1,13 @@
 {
   "code": "600019",
   "name": "宝钢股份",
-  "current_price": 6.25,
-  "open": 6.5,
-  "high": 6.52,
-  "low": 6.21,
-  "volume": 1728444,
-  "amount": 1094225464.0,
-  "change_pct": -4.87,
-  "pe": 99,
-  "pb": 723,
-  "total_mv": 0.365411709,
-  "source": "eastmoney",
-  "timestamp": "2026-03-24T08:18:17.033367"
+  "current_price": 6.41,
+  "open": 6.4,
+  "high": 6.42,
+  "low": 6.4,
+  "volume": 1119800.0,
+  "amount": 7169244.0,
+  "change_pct": 0.3129890453834188,
+  "source": "sina",
+  "timestamp": "2026-03-25T09:30:15.477687"
 }

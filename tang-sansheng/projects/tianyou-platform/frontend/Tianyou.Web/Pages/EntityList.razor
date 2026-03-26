@@ -1,0 +1,169 @@
+@page "/entities"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>📊 实体管理</h3>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="CreateEntity">➕ 创建实体</button>
+    <button class="btn btn-secondary" @onclick="LoadEntities">🔄 刷新</button>
+</div>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (entities == null || entities.Count == 0)
+{
+    <div class="alert alert-info">
+        暂无实体数据，请点击"创建实体"按钮添加
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>实体名称</th>
+                    <th>表名</th>
+                    <th>描述</th>
+                    <th>字段数</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var entity in entities)
+                {
+                    <tr>
+                        <td><strong>@entity.EntityName</strong></td>
+                        <td><code>@entity.TableName</code></td>
+                        <td>@entity.Description</td>
+                        <td><span class="badge bg-info">@entity.FieldCount</span></td>
+                        <td>@entity.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>
+                            <button class="btn btn-sm btn-info" @onclick="() => ViewDetail(entity.EntityId)">查看</button>
+                            <button class="btn btn-sm btn-success" @onclick="() => ManageData(entity.EntityId)">数据</button>
+                            <button class="btn btn-sm btn-danger" @onclick="() => ConfirmDeleteEntity(entity.EntityId, entity.EntityName)">删除</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<!-- 删除确认对话框 -->
+@if (showDeleteConfirm)
+{
+    <div class="modal" style="display: block; background: rgba(0,0,0,0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">⚠️ 确认删除</h5>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0">您确定要删除实体 <strong>@deleteEntityName</strong> 吗？</p>
+                    <p class="text-danger mt-2 mb-0"><small>此操作将删除该实体及其所有数据，不可恢复！</small></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CancelDelete">取消</button>
+                    <button type="button" class="btn btn-danger" @onclick="DeleteEntityConfirmed">确认删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<EntityDto> entities = new();
+    private bool loading = true;
+    private bool showDeleteConfirm = false;
+    private Guid deleteEntityId = Guid.Empty;
+    private string deleteEntityName = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadEntities();
+    }
+
+    private async Task LoadEntities()
+    {
+        loading = true;
+        try
+        {
+            var response = await Http.GetFromJsonAsync<ApiResponse<List<EntityDto>>>("api/entities");
+            if (response?.Success == true)
+            {
+                entities = response.Data;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private void CreateEntity()
+    {
+        NavManager.NavigateTo("/entities/create");
+    }
+
+    private void ViewDetail(Guid entityId)
+    {
+        NavManager.NavigateTo($"/entities/{entityId}");
+    }
+
+    private void ManageData(Guid entityId)
+    {
+        NavManager.NavigateTo($"/entities/{entityId}/data");
+    }
+
+    private void ConfirmDeleteEntity(Guid entityId, string entityName)
+    {
+        deleteEntityId = entityId;
+        deleteEntityName = entityName;
+        showDeleteConfirm = true;
+    }
+
+    private void CancelDelete()
+    {
+        showDeleteConfirm = false;
+        deleteEntityId = Guid.Empty;
+        deleteEntityName = "";
+    }
+
+    private async Task DeleteEntityConfirmed()
+    {
+        entities.RemoveAll(e => e.EntityId == deleteEntityId);
+        showDeleteConfirm = false;
+        deleteEntityId = Guid.Empty;
+        deleteEntityName = "";
+        StateHasChanged();
+    }
+
+    public class EntityDto
+    {
+        public Guid EntityId { get; set; }
+        public string EntityName { get; set; } = "";
+        public string TableName { get; set; } = "";
+        public string? Description { get; set; }
+        public int FieldCount { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class ApiResponse<T>
+    {
+        public bool Success { get; set; }
+        public T? Data { get; set; }
+        public string? Message { get; set; }
+    }
+}

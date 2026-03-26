@@ -5,10 +5,8 @@ namespace Tianyou.Domain.Entities;
 /// <summary>
 /// 租户
 /// </summary>
-public class Tenant
+public class Tenant : BaseEntity
 {
-    public Guid Id { get; set; }
-    
     [Required]
     [StringLength(100)]
     public string TenantName { get; set; } = string.Empty;
@@ -31,8 +29,6 @@ public class Tenant
     
     public int MaxUsers { get; set; } = 100;
     
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? ExpiresAt { get; set; }
     
     // 导航属性

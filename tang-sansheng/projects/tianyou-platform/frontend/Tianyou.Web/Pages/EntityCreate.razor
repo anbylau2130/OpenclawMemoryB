@@ -1,0 +1,163 @@
+@page "/entities/create"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>➕ 创建实体</h3>
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center" role="alert">
+        <span class="me-2">❌</span>
+        <div class="flex-grow-1">
+            <strong>操作失败</strong>
+            <p class="mb-0 small">@ErrorMessage</p>
+        </div>
+        <button type="button" class="btn-close" @onclick="ClearError"></button>
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(SuccessMessage))
+{
+    <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+        <span class="me-2">✅</span>
+        <div class="flex-grow-1">
+            <strong>操作成功</strong>
+            <p class="mb-0 small">@SuccessMessage</p>
+        </div>
+        <button type="button" class="btn-close" @onclick="ClearSuccess"></button>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <EditForm Model="@entityForm" OnValidSubmit="HandleSubmit">
+                    <DataAnnotationsValidator />
+                    
+                    <div class="mb-3">
+                        <label class="form-label">实体名称 *</label>
+                        <InputText class="form-control" @bind-Value="entityForm.EntityName" placeholder="例如：产品" />
+                        <ValidationMessage For="() => entityForm.EntityName" />
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">表名 *</label>
+                        <InputText class="form-control" @bind-Value="entityForm.TableName" placeholder="例如：products" />
+                        <small class="text-muted">建议使用英文小写+下划线</small>
+                        <ValidationMessage For="() => entityForm.TableName" />
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">描述</label>
+                        <InputTextArea class="form-control" @bind-Value="entityForm.Description" rows="3" />
+                    </div>
+                    
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary" disabled="@submitting">
+                            @if (submitting)
+                            {
+                                <span class="spinner-border spinner-border-sm me-2"></span>
+                            }
+                            保存
+                        </button>
+                        <button type="button" class="btn btn-secondary" @onclick="Cancel">取消</button>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private EntityForm entityForm = new();
+    private bool submitting = false;
+    private string? ErrorMessage;
+    private string? SuccessMessage;
+
+    private async Task HandleSubmit()
+    {
+        submitting = true;
+        ErrorMessage = null;
+        SuccessMessage = null;
+        
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/entities", entityForm);
+            
+            if (response.IsSuccessStatusCode)
+            {
+                SuccessMessage = "实体创建成功！正在跳转...";
+                StateHasChanged();
+                
+                // 延迟跳转，让用户看到成功提示
+                await Task.Delay(1000);
+                NavManager.NavigateTo("/entities");
+            }
+            else
+            {
+                // 根据HTTP状态码提供友好的错误提示
+                ErrorMessage = GetFriendlyErrorMessage(response.StatusCode);
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            Console.WriteLine($"网络错误: {ex.Message}");
+            ErrorMessage = "网络连接失败，请检查您的网络连接后重试";
+        }
+        catch (TaskCanceledException ex)
+        {
+            Console.WriteLine($"请求超时: {ex.Message}");
+            ErrorMessage = "请求超时，请稍后重试";
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"创建失败: {ex.Message}");
+            ErrorMessage = "系统暂时无法处理您的请求，请稍后重试";
+        }
+        finally
+        {
+            submitting = false;
+            StateHasChanged();
+        }
+    }
+    
+    private string GetFriendlyErrorMessage(System.Net.HttpStatusCode statusCode)
+    {
+        return statusCode switch
+        {
+            System.Net.HttpStatusCode.BadRequest => "提交的数据格式不正确，请检查后重试",
+            System.Net.HttpStatusCode.Unauthorized => "您的登录已过期，请重新登录",
+            System.Net.HttpStatusCode.Forbidden => "您没有权限执行此操作",
+            System.Net.HttpStatusCode.NotFound => "请求的资源不存在",
+            System.Net.HttpStatusCode.Conflict => "实体名称或表名已存在，请使用其他名称",
+            System.Net.HttpStatusCode.InternalServerError => "服务器内部错误，请稍后重试",
+            System.Net.HttpStatusCode.ServiceUnavailable => "服务暂时不可用，请稍后重试",
+            _ => $"操作失败 (错误码: {(int)statusCode})"
+        };
+    }
+    
+    private void ClearError()
+    {
+        ErrorMessage = null;
+    }
+    
+    private void ClearSuccess()
+    {
+        SuccessMessage = null;
+    }
+
+    private void Cancel()
+    {
+        NavManager.NavigateTo("/entities");
+    }
+
+    public class EntityForm
+    {
+        public string EntityName { get; set; } = "";
+        public string TableName { get; set; } = "";
+        public string? Description { get; set; }
+    }
+}

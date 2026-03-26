@@ -10,7 +10,7 @@
       "accountId": "libu"
     },
     "sessionId": "efb52ff0-c353-45ab-a403-d17fee415b3c",
-    "updatedAt": 1774329101522,
+    "updatedAt": 1774365757082,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -141,7 +141,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774329082376,
+      "generatedAt": 1774365711163,
       "sessionId": "efb52ff0-c353-45ab-a403-d17fee415b3c",
       "sessionKey": "agent:libu:main",
       "provider": "zai",
@@ -161,8 +161,8 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 22855,
-        "projectContextChars": 8899,
+        "chars": 23478,
+        "projectContextChars": 9522,
         "nonProjectContextChars": 13956
       },
       "injectedWorkspaceFiles": [
@@ -170,8 +170,8 @@
           "name": "AGENTS.md",
           "path": "/root/.openclaw/tang-sansheng/workspace-libu/AGENTS.md",
           "missing": false,
-          "rawChars": 807,
-          "injectedChars": 807,
+          "rawChars": 1430,
+          "injectedChars": 1430,
           "truncated": false
         },
         {
@@ -397,11 +397,11 @@
         ]
       }
     },
-    "inputTokens": 7493,
-    "outputTokens": 439,
-    "cacheRead": 15552,
+    "inputTokens": 9379,
+    "outputTokens": 190,
+    "cacheRead": 17600,
     "cacheWrite": 0,
-    "totalTokens": 15936,
+    "totalTokens": 17774,
     "totalTokensFresh": true
   }
 }

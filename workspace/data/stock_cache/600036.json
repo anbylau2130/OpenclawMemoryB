@@ -1,16 +1,13 @@
 {
   "code": "600036",
   "name": "招商银行",
-  "current_price": 38.68,
-  "open": 39.58,
-  "high": 39.7,
-  "low": 38.55,
-  "volume": 957738,
-  "amount": 3730145439.0,
-  "change_pct": -2.69,
-  "pe": 148,
-  "pb": 4373,
-  "total_mv": 5.954873887,
-  "source": "eastmoney",
-  "timestamp": "2026-03-24T08:18:15.188236"
+  "current_price": 39.33,
+  "open": 39.33,
+  "high": 39.33,
+  "low": 39.33,
+  "volume": 482000.0,
+  "amount": 18957060.0,
+  "change_pct": 0.20382165605095107,
+  "source": "sina",
+  "timestamp": "2026-03-25T09:29:57.949580"
 }

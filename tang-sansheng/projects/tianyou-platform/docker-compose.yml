@@ -1,92 +1,228 @@
 version: '3.8'
 
 services:
+  # ========================================
   # PostgreSQL 数据库
+  # ========================================
   postgres:
     image: postgres:15-alpine
     container_name: tianyou-postgres
     restart: always
     environment:
-      POSTGRES_USER: tianyou_admin
-      POSTGRES_PASSWORD: Tianyou@2026!
-      POSTGRES_DB: tianyou_platform
+      POSTGRES_USER: ${POSTGRES_USER:-tianyou_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-Tianyou@2026!}
+      POSTGRES_DB: ${POSTGRES_DB:-tianyou_platform}
+      TZ: Asia/Shanghai
     ports:
-      - "5432:5432"
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./database/init:/docker-entrypoint-initdb.d
+      - ./database/init:/docker-entrypoint-initdb.d:ro
     networks:
       - tianyou-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tianyou_admin} -d ${POSTGRES_DB:-tianyou_platform}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
+  # ========================================
   # Redis 缓存
+  # ========================================
   redis:
     image: redis:7-alpine
     container_name: tianyou-redis
     restart: always
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-redis@123}
+    environment:
+      TZ: Asia/Shanghai
     ports:
-      - "6379:6379"
+      - "${REDIS_PORT:-6379}:6379"
     volumes:
       - redis_data:/data
     networks:
       - tianyou-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD:-redis@123}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 64M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
+  # ========================================
   # RabbitMQ 消息队列
+  # ========================================
   rabbitmq:
     image: rabbitmq:3.12-management-alpine
     container_name: tianyou-rabbitmq
     restart: always
     environment:
-      RABBITMQ_DEFAULT_USER: admin
-      RABBITMQ_DEFAULT_PASS: admin@123
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-admin}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-admin@123}
+      TZ: Asia/Shanghai
     ports:
-      - "5672:5672"
-      - "15672:15672"
+      - "${RABBITMQ_PORT:-5672}:5672"
+      - "${RABBITMQ_MGMT_PORT:-15672}:15672"
     volumes:
       - rabbitmq_data:/var/lib/rabbitmq
     networks:
       - tianyou-network
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 128M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
-  # Tianyou API
+  # ========================================
+  # Tianyou API (ASP.NET Core 8.0)
+  # ========================================
   tianyou-api:
     build:
       context: ./backend
       dockerfile: src/Tianyou.Api/Dockerfile
+    image: tianyou-api:${API_VERSION:-latest}
     container_name: tianyou-api
     restart: always
     environment:
-      ASPNETCORE_ENVIRONMENT: Production
-      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=tianyou_platform;Username=tianyou_admin;Password=Tianyou@2026!"
-      Redis__ConnectionString: "redis:6379"
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Production}
+      ASPNETCORE_URLS: http://+:80
+      TZ: Asia/Shanghai
+      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=${POSTGRES_DB:-tianyou_platform};Username=${POSTGRES_USER:-tianyou_admin};Password=${POSTGRES_PASSWORD:-Tianyou@2026!}"
+      Redis__ConnectionString: "redis:6379,password=${REDIS_PASSWORD:-redis@123}"
       RabbitMQ__Host: rabbitmq
+      RabbitMQ__Username: ${RABBITMQ_USER:-admin}
+      RabbitMQ__Password: ${RABBITMQ_PASSWORD:-admin@123}
     ports:
-      - "5000:80"
-      - "5001:443"
+      - "${API_HTTP_PORT:-5000}:80"
+      - "${API_HTTPS_PORT:-5001}:443"
     depends_on:
-      - postgres
-      - redis
-      - rabbitmq
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
     networks:
       - tianyou-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "5"
 
+  # ========================================
   # Tianyou Web (Blazor WebAssembly)
+  # ========================================
   tianyou-web:
     build:
       context: ./frontend/Tianyou.Web
       dockerfile: Dockerfile
+    image: tianyou-web:${WEB_VERSION:-latest}
     container_name: tianyou-web
     restart: always
+    environment:
+      TZ: Asia/Shanghai
+      API_BASE_URL: ${API_BASE_URL:-http://tianyou-api:80}
     ports:
-      - "8080:80"
+      - "${WEB_PORT:-8080}:80"
     depends_on:
-      - tianyou-api
+      tianyou-api:
+        condition: service_healthy
     networks:
       - tianyou-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 64M
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
+# ========================================
+# 数据卷
+# ========================================
 volumes:
   postgres_data:
+    driver: local
   redis_data:
+    driver: local
   rabbitmq_data:
+    driver: local
 
+# ========================================
+# 网络
+# ========================================
 networks:
   tianyou-network:
     driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16

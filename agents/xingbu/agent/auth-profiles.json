@@ -24,9 +24,13 @@
   },
   "usageStats": {
     "zai:default": {
-      "lastUsed": 1774110680238,
-      "errorCount": 0,
-      "lastFailureAt": 1773215880792
+      "lastUsed": 1774367146967,
+      "errorCount": 1,
+      "lastFailureAt": 1774368439425,
+      "failureCounts": {
+        "rate_limit": 1
+      },
+      "cooldownUntil": 1774368499425
     },
     "anthropic:default": {
       "errorCount": 0,
@@ -35,7 +39,7 @@
     },
     "zai:edict": {
       "errorCount": 0,
-      "lastUsed": 1774227330678
+      "lastUsed": 1774368460725
     }
   }
 }

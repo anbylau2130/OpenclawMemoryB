@@ -1,16 +1,13 @@
 {
   "code": "601288",
   "name": "农业银行",
-  "current_price": 6.47,
-  "open": 6.74,
-  "high": 6.75,
-  "low": 6.42,
-  "volume": 5487576,
-  "amount": 3588634920.0,
-  "change_pct": -4.29,
-  "pe": 134,
-  "pb": 744,
-  "total_mv": 0.631056305,
-  "source": "eastmoney",
-  "timestamp": "2026-03-24T08:18:15.882953"
+  "current_price": 6.5,
+  "open": 6.5,
+  "high": 6.5,
+  "low": 6.49,
+  "volume": 1385400.0,
+  "amount": 9005080.0,
+  "change_pct": 0.0,
+  "source": "sina",
+  "timestamp": "2026-03-25T09:30:04.973158"
 }

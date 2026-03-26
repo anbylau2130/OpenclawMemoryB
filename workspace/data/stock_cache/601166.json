@@ -1,16 +1,13 @@
 {
   "code": "601166",
   "name": "兴业银行",
-  "current_price": 18.24,
-  "open": 18.65,
-  "high": 18.66,
-  "low": 18.14,
-  "volume": 1092370,
-  "amount": 2004203291.0,
-  "change_pct": -2.93,
-  "pe": 156,
-  "pb": 2067,
-  "total_mv": 3.660611782,
-  "source": "eastmoney",
-  "timestamp": "2026-03-24T08:18:15.483195"
+  "current_price": 18.78,
+  "open": 18.78,
+  "high": 18.78,
+  "low": 18.78,
+  "volume": 472800.0,
+  "amount": 8879184.0,
+  "change_pct": 0.3205128205128327,
+  "source": "sina",
+  "timestamp": "2026-03-25T09:30:00.789530"
 }

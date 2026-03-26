@@ -1,0 +1,147 @@
+# ==================== 日志系统 Docker Compose 配置 ====================
+# 天佑平台日志管理系统部署配置
+# 作者：兵部
+# 日期：2026-03-25
+
+version: '3.8'
+
+services:
+  # ==================== Seq 日志服务器 ====================
+  seq:
+    image: datalust/seq:2024.1
+    container_name: tianyou-seq
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SEQ_FIRSTRUN_ADMINPASSWORD=${SEQ_ADMIN_PASSWORD:-admin123}
+      - SEQ_CACHE_SYSTEMRAMTARGET=0.5
+    ports:
+      - "5341:80"
+    volumes:
+      - seq-data:/data
+    networks:
+      - tianyou-logging
+    labels:
+      - "com.tianyou.service=logging"
+      - "com.tianyou.component=seq"
+
+  # ==================== Elasticsearch 日志存储 ====================
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    container_name: tianyou-elasticsearch
+    restart: unless-stopped
+    environment:
+      - discovery.type=single-node
+      - cluster.name=tianyou-logs
+      - node.name=tianyou-node-1
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    networks:
+      - tianyou-logging
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    labels:
+      - "com.tianyou.service=logging"
+      - "com.tianyou.component=elasticsearch"
+
+  # ==================== Kibana 日志可视化 ====================
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.11.0
+    container_name: tianyou-kibana
+    restart: unless-stopped
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - SERVER_NAME=tianyou-kibana
+      - SERVER_HOST=0.0.0.0
+      - XPACK_SECURITY_ENABLED=false
+    ports:
+      - "5601:5601"
+    networks:
+      - tianyou-logging
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5601/api/status || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    labels:
+      - "com.tianyou.service=logging"
+      - "com.tianyou.component=kibana"
+
+  # ==================== Logstash 日志处理 ====================
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.11.0
+    container_name: tianyou-logstash
+    restart: unless-stopped
+    environment:
+      - "LS_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "5044:5044"
+      - "9600:9600"
+    volumes:
+      - ./logging/logstash/pipeline:/usr/share/logstash/pipeline:ro
+      - ./logging/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
+    networks:
+      - tianyou-logging
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    labels:
+      - "com.tianyou.service=logging"
+      - "com.tianyou.component=logstash"
+
+  # ==================== Filebeat 日志收集 ====================
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.11.0
+    container_name: tianyou-filebeat
+    restart: unless-stopped
+    user: root
+    volumes:
+      - ./logging/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./logs:/var/log/tianyou:ro
+    networks:
+      - tianyou-logging
+    depends_on:
+      - logstash
+    command: filebeat -e -strict.perms=false
+    labels:
+      - "com.tianyou.service=logging"
+      - "com.tianyou.component=filebeat"
+
+# ==================== 网络配置 ====================
+networks:
+  tianyou-logging:
+    driver: bridge
+    labels:
+      - "com.tianyou.network=logging"
+
+# ==================== 数据卷配置 ====================
+volumes:
+  seq-data:
+    driver: local
+    labels:
+      - "com.tianyou.volume=seq"
+  elasticsearch-data:
+    driver: local
+    labels:
+      - "com.tianyou.volume=elasticsearch"

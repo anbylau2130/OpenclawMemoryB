@@ -5,10 +5,8 @@ namespace Tianyou.Domain.Entities;
 /// <summary>
 /// 用户实体
 /// </summary>
-public class User
+public class User : BaseEntity
 {
-    public Guid Id { get; set; }
-    
     [Required]
     [StringLength(50)]
     public string Username { get; set; } = string.Empty;
@@ -30,8 +28,6 @@ public class User
     [StringLength(20)]
     public string Status { get; set; } = "active";
     
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
     public DateTime? LastLoginAt { get; set; }
     
     // 导航属性

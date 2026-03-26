@@ -1,0 +1,199 @@
+@page "/"
+@inject Tianyou.Web.Services.AuthService AuthService
+@inject NavigationManager NavigationManager
+@inject ILogger<Home> Logger
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            @if (IsLoading)
+            {
+                <div class="text-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">加载中...</span>
+                    </div>
+                    <p class="mt-2">正在加载用户信息...</p>
+                </div>
+            }
+            else if (UserInfo == null)
+            {
+                <div class="alert alert-warning text-center" role="alert">
+                    <h4 class="alert-heading">⚠️ 未登录</h4>
+                    <p>请先登录以访问系统功能</p>
+                    <hr>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="/login" class="btn btn-primary">🔐 立即登录</a>
+                        <a href="/register" class="btn btn-success">✨ 立即注册</a>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">🏠 欢迎回来，@UserInfo.FullName！</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h5 class="card-title">📋 用户信息</h5>
+                            <hr>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <strong>用户ID：</strong>
+                                </div>
+                                <div class="col-sm-9">
+                                    <code>@UserInfo.UserId</code>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <strong>用户名：</strong>
+                                </div>
+                                <div class="col-sm-9">
+                                    @UserInfo.Username
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <strong>邮箱：</strong>
+                                </div>
+                                <div class="col-sm-9">
+                                    <a href="mailto:@UserInfo.Email">@UserInfo.Email</a>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <strong>姓名：</strong>
+                                </div>
+                                <div class="col-sm-9">
+                                    @UserInfo.FullName
+                                </div>
+                            </div>
+                            
+                            @if (UserInfo.Roles != null && UserInfo.Roles.Any())
+                            {
+                                <div class="row mb-3">
+                                    <div class="col-sm-3">
+                                        <strong>角色：</strong>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @foreach (var role in UserInfo.Roles)
+                                        {
+                                            <span class="badge bg-info me-1">@role</span>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                            
+                            @if (UserInfo.Permissions != null && UserInfo.Permissions.Any())
+                            {
+                                <div class="row mb-3">
+                                    <div class="col-sm-3">
+                                        <strong>权限：</strong>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        @foreach (var permission in UserInfo.Permissions)
+                                        {
+                                            <span class="badge bg-secondary me-1">@permission</span>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-danger" @onclick="HandleLogout">
+                                🚪 登出
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-4 shadow">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">🎯 系统功能</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title">📊 数据管理</h6>
+                                        <p class="card-text text-muted">管理您的业务数据</p>
+                                        <button class="btn btn-outline-primary btn-sm" disabled>即将上线</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card h-100 border-success">
+                                    <div class="card-body text-center">
+                                        <h6 class="card-title">⚙️ 系统设置</h6>
+                                        <p class="card-text text-muted">配置系统参数</p>
+                                        <button class="btn btn-outline-success btn-sm" disabled>即将上线</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    private Tianyou.Web.Services.UserInfo? UserInfo;
+    private bool IsLoading = true;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUserInfo();
+    }
+    
+    private async Task LoadUserInfo()
+    {
+        try
+        {
+            // 检查是否已登录
+            var isAuthenticated = await AuthService.IsAuthenticatedAsync();
+            
+            if (!isAuthenticated)
+            {
+                UserInfo = null;
+                IsLoading = false;
+                return;
+            }
+            
+            // 获取用户信息
+            UserInfo = await AuthService.GetCurrentUserAsync();
+            
+            if (UserInfo == null)
+            {
+                Logger.LogWarning("获取用户信息失败，可能Token已过期");
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "加载用户信息异常");
+            UserInfo = null;
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+    
+    private async Task HandleLogout()
+    {
+        try
+        {
+            await AuthService.LogoutAsync();
+            Logger.LogInformation("用户已登出");
+            NavigationManager.NavigateTo("/login");
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "登出异常");
+        }
+    }
+}

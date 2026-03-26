@@ -325,7 +325,7 @@
       "accountId": "zhongshu"
     },
     "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
-    "updatedAt": 1774347559513,
+    "updatedAt": 1774421903389,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -420,7 +420,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774347371548,
+      "generatedAt": 1774421816534,
       "sessionId": "d26560c5-9ca6-4344-ab51-a2278877b3f1",
       "sessionKey": "agent:zhongshu:main",
       "provider": "zai",
@@ -440,25 +440,25 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 26349,
-        "projectContextChars": 13177,
-        "nonProjectContextChars": 13172
+        "chars": 29143,
+        "projectContextChars": 16618,
+        "nonProjectContextChars": 12525
       },
       "injectedWorkspaceFiles": [
         {
           "name": "AGENTS.md",
           "path": "/root/.openclaw/tang-sansheng/workspace-zhongshu/AGENTS.md",
           "missing": false,
-          "rawChars": 279,
-          "injectedChars": 279,
+          "rawChars": 1793,
+          "injectedChars": 1793,
           "truncated": false
         },
         {
           "name": "SOUL.md",
           "path": "/root/.openclaw/tang-sansheng/workspace-zhongshu/SOUL.md",
           "missing": false,
-          "rawChars": 6365,
-          "injectedChars": 6365,
+          "rawChars": 8292,
+          "injectedChars": 8292,
           "truncated": false
         },
         {
@@ -665,17 +665,18 @@
       }
     },
     "totalTokensFresh": true,
-    "inputTokens": 13723,
-    "outputTokens": 5156,
-    "cacheRead": 77824,
+    "inputTokens": 160785,
+    "outputTokens": 1378,
+    "cacheRead": 177856,
     "cacheWrite": 0,
     "authProfileOverride": "zai:default",
     "authProfileOverrideSource": "auto",
-    "authProfileOverrideCompactionCount": 4,
-    "memoryFlushAt": 1774345263659,
-    "memoryFlushCompactionCount": 4,
-    "compactionCount": 4,
-    "totalTokens": 78962
+    "authProfileOverrideCompactionCount": 8,
+    "memoryFlushAt": 1774414455954,
+    "memoryFlushCompactionCount": 8,
+    "compactionCount": 8,
+    "channel": "dingtalk",
+    "totalTokens": 169809
   },
   "agent:zhongshu:dingtalk:group:096028035723738668": {
     "chatType": "group",
@@ -689,7 +690,7 @@
       "chatType": "group",
       "from": "dingtalk:group:096028035723738668",
       "to": "channel:096028035723738668",
-      "accountId": "menxia"
+      "accountId": "zhongshu"
     },
     "sessionId": "860db9c4-b48b-4efb-aee1-1124b6dd3d77",
     "updatedAt": 1774278999103,

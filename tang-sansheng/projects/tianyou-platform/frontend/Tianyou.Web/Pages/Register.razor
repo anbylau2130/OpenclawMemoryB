@@ -1,0 +1,184 @@
+@page "/register"
+@inject Tianyou.Web.Services.AuthService AuthService
+@inject NavigationManager NavigationManager
+@inject ILogger<Register> Logger
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white text-center">
+                    <h4 class="mb-0">✨ 用户注册</h4>
+                </div>
+                <div class="card-body">
+                    @if (!string.IsNullOrEmpty(ErrorMessage))
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @ErrorMessage
+                            <button type="button" class="btn-close" @onclick="ClearError"></button>
+                        </div>
+                    }
+                    
+                    @if (!string.IsNullOrEmpty(SuccessMessage))
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @SuccessMessage
+                            <button type="button" class="btn-close" @onclick="ClearSuccess"></button>
+                        </div>
+                    }
+                    
+                    <EditForm Model="@registerModel" OnValidSubmit="@HandleRegister" class="needs-validation">
+                        <DataAnnotationsValidator />
+                        
+                        <div class="mb-3">
+                            <label for="username" class="form-label">用户名 *</label>
+                            <InputText id="username" @bind-Value="registerModel.Username" class="form-control" placeholder="请输入用户名" required />
+                            <ValidationMessage For="@(() => registerModel.Username)" class="text-danger" />
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">邮箱 *</label>
+                            <InputText id="email" type="email" @bind-Value="registerModel.Email" class="form-control" placeholder="请输入邮箱" required />
+                            <ValidationMessage For="@(() => registerModel.Email)" class="text-danger" />
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">姓名</label>
+                            <InputText id="fullName" @bind-Value="registerModel.FullName" class="form-control" placeholder="请输入姓名（选填）" />
+                            <ValidationMessage For="@(() => registerModel.FullName)" class="text-danger" />
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password" class="form-label">密码 *</label>
+                            <InputText id="password" type="password" @bind-Value="registerModel.Password" class="form-control" placeholder="请输入密码（至少6位）" required />
+                            <ValidationMessage For="@(() => registerModel.Password)" class="text-danger" />
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">确认密码 *</label>
+                            <InputText id="confirmPassword" type="password" @bind-Value="registerModel.ConfirmPassword" class="form-control" placeholder="请再次输入密码" required />
+                            <ValidationMessage For="@(() => registerModel.ConfirmPassword)" class="text-danger" />
+                        </div>
+                        
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success" disabled="@IsLoading">
+                                @if (IsLoading)
+                                {
+                                    <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                    <span>注册中...</span>
+                                }
+                                else
+                                {
+                                    <span>🎉 注册</span>
+                                }
+                            </button>
+                        </div>
+                    </EditForm>
+                    
+                    <hr class="my-4" />
+                    
+                    <div class="text-center">
+                        <p class="mb-0">
+                            已有账号？
+                            <a href="/login" class="text-decoration-none">立即登录</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private RegisterModel registerModel = new RegisterModel();
+    private bool IsLoading = false;
+    private string? ErrorMessage;
+    private string? SuccessMessage;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        // 检查是否已登录
+        var isAuthenticated = await AuthService.IsAuthenticatedAsync();
+        if (isAuthenticated)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+    
+    private async Task HandleRegister()
+    {
+        // 验证密码是否一致
+        if (registerModel.Password != registerModel.ConfirmPassword)
+        {
+            ErrorMessage = "两次输入的密码不一致";
+            return;
+        }
+        
+        IsLoading = true;
+        ErrorMessage = null;
+        SuccessMessage = null;
+        
+        try
+        {
+            var result = await AuthService.RegisterAsync(
+                registerModel.Username,
+                registerModel.Email,
+                registerModel.Password,
+                registerModel.FullName ?? string.Empty
+            );
+            
+            if (result.Success)
+            {
+                Logger.LogInformation("注册成功，自动登录并跳转到首页");
+                SuccessMessage = "注册成功！正在跳转...";
+                
+                // 短暂延迟后跳转
+                await Task.Delay(1000);
+                NavigationManager.NavigateTo("/");
+            }
+            else
+            {
+                ErrorMessage = result.Message ?? "注册失败，请重试";
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "注册异常");
+            ErrorMessage = $"注册失败: {ex.Message}";
+        }
+        finally
+        {
+            IsLoading = false;
+        }
+    }
+    
+    private void ClearError()
+    {
+        ErrorMessage = null;
+    }
+    
+    private void ClearSuccess()
+    {
+        SuccessMessage = null;
+    }
+    
+    public class RegisterModel
+    {
+        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "用户名不能为空")]
+        [System.ComponentModel.DataAnnotations.StringLength(50, MinimumLength = 3, ErrorMessage = "用户名长度3-50个字符")]
+        public string Username { get; set; } = string.Empty;
+        
+        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "邮箱不能为空")]
+        [System.ComponentModel.DataAnnotations.EmailAddress(ErrorMessage = "邮箱格式不正确")]
+        public string Email { get; set; } = string.Empty;
+        
+        public string? FullName { get; set; }
+        
+        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "密码不能为空")]
+        [System.ComponentModel.DataAnnotations.StringLength(100, MinimumLength = 6, ErrorMessage = "密码长度至少6个字符")]
+        public string Password { get; set; } = string.Empty;
+        
+        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "请确认密码")]
+        public string ConfirmPassword { get; set; } = string.Empty;
+    }
+}

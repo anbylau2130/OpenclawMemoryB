@@ -1,0 +1,187 @@
+@page "/forms/{FormId:guid}/design"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>🎨 表单设计器</h3>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>字段工具箱</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-primary" @onclick='() => AddField("text")'>文本框</button>
+                        <button class="btn btn-outline-primary" @onclick='() => AddField("number")'>数字框</button>
+                        <button class="btn btn-outline-primary" @onclick='() => AddField("select")'>下拉框</button>
+                        <button class="btn btn-outline-primary" @onclick='() => AddField("date")'>日期选择</button>
+                        <button class="btn btn-outline-primary" @onclick='() => AddField("textarea")'>多行文本</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                    <h5>表单预览</h5>
+                    <div>
+                        <button class="btn btn-success btn-sm" @onclick="PublishForm">发布表单</button>
+                        <button class="btn btn-secondary btn-sm" @onclick="GoBack">返回</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    @if (fields.Count == 0)
+                    {
+                        <div class="text-center text-muted py-5">
+                            从左侧工具箱选择字段类型添加
+                        </div>
+                    }
+                    else
+                    {
+                        @foreach (var field in fields)
+                        {
+                            <div class="mb-3 border p-3 rounded">
+                                <div class="d-flex justify-content-between">
+                                    <label class="form-label">
+                                        @field.Label (@field.FieldName)
+                                        @if (field.IsRequired)
+                                        {
+                                            <span class="text-danger">*</span>
+                                        }
+                                    </label>
+                                    <button class="btn btn-sm btn-outline-danger" @onclick="() => RemoveField(field.FieldId)">删除</button>
+                                </div>
+                                <input type="@field.FieldType" class="form-control" disabled placeholder="@field.Placeholder" />
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Guid FormId { get; set; }
+
+    private List<FormFieldDto> fields = new();
+    private bool loading = true;
+    private int fieldCounter = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadForm();
+    }
+
+    private async Task LoadForm()
+    {
+        loading = true;
+        try
+        {
+            var response = await Http.GetFromJsonAsync<ApiResponse<FormDetailDto>>($"api/forms/{FormId}");
+            if (response?.Success == true && response.Data != null)
+            {
+                fields = response.Data.Fields ?? new List<FormFieldDto>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private async Task AddField(string fieldType)
+    {
+        fieldCounter++;
+        var fieldName = $"field_{fieldCounter}";
+        var label = GetFieldLabel(fieldType);
+
+        try
+        {
+            await Http.PostAsJsonAsync($"api/forms/{FormId}/fields", new
+            {
+                FieldName = fieldName,
+                FieldType = fieldType,
+                Label = label,
+                IsRequired = false
+            });
+            await LoadForm();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"添加字段失败: {ex.Message}");
+        }
+    }
+
+    private string GetFieldLabel(string fieldType) => fieldType switch
+    {
+        "text" => "文本输入",
+        "number" => "数字输入",
+        "select" => "下拉选择",
+        "date" => "日期选择",
+        "textarea" => "多行文本",
+        _ => "字段"
+    };
+
+    private async Task RemoveField(Guid fieldId)
+    {
+        fields.RemoveAll(f => f.FieldId == fieldId);
+        StateHasChanged();
+    }
+
+    private async Task PublishForm()
+    {
+        try
+        {
+            await Http.PostAsync($"api/forms/{FormId}/publish", null);
+            NavManager.NavigateTo("/forms");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"发布失败: {ex.Message}");
+        }
+    }
+
+    private void GoBack()
+    {
+        NavManager.NavigateTo("/forms");
+    }
+
+    public class FormDetailDto
+    {
+        public List<FormFieldDto>? Fields { get; set; }
+    }
+
+    public class FormFieldDto
+    {
+        public Guid FieldId { get; set; }
+        public string FieldName { get; set; } = "";
+        public string FieldType { get; set; } = "";
+        public string Label { get; set; } = "";
+        public string? Placeholder { get; set; }
+        public bool IsRequired { get; set; }
+    }
+
+    public class ApiResponse<T>
+    {
+        public bool Success { get; set; }
+        public T? Data { get; set; }
+        public string? Message { get; set; }
+    }
+}

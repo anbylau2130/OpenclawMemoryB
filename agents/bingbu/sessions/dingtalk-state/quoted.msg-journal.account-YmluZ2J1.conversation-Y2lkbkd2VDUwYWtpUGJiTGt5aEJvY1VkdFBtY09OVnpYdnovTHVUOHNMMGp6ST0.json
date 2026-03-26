@@ -1,12 +1,24 @@
 {
   "version": 1,
-  "updatedAt": 1774329019363,
+  "updatedAt": 1774368481334,
   "records": [
     {
       "msgId": "msg/722KFSHiHLrtZfMMMTXUg==",
       "messageType": "text",
       "text": "充分利用你的skills",
       "createdAt": 1774329019011
+    },
+    {
+      "msgId": "msgXKBU3p1GQ5Mhfvksyc/RWQ==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1774365685471
+    },
+    {
+      "msgId": "msgdaXnmG3xSqQ4sFGXV2VAXA==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1774368481095
     }
   ]
 }

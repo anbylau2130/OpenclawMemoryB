@@ -1,0 +1,121 @@
+@page "/roles"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>🔑 角色管理</h3>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="CreateRole">➕ 新增角色</button>
+    <button class="btn btn-secondary" @onclick="LoadRoles">🔄 刷新</button>
+</div>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (roles == null || roles.Count == 0)
+{
+    <div class="alert alert-info">暂无角色数据</div>
+}
+else
+{
+    <div class="row">
+        @foreach (var role in roles)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@role.RoleName</h5>
+                        <p class="card-text text-muted">@role.Description</p>
+                        <div class="mb-2">
+                            @foreach (var permission in role.Permissions.Take(3))
+                            {
+                                <span class="badge bg-info me-1">@permission</span>
+                            }
+                            @if (role.Permissions.Count > 3)
+                            {
+                                <span class="badge bg-secondary">+@(role.Permissions.Count - 3)</span>
+                            }
+                        </div>
+                        <button class="btn btn-sm btn-warning" @onclick="() => EditRole(role.RoleId)">编辑</button>
+                        <button class="btn btn-sm btn-danger" @onclick="() => DeleteRole(role.RoleId)">删除</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<RoleDto> roles = new();
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadRoles();
+    }
+
+    private async Task LoadRoles()
+    {
+        loading = true;
+        try
+        {
+            // 临时模拟数据
+            roles = new List<RoleDto>
+            {
+                new RoleDto 
+                { 
+                    RoleId = Guid.NewGuid(), 
+                    RoleName = "管理员", 
+                    Description = "系统管理员，拥有所有权限",
+                    Permissions = new List<string> { "用户管理", "角色管理", "系统配置", "数据管理" },
+                    CreatedAt = DateTime.Now.AddDays(-30)
+                },
+                new RoleDto 
+                { 
+                    RoleId = Guid.NewGuid(), 
+                    RoleName = "普通用户", 
+                    Description = "普通用户，基础权限",
+                    Permissions = new List<string> { "查看数据", "提交表单" },
+                    CreatedAt = DateTime.Now.AddDays(-30)
+                }
+            };
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private void CreateRole()
+    {
+        NavManager.NavigateTo("/roles/create");
+    }
+
+    private void EditRole(Guid roleId)
+    {
+        NavManager.NavigateTo($"/roles/{roleId}/edit");
+    }
+
+    private async Task DeleteRole(Guid roleId)
+    {
+        roles.RemoveAll(r => r.RoleId == roleId);
+        StateHasChanged();
+    }
+
+    public class RoleDto
+    {
+        public Guid RoleId { get; set; }
+        public string RoleName { get; set; } = "";
+        public string? Description { get; set; }
+        public List<string> Permissions { get; set; } = new();
+        public DateTime CreatedAt { get; set; }
+    }
+}

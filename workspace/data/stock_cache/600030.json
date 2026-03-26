@@ -1,16 +1,13 @@
 {
   "code": "600030",
   "name": "中信证券",
-  "current_price": 24.29,
-  "open": 25.0,
-  "high": 25.0,
-  "low": 24.09,
-  "volume": 1992656,
-  "amount": 4887377310.0,
-  "change_pct": -3.99,
-  "pe": 158,
-  "pb": 2783,
-  "total_mv": 2.027657977,
-  "source": "eastmoney",
-  "timestamp": "2026-03-24T08:18:16.306064"
+  "current_price": 24.41,
+  "open": 24.4,
+  "high": 24.47,
+  "low": 24.39,
+  "volume": 1612080.0,
+  "amount": 39339172.0,
+  "change_pct": 0.2052545155993461,
+  "source": "sina",
+  "timestamp": "2026-03-25T09:30:08.539661"
 }

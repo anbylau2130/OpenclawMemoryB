@@ -1,0 +1,150 @@
+@page "/notifications"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>🔔 通知中心</h3>
+
+<div class="mb-3">
+    <button class="btn btn-success" @onclick="MarkAllRead">✓ 全部已读</button>
+    <button class="btn btn-secondary" @onclick="LoadNotifications">🔄 刷新</button>
+</div>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (notifications == null || notifications.Count == 0)
+{
+    <div class="alert alert-info">暂无通知</div>
+}
+else
+{
+    <div class="list-group">
+        @foreach (var notification in notifications)
+        {
+            <div class="list-group-item list-group-item-action @(!notification.IsRead ? "list-group-item-primary" : "")">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">
+                        @if (!notification.IsRead)
+                        {
+                            <span class="badge bg-danger me-2">新</span>
+                        }
+                        @notification.Title
+                    </h5>
+                    <small>@notification.CreatedAt.ToString("MM-dd HH:mm")</small>
+                </div>
+                <p class="mb-1">@notification.Content</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge @GetTypeBadge(notification.Type)">@notification.Type</span>
+                    <div>
+                        <button class="btn btn-sm btn-outline-primary" @onclick="() => MarkAsRead(notification.NotificationId)">已读</button>
+                        <button class="btn btn-sm btn-outline-danger" @onclick="() => DeleteNotification(notification.NotificationId)">删除</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<NotificationDto> notifications = new();
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadNotifications();
+    }
+
+    private async Task LoadNotifications()
+    {
+        loading = true;
+        try
+        {
+            // 临时模拟数据
+            notifications = new List<NotificationDto>
+            {
+                new NotificationDto 
+                { 
+                    NotificationId = Guid.NewGuid(), 
+                    Title = "新任务分配", 
+                    Content = "您有一个新的审批任务待处理",
+                    Type = "任务",
+                    IsRead = false,
+                    CreatedAt = DateTime.Now.AddHours(-2)
+                },
+                new NotificationDto 
+                { 
+                    NotificationId = Guid.NewGuid(), 
+                    Title = "系统升级通知", 
+                    Content = "系统将于今晚22:00进行升级维护",
+                    Type = "系统",
+                    IsRead = false,
+                    CreatedAt = DateTime.Now.AddHours(-5)
+                },
+                new NotificationDto 
+                { 
+                    NotificationId = Guid.NewGuid(), 
+                    Title = "审批通过", 
+                    Content = "您的请假申请已通过审批",
+                    Type = "审批",
+                    IsRead = true,
+                    CreatedAt = DateTime.Now.AddDays(-1)
+                }
+            };
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private async Task MarkAsRead(Guid notificationId)
+    {
+        var notification = notifications.FirstOrDefault(n => n.NotificationId == notificationId);
+        if (notification != null)
+        {
+            notification.IsRead = true;
+            StateHasChanged();
+        }
+    }
+
+    private async Task MarkAllRead()
+    {
+        foreach (var notification in notifications)
+        {
+            notification.IsRead = true;
+        }
+        StateHasChanged();
+    }
+
+    private async Task DeleteNotification(Guid notificationId)
+    {
+        notifications.RemoveAll(n => n.NotificationId == notificationId);
+        StateHasChanged();
+    }
+
+    private string GetTypeBadge(string type) => type switch
+    {
+        "系统" => "bg-warning",
+        "任务" => "bg-info",
+        "审批" => "bg-success",
+        _ => "bg-secondary"
+    };
+
+    public class NotificationDto
+    {
+        public Guid NotificationId { get; set; }
+        public string Title { get; set; } = "";
+        public string Content { get; set; } = "";
+        public string Type { get; set; } = "";
+        public bool IsRead { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+}

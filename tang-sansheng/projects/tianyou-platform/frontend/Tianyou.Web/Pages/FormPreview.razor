@@ -1,0 +1,140 @@
+@page "/forms/{FormId:guid}/preview"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>👁️ 表单预览</h3>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (form == null)
+{
+    <div class="alert alert-warning">表单不存在</div>
+}
+else
+{
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5>@form.FormName</h5>
+                    <small class="text-muted">@form.Description</small>
+                </div>
+                <div class="card-body">
+                    @if (form.Fields == null || form.Fields.Count == 0)
+                    {
+                        <div class="text-center text-muted py-5">
+                            此表单暂无字段
+                        </div>
+                    }
+                    else
+                    {
+                        @foreach (var field in form.Fields)
+                        {
+                            <div class="mb-3">
+                                <label class="form-label">
+                                    @field.Label
+                                    @if (field.IsRequired)
+                                    {
+                                        <span class="text-danger">*</span>
+                                    }
+                                </label>
+                                
+                                @if (field.FieldType == "textarea")
+                                {
+                                    <textarea class="form-control" rows="3" placeholder="@field.Placeholder" disabled="@(!field.IsEditable)"></textarea>
+                                }
+                                else if (field.FieldType == "select")
+                                {
+                                    <select class="form-control" disabled="@(!field.IsEditable)">
+                                        <option>请选择...</option>
+                                    </select>
+                                }
+                                else
+                                {
+                                    <input type="@field.FieldType" class="form-control" placeholder="@field.Placeholder" disabled="@(!field.IsEditable)" />
+                                }
+                            </div>
+                        }
+
+                        <div class="mt-4">
+                            <button class="btn btn-primary" disabled>提交</button>
+                            <button class="btn btn-secondary" disabled>重置</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <button class="btn btn-secondary" @onclick="GoBack">← 返回</button>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Guid FormId { get; set; }
+
+    private FormDetailDto? form;
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadForm();
+    }
+
+    private async Task LoadForm()
+    {
+        loading = true;
+        try
+        {
+            var response = await Http.GetFromJsonAsync<ApiResponse<FormDetailDto>>($"api/forms/{FormId}");
+            if (response?.Success == true)
+            {
+                form = response.Data;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private void GoBack()
+    {
+        NavManager.NavigateTo("/forms");
+    }
+
+    public class FormDetailDto
+    {
+        public string FormName { get; set; } = "";
+        public string? Description { get; set; }
+        public List<FormFieldDto>? Fields { get; set; }
+    }
+
+    public class FormFieldDto
+    {
+        public string FieldName { get; set; } = "";
+        public string FieldType { get; set; } = "";
+        public string Label { get; set; } = "";
+        public string? Placeholder { get; set; }
+        public bool IsRequired { get; set; }
+        public bool IsEditable { get; set; }
+    }
+
+    public class ApiResponse<T>
+    {
+        public bool Success { get; set; }
+        public T? Data { get; set; }
+        public string? Message { get; set; }
+    }
+}

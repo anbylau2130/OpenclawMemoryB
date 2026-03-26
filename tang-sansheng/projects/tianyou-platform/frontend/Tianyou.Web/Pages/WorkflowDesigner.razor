@@ -1,0 +1,134 @@
+@page "/workflows/{WorkflowId:guid}/design"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>🔧 工作流设计器</h3>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">
+                <h5>节点工具箱</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-outline-success" @onclick='() => AddNode("start")'>开始节点</button>
+                    <button class="btn btn-outline-primary" @onclick='() => AddNode("task")'>任务节点</button>
+                    <button class="btn btn-outline-info" @onclick='() => AddNode("approve")'>审批节点</button>
+                    <button class="btn btn-outline-warning" @onclick='() => AddNode("condition")'>条件节点</button>
+                    <button class="btn btn-outline-danger" @onclick='() => AddNode("end")'>结束节点</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <h5>流程设计</h5>
+                <div>
+                    <button class="btn btn-success btn-sm" @onclick="SaveWorkflow">保存</button>
+                    <button class="btn btn-secondary btn-sm" @onclick="GoBack">返回</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="workflow-canvas" style="min-height: 400px; background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 4px; padding: 20px;">
+                    @if (nodes.Count == 0)
+                    {
+                        <div class="text-center text-muted py-5">
+                            从左侧工具箱选择节点类型添加
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row">
+                            @foreach (var node in nodes)
+                            {
+                                <div class="col-md-4 mb-3">
+                                    <div class="card @GetNodeCardClass(node.NodeType)">
+                                        <div class="card-body text-center">
+                                            <h6>@GetNodeLabel(node.NodeType)</h6>
+                                            <small>@node.NodeName</small>
+                                            <button class="btn btn-sm btn-outline-danger mt-2" @onclick="() => RemoveNode(node.NodeId)">删除</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Guid WorkflowId { get; set; }
+
+    private List<NodeDto> nodes = new();
+    private int nodeCounter = 0;
+
+    private void AddNode(string nodeType)
+    {
+        nodeCounter++;
+        nodes.Add(new NodeDto
+        {
+            NodeId = Guid.NewGuid(),
+            NodeType = nodeType,
+            NodeName = $"{GetNodeLabel(nodeType)} {nodeCounter}"
+        });
+    }
+
+    private string GetNodeLabel(string nodeType) => nodeType switch
+    {
+        "start" => "开始",
+        "task" => "任务",
+        "approve" => "审批",
+        "condition" => "条件",
+        "end" => "结束",
+        _ => "节点"
+    };
+
+    private string GetNodeCardClass(string nodeType) => nodeType switch
+    {
+        "start" => "border-success",
+        "task" => "border-primary",
+        "approve" => "border-info",
+        "condition" => "border-warning",
+        "end" => "border-danger",
+        _ => ""
+    };
+
+    private void RemoveNode(Guid nodeId)
+    {
+        nodes.RemoveAll(n => n.NodeId == nodeId);
+    }
+
+    private async Task SaveWorkflow()
+    {
+        try
+        {
+            await Http.PostAsJsonAsync($"api/workflows/{WorkflowId}/nodes", nodes);
+            NavManager.NavigateTo("/workflows");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"保存失败: {ex.Message}");
+        }
+    }
+
+    private void GoBack()
+    {
+        NavManager.NavigateTo("/workflows");
+    }
+
+    public class NodeDto
+    {
+        public Guid NodeId { get; set; }
+        public string NodeType { get; set; } = "";
+        public string NodeName { get; set; } = "";
+    }
+}

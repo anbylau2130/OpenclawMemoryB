@@ -44,6 +44,9 @@ public class TianyouDbContext : DbContext
             entity.Property(e => e.Email).IsRequired().HasMaxLength(100);
             entity.Property(e => e.PasswordHash).IsRequired();
             entity.Property(e => e.Status).HasDefaultValue("active");
+            
+            // 软删除查询过滤器
+            entity.HasQueryFilter(e => !e.IsDeleted);
         });
         
         // 配置Role实体
@@ -105,6 +108,9 @@ public class TianyouDbContext : DbContext
             entity.HasOne(e => e.Entity)
                   .WithMany()
                   .HasForeignKey(e => e.EntityDefinitionId);
+            
+            // 软删除查询过滤器
+            entity.HasQueryFilter(e => !e.IsDeleted);
         });
         
         // 配置FormDefinition实体
@@ -196,6 +202,9 @@ public class TianyouDbContext : DbContext
             entity.Property(e => e.TenantName).IsRequired().HasMaxLength(100);
             entity.Property(e => e.TenantCode).IsRequired().HasMaxLength(50);
             entity.Property(e => e.Status).IsRequired().HasMaxLength(20);
+            
+            // 软删除查询过滤器
+            entity.HasQueryFilter(e => !e.IsDeleted);
         });
         
         // 种子数据

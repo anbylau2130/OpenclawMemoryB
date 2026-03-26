@@ -1,0 +1,83 @@
+@inject IJSRuntime JSRuntime
+
+<div class="toast-container position-fixed top-0 end-0 p-3">
+    @foreach (var toast in toasts)
+    {
+        <div class="toast @toast.CssClass show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">@toast.Title</strong>
+                <small>@toast.Time.ToString("HH:mm")</small>
+                <button type="button" class="btn-close" @onclick="() => RemoveToast(toast.Id)"></button>
+            </div>
+            <div class="toast-body">
+                @toast.Message
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private List<ToastMessage> toasts = new();
+    private int nextId = 1;
+
+    public void ShowSuccess(string title, string message, int durationSeconds = 5)
+    {
+        AddToast(title, message, "bg-success text-white", durationSeconds);
+    }
+
+    public void ShowError(string title, string message, int durationSeconds = 5)
+    {
+        AddToast(title, message, "bg-danger text-white", durationSeconds);
+    }
+
+    public void ShowWarning(string title, string message, int durationSeconds = 5)
+    {
+        AddToast(title, message, "bg-warning", durationSeconds);
+    }
+
+    public void ShowInfo(string title, string message, int durationSeconds = 5)
+    {
+        AddToast(title, message, "bg-info text-white", durationSeconds);
+    }
+
+    private void AddToast(string title, string message, string cssClass, int durationSeconds)
+    {
+        var toast = new ToastMessage
+        {
+            Id = nextId++,
+            Title = title,
+            Message = message,
+            CssClass = cssClass,
+            Time = DateTime.Now
+        };
+
+        toasts.Add(toast);
+        StateHasChanged();
+
+        // 自动移除
+        _ = Task.Run(async () =>
+        {
+            await Task.Delay(durationSeconds * 1000);
+            RemoveToast(toast.Id);
+        });
+    }
+
+    private void RemoveToast(int id)
+    {
+        var toast = toasts.FirstOrDefault(t => t.Id == id);
+        if (toast != null)
+        {
+            toasts.Remove(toast);
+            InvokeAsync(StateHasChanged);
+        }
+    }
+
+    public class ToastMessage
+    {
+        public int Id { get; set; }
+        public string Title { get; set; } = "";
+        public string Message { get; set; } = "";
+        public string CssClass { get; set; } = "";
+        public DateTime Time { get; set; }
+    }
+}

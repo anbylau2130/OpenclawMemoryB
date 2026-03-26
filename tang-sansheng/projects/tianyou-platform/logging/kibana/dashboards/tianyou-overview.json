@@ -1,0 +1,173 @@
+{
+  "version": "8.11.0",
+  "objects": [
+    {
+      "id": "tianyou-logs-overview",
+      "type": "dashboard",
+      "attributes": {
+        "title": "天佑平台日志总览",
+        "hits": 0,
+        "description": "天佑平台应用日志监控总览仪表板",
+        "panelsJSON": [
+          {
+            "gridData": {
+              "x": 0,
+              "y": 0,
+              "w": 24,
+              "h": 4
+            },
+            "id": "panel-1",
+            "panelIndex": 1,
+            "title": "日志总数",
+            "type": "metric",
+            "embeddableConfig": {
+              "vis": {
+                "params": {
+                  "metric": {
+                    "percentageMode": false,
+                    "useRanges": false,
+                    "colorSchema": "Green to Red",
+                    "metricColorMode": "None",
+                    "style": {
+                      "bgFill": "#000",
+                      "bgColor": false,
+                      "labelColor": false,
+                      "subText": "",
+                      "fontSize": 60
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "gridData": {
+              "x": 0,
+              "y": 4,
+              "w": 12,
+              "h": 8
+            },
+            "id": "panel-2",
+            "panelIndex": 2,
+            "title": "日志级别分布",
+            "type": "visualization",
+            "embeddableConfig": {
+              "vis": {
+                "params": {
+                  "type": "pie",
+                  "addTooltip": true,
+                  "addLegend": true,
+                  "legendPosition": "right",
+                  "isDonut": true
+                }
+              }
+            }
+          },
+          {
+            "gridData": {
+              "x": 12,
+              "y": 4,
+              "w": 12,
+              "h": 8
+            },
+            "id": "panel-3",
+            "panelIndex": 3,
+            "title": "错误日志趋势",
+            "type": "visualization",
+            "embeddableConfig": {
+              "vis": {
+                "params": {
+                  "type": "line",
+                  "grid": {
+                    "categoryLines": false
+                  },
+                  "categoryAxes": [
+                    {
+                      "id": "CategoryAxis-1",
+                      "type": "category",
+                      "position": "bottom",
+                      "show": true,
+                      "style": {}
+                    }
+                  ],
+                  "valueAxes": [
+                    {
+                      "id": "ValueAxis-1",
+                      "name": "LeftAxis-1",
+                      "type": "value",
+                      "position": "left",
+                      "show": true,
+                      "style": {}
+                    }
+                  ],
+                  "seriesParams": [
+                    {
+                      "show": "true",
+                      "type": "line",
+                      "mode": "normal",
+                      "data": {
+                        "id": "1",
+                        "label": "Count"
+                      },
+                      "drawLinesBetweenPoints": true,
+                      "showCircles": true
+                    }
+                  ],
+                  "addTooltip": true,
+                  "addLegend": true,
+                  "legendPosition": "right"
+                }
+              }
+            }
+          },
+          {
+            "gridData": {
+              "x": 0,
+              "y": 12,
+              "w": 24,
+              "h": 12
+            },
+            "id": "panel-4",
+            "panelIndex": 4,
+            "title": "最新日志",
+            "type": "search",
+            "embeddableConfig": {
+              "columns": ["timestamp", "log_level", "message", "user_id"],
+              "sort": ["timestamp", "desc"],
+              "perPage": 20
+            }
+          }
+        ],
+        "optionsJSON": {
+          "darkTheme": false,
+          "hidePanelTitles": false,
+          "useMargins": true
+        },
+        "timeRestore": true,
+        "timeTo": "now",
+        "timeFrom": "now-1h",
+        "refreshInterval": {
+          "pause": false,
+          "value": 10
+        },
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": {
+            "query": {
+              "language": "kuery",
+              "query": ""
+            },
+            "filter": [],
+            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index"
+          }
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "tianyou-logs-*"
+        }
+      ]
+    }
+  ]
+}

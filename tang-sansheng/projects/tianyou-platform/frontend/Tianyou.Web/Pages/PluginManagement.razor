@@ -1,0 +1,144 @@
+@page "/plugins"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>🔌 插件管理</h3>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="UploadPlugin">📤 上传插件</button>
+    <button class="btn btn-secondary" @onclick="LoadPlugins">🔄 刷新</button>
+</div>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (plugins == null || plugins.Count == 0)
+{
+    <div class="alert alert-info">暂无插件</div>
+}
+else
+{
+    <div class="row">
+        @foreach (var plugin in plugins)
+        {
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">@plugin.PluginName</h5>
+                            <span class="badge @(plugin.IsEnabled ? "bg-success" : "bg-secondary")">
+                                @(plugin.IsEnabled ? "已启用" : "已禁用")
+                            </span>
+                        </div>
+                        <p class="card-text text-muted">@plugin.Description</p>
+                        <div class="mb-2">
+                            <span class="badge bg-info">@plugin.Version</span>
+                            <span class="badge bg-primary">@plugin.Author</span>
+                        </div>
+                        <p class="card-text">
+                            <small class="text-muted">安装于 @plugin.InstalledAt.ToString("yyyy-MM-dd")</small>
+                        </p>
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-outline-primary" @onclick="() => ConfigurePlugin(plugin.PluginId)">配置</button>
+                            <button class="btn btn-outline-warning" @onclick="() => TogglePlugin(plugin.PluginId)">
+                                @(plugin.IsEnabled ? "禁用" : "启用")
+                            </button>
+                            <button class="btn btn-outline-danger" @onclick="() => UninstallPlugin(plugin.PluginId)">卸载</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<PluginDto> plugins = new();
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadPlugins();
+    }
+
+    private async Task LoadPlugins()
+    {
+        loading = true;
+        try
+        {
+            // 临时模拟数据
+            plugins = new List<PluginDto>
+            {
+                new PluginDto 
+                { 
+                    PluginId = Guid.NewGuid(), 
+                    PluginName = "数据导入插件", 
+                    Description = "支持Excel、CSV数据批量导入",
+                    Version = "1.0.0",
+                    Author = "Tianyou",
+                    IsEnabled = true,
+                    InstalledAt = DateTime.Now.AddDays(-15)
+                },
+                new PluginDto 
+                { 
+                    PluginId = Guid.NewGuid(), 
+                    PluginName = "报表生成器", 
+                    Description = "自动生成统计报表",
+                    Version = "2.1.0",
+                    Author = "Tianyou",
+                    IsEnabled = false,
+                    InstalledAt = DateTime.Now.AddDays(-10)
+                }
+            };
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private void UploadPlugin()
+    {
+        NavManager.NavigateTo("/plugins/upload");
+    }
+
+    private void ConfigurePlugin(Guid pluginId)
+    {
+        NavManager.NavigateTo($"/plugins/{pluginId}/config");
+    }
+
+    private async Task TogglePlugin(Guid pluginId)
+    {
+        var plugin = plugins.FirstOrDefault(p => p.PluginId == pluginId);
+        if (plugin != null)
+        {
+            plugin.IsEnabled = !plugin.IsEnabled;
+            StateHasChanged();
+        }
+    }
+
+    private async Task UninstallPlugin(Guid pluginId)
+    {
+        plugins.RemoveAll(p => p.PluginId == pluginId);
+        StateHasChanged();
+    }
+
+    public class PluginDto
+    {
+        public Guid PluginId { get; set; }
+        public string PluginName { get; set; } = "";
+        public string? Description { get; set; }
+        public string Version { get; set; } = "";
+        public string Author { get; set; } = "";
+        public bool IsEnabled { get; set; }
+        public DateTime InstalledAt { get; set; }
+    }
+}

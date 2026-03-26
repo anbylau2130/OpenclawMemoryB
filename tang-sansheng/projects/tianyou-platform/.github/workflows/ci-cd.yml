@@ -1,0 +1,227 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+env:
+  DOTNET_VERSION: '8.0.x'
+  NODE_VERSION: '18.x'
+
+jobs:
+  # ==================== Backend Build & Test ====================
+  backend-build:
+    name: Backend Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        
+    - name: Cache NuGet packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-
+          
+    - name: Restore dependencies
+      run: dotnet restore backend/Tianyou.sln
+      
+    - name: Build backend
+      run: dotnet build backend/Tianyou.sln --configuration Release --no-restore
+      
+    - name: Run backend tests
+      run: dotnet test backend/Tianyou.sln --configuration Release --no-build --verbosity normal
+      
+    - name: Publish backend
+      run: dotnet publish backend/src/Tianyou.Api/Tianyou.Api.csproj --configuration Release --output ./publish/backend --no-build
+      
+    - name: Upload backend artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: backend-artifact
+        path: ./publish/backend
+        retention-days: 7
+
+  # ==================== Frontend Build & Test ====================
+  frontend-build:
+    name: Frontend Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        
+    - name: Cache NuGet packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-frontend-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-frontend-
+          
+    - name: Restore frontend dependencies
+      run: dotnet restore frontend/Tianyou.Web/Tianyou.Web.csproj
+      
+    - name: Build frontend
+      run: dotnet build frontend/Tianyou.Web/Tianyou.Web.csproj --configuration Release --no-restore
+      
+    - name: Publish frontend
+      run: dotnet publish frontend/Tianyou.Web/Tianyou.Web.csproj --configuration Release --output ./publish/frontend --no-build
+      
+    - name: Upload frontend artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: frontend-artifact
+        path: ./publish/frontend
+        retention-days: 7
+
+  # ==================== Docker Build ====================
+  docker-build:
+    name: Docker Build & Push
+    runs-on: ubuntu-latest
+    needs: [backend-build, frontend-build]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Download backend artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: backend-artifact
+        path: ./publish/backend
+        
+    - name: Download frontend artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: frontend-artifact
+        path: ./publish/frontend
+        
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+      
+    - name: Login to Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        
+    - name: Extract metadata
+      id: meta
+      uses: docker/metadata-action@v5
+      with:
+        images: ${{ secrets.DOCKER_USERNAME }}/tianyou-platform
+        tags: |
+          type=ref,event=branch
+          type=ref,event=pr
+          type=semver,pattern={{version}}
+          type=semver,pattern={{major}}.{{minor}}
+          
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ./docker-compose.yml
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+  # ==================== Deploy to Production ====================
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: [docker-build]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment: production
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Deploy to server
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.DEPLOY_HOST }}
+        username: ${{ secrets.DEPLOY_USER }}
+        key: ${{ secrets.DEPLOY_KEY }}
+        script: |
+          cd /opt/tianyou-platform
+          docker-compose pull
+          docker-compose up -d
+          docker system prune -f
+          
+    - name: Health check
+      run: |
+        curl -f https://${{ secrets.DEPLOY_HOST }}/health || exit 1
+        
+    - name: Notify deployment status
+      if: always()
+      run: |
+        echo "Deployment ${{ job.status }}"
+
+  # ==================== Code Quality Check ====================
+  code-quality:
+    name: Code Quality Analysis
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        
+    - name: Restore dependencies
+      run: dotnet restore backend/Tianyou.sln
+      
+    - name: Run code analysis
+      run: dotnet build backend/Tianyou.sln --configuration Release /p:EnforceCodeStyleInBuild=true
+      
+    - name: Check formatting
+      run: dotnet format backend/Tianyou.sln --verify-no-changes --verbosity diagnostic
+
+  # ==================== Security Scan ====================
+  security-scan:
+    name: Security Vulnerability Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        
+    - name: Restore dependencies
+      run: dotnet restore backend/Tianyou.sln
+      
+    - name: Run security scan
+      uses: github/codeql-action/init@v3
+      with:
+        languages: csharp
+        
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3

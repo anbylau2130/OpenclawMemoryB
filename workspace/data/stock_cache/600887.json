@@ -1,16 +1,16 @@
 {
   "code": "600887",
   "name": "伊利股份",
-  "current_price": 25.49,
-  "open": 26.2,
-  "high": 26.23,
-  "low": 25.35,
-  "volume": 640462,
-  "amount": 1645709736.0,
-  "change_pct": -3.41,
-  "pe": 154,
-  "pb": 2903,
+  "current_price": 25.84,
+  "open": 25.83,
+  "high": 25.86,
+  "low": 25.82,
+  "volume": 2655,
+  "amount": 6857984.0,
+  "change_pct": 0.54,
+  "pe": 145,
+  "pb": 2827,
   "total_mv": 1.64830168,
   "source": "eastmoney",
-  "timestamp": "2026-03-24T08:18:18.043389"
+  "timestamp": "2026-03-25T09:30:20.423619"
 }

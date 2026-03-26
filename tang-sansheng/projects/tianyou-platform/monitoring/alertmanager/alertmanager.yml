@@ -1,0 +1,146 @@
+# ==================== Alertmanager 配置文件 ====================
+# 天佑平台告警管理配置
+# 作者：兵部
+# 日期：2026-03-25
+
+global:
+  # SMTP 配置
+  smtp_smarthost: '${SMTP_HOST}:${SMTP_PORT}'
+  smtp_from: '${SMTP_FROM}'
+  smtp_auth_username: '${SMTP_USER}'
+  smtp_auth_password: '${SMTP_PASSWORD}'
+  smtp_require_tls: true
+
+  # Slack 配置
+  slack_api_url: '${SLACK_WEBHOOK_URL}'
+
+  # 解决时间窗口
+  resolve_timeout: 5m
+
+# 告警模板
+templates:
+  - '/etc/alertmanager/templates/*.tmpl'
+
+# 路由配置
+route:
+  # 默认接收器
+  receiver: 'default-receiver'
+  
+  # 分组标签
+  group_by: ['alertname', 'cluster', 'service']
+  
+  # 初始等待时间
+  group_wait: 30s
+  
+  # 发送相同告警的间隔时间
+  group_interval: 5m
+  
+  # 重复发送告警的间隔时间
+  repeat_interval: 4h
+  
+  # 子路由
+  routes:
+    # 严重告警路由
+    - match:
+        severity: critical
+      receiver: 'critical-alerts'
+      group_wait: 10s
+      repeat_interval: 1h
+      continue: true
+    
+    # 数据库告警路由
+    - match:
+        service: postgres
+      receiver: 'database-team'
+      group_by: ['alertname', 'instance']
+    
+    # 应用告警路由
+    - match:
+        service: tianyou-platform
+      receiver: 'application-team'
+      group_by: ['alertname', 'instance', 'endpoint']
+
+# 接收器配置
+receivers:
+  # 默认接收器
+  - name: 'default-receiver'
+    email_configs:
+      - to: '${ALERT_EMAIL_RECIPIENT}'
+        send_resolved: true
+        html: '{{ template "email.default.html" . }}'
+    
+    slack_configs:
+      - channel: '#tianyou-alerts'
+        send_resolved: true
+        title: '{{ template "slack.title" . }}'
+        text: '{{ template "slack.text" . }}'
+        color: '{{ if eq .Status "firing" }}{{ if eq .CommonLabels.severity "critical" }}danger{{ else if eq .CommonLabels.severity "warning" }}warning{{ else }}#439FE0{{ end }}{{ else }}good{{ end }}'
+
+  # 严重告警接收器
+  - name: 'critical-alerts'
+    email_configs:
+      - to: '${CRITICAL_ALERT_EMAIL}'
+        send_resolved: true
+        html: '{{ template "email.critical.html" . }}'
+    
+    slack_configs:
+      - channel: '#tianyou-critical'
+        send_resolved: true
+        title: '🚨 CRITICAL: {{ template "slack.title" . }}'
+        text: '{{ template "slack.text" . }}'
+        color: 'danger'
+    
+    webhook_configs:
+      - url: '${WEBHOOK_URL_CRITICAL}'
+        send_resolved: true
+
+  # 数据库团队接收器
+  - name: 'database-team'
+    email_configs:
+      - to: '${DB_TEAM_EMAIL}'
+        send_resolved: true
+        html: '{{ template "email.database.html" . }}'
+    
+    slack_configs:
+      - channel: '#tianyou-database'
+        send_resolved: true
+        title: '📊 Database Alert: {{ template "slack.title" . }}'
+        text: '{{ template "slack.text" . }}'
+        color: '{{ if eq .Status "firing" }}warning{{ else }}good{{ end }}'
+
+  # 应用团队接收器
+  - name: 'application-team'
+    email_configs:
+      - to: '${APP_TEAM_EMAIL}'
+        send_resolved: true
+        html: '{{ template "email.application.html" . }}'
+    
+    slack_configs:
+      - channel: '#tianyou-app'
+        send_resolved: true
+        title: '⚡ Application Alert: {{ template "slack.title" . }}'
+        text: '{{ template "slack.text" . }}'
+        color: '{{ if eq .Status "firing" }}warning{{ else }}good{{ end }}'
+
+# 抑制规则
+inhibit_rules:
+  # 如果服务宕机，抑制该服务的其他告警
+  - source_match:
+      alertname: 'ServiceDown'
+    target_match_re:
+      alertname: '.*'
+    equal: ['instance', 'service']
+  
+  # 如果节点宕机，抑制该节点的所有告警
+  - source_match:
+      alertname: 'NodeDown'
+    target_match_re:
+      alertname: '.*'
+    equal: ['instance']
+  
+  # 如果数据库宕机，抑制数据库相关的告警
+  - source_match:
+      alertname: 'PostgreSQLDown'
+    target_match:
+      service: 'postgres'
+    equal: ['instance']

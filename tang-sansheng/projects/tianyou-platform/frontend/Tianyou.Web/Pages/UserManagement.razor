@@ -1,0 +1,249 @@
+@page "/users"
+@using Microsoft.AspNetCore.Authorization
+@using System.Net.Http.Json
+@using System.Net.Http.Headers
+@using Tianyou.Web.Services
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+@inject AuthService AuthService
+
+<h3>👥 用户管理</h3>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="CreateUser">➕ 新增用户</button>
+    <button class="btn btn-secondary" @onclick="LoadUsers">🔄 刷新</button>
+</div>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (users == null || users.Count == 0)
+{
+    <div class="alert alert-info">暂无用户数据</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>用户名</th>
+                    <th>邮箱</th>
+                    <th>角色</th>
+                    <th>状态</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in users)
+                {
+                    <tr>
+                        <td><strong>@user.Username</strong></td>
+                        <td>@user.Email</td>
+                        <td><span class="badge bg-primary">@user.Role</span></td>
+                        <td>
+                            <span class="badge @(user.IsActive ? "bg-success" : "bg-secondary")">
+                                @(user.IsActive ? "激活" : "禁用")
+                            </span>
+                        </td>
+                        <td>@user.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning" @onclick="() => EditUser(user.UserId)">编辑</button>
+                            <button class="btn btn-sm btn-danger" @onclick="() => ConfirmDeleteUser(user.UserId, user.Username)">删除</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+<!-- 删除确认对话框 -->
+@if (showDeleteConfirm)
+{
+    <div class="modal" style="display: block; background: rgba(0,0,0,0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">⚠️ 确认删除</h5>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0">您确定要删除用户 <strong>@deleteUserName</strong> 吗？</p>
+                    <p class="text-danger mt-2 mb-0"><small>此操作不可恢复，请谨慎操作！</small></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="CancelDelete">取消</button>
+                    <button type="button" class="btn btn-danger" @onclick="DeleteUserConfirmed">确认删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private List<UserDto> users = new();
+    private bool loading = true;
+    private bool showDeleteConfirm = false;
+    private Guid deleteUserId = Guid.Empty;
+    private string deleteUserName = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadUsers();
+    }
+
+    private async Task LoadUsers()
+    {
+        loading = true;
+        try
+        {
+            // 获取Token
+            var token = await AuthService.GetTokenAsync();
+            
+            if (string.IsNullOrEmpty(token))
+            {
+                // 没有Token，跳转到登录页
+                Console.WriteLine("未登录，跳转到登录页");
+                NavManager.NavigateTo("/login");
+                return;
+            }
+            
+            // 创建带Authorization header的HttpClient
+            using var requestMessage = new HttpRequestMessage(HttpMethod.Get, 
+                "http://192.168.50.251:8091/api/users?page=1&size=10");
+            requestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            
+            var response = await Http.SendAsync(requestMessage);
+            
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var apiResponse = System.Text.Json.JsonSerializer.Deserialize<ApiResponse<UserListData>>(content, 
+                    new System.Text.Json.JsonSerializerOptions 
+                    { 
+                        PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase 
+                    });
+                
+                if (apiResponse != null && apiResponse.Success && apiResponse.Data != null)
+                {
+                    users = apiResponse.Data.Users.Select(u => new UserDto
+                    {
+                        UserId = u.UserId,
+                        Username = u.Username,
+                        Email = u.Email,
+                        Role = u.Roles != null && u.Roles.Count > 0 ? u.Roles[0] : "普通用户",
+                        IsActive = u.IsActive,
+                        CreatedAt = u.CreatedAt
+                    }).ToList();
+                    
+                    StateHasChanged();
+                }
+                else
+                {
+                    Console.WriteLine($"加载用户失败: API返回失败");
+                    users = new List<UserDto>();
+                }
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                // Token过期，跳转到登录页
+                Console.WriteLine("Token过期，请重新登录");
+                NavManager.NavigateTo("/login");
+                return;
+            }
+            else
+            {
+                Console.WriteLine($"加载用户失败: HTTP {(int)response.StatusCode}");
+                users = new List<UserDto>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+            users = new List<UserDto>();
+        }
+        loading = false;
+    }
+
+    private void CreateUser()
+    {
+        NavManager.NavigateTo("/users/create");
+    }
+
+    private void EditUser(Guid userId)
+    {
+        NavManager.NavigateTo($"/users/{userId}/edit");
+    }
+
+    private void ConfirmDeleteUser(Guid userId, string userName)
+    {
+        deleteUserId = userId;
+        deleteUserName = userName;
+        showDeleteConfirm = true;
+    }
+
+    private void CancelDelete()
+    {
+        showDeleteConfirm = false;
+        deleteUserId = Guid.Empty;
+        deleteUserName = "";
+    }
+
+    private async Task DeleteUserConfirmed()
+    {
+        users.RemoveAll(u => u.UserId == deleteUserId);
+        showDeleteConfirm = false;
+        deleteUserId = Guid.Empty;
+        deleteUserName = "";
+        StateHasChanged();
+    }
+
+    private async Task DeleteUser(Guid userId)
+    {
+        users.RemoveAll(u => u.UserId == userId);
+        StateHasChanged();
+    }
+
+    // DTO类
+    public class UserDto
+    {
+        public Guid UserId { get; set; }
+        public string Username { get; set; } = "";
+        public string Email { get; set; } = "";
+        public string Role { get; set; } = "";
+        public bool IsActive { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+
+    // API响应类
+    public class ApiResponse<T>
+    {
+        public bool Success { get; set; }
+        public T Data { get; set; }
+    }
+
+    public class UserListData
+    {
+        public List<UserData> Users { get; set; }
+        public int Total { get; set; }
+        public int Page { get; set; }
+        public int Size { get; set; }
+    }
+
+    public class UserData
+    {
+        public Guid UserId { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public List<string> Roles { get; set; }
+        public bool IsActive { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+}

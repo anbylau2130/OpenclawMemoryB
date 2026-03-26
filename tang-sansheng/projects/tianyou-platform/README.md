@@ -1,5 +1,12 @@
 # Tianyou - 企业级低代码开发平台
 
+[![CI/CD Pipeline](https://github.com/your-org/tianyou-platform/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/your-org/tianyou-platform/actions)
+[![Backend Build](https://img.shields.io/github/workflow/status/your-org/tianyou-platform/Backend%20Build%20%26%20Test?label=backend&logo=dotnet)](https://github.com/your-org/tianyou-platform/actions)
+[![Frontend Build](https://img.shields.io/github/workflow/status/your-org/tianyou-platform/Frontend%20Build%20%26%20Test?label=frontend&logo=blazor)](https://github.com/your-org/tianyou-platform/actions)
+[![Code Quality](https://img.shields.io/github/workflow/status/your-org/tianyou-platform/Code%20Quality%20Analysis?label=code%20quality&logo=github)](https://github.com/your-org/tianyou-platform/actions)
+[![Security Scan](https://img.shields.io/github/workflow/status/your-org/tianyou-platform/Security%20Vulnerability%20Scan?label=security&logo=github)](https://github.com/your-org/tianyou-platform/actions)
+[![License](https://img.shields.io/badge/license-Proprietary-blue.svg)](LICENSE)
+
 ## 项目概述
 
 **项目名称**: Tianyou（天佑）
@@ -111,11 +118,47 @@ dotnet run --project src/Tianyou.Api
 - 测试工程师: 2人
 - DevOps工程师: 1人
 
+## CI/CD 流水线
+
+本项目配置了完整的 CI/CD 流水线，包括：
+
+### 自动化流程
+- ✅ **后端构建和测试**：每次代码提交自动构建和测试后端项目
+- ✅ **前端构建和测试**：每次代码提交自动构建和测试前端项目
+- ✅ **代码质量检查**：自动执行代码风格检查和分析
+- ✅ **安全扫描**：自动扫描代码安全漏洞
+- ✅ **Docker 镜像构建**：自动构建和推送 Docker 镜像
+- ✅ **自动部署**：主分支合并自动部署到生产环境
+
+### 构建脚本
+```bash
+# 本地构建
+./scripts/build.sh
+
+# 本地部署
+./scripts/deploy.sh deploy
+
+# 查看部署状态
+./scripts/deploy.sh status
+
+# 查看日志
+./scripts/deploy.sh logs
+
+# 回滚
+./scripts/deploy.sh rollback
+```
+
+### 手动触发部署
+1. 访问 GitHub Actions 页面
+2. 选择 "CI/CD Pipeline" 工作流
+3. 点击 "Run workflow"
+4. 选择分支后运行
+
 ## 许可证
 
 Copyright © 2026 Tianyou Platform
 
 ---
 
-**开发状态**: 🚧 Phase 1 开发中
-**最后更新**: 2026-03-24 22:45
+**开发状态**: 🚧 Phase 3 中优先级任务执行中
+**最后更新**: 2026-03-25 14:55

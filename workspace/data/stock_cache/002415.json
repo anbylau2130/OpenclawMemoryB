@@ -1,16 +1,16 @@
 {
   "code": "002415",
   "name": "海康威视",
-  "current_price": 30.01,
-  "open": 30.64,
-  "high": 31.08,
-  "low": 29.95,
-  "volume": 479521,
-  "amount": 1458279263.97,
-  "change_pct": -4.12,
-  "pe": 126,
-  "pb": 3443,
+  "current_price": 30.31,
+  "open": 30.28,
+  "high": 30.32,
+  "low": 30.21,
+  "volume": 4960,
+  "amount": 15024347.0,
+  "change_pct": 0.1,
+  "pe": 278,
+  "pb": 3331,
   "total_mv": 1.548114379,
   "source": "eastmoney",
-  "timestamp": "2026-03-24T08:18:18.639156"
+  "timestamp": "2026-03-25T09:30:21.891231"
 }

@@ -1,0 +1,112 @@
+@page "/forms"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>📝 表单管理</h3>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="CreateForm">➕ 创建表单</button>
+    <button class="btn btn-secondary" @onclick="LoadForms">🔄 刷新</button>
+</div>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (forms == null || forms.Count == 0)
+{
+    <div class="alert alert-info">暂无表单，请点击"创建表单"按钮添加</div>
+}
+else
+{
+    <div class="row">
+        @foreach (var form in forms)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@form.FormName</h5>
+                        <p class="card-text text-muted">@(form.Description ?? "无描述")</p>
+                        <p>
+                            <span class="badge @(form.IsPublished ? "bg-success" : "bg-secondary")">
+                                @(form.IsPublished ? "已发布" : "草稿")
+                            </span>
+                            <span class="badge bg-info">@form.FieldCount 字段</span>
+                        </p>
+                        <button class="btn btn-sm btn-primary" @onclick="() => DesignForm(form.FormId)">设计</button>
+                        <button class="btn btn-sm btn-info" @onclick="() => PreviewForm(form.FormId)">预览</button>
+                    </div>
+                    <div class="card-footer text-muted">
+                        创建于 @form.CreatedAt.ToString("yyyy-MM-dd")
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private List<FormDto> forms = new();
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadForms();
+    }
+
+    private async Task LoadForms()
+    {
+        loading = true;
+        try
+        {
+            var response = await Http.GetFromJsonAsync<ApiResponse<List<FormDto>>>("api/forms");
+            if (response?.Success == true)
+            {
+                forms = response.Data ?? new List<FormDto>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private void CreateForm()
+    {
+        NavManager.NavigateTo("/forms/create");
+    }
+
+    private void DesignForm(Guid formId)
+    {
+        NavManager.NavigateTo($"/forms/{formId}/design");
+    }
+
+    private void PreviewForm(Guid formId)
+    {
+        NavManager.NavigateTo($"/forms/{formId}/preview");
+    }
+
+    public class FormDto
+    {
+        public Guid FormId { get; set; }
+        public string FormName { get; set; } = "";
+        public string? Description { get; set; }
+        public bool IsPublished { get; set; }
+        public int FieldCount { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class ApiResponse<T>
+    {
+        public bool Success { get; set; }
+        public T? Data { get; set; }
+        public string? Message { get; set; }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "updatedAt": 1774368404708,
+  "records": [
+    {
+      "msgId": "msgsGifGbi+2u2Lc7Kc322YNQ==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1774365717610
+    },
+    {
+      "msgId": "msgK7TLQCs4cHEJlTfRTmcGDw==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1774367115044
+    },
+    {
+      "msgId": "msgTizerNAh8pDljvVo9M7Nzg==",
+      "messageType": "text",
+      "text": "1",
+      "createdAt": 1774368404418
+    }
+  ]
+}

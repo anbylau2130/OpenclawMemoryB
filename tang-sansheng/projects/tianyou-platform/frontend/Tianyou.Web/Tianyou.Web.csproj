@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+    <!-- AOT 编译优化 -->
+    <RunAOTCompilation>true</RunAOTCompilation>
+    
+    <!-- Trimming 优化 -->
+    <PublishTrimmed>true</PublishTrimmed>
+    <TrimMode>partial</TrimMode>
+    
+    <!-- 性能优化 -->
+    <BlazorEnableTimeZoneSupport>true</BlazorEnableTimeZoneSupport>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <BlazorCacheBootResources>true</BlazorCacheBootResources>
+    
+    <!-- 压缩优化 -->
+    <BlazorWebAssemblyEnableLinking>true</BlazorWebAssemblyEnableLinking>
+    
+    <!-- 启用 SIMD 优化 -->
+    <WasmEnableSIMD>true</WasmEnableSIMD>
+    
+    <!-- 异常处理优化 -->
+    <WasmEnableExceptionHandling>true</WasmEnableExceptionHandling>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.25" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.25" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

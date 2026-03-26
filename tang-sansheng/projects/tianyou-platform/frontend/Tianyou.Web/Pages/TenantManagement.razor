@@ -1,0 +1,142 @@
+@page "/tenants"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>🏢 租户管理</h3>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="CreateTenant">➕ 新增租户</button>
+    <button class="btn btn-secondary" @onclick="LoadTenants">🔄 刷新</button>
+</div>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (tenants == null || tenants.Count == 0)
+{
+    <div class="alert alert-info">暂无租户数据</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>租户名称</th>
+                    <th>联系人</th>
+                    <th>用户数</th>
+                    <th>状态</th>
+                    <th>到期时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var tenant in tenants)
+                {
+                    <tr>
+                        <td><strong>@tenant.TenantName</strong></td>
+                        <td>@tenant.ContactName</td>
+                        <td><span class="badge bg-info">@tenant.UserCount</span></td>
+                        <td>
+                            <span class="badge @(tenant.IsActive ? "bg-success" : "bg-secondary")">
+                                @(tenant.IsActive ? "正常" : "停用")
+                            </span>
+                        </td>
+                        <td>@tenant.ExpireAt.ToString("yyyy-MM-dd")</td>
+                        <td>
+                            <button class="btn btn-sm btn-info" @onclick="() => ViewTenant(tenant.TenantId)">查看</button>
+                            <button class="btn btn-sm btn-warning" @onclick="() => EditTenant(tenant.TenantId)">编辑</button>
+                            <button class="btn btn-sm btn-danger" @onclick="() => DeleteTenant(tenant.TenantId)">删除</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@code {
+    private List<TenantDto> tenants = new();
+    private bool loading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTenants();
+    }
+
+    private async Task LoadTenants()
+    {
+        loading = true;
+        try
+        {
+            // 临时模拟数据
+            tenants = new List<TenantDto>
+            {
+                new TenantDto 
+                { 
+                    TenantId = Guid.NewGuid(), 
+                    TenantName = "天佑科技", 
+                    ContactName = "张经理",
+                    UserCount = 50,
+                    IsActive = true,
+                    ExpireAt = DateTime.Now.AddYears(1),
+                    CreatedAt = DateTime.Now.AddDays(-100)
+                },
+                new TenantDto 
+                { 
+                    TenantId = Guid.NewGuid(), 
+                    TenantName = "测试公司", 
+                    ContactName = "李总",
+                    UserCount = 10,
+                    IsActive = true,
+                    ExpireAt = DateTime.Now.AddMonths(3),
+                    CreatedAt = DateTime.Now.AddDays(-30)
+                }
+            };
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private void CreateTenant()
+    {
+        NavManager.NavigateTo("/tenants/create");
+    }
+
+    private void ViewTenant(Guid tenantId)
+    {
+        NavManager.NavigateTo($"/tenants/{tenantId}");
+    }
+
+    private void EditTenant(Guid tenantId)
+    {
+        NavManager.NavigateTo($"/tenants/{tenantId}/edit");
+    }
+
+    private async Task DeleteTenant(Guid tenantId)
+    {
+        tenants.RemoveAll(t => t.TenantId == tenantId);
+        StateHasChanged();
+    }
+
+    public class TenantDto
+    {
+        public Guid TenantId { get; set; }
+        public string TenantName { get; set; } = "";
+        public string ContactName { get; set; } = "";
+        public int UserCount { get; set; }
+        public bool IsActive { get; set; }
+        public DateTime ExpireAt { get; set; }
+        public DateTime CreatedAt { get; set; }
+    }
+}

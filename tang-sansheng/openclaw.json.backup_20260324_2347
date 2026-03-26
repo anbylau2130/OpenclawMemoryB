@@ -1,0 +1,688 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-21T04:39:18.192Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-06T01:09:18.549Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "browser": {
+    "executablePath": "/usr/bin/chromium",
+    "headless": true,
+    "noSandbox": true,
+    "defaultProfile": "openclaw"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "nvidia1": {
+        "baseUrl": "https://integrate.api.nvidia.com/v1",
+        "apiKey": "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",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-ai/deepseek-v3.2",
+            "name": "DeepSeek V3.2",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 64000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "meta/llama-3.1-70b-instruct",
+            "name": "Llama 3.1 70B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 8192
+          },
+          {
+            "id": "meta/llama-3.1-8b-instruct",
+            "name": "Llama 3.1 8B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 8192
+          },
+          {
+            "id": "microsoft/phi-3-mini-128k-instruct",
+            "name": "Phi-3 Mini 128K",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "microsoft/phi-3.5-mini-instruct",
+            "name": "Phi-3.5 Mini",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "google/gemma-2-9b-it",
+            "name": "Gemma 2 9B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 8192,
+            "maxTokens": 8192
+          },
+          {
+            "id": "google/gemma-2-2b-it",
+            "name": "Gemma 2 2B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 8192,
+            "maxTokens": 8192
+          },
+          {
+            "id": "mistralai/mistral-7b-instruct-v0.3",
+            "name": "Mistral 7B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 32768,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "nvidia2": {
+        "baseUrl": "https://integrate.api.nvidia.com/v1",
+        "apiKey": "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",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-ai/deepseek-v3.2",
+            "name": "DeepSeek V3.2",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 64000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "meta/llama-3.1-70b-instruct",
+            "name": "Llama 3.1 70B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 8192
+          },
+          {
+            "id": "meta/llama-3.1-8b-instruct",
+            "name": "Llama 3.1 8B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 131072,
+            "maxTokens": 8192
+          },
+          {
+            "id": "microsoft/phi-3-mini-128k-instruct",
+            "name": "Phi-3 Mini 128K",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "microsoft/phi-3.5-mini-instruct",
+            "name": "Phi-3.5 Mini",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 4096
+          },
+          {
+            "id": "google/gemma-2-9b-it",
+            "name": "Gemma 2 9B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 8192,
+            "maxTokens": 8192
+          },
+          {
+            "id": "google/gemma-2-2b-it",
+            "name": "Gemma 2 2B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 8192,
+            "maxTokens": 8192
+          },
+          {
+            "id": "mistralai/mistral-7b-instruct-v0.3",
+            "name": "Mistral 7B",
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 32768,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "zai": {
+        "baseUrl": "https://open.bigmodel.cn/api/coding/paas/v4",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "glm-5",
+            "name": "GLM-5",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 204800,
+            "maxTokens": 100000
+          },
+          {
+            "id": "glm-4.7",
+            "name": "GLM-4.7",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 204800,
+            "maxTokens": 100000
+          },
+          {
+            "id": "glm-4.6",
+            "name": "GLM-4.6",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 204800,
+            "maxTokens": 100000
+          },
+          {
+            "id": "glm-4.5-air",
+            "name": "glm-4.5-air",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 204800,
+            "maxTokens": 100000
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/root/.openclaw/workspace",
+      "model": {
+        "primary": "zai/glm-5"
+      },
+      "sandbox": {
+        "mode": "non-main"
+      },
+      "skipBootstrap": true
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "日常助手",
+        "workspace": "/root/.openclaw/workspace",
+        "model": {
+          "primary": "zai/glm-5"
+        }
+      },
+      {
+        "id": "jessica",
+        "name": "jessica",
+        "workspace": "/root/.openclaw/workspace-jessica",
+        "model": {
+          "primary": "zai/glm-4.7"
+        }
+      },
+      {
+        "id": "shangshu",
+        "name": "尚书省",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是尚书省令（左仆射），唐朝三省制的执行枢纽。回答用中文，雷厉风行。\n\n【核心职责】接收门下省审核通过的诏令，拆解任务派发六部执行，追踪进度向陛下汇报。\n\n【任务流程——三省流转】\n1. 收到用户任务后，用 sessions_spawn 发给中书省（agentId: zhongshu）起草方案；\n2. 中书省草案自动经门下省（agentId: menxia）审核；\n3. 门下省通过后，你按方案在频道内 @对应部门 派发任务；\n4. 门下省驳回 → 转回中书省修改。\n跳过三省的情况：纯闲聊、简单问答、状态查询、陛下标注「加急」。\n\n【部门职责】中书省=决策起草、门下省=审核追问、兵部=编码开发、户部=财务分析、礼部=品牌营销、工部=运维部署、吏部=项目管理、刑部=法务合规、御史台=独立监察。\n\n【派活方式】用 message 工具在 Discord 频道发消息，@对应部门 bot 下达任务。派活用结构化 Prompt：【角色】+【任务】+【背景】+【要求】+【格式】。"
+        },
+        "sandbox": {
+          "mode": "off"
+        },
+        "subagents": {
+          "allowAgents": [
+            "zhongshu",
+            "menxia",
+            "yushitai",
+            "bingbu",
+            "hubu",
+            "libu",
+            "gongbu",
+            "libu2",
+            "xingbu",
+            "shiguan"
+          ]
+        }
+      },
+      {
+        "id": "zhongshu",
+        "name": "中书省",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是中书令，唐朝三省制的决策起草机构。回答用中文，高瞻远瞩。\n\n【核心职责——诏令起草】收到尚书省转来的用户任务后：\n1. 分析需求完整性，判断是否缺失关键 context；\n2. 缺失信息 → 列出需要用户补充的问题，返回尚书省追问；\n3. 需求明确 → 起草【诏令草案】：\n   - 【方案描述】：结构化的高质量 Prompt（含角色、任务、背景、要求、格式）；\n   - 【执行计划】：拆解为具体步骤，标注每步应派给哪个部门；\n   - 【风险评估】：技术栈选择理由、潜在风险、替代方案。\n\n草案完成后自动提交门下省审核。\n\n【原则】方案具体可行，技术选型有理有据，风险评估诚实。宁可多想一步，不要让模糊方案流入执行层。"
+        },
+        "sandbox": {
+          "mode": "off"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-zhongshu",
+        "subagents": {
+          "allowAgents": ["menxia"]
+        }
+      },
+      {
+        "id": "menxia",
+        "name": "门下省",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是侍中，唐朝三省制的审核机构。回答用中文，谨慎严密。\n\n【核心职责——封驳审核】审核中书省起草的诏令草案：\n1. 检查方案完整性：目标是否清晰、步骤是否可行、资源是否充足、风险是否可控；\n2. 给出审核意见：\n   - ✅ 通过 → 下发尚书省执行；\n   - ❓ 需要补充 → 列出需要用户回答的问题，请尚书省追问；\n   - ↩️ 方案有问题 → 返回中书省修改，说明具体问题和修改建议。\n\n【审议职责】重大决策（预算、架构变更、战略方向）独立评估可行性。有封驳权。\n\n【原则】只问关键信息，一次问清楚。不做传声筒——必须独立思考。紧急任务可标注加急通过。"
+        },
+        "sandbox": {
+          "mode": "off"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-menxia",
+        "subagents": {
+          "allowAgents": ["shangshu"]
+        }
+      },
+      {
+        "id": "yushitai",
+        "name": "御史台",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是御史大夫，唐朝三省制的独立监察机构。回答用中文，铁面无私。\n\n【自动审查——Push 触发】收到 push 的 commit 信息和 diff 时：\n1. 逐文件检查：安全漏洞、性能问题、逻辑错误、代码规范；\n2. 结论：✅ 通过 / ⚠️ 建议修改 / ❌ 必须修改；\n3. 问题具体化：文件 + 行号 + 问题描述 + 修复建议。\n\n【独立性】御史台直接向陛下汇报，不受尚书省干涉。发现安全问题直接@陛下。\n\n【审计职责】定期检查项目进度偏差、资源浪费、风险隐患。发现问题直言不讳。"
+        },
+        "sandbox": {
+          "mode": "all",
+          "scope": "agent"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-yushitai"
+      },
+      {
+        "id": "bingbu",
+        "name": "兵部",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是兵部尚书，专精软件工程、系统架构、编码实现。回答用中文，直接给方案。任务完成后主动汇报结果摘要。"
+        },
+        "sandbox": {
+          "mode": "all",
+          "scope": "agent"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-bingbu"
+      },
+      {
+        "id": "hubu",
+        "name": "户部",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是户部尚书，专精财务分析、成本管控、预算规划。回答用中文，数据驱动。发现异常开支时主动告警。"
+        },
+        "sandbox": {
+          "mode": "off"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-hubu"
+      },
+      {
+        "id": "libu",
+        "name": "礼部",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是礼部尚书，专精品牌营销、社交媒体、内容创作。回答用中文，风格活泼。任务完成后主动汇报产出摘要。"
+        },
+        "sandbox": {
+          "mode": "off"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-libu"
+      },
+      {
+        "id": "gongbu",
+        "name": "工部",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是工部尚书，专精 DevOps、服务器运维、CI/CD、基础设施。回答用中文，注重实操。发现服务异常时主动告警。"
+        },
+        "sandbox": {
+          "mode": "off"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-gongbu"
+      },
+      {
+        "id": "libu2",
+        "name": "吏部",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是吏部尚书，专精项目管理、团队协调、进度追踪。回答用中文，条理清晰。任务完成后主动汇报进度和待办。"
+        },
+        "sandbox": {
+          "mode": "off"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-libu2"
+      },
+      {
+        "id": "xingbu",
+        "name": "刑部",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是刑部尚书，专精法务合规、知识产权、合同审查。回答用中文，严谨专业。发现合规问题时主动告警。"
+        },
+        "sandbox": {
+          "mode": "off"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-xingbu"
+      },
+      {
+        "id": "shiguan",
+        "name": "史官",
+        "model": {
+          "primary": "zai/glm-5"
+        },
+        "identity": {
+          "theme": "你是史官，秉笔直书，负责记录三省六部每日政务。回答用中文，客观翔实。\n\n【核心职责——每日记录】\n1. 每日自动生成【日录】，记录当天所有重要事件：\n   - 陛下诏令和决策\n   - 中书省起草的方案\n   - 门下省的审核意见\n   - 尚书省的执行派发\n   - 六部完成的工作\n   - 御史台的审查结论\n2. 格式：按时间线记录，分【诏令】【草案】【审核】【执行】【监察】五类\n3. 每日结束时生成摘要，归档到工作区\n\n【被动记录】平时不主动发言，只在被@或每日定时触发时输出记录。\n\n【月报生成】月末汇总当月日录，生成月度报告，含统计数据。\n\n【原则】秉笔直书，不隐不讳。如实记录，不加评判。"
+        },
+        "sandbox": {
+          "mode": "off"
+        },
+        "workspace": "/root/.openclaw/tang-sansheng/workspace-shiguan"
+      }
+    ]
+  },
+  "tools": {
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "main",
+      "match": {
+        "channel": "dingtalk",
+        "accountId": "default"
+      }
+    },
+    {
+      "agentId": "jessica",
+      "match": {
+        "channel": "dingtalk",
+        "accountId": "jessica"
+      }
+    },
+    {
+      "agentId": "zhongshu",
+      "match": {
+        "channel": "dingtalk",
+        "accountId": "taizi"
+      }
+    }
+  ],
+  "messages": {
+    "groupChat": {
+      "mentionPatterns": ["@everyone", "@here"]
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "maintenance": {
+      "mode": "enforce",
+      "pruneAfter": "30d",
+      "maxEntries": 50
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "dingtalk": {
+      "enabled": true,
+      "learningEnabled": true,
+      "learningAutoApply": false,
+      "learningNoteTtlMs": 21600000,
+      "showThinking": true,
+      "messageType": "markdown",
+      "thinkingMessage": "emoji",
+      "accounts": {
+        "default": {
+          "clientId": "ding46pdp4gp2nfgfbfl",
+          "clientSecret": "8krhe-wWKlqm_TlTZHczuPic1ztczb8RHNUtFviVOJy9Q5NcVuqJuSJrBKXjpGXY",
+          "robotCode": "ding46pdp4gp2nfgfbfl",
+          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
+          "agentId": "4271180067",
+          "dmPolicy": "open",
+          "groupPolicy": "open",
+          "messageType": "markdown",
+          "ackReaction": "🤔思考中",
+          "userPhone": "13027729771",
+          "allowFrom": ["*"]
+        },
+        "jessica": {
+          "clientId": "dingftzhsams5mrc5qk0",
+          "clientSecret": "05mQKSfxHfZYr9_ITHOWaovP6JNL-OeLHZmMGvyJwa5tJGu863LjTgqErvKZ0Rwq",
+          "robotCode": "dingftzhsams5mrc5qk0",
+          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
+          "agentId": "4274267137",
+          "dmPolicy": "open",
+          "groupPolicy": "open",
+          "messageType": "markdown",
+          "ackReaction": "🤔思考中",
+          "userPhone": "13027729771",
+          "allowFrom": ["*"]
+        },
+        "taizi": {
+          "clientId": "dingyhlhrphf9uxwp5u3",
+          "clientSecret": "8GQXzXWOLZqQ7UyNtbMU12Q0_-mA3c7trPM_A5XNIDA0LjepnThuzky23YGcCi_G",
+          "robotCode": "dingyhlhrphf9uxwp5u3",
+          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
+          "agentId": "4346325687",
+          "dmPolicy": "open",
+          "groupPolicy": "open",
+          "messageType": "markdown",
+          "ackReaction": "🤔思考中",
+          "userPhone": "13027729771",
+          "allowFrom": ["*"]
+        }
+      },
+      "robots": [
+        {
+          "name": "OpenClaw工作通知机器人",
+          "agentId": "4271180067",
+          "clientId": "ding46pdp4gp2nfgfbfl",
+          "clientSecret": "8krhe-wWKlqm_TlTZHczuPic1ztczb8RHNUtFviVOJy9Q5NcVuqJuSJrBKXjpGXY",
+          "corpId": "ding3cecc6cee84e6509a1320dcb25e91351",
+          "accountId": "default",
+          "userPhone": "13027729771"
+        }
+      ],
+      "subagents": {
+        "enabled": true,
+        "spawnThreads": true,
+        "spawnThreadsBindings": []
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {},
+    "auth": {
+      "mode": "token",
+      "token": "Lrq7dNX27t57BGby_PVKDAQMqHu3jq_p35DpZEqOLbk"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "plugins": {
+    "load": {
+      "paths": ["/root/.openclaw/plugins/evermemos-openclaw-plugin"]
+    },
+    "slots": {
+      "memory": "evermemos-openclaw-plugin"
+    },
+    "entries": {
+      "dingtalk": {
+        "enabled": true
+      },
+      "novel-openviking": {
+        "enabled": true
+      },
+      "evermemos-openclaw-plugin": {
+        "enabled": true,
+        "config": {
+          "baseUrl": "http://192.168.50.251:1995",
+          "userId": "openclaw",
+          "groupId": "openclaw-agents",
+          "topK": 5,
+          "memoryTypes": [
+            "episodic_memory",
+            "profile",
+            "agent_skill",
+            "agent_case"
+          ],
+          "retrieveMethod": "rrf"
+        }
+      }
+    },
+    "installs": {
+      "dingtalk": {
+        "source": "npm",
+        "spec": "@soimy/dingtalk",
+        "installPath": "/root/.openclaw/extensions/dingtalk",
+        "version": "3.3.0",
+        "resolvedName": "@soimy/dingtalk",
+        "resolvedVersion": "3.3.0",
+        "resolvedSpec": "@soimy/dingtalk@3.3.0",
+        "integrity": "sha512-2MkBwfU06s/j2ImGoAilunWbvmNk5zKnsc3yItBD+oPxC2fK4IfqhZvzDDvXyBts89MXs2puKB9LDGRzDa1O/Q==",
+        "shasum": "f6881d3f54ae33dd0f9aa30c8fb70a3e3541616e",
+        "resolvedAt": "2026-03-21T04:36:28.977Z",
+        "installedAt": "2026-03-21T04:39:17.968Z"
+      }
+    }
+  }
+}

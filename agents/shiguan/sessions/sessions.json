@@ -10,7 +10,7 @@
       "accountId": "shiguan"
     },
     "sessionId": "2bf69200-34da-4817-8043-772730ecae54",
-    "updatedAt": 1774314277399,
+    "updatedAt": 1774368464949,
     "deliveryContext": {
       "channel": "dingtalk",
       "to": "096028035723738668",
@@ -141,7 +141,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774314215592,
+      "generatedAt": 1774368452935,
       "sessionId": "2bf69200-34da-4817-8043-772730ecae54",
       "sessionKey": "agent:shiguan:main",
       "provider": "zai",
@@ -161,9 +161,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 22650,
+        "chars": 22667,
         "projectContextChars": 8690,
-        "nonProjectContextChars": 13960
+        "nonProjectContextChars": 13977
       },
       "injectedWorkspaceFiles": [
         {
@@ -397,11 +397,11 @@
         ]
       }
     },
-    "inputTokens": 12468,
-    "outputTokens": 1618,
-    "cacheRead": 19840,
+    "inputTokens": 12603,
+    "outputTokens": 42,
+    "cacheRead": 8448,
     "cacheWrite": 0,
-    "totalTokens": 20352,
+    "totalTokens": 21051,
     "totalTokensFresh": true
   }
 }

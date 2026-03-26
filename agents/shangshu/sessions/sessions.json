@@ -1,7 +1,7 @@
 {
   "agent:shangshu:main": {
     "sessionId": "6c3ccd37-531b-4c98-a4a6-9a80fd2f311d",
-    "updatedAt": 1774328942846,
+    "updatedAt": 1774368487623,
     "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
@@ -106,7 +106,7 @@
     "contextTokens": 204800,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774328815957,
+      "generatedAt": 1774368394881,
       "sessionId": "6c3ccd37-531b-4c98-a4a6-9a80fd2f311d",
       "sessionKey": "agent:shangshu:main",
       "provider": "zai",
@@ -350,16 +350,16 @@
         ]
       }
     },
-    "inputTokens": 570967,
-    "outputTokens": 3723,
-    "cacheRead": 158080,
+    "inputTokens": 3531,
+    "outputTokens": 570,
+    "cacheRead": 165760,
     "cacheWrite": 0,
     "totalTokensFresh": true,
     "channel": "dingtalk",
     "authProfileOverride": "zai:default",
     "authProfileOverrideSource": "auto",
     "authProfileOverrideCompactionCount": 0,
-    "totalTokens": 160144
+    "totalTokens": 166087
   },
   "agent:shangshu:dingtalk:group:taizi": {
     "chatType": "group",

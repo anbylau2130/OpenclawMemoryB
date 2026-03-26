@@ -1,0 +1,197 @@
+@page "/entities/{EntityId:guid}/data"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject HttpClient Http
+@inject NavigationManager NavManager
+
+<h3>📊 实体数据管理</h3>
+
+<div class="mb-3">
+    <button class="btn btn-primary" @onclick="CreateData">➕ 新增数据</button>
+    <button class="btn btn-secondary" @onclick="LoadData">🔄 刷新</button>
+    <button class="btn btn-outline-secondary" @onclick="GoBack">← 返回</button>
+</div>
+
+@if (loading)
+{
+    <div class="text-center">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+    </div>
+}
+else if (dataList == null || dataList.Count == 0)
+{
+    <div class="alert alert-info">暂无数据</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>数据内容</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in dataList)
+                {
+                    <tr>
+                        <td><code>@item.DataId.ToString()[..8]...</code></td>
+                        <td>@item.DataContent</td>
+                        <td>@item.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>
+                            <button class="btn btn-sm btn-warning" @onclick="() => EditData(item.DataId)">编辑</button>
+                            <button class="btn btn-sm btn-danger" @onclick="() => DeleteData(item.DataId)">删除</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+@if (showForm)
+{
+    <div class="modal" style="display: block; background: rgba(0,0,0,0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">@(isEditing ? "编辑数据" : "新增数据")</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">数据内容 (JSON)</label>
+                        <textarea class="form-control" @bind="formData" rows="6" placeholder='{"key": "value"}'></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" @onclick="SaveData">保存</button>
+                    <button class="btn btn-secondary" @onclick="CloseForm">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public Guid EntityId { get; set; }
+
+    private List<DataDto> dataList = new();
+    private bool loading = true;
+    private bool showForm = false;
+    private bool isEditing = false;
+    private Guid editingId = Guid.Empty;
+    private string formData = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        loading = true;
+        try
+        {
+            var response = await Http.GetFromJsonAsync<ApiResponse<List<DataDto>>>($"api/entities/{EntityId}/data");
+            if (response?.Success == true)
+            {
+                dataList = response.Data ?? new List<DataDto>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"加载失败: {ex.Message}");
+        }
+        loading = false;
+    }
+
+    private void CreateData()
+    {
+        isEditing = false;
+        editingId = Guid.Empty;
+        formData = "";
+        showForm = true;
+    }
+
+    private void EditData(Guid dataId)
+    {
+        var item = dataList.FirstOrDefault(d => d.DataId == dataId);
+        if (item != null)
+        {
+            isEditing = true;
+            editingId = dataId;
+            formData = item.DataContent;
+            showForm = true;
+        }
+    }
+
+    private async Task SaveData()
+    {
+        try
+        {
+            if (isEditing)
+            {
+                await Http.PutAsJsonAsync($"api/entities/data/{editingId}", new { DataContent = formData });
+            }
+            else
+            {
+                await Http.PostAsJsonAsync($"api/entities/{EntityId}/data", new { DataContent = formData });
+            }
+            showForm = false;
+            await LoadData();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"保存失败: {ex.Message}");
+        }
+    }
+
+    private async Task DeleteData(Guid dataId)
+    {
+        if (await JS.InvokeAsync<bool>("confirm", "确定删除此数据吗？"))
+        {
+            try
+            {
+                await Http.DeleteAsync($"api/entities/data/{dataId}");
+                await LoadData();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"删除失败: {ex.Message}");
+            }
+        }
+    }
+
+    private void CloseForm()
+    {
+        showForm = false;
+    }
+
+    private void GoBack()
+    {
+        NavManager.NavigateTo($"/entities/{EntityId}");
+    }
+
+    [Inject]
+    private IJSRuntime JS { get; set; } = null!;
+
+    public class DataDto
+    {
+        public Guid DataId { get; set; }
+        public string DataContent { get; set; } = "";
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class ApiResponse<T>
+    {
+        public bool Success { get; set; }
+        public T? Data { get; set; }
+        public string? Message { get; set; }
+    }
+}

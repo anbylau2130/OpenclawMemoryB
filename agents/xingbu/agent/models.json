@@ -13,10 +13,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 64000,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "meta/llama-3.1-70b-instruct",
@@ -26,10 +30,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 131072,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "meta/llama-3.1-8b-instruct",
@@ -39,10 +47,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 131072,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "microsoft/phi-3-mini-128k-instruct",
@@ -52,10 +64,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 128000,
-          "maxTokens": 4096
+          "maxTokens": 4096,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "microsoft/phi-3.5-mini-instruct",
@@ -65,10 +81,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 128000,
-          "maxTokens": 4096
+          "maxTokens": 4096,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "google/gemma-2-9b-it",
@@ -78,10 +98,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 8192,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "google/gemma-2-2b-it",
@@ -91,10 +115,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 8192,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "mistralai/mistral-7b-instruct-v0.3",
@@ -104,10 +132,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 32768,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         }
       ]
     },
@@ -124,10 +156,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 64000,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "meta/llama-3.1-70b-instruct",
@@ -137,10 +173,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 131072,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "meta/llama-3.1-8b-instruct",
@@ -150,10 +190,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 131072,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "microsoft/phi-3-mini-128k-instruct",
@@ -163,10 +207,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 128000,
-          "maxTokens": 4096
+          "maxTokens": 4096,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "microsoft/phi-3.5-mini-instruct",
@@ -176,10 +224,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 128000,
-          "maxTokens": 4096
+          "maxTokens": 4096,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "google/gemma-2-9b-it",
@@ -189,10 +241,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 8192,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "google/gemma-2-2b-it",
@@ -202,10 +258,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 8192,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         },
         {
           "id": "mistralai/mistral-7b-instruct-v0.3",
@@ -215,10 +275,14 @@
           ],
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
           },
           "contextWindow": 32768,
-          "maxTokens": 8192
+          "maxTokens": 8192,
+          "reasoning": false,
+          "api": "openai-completions"
         }
       ]
     },
@@ -240,7 +304,8 @@
             "cacheWrite": 0
           },
           "contextWindow": 204800,
-          "maxTokens": 100000
+          "maxTokens": 100000,
+          "api": "openai-completions"
         },
         {
           "id": "glm-4.7",
@@ -256,7 +321,8 @@
             "cacheWrite": 0
           },
           "contextWindow": 204800,
-          "maxTokens": 100000
+          "maxTokens": 100000,
+          "api": "openai-completions"
         },
         {
           "id": "glm-4.6",
@@ -272,7 +338,8 @@
             "cacheWrite": 0
           },
           "contextWindow": 204800,
-          "maxTokens": 100000
+          "maxTokens": 100000,
+          "api": "openai-completions"
         },
         {
           "id": "glm-4.5-air",
@@ -288,7 +355,8 @@
             "cacheWrite": 0
           },
           "contextWindow": 204800,
-          "maxTokens": 100000
+          "maxTokens": 100000,
+          "api": "openai-completions"
         }
       ],
       "apiKey": "701748e84ca840a5b50e80e0d7c129b1.kSiJo4Zpztf5bCiI"

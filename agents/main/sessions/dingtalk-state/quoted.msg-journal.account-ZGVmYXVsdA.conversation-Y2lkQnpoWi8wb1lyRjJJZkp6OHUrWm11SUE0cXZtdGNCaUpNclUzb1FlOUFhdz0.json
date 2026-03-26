@@ -1,235 +1,7 @@
 {
   "version": 1,
-  "updatedAt": 1774347462253,
+  "updatedAt": 1774402169800,
   "records": [
-    {
-      "msgId": "msgXFf2kHnBLxFYOfBSK/kLXA==",
-      "messageType": "text",
-      "text": "配置完之后通知我",
-      "createdAt": 1773742795513
-    },
-    {
-      "msgId": "msgPoKIg4Abp70OYJ7ULZnltA==",
-      "messageType": "text",
-      "text": "我使用192.168.50.251:7891为什么不能访问",
-      "createdAt": 1773742969820
-    },
-    {
-      "msgId": "msg+hUL6YjxDuLYW/FGk7+q8w==",
-      "messageType": "text",
-      "text": "修改0.0.0.0",
-      "createdAt": 1773743026344
-    },
-    {
-      "msgId": "msgI3hBjAz7lkEajb1QaDk7lQ==",
-      "messageType": "text",
-      "text": "为什么三省六部只有太子是正常工作的？",
-      "createdAt": 1773743818346
-    },
-    {
-      "msgId": "msg9kwoiIydFpET51/5Ll4wow==",
-      "messageType": "text",
-      "text": "根据我们的dingtalk插件，查看具体的配置帮我申请不同的机器人，然后配置但我们的openclaw中",
-      "createdAt": 1773744033549
-    },
-    {
-      "msgId": "msg+Q/5q8vz2dLLK7Jh8GD4Yw==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773745605644
-    },
-    {
-      "msgId": "msg//cNgpKpHhVM8wEBm8dz0w==",
-      "messageType": "text",
-      "text": "如果需要扫码我来扫",
-      "createdAt": 1773745623996
-    },
-    {
-      "msgId": "msguN8OdwoRjbv5Ztz/YTQs2w==",
-      "messageType": "text",
-      "text": "不要动",
-      "createdAt": 1773745792443
-    },
-    {
-      "msgId": "msgWNzPLS36qLgbOGRJ8YY7qw==",
-      "messageType": "text",
-      "text": "没有经过我的同意不要改配置",
-      "createdAt": 1773745824012
-    },
-    {
-      "msgId": "msgO0CnfWuMp3Jqe3Q4mDxFkQ==",
-      "messageType": "text",
-      "text": "没有经过我的同意不要改配置,你个傻缺，改回去",
-      "createdAt": 1773746063333
-    },
-    {
-      "msgId": "msg5sXLjl23rSIY6GpDlwkyfg==",
-      "messageType": "text",
-      "text": "我需要你帮我申请钉钉机器人，我来扫码，你帮我申请",
-      "createdAt": 1773746170469
-    },
-    {
-      "msgId": "msg39bZy3buOoZWzXgzbE0bSw==",
-      "messageType": "text",
-      "text": "扫码你要给我截图啊",
-      "createdAt": 1773746361674
-    },
-    {
-      "msgId": "msg60YnWTmACsY0O2U+o9m53g==",
-      "messageType": "text",
-      "text": "选择企业选Cuixiaoyang2130，你应该要用到chrome dev tools，还有一个能操作浏览器的什么工具",
-      "createdAt": 1773746470985
-    },
-    {
-      "msgId": "msg3uelLSu+UJLJlwhCjcNqfQ==",
-      "messageType": "text",
-      "text": "我是让你来操作申请钉钉机器人，我只负责扫码让你登录",
-      "createdAt": 1773746618060
-    },
-    {
-      "msgId": "msgKZa/bTvfAnEuMIT4l7iajA==",
-      "messageType": "text",
-      "text": "工具你需要自己下载安装",
-      "createdAt": 1773746636040
-    },
-    {
-      "msgId": "msgUMi5yz8i2PqMBES6/ZRjQA==",
-      "messageType": "text",
-      "text": "怎么样了？",
-      "createdAt": 1773748067355
-    },
-    {
-      "msgId": "msglATxI57sDUiY5gZHbDbrOQ==",
-      "messageType": "text",
-      "text": "？？",
-      "createdAt": 1773750649858
-    },
-    {
-      "msgId": "msgBtWOeZB+c3xIZs+ZFxebww==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773753615964
-    },
-    {
-      "msgId": "msgx0T5+XPyrgbEQwjXMldL1w==",
-      "messageType": "text",
-      "text": "你需要使用其他办法完成我的任务",
-      "createdAt": 1773754807769
-    },
-    {
-      "msgId": "msg/oQEDJyv+HUY+aVYmZX6Dw==",
-      "messageType": "text",
-      "text": "https://wuxinshui.blog.csdn.net/article/details/158894105\n根据这个帖子搭建无头浏览器",
-      "createdAt": 1773756125299
-    },
-    {
-      "msgId": "msg3JDTcyzdDTAJn1frAiZcsA==",
-      "messageType": "text",
-      "text": "这个操作更详细https://cloud.tencent.com/developer/article/2632649",
-      "createdAt": 1773756349118
-    },
-    {
-      "msgId": "msgKwsFLvF/JyvDW4tpVY3gQA==",
-      "messageType": "text",
-      "text": "这个帖子跟腾云云的帖子是一样 的https://iloli.love/archives/1772390357848",
-      "createdAt": 1773756410282
-    },
-    {
-      "msgId": "msgkn1dVqyVgk/sbZVpcJFbsQ==",
-      "messageType": "text",
-      "text": "？",
-      "createdAt": 1773757953478
-    },
-    {
-      "msgId": "msgpMdzo/k7ux6TMzzUqeyOKw==",
-      "messageType": "text",
-      "text": "不行就更改成国内的软件源进行安装",
-      "createdAt": 1773757998660
-    },
-    {
-      "msgId": "msgmMOCOUqtsyPvsFumC5LyJg==",
-      "messageType": "text",
-      "text": "怎么样？可以吗",
-      "createdAt": 1773758118389
-    },
-    {
-      "msgId": "msgqDCvG6LK60S3dKKaXXNN7g==",
-      "messageType": "text",
-      "text": "图片有方块",
-      "createdAt": 1773759891385
-    },
-    {
-      "msgId": "msgo+eQRajk5gZNyHAm5f0bqw==",
-      "messageType": "text",
-      "text": "登陆了",
-      "createdAt": 1773760032399
-    },
-    {
-      "msgId": "msg5NLaUmopvavoFwrgqtOmEQ==",
-      "messageType": "text",
-      "text": "直接创建三省六部需要的其他机器人，并且将重要参数保存下来，用来配置给三省六部的agent使用，把配置文档保存下来，先不要配置，我看了没问题再配置，还是提醒你配置相关的操作要查询文档，根据文档说明配置",
-      "createdAt": 1773760339840
-    },
-    {
-      "msgId": "msgVUsSl90OtTVpl5H7Zh3v6g==",
-      "messageType": "text",
-      "text": "我不是扫码给你了么？还不会做？",
-      "createdAt": 1773760553140
-    },
-    {
-      "msgId": "msgGTZRKKrAwNPQAyRLIYhreQ==",
-      "messageType": "text",
-      "text": "不止5个吧？还有中书省，门下省，尚书省这是3省",
-      "createdAt": 1773760709056
-    },
-    {
-      "msgId": "msgxHI/+tKJvxgpWuDRLc0thA==",
-      "messageType": "text",
-      "text": "还有钦天监是什么鬼？",
-      "createdAt": 1773760739565
-    },
-    {
-      "msgId": "msgV2tSHBZvxkc2XfBOQKQEDA==",
-      "messageType": "text",
-      "text": "“三省”是中书省、门下省、尚书省，“六部”是吏部、户部、礼部、兵部、刑部、工部",
-      "createdAt": 1773760801998
-    },
-    {
-      "msgId": "msgQq8ons75/9EaM4lheQVkyg==",
-      "messageType": "text",
-      "text": "方案二",
-      "createdAt": 1773760956154
-    },
-    {
-      "msgId": "msgL7TWrSe2qJr297wSd9I/Ow==",
-      "messageType": "text",
-      "text": "不只是需要创建，还要根据插件文档配置相关的权限然后发布新版本，才能使用",
-      "createdAt": 1773761128241
-    },
-    {
-      "msgId": "msgNJ1pGyGwVGLgHM8h0uM8dQ==",
-      "messageType": "text",
-      "text": "先配置创建的两个机器人",
-      "createdAt": 1773790854443
-    },
-    {
-      "msgId": "msg+zGLetIblWkmsnMiS2KwFA==",
-      "messageType": "text",
-      "text": "？卡在哪里了？",
-      "createdAt": 1773791705308
-    },
-    {
-      "msgId": "msgNCFxEcuuqqlCv9PC/nqD5A==",
-      "messageType": "text",
-      "text": "你先创建其他剩余的机器人",
-      "createdAt": 1773792734253
-    },
-    {
-      "msgId": "msg8nh7U9kE+OzupqvSWnNSkA==",
-      "messageType": "text",
-      "text": "·",
-      "createdAt": 1773793308641
-    },
     {
       "msgId": "msgRlefd8vEOVoBivx62eZykQ==",
       "messageType": "text",
@@ -2125,6 +1897,156 @@
       "messageType": "text",
       "text": "备份到github",
       "createdAt": 1774347462076
+    },
+    {
+      "msgId": "msgVUJFaggHCOZCy1CI78Zjpg==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774347837597
+    },
+    {
+      "msgId": "msgR6P0AtRQ+oMdYdt1LOBwMA==",
+      "messageType": "text",
+      "text": "为什么不回复消息？立即修复",
+      "createdAt": 1774347871041
+    },
+    {
+      "msgId": "msgpRUJfnX8OMUi1hTDObhUQg==",
+      "messageType": "text",
+      "text": "3",
+      "createdAt": 1774347952288
+    },
+    {
+      "msgId": "msgQSJhPxye03wPp/avzQ1IYg==",
+      "messageType": "audio",
+      "text": "先看一下中书省为什么没有回复，然后建立消息记录机制，只保留我的呃消息。回复回复记录全部都不用保存。",
+      "createdAt": 1774348108849
+    },
+    {
+      "msgId": "msgxN3flDoKRYbPP96bCaI5HQ==",
+      "messageType": "audio",
+      "text": "你看一下中书省在干什么，他一直没有回复我消息。如果是卡住了，看一下为什么卡住，先不要中断他的绘画。",
+      "createdAt": 1774348312866
+    },
+    {
+      "msgId": "msgHyKPP6Ds5x0nBeIishVgfQ==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774348557259
+    },
+    {
+      "msgId": "msgRNyIbspplN/0PwNlu9CtTw==",
+      "messageType": "text",
+      "text": "御史官报错:⚠️ Agent failed before reply: Sandbox mode requires Docker, but the \"docker\" command was not found in PATH. Install Docker (and ensure \"docker\" is available), or set agents.defaults.sandbox.mode=off to disable sandboxing. Logs: openclaw logs --follow",
+      "createdAt": 1774348637563
+    },
+    {
+      "msgId": "msgx0fePrjzZWa90c26/P7I2g==",
+      "messageType": "text",
+      "text": "御史官报错:⚠️ Agent failed before reply: Sandbox mode requires Docker, but the \"docker\" command was not found in PATH. Install Docker (and ensure \"docker\" is available), or set agents.defaults.sandbox.mode=off to disable sandboxing. Logs: openclaw logs --follow",
+      "createdAt": 1774348661370
+    },
+    {
+      "msgId": "msgTqHeyR7eTjTQp5W3SogOoA==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774349100466
+    },
+    {
+      "msgId": "msgePOPGpafv+jJoNXSmd7/Fw==",
+      "messageType": "text",
+      "text": "?",
+      "createdAt": 1774350803800
+    },
+    {
+      "msgId": "msgBsWFMxEbT3fiCuYSDxQJ8Q==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1774354915445
+    },
+    {
+      "msgId": "msgBsWFMxEbT3fiCuYSDxQJ8Q==",
+      "messageType": "text",
+      "text": "？",
+      "createdAt": 1774354915445
+    },
+    {
+      "msgId": "msgqr6zf7o1UZrFjCXIe8e8NA==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774356768198
+    },
+    {
+      "msgId": "msgRGl7jfiS8/KXgM3i2RFWrg==",
+      "messageType": "text",
+      "text": "??",
+      "createdAt": 1774358278167
+    },
+    {
+      "msgId": "msguXgFjspqAWtqW0JBRTiVmQ==",
+      "messageType": "text",
+      "text": "??",
+      "createdAt": 1774358598939
+    },
+    {
+      "msgId": "msgBrAjnbnJIuPZHbq4/t4i/w==",
+      "messageType": "text",
+      "text": "？？",
+      "createdAt": 1774360381412
+    },
+    {
+      "msgId": "msg9zCphGKCD02zx8Bog1PHxw==",
+      "messageType": "text",
+      "text": "方案1",
+      "createdAt": 1774360446756
+    },
+    {
+      "msgId": "msgz6hH3HOMWgsoNPXzfw6GTg==",
+      "messageType": "text",
+      "text": "我的jina上得向量数据库token快用完了，现在去github上找一下有没有可以本地部署替代的方案",
+      "createdAt": 1774360659309
+    },
+    {
+      "msgId": "msgjRwWWlmMNaOsBnl/xTtY8w==",
+      "messageType": "text",
+      "text": "Qdrant能集成到openclaw的记忆系统中么？",
+      "createdAt": 1774361393855
+    },
+    {
+      "msgId": "msgXJTBeYqw5s4yeJ+yscE5BQ==",
+      "messageType": "text",
+      "text": "OpenViking 这个项目怎么样",
+      "createdAt": 1774361694698
+    },
+    {
+      "msgId": "msgHQpIKhVGq8xM60iSdiI0YQ==",
+      "messageType": "text",
+      "text": "先出方案，具体步骤写明白，然后配置要参考官方文档来写，避免凭空想象",
+      "createdAt": 1774362423826
+    },
+    {
+      "msgId": "msggzaNwYi+uSdFQ5BkwXdizg==",
+      "messageType": "text",
+      "text": "把文档保存到knowledge-base目录下 Openviking.md文档",
+      "createdAt": 1774362855675
+    },
+    {
+      "msgId": "msgeLmFkDtakp1IRfyFmurSOg==",
+      "messageType": "text",
+      "text": "启动18795",
+      "createdAt": 1774366424405
+    },
+    {
+      "msgId": "msggpF6//29kwCLx8LFVRtQxg==",
+      "messageType": "text",
+      "text": "使用pm2检测，18795不要宕机",
+      "createdAt": 1774366689287
+    },
+    {
+      "msgId": "msgDBlwixdGqIbis+s6pci25A==",
+      "messageType": "text",
+      "text": "三一重工操作建议",
+      "createdAt": 1774402169401
     }
   ]
 }
